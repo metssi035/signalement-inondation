@@ -1,0 +1,11 @@
+{
+  "name": "signalements-geojson",
+  "version": "1.0.0",
+  "description": "Fusion des données de signalements routiers",
+  "scripts": {
+    "generate": "node scripts/grist-to-geojson.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
