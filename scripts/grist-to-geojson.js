@@ -1,40 +1,163 @@
-// ✅ Fonction pour formater les dates
-function formatDate(dateString) {
-    if (!dateString) return '';
+const https = require('https');
+const fs = require('fs');
+const fetch = require('node-fetch');
+
+const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
+const GRIST_API_KEY = process.env.GRIST_API_KEY;
+const TABLE_ID = 'Signalements';
+
+console.log('🚀 Démarrage de la fusion des 3 sources...\n');
+
+// ✅ FONCTION DE FORMATAGE DES DATES
+function formatDate(dateValue) {
+    if (!dateValue) return '';
     
     try {
-        // Si c'est un timestamp (nombre)
-        if (!isNaN(dateString)) {
-            const date = new Date(parseFloat(dateString) * 1000);
-            return date.toLocaleDateString('fr-FR', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
+        let date;
+        
+        // Si c'est une string ISO
+        if (typeof dateValue === 'string') {
+            date = new Date(dateValue);
+        } 
+        // Si c'est un timestamp
+        else if (typeof dateValue === 'number') {
+            date = new Date(dateValue * 1000);
+        } else {
+            return '';
         }
         
-        // Si c'est déjà une date ISO
-        const date = new Date(dateString);
-        if (!isNaN(date.getTime())) {
-            return date.toLocaleDateString('fr-FR', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
+        // Vérifier validité
+        if (isNaN(date.getTime())) {
+            return '';
         }
         
-        // Sinon retourner tel quel
-        return dateString;
+        // Format JJ/MM/AAAA HH:MM
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        
+        return `${day}/${month}/${year} à ${hours}h${minutes}`;
+        
     } catch (e) {
-        return dateString;
+        return '';
     }
 }
 
-// Convertir Grist (MODIFIÉ)
+// Récupérer Grist
+async function fetchGristData() {
+    try {
+        if (!GRIST_DOC_ID || !GRIST_API_KEY) {
+            console.warn('⚠️ Grist credentials manquants');
+            return [];
+        }
+
+        console.log('🔗 [Grist 35] Récupération...');
+        
+        const options = {
+            hostname: 'grist.dataregion.fr',
+            path: `/o/inforoute/api/docs/${GRIST_DOC_ID}/tables/${TABLE_ID}/records`,
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${GRIST_API_KEY}`,
+                'Content-Type': 'application/json'
+            }
+        };
+
+        return new Promise((resolve) => {
+            https.get(options, (res) => {
+                let data = '';
+                res.on('data', chunk => { data += chunk; });
+                res.on('end', () => {
+                    if (res.statusCode === 200) {
+                        try {
+                            const parsed = JSON.parse(data);
+                            console.log(`✅ [Grist 35] ${parsed.records.length} records`);
+                            resolve(parsed.records || []);
+                        } catch (e) {
+                            console.error('❌ [Grist 35] Parse error');
+                            resolve([]);
+                        }
+                    } else {
+                        console.error(`❌ [Grist 35] HTTP ${res.statusCode}`);
+                        resolve([]);
+                    }
+                });
+            }).on('error', (err) => {
+                console.error('❌ [Grist 35]', err.message);
+                resolve([]);
+            });
+        });
+    } catch (error) {
+        console.error('❌ [Grist 35]', error.message);
+        return [];
+    }
+}
+
+// Récupérer CD44
+async function fetchCD44Data() {
+    try {
+        console.log('🔗 [CD44] Récupération...');
+        
+        return new Promise((resolve) => {
+            const options = {
+                hostname: 'data.loire-atlantique.fr',
+                path: '/api/explore/v2.1/catalog/datasets/224400028_info-route-departementale/records?limit=100',
+                method: 'GET',
+                headers: {
+                    'User-Agent': 'Mozilla/5.0'
+                }
+            };
+
+            https.get(options, (res) => {
+                let data = '';
+                res.on('data', chunk => { data += chunk; });
+                res.on('end', () => {
+                    if (res.statusCode === 200) {
+                        try {
+                            const response = JSON.parse(data);
+                            const records = response.results || [];
+                            console.log(`✅ [CD44] ${records.length} records`);
+                            resolve(records);
+                        } catch (e) {
+                            console.error('❌ [CD44] Parse error');
+                            resolve([]);
+                        }
+                    } else {
+                        console.error(`❌ [CD44] HTTP ${res.statusCode}`);
+                        resolve([]);
+                    }
+                });
+            }).on('error', (err) => {
+                console.error('❌ [CD44]', err.message);
+                resolve([]);
+            });
+        });
+    } catch (error) {
+        console.error('❌ [CD44]', error.message);
+        return [];
+    }
+}
+
+// Récupérer Rennes Métropole
+async function fetchRennesMetropoleData() {
+    try {
+        console.log('🔗 [Rennes Métropole] Récupération...');
+        const response = await fetch(
+            'https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets/travaux_1_jour/records?limit=100'
+        );
+        const data = await response.json();
+        const records = data.results || [];
+        console.log(`✅ [Rennes Métropole] ${records.length} records`);
+        return records;
+    } catch (error) {
+        console.error('❌ [Rennes Métropole]', error.message);
+        return [];
+    }
+}
+
+// Convertir Grist
 function gristToFeature(record) {
     try {
         let geometry;
@@ -54,6 +177,8 @@ function gristToFeature(record) {
                      record.fields.Cause.filter(c => c !== 'L').join(', ') : 
                      (record.fields.Cause || '');
         
+        const statut = record.fields.Statut || 'Actif';
+        
         return {
             type: 'Feature',
             geometry: geometry,
@@ -64,7 +189,9 @@ function gristToFeature(record) {
                 commune: record.fields.Commune || '',
                 etat: record.fields.Type_coupure || 'Route fermée',
                 cause: cause || 'Inondation',
-                statut: record.fields.Statut || 'Actif',
+                statut: statut,
+                statut_actif: statut === 'Actif',
+                statut_resolu: statut === 'Résolu',
                 type_coupure: record.fields.Type_coupure || '',
                 sens_circulation: record.fields.sens_circulation || '',
                 commentaire: record.fields.Description || '',
@@ -79,7 +206,7 @@ function gristToFeature(record) {
     }
 }
 
-// Convertir CD44 (MODIFIÉ)
+// Convertir CD44
 function cd44ToFeature(item) {
     try {
         const geometry = {
@@ -88,6 +215,7 @@ function cd44ToFeature(item) {
         };
         
         const route = Array.isArray(item.ligne2) ? item.ligne2.join(' / ') : (item.ligne2 || 'Route');
+        const statut = 'Actif';
         
         return {
             type: 'Feature',
@@ -99,7 +227,9 @@ function cd44ToFeature(item) {
                 commune: item.ligne3 || 'Commune',
                 etat: item.type || 'Route fermée',
                 cause: item.nature || '',
-                statut: 'Actif',
+                statut: statut,
+                statut_actif: true,
+                statut_resolu: false,
                 type_coupure: item.type || '',
                 sens_circulation: '',
                 commentaire: item.ligne1 || '',
@@ -114,7 +244,7 @@ function cd44ToFeature(item) {
     }
 }
 
-// Convertir Rennes Métropole (MODIFIÉ)
+// Convertir Rennes Métropole
 function rennesMetropoleToFeatures(item) {
     try {
         let geometry = null;
@@ -130,6 +260,8 @@ function rennesMetropoleToFeatures(item) {
         
         if (!geometry) return [];
         
+        const statut = 'Actif';
+        
         return [{
             type: 'Feature',
             geometry: geometry,
@@ -140,7 +272,9 @@ function rennesMetropoleToFeatures(item) {
                 commune: item.commune || 'Rennes',
                 etat: 'Route fermée',
                 cause: 'Travaux',
-                statut: 'Actif',
+                statut: statut,
+                statut_actif: true,
+                statut_resolu: false,
                 type_coupure: item.type || '',
                 sens_circulation: '',
                 commentaire: item.libelle || '',
@@ -155,3 +289,93 @@ function rennesMetropoleToFeatures(item) {
         return [];
     }
 }
+
+// Fusion principale
+async function mergeSources() {
+    try {
+        console.log('');
+        
+        const [gristRecords, cd44Records, rennesMetropoleRecords] = await Promise.all([
+            fetchGristData(),
+            fetchCD44Data(),
+            fetchRennesMetropoleData()
+        ]);
+        
+        console.log(`\n📊 Total brut: ${gristRecords.length + cd44Records.length + rennesMetropoleRecords.length} records\n`);
+        
+        let features = [];
+        
+        gristRecords.forEach(record => {
+            const feature = gristToFeature(record);
+            if (feature) features.push(feature);
+        });
+        
+        cd44Records.forEach(item => {
+            const feature = cd44ToFeature(item);
+            if (feature) features.push(feature);
+        });
+        
+        rennesMetropoleRecords.forEach(item => {
+            const rmsFeatures = rennesMetropoleToFeatures(item);
+            features.push(...rmsFeatures);
+        });
+        
+        console.log(`✅ ${features.length} features créées\n`);
+        
+        const geojson = {
+            type: 'FeatureCollection',
+            features: features,
+            metadata: {
+                generated: new Date().toISOString(),
+                source: 'Fusion Grist 35 + CD44 + Rennes Métropole',
+                total_count: features.length,
+                sources: {
+                    grist_35: gristRecords.length,
+                    cd44: cd44Records.length,
+                    rennes_metropole: rennesMetropoleRecords.length
+                }
+            }
+        };
+        
+        fs.writeFileSync('signalements.geojson', JSON.stringify(geojson, null, 2));
+        console.log('✅ Fichier signalements.geojson créé');
+        
+        const metadata = {
+            lastUpdate: new Date().toISOString(),
+            sources: {
+                grist_35: gristRecords.length,
+                cd44: cd44Records.length,
+                rennes_metropole: rennesMetropoleRecords.length,
+                total: features.length
+            },
+            stats: {
+                points: features.filter(f => f.geometry.type === 'Point').length,
+                lines: features.filter(f => f.geometry.type === 'LineString').length,
+                multilines: features.filter(f => f.geometry.type === 'MultiLineString').length,
+                by_source: {
+                    grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
+                    cd44: features.filter(f => f.properties.source === 'CD44').length,
+                    rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length
+                }
+            }
+        };
+        
+        fs.writeFileSync('metadata.json', JSON.stringify(metadata, null, 2));
+        console.log('✅ Métadonnées créées');
+        
+        console.log('\n📊 Statistiques finales:');
+        console.log(`   - Grist 35: ${gristRecords.length}`);
+        console.log(`   - CD44: ${cd44Records.length}`);
+        console.log(`   - Rennes Métropole: ${rennesMetropoleRecords.length}`);
+        console.log(`   - Total features: ${features.length}`);
+        console.log(`   - Points: ${metadata.stats.points}`);
+        console.log(`   - LineStrings: ${metadata.stats.lines}`);
+        console.log(`   - MultiLineStrings: ${metadata.stats.multilines}`);
+        
+    } catch (error) {
+        console.error('❌ Erreur fusion:', error.message);
+        process.exit(1);
+    }
+}
+
+mergeSources();
