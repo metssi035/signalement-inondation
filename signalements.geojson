@@ -39,16 +39,18 @@
       "properties": {
         "id": 41,
         "source": "Grist 35",
-        "gestionnaire": "Rennes Metropole",
-        "administration": "Rennes Metropole",
         "route": "Route de Lorient",
         "commune": "Le Rheu",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760360174.847
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760360174.847,
+        "date_fin": "",
+        "date_saisie": 1760360174.847,
+        "gestionnaire": "Rennes Metropole"
       }
     },
     {
@@ -63,16 +65,18 @@
       "properties": {
         "id": 44,
         "source": "Grist 35",
-        "gestionnaire": "CD56",
-        "administration": "CD56",
         "route": "D 177",
         "commune": "Bruz",
-        "type_coupure": "Déviation",
+        "etat": "Déviation",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Résolu",
-        "description": "dans le sens",
-        "date_heure": 1760434564.294
+        "type_coupure": "Déviation",
+        "sens_circulation": "",
+        "commentaire": "dans le sens",
+        "date_debut": 1760434564.294,
+        "date_fin": "",
+        "date_saisie": 1760434564.294,
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -87,16 +91,18 @@
       "properties": {
         "id": 45,
         "source": "Grist 35",
-        "gestionnaire": "CD56",
-        "administration": "CD56",
         "route": "Rocade Sud",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760689710.719
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760689710.719,
+        "date_fin": "",
+        "date_saisie": 1760689710.719,
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -117,16 +123,18 @@
       "properties": {
         "id": 46,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "D 29",
         "commune": "Montgermont",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "ffftt",
-        "date_heure": 1760690502.735
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "ffftt",
+        "date_debut": 1760690502.735,
+        "date_fin": "",
+        "date_saisie": 1760690502.735,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -141,16 +149,18 @@
       "properties": {
         "id": 47,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "C 1",
         "commune": "Montauban-de-Bretagne",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760692427.166
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760692427.166,
+        "date_fin": "",
+        "date_saisie": 1760692427.166,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -165,16 +175,18 @@
       "properties": {
         "id": 48,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "dd",
         "commune": "Breteil",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760692819.845
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760692819.845,
+        "date_fin": "",
+        "date_saisie": 1760692819.845,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -207,16 +219,18 @@
       "properties": {
         "id": 49,
         "source": "Grist 35",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route de Rennes",
         "commune": "Domloup",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760692944.173
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760692944.173,
+        "date_fin": "",
+        "date_saisie": 1760692944.173,
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -237,16 +251,18 @@
       "properties": {
         "id": 50,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "D 175",
         "commune": "Cesson-Sévigné",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760698427.591
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760698427.591,
+        "date_fin": "",
+        "date_saisie": 1760698427.591,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -261,16 +277,18 @@
       "properties": {
         "id": 51,
         "source": "Grist 35",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Melesse",
         "commune": "La Mézière",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760956518.863
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760956518.863,
+        "date_fin": "",
+        "date_saisie": 1760956518.863,
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -285,16 +303,18 @@
       "properties": {
         "id": 52,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "N 12",
         "commune": "Montauban-de-Bretagne",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760956520.948
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760956520.948,
+        "date_fin": "",
+        "date_saisie": 1760956520.948,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -309,16 +329,18 @@
       "properties": {
         "id": 53,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "N 24",
         "commune": "Bréal-sous-Montfort",
-        "type_coupure": "Partielle",
+        "etat": "Partielle",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760963915.609
+        "type_coupure": "Partielle",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760963915.609,
+        "date_fin": "",
+        "date_saisie": 1760963915.609,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -347,16 +369,18 @@
       "properties": {
         "id": 54,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "N 157",
         "commune": "Noyal-sur-Vilaine",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760963952.112
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760963952.112,
+        "date_fin": "",
+        "date_saisie": 1760963952.112,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -385,16 +409,18 @@
       "properties": {
         "id": 55,
         "source": "Grist 35",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "N 24",
         "commune": "Mordelles",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1760973148.835
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1760973148.835,
+        "date_fin": "",
+        "date_saisie": 1760973148.835,
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -409,16 +435,18 @@
       "properties": {
         "id": 56,
         "source": "Grist 35",
-        "gestionnaire": "DIRO",
-        "administration": "DIRO",
         "route": "N 137",
         "commune": "Pont-Péan",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Résolu",
-        "description": "",
-        "date_heure": 1761135570.23
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761135570.23,
+        "date_fin": "",
+        "date_saisie": 1761135570.23,
+        "gestionnaire": "DIRO"
       }
     },
     {
@@ -443,16 +471,18 @@
       "properties": {
         "id": 57,
         "source": "Grist 35",
-        "gestionnaire": "Redon Agglo",
-        "administration": "Redon Agglo",
         "route": "A 84",
         "commune": "Saint-Aubin-du-Cormier",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1761136288.542
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761136288.542,
+        "date_fin": "",
+        "date_saisie": 1761136288.542,
+        "gestionnaire": "Redon Agglo"
       }
     },
     {
@@ -473,16 +503,18 @@
       "properties": {
         "id": 58,
         "source": "Grist 35",
-        "gestionnaire": "Redon Agglo",
-        "administration": "Redon Agglo",
         "route": "D 238",
         "commune": "Maxent",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1761136571.246
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761136571.246,
+        "date_fin": "",
+        "date_saisie": 1761136571.246,
+        "gestionnaire": "Redon Agglo"
       }
     },
     {
@@ -497,16 +529,18 @@
       "properties": {
         "id": 59,
         "source": "Grist 35",
-        "gestionnaire": "Redon Agglo",
-        "administration": "Redon Agglo",
         "route": "D 238",
         "commune": "Maxent",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1761136605.046
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761136605.046,
+        "date_fin": "",
+        "date_saisie": 1761136605.046,
+        "gestionnaire": "Redon Agglo"
       }
     },
     {
@@ -521,16 +555,18 @@
       "properties": {
         "id": 60,
         "source": "Grist 35",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "N 12",
         "commune": "Montauban-de-Bretagne",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Résolu",
-        "description": "",
-        "date_heure": 1761137115.075
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761137115.075,
+        "date_fin": "",
+        "date_saisie": 1761137115.075,
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -545,16 +581,18 @@
       "properties": {
         "id": 61,
         "source": "Grist 35",
-        "gestionnaire": "CD35",
-        "administration": "CD35",
         "route": "N 12",
         "commune": "Caulnes",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1761554907.185
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761554907.185,
+        "date_fin": "",
+        "date_saisie": 1761554907.185,
+        "gestionnaire": "CD35"
       }
     },
     {
@@ -569,16 +607,18 @@
       "properties": {
         "id": 62,
         "source": "Grist 35",
-        "gestionnaire": "CD56",
-        "administration": "CD56",
         "route": "Chemin de la Tuvélière",
         "commune": "Saint-Symphorien",
-        "type_coupure": "Totale",
+        "etat": "Totale",
         "cause": "Inondation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": 1761554925.961
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": 1761554925.961,
+        "date_fin": "",
+        "date_saisie": 1761554925.961,
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -593,16 +633,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D213 / Montoir-de-Bretagne",
         "commune": "Saint-Brevin vers Saint-Nazaire",
-        "type_coupure": "Ouvrage d'art",
+        "etat": "Ouvrage d'art",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Travaux sur ouvrage d'art",
-        "date_heure": "2025-10-29T05:18:28+00:00"
+        "type_coupure": "Ouvrage d'art",
+        "sens_circulation": "",
+        "commentaire": "Travaux sur ouvrage d'art",
+        "date_debut": "2025-10-29T05:18:28+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-29T05:18:28+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -617,16 +659,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D100 / Donges",
         "commune": "Donges / Montoir-de-Bretagne",
-        "type_coupure": "Aménagement de chaussée",
+        "etat": "Aménagement de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Aménagement de chaussée",
-        "date_heure": "2025-10-28T11:02:12+00:00"
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "2025-10-28T11:02:12+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-28T11:02:12+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -641,16 +685,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "Travaux de réfection de chaussée",
         "commune": "D149 - Gorges",
-        "type_coupure": "Tous les véhicules",
+        "etat": "Tous les véhicules",
         "cause": "Déviation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Déviation",
-        "date_heure": "2025-10-27T07:00:31+00:00"
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "2025-10-27T07:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-27T07:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -665,16 +711,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D254 / Mouzillon",
         "commune": "Mouzillon / Gorges",
-        "type_coupure": "Réfection de chaussée",
+        "etat": "Réfection de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Travaux de réfection de chaussée",
-        "date_heure": "2025-10-27T07:00:31+00:00"
+        "type_coupure": "Réfection de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Travaux de réfection de chaussée",
+        "date_debut": "2025-10-27T07:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-27T07:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -689,16 +737,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D88 / Gétigné",
         "commune": "Gétigné / Clisson",
-        "type_coupure": "Aménagement de chaussée",
+        "etat": "Aménagement de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Aménagement de chaussée",
-        "date_heure": "2025-10-21T06:35:13+00:00"
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "2025-10-21T06:35:13+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-21T06:35:13+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -713,16 +763,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D751 / Saint-Léger-les-Vignes",
         "commune": "St Léger vers Port St Pere",
-        "type_coupure": "Aménagement de chaussée",
+        "etat": "Aménagement de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Aménagement de chaussée",
-        "date_heure": "2025-10-20T19:00:31+00:00"
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "2025-10-20T19:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-20T19:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -737,16 +789,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "Travaux / D120 / Saint-Sulpice",
         "commune": "Commune",
-        "type_coupure": "Tous les véhicules",
+        "etat": "Tous les véhicules",
         "cause": "Déviation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Déviation",
-        "date_heure": "2025-10-20T06:00:31+00:00"
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "2025-10-20T06:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-20T06:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -761,16 +815,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "Travaux sur réseaux / D14 / Riaillé",
         "commune": "Commune",
-        "type_coupure": "Tous les véhicules",
+        "etat": "Tous les véhicules",
         "cause": "Déviation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Déviation",
-        "date_heure": "2025-10-20T06:00:31+00:00"
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "2025-10-20T06:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-20T06:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -785,16 +841,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D33 / Bonnoeuvre",
         "commune": "Saint-Mars-la-Jaille / Bonnoeuvre",
-        "type_coupure": "Tranchée / raccordement",
+        "etat": "Tranchée / raccordement",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Travaux sur réseaux",
-        "date_heure": "2025-10-20T06:00:31+00:00"
+        "type_coupure": "Tranchée / raccordement",
+        "sens_circulation": "",
+        "commentaire": "Travaux sur réseaux",
+        "date_debut": "2025-10-20T06:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-20T06:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -809,16 +867,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "Bacs de Loire",
         "commune": "Liaison : Basse-Indre / Indret",
-        "type_coupure": "Bac de réserve",
+        "etat": "Bac de réserve",
         "cause": "Bacs de Loire",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Bac de réserve",
-        "date_heure": "2025-10-17T15:10:35+00:00"
+        "type_coupure": "Bac de réserve",
+        "sens_circulation": "",
+        "commentaire": "Bac de réserve",
+        "date_debut": "2025-10-17T15:10:35+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-17T15:10:35+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -833,16 +893,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D18 / La Roche-Blanche",
         "commune": "La Roche-Bl / Pouillé-les-Côteaux",
-        "type_coupure": "Autres",
+        "etat": "Autres",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Autres",
-        "date_heure": "2025-10-16T06:41:22+00:00"
+        "type_coupure": "Autres",
+        "sens_circulation": "",
+        "commentaire": "Autres",
+        "date_debut": "2025-10-16T06:41:22+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-16T06:41:22+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -857,16 +919,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D33 / Saffré",
         "commune": "Saffré / Puceul",
-        "type_coupure": "Tranchée / raccordement",
+        "etat": "Tranchée / raccordement",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Travaux sur réseaux",
-        "date_heure": "2025-10-15T06:00:31+00:00"
+        "type_coupure": "Tranchée / raccordement",
+        "sens_circulation": "",
+        "commentaire": "Travaux sur réseaux",
+        "date_debut": "2025-10-15T06:00:31+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-15T06:00:31+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -881,16 +945,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D1 / Saffré",
         "commune": "Abbaretz / Saffré",
-        "type_coupure": "Aménagement de chaussée",
+        "etat": "Aménagement de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Aménagement de chaussée",
-        "date_heure": "2025-10-13T07:47:52+00:00"
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "2025-10-13T07:47:52+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-10-13T07:47:52+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -905,16 +971,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D129 / Conquereuil",
         "commune": "Guémené-Penfao / Conquereuil",
-        "type_coupure": "Tranchée / raccordement",
+        "etat": "Tranchée / raccordement",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Travaux sur réseaux",
-        "date_heure": "2025-06-10T13:42:16+00:00"
+        "type_coupure": "Tranchée / raccordement",
+        "sens_circulation": "",
+        "commentaire": "Travaux sur réseaux",
+        "date_debut": "2025-06-10T13:42:16+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-06-10T13:42:16+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -929,16 +997,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D751 / Saint-Léger-les-Vignes",
         "commune": "Saint-Léger vers Port St Pere",
-        "type_coupure": "Aménagement de chaussée",
+        "etat": "Aménagement de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Aménagement de chaussée",
-        "date_heure": "2025-04-10T08:13:17+00:00"
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "2025-04-10T08:13:17+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-04-10T08:13:17+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -953,16 +1023,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D33 / Sainte-Anne-sur-Brivet",
         "commune": "Ste-Anne-sur-Brivet / Pontchâteau",
-        "type_coupure": "Divers",
+        "etat": "Divers",
         "cause": "Autre danger",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Divers",
-        "date_heure": "2025-09-15T14:43:08+00:00"
+        "type_coupure": "Divers",
+        "sens_circulation": "",
+        "commentaire": "Divers",
+        "date_debut": "2025-09-15T14:43:08+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-09-15T14:43:08+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -977,16 +1049,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "Aménagement de chaussée",
         "commune": "Commune",
-        "type_coupure": "Tous les véhicules",
+        "etat": "Tous les véhicules",
         "cause": "Déviation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Déviation",
-        "date_heure": "2025-08-29T07:40:10+00:00"
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "2025-08-29T07:40:10+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-08-29T07:40:10+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -1001,16 +1075,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D773 / Donges",
         "commune": "Besné / Donges",
-        "type_coupure": "Aménagement de chaussée",
+        "etat": "Aménagement de chaussée",
         "cause": "Chantier",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Aménagement de chaussée",
-        "date_heure": "2025-08-29T07:40:06+00:00"
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "2025-08-29T07:40:06+00:00",
+        "date_fin": "",
+        "date_saisie": "2025-08-29T07:40:06+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -1025,16 +1101,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D723 / Bouguenais",
         "commune": "Pornic vers Nantes",
-        "type_coupure": "Bouchon",
+        "etat": "Bouchon",
         "cause": "Bouchon",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Bouchon sur 4 km",
-        "date_heure": "2024-04-07T07:24:02+00:00"
+        "type_coupure": "Bouchon",
+        "sens_circulation": "",
+        "commentaire": "Bouchon sur 4 km",
+        "date_debut": "2024-04-07T07:24:02+00:00",
+        "date_fin": "",
+        "date_saisie": "2024-04-07T07:24:02+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -1049,16 +1127,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D178 / Pont-Saint-Martin",
         "commune": "Machecoul vers Nantes",
-        "type_coupure": "Bouchon",
+        "etat": "Bouchon",
         "cause": "Bouchon",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Bouchon sur 3.6 km",
-        "date_heure": "2024-03-07T08:30:46+00:00"
+        "type_coupure": "Bouchon",
+        "sens_circulation": "",
+        "commentaire": "Bouchon sur 3.6 km",
+        "date_debut": "2024-03-07T08:30:46+00:00",
+        "date_fin": "",
+        "date_saisie": "2024-03-07T08:30:46+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -1073,16 +1153,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "D537 / Treillières",
         "commune": "Orvault / Treillières",
-        "type_coupure": "Obstacle",
+        "etat": "Obstacle",
         "cause": "Autre danger",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Obstacle sur la chaussée",
-        "date_heure": "2024-05-13T06:06:06+00:00"
+        "type_coupure": "Obstacle",
+        "sens_circulation": "",
+        "commentaire": "Obstacle sur la chaussée",
+        "date_debut": "2024-05-13T06:06:06+00:00",
+        "date_fin": "",
+        "date_saisie": "2024-05-13T06:06:06+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -1097,16 +1179,18 @@
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "gestionnaire": "CD44",
-        "administration": "CD44",
         "route": "Aménagement de chaussée",
         "commune": "Commune",
-        "type_coupure": "Tous les véhicules",
+        "etat": "Tous les véhicules",
         "cause": "Déviation",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Déviation",
-        "date_heure": "2022-04-07T19:00:18+00:00"
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "2022-04-07T19:00:18+00:00",
+        "date_fin": "",
+        "date_saisie": "2022-04-07T19:00:18+00:00",
+        "gestionnaire": "CD44"
       }
     },
     {
@@ -1129,16 +1213,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Quai Duguay-Trouin, de la Rue Le Bouteiller jusqu'au Pont de la Mission",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-12-05T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -1241,16 +1327,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "rue de la Hallerais entre la rue du pré long et la VC5 Chantepie déviation des 2 sens de circulation\nrue de la Hallerais depuis le rond point de l'hermine et jusqu'à la rue du pré long deviation un sens de circulation",
         "commune": "35055 - Chantepie, 35352 - Vern-sur-Seiche",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Circulation interdite",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-06T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-06T00:00:00+00:00",
+        "date_fin": "2026-01-30T00:00:00+00:00",
+        "date_saisie": "2025-10-06T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -1321,16 +1409,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "les Rochelles,  de les Fries jusqu'à Inconnu Voie non dénommée",
         "commune": "35278 - Saint-Grégoire",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Circulation alternée",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -1401,16 +1491,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "les Rochelles,  de les Fries jusqu'à Inconnu Voie non dénommée",
         "commune": "35278 - Saint-Grégoire",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -1437,16 +1529,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard de Guines, du Boulevard de La Tour d'Auvergne jusqu'au Boulevard Saint-Conwoïon et seulement dans le sens Est-Ouest",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "de réfection de chaussée",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "de réfection de chaussée",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2393,16 +2487,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "à l'intersection de l'Avenue des Buttes de Coësmes et la rue Antoine Becquerel",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2457,16 +2553,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "à l'intersection de l'Avenue des Basses Noës et du Rond-point",
         "commune": "35266 - Saint-Erblon",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "de réfection de chaussée",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "de réfection de chaussée",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2489,16 +2587,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Vern, de la Rue Le Dantec jusqu'au 95",
         "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Rétrécissement temporaire de largeur de voie",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2024-09-23T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2024-09-23T00:00:00+00:00",
+        "date_fin": "2026-08-14T00:00:00+00:00",
+        "date_saisie": "2024-09-23T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2525,16 +2625,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Pont de Verrière,à l'intersection de la Route de Vezin et de la Route départementale 68",
         "commune": "35240 - le Rheu, 35353 - Vezin-le-Coquet",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2024-10-29T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2024-10-29T00:00:00+00:00",
+        "date_fin": "2026-06-30T00:00:00+00:00",
+        "date_saisie": "2024-10-29T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2561,16 +2663,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Pont de Verrière,à l'intersection de la Route de Vezin et de la Route départementale 68",
         "commune": "35240 - le Rheu, 35353 - Vezin-le-Coquet",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2024-11-18T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2024-11-18T00:00:00+00:00",
+        "date_fin": "2026-06-30T00:00:00+00:00",
+        "date_saisie": "2024-11-18T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2597,16 +2701,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Pont de Verrière,à l'intersection de la Route de Vezin et de la Route départementale 68",
         "commune": "35240 - le Rheu, 35353 - Vezin-le-Coquet",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur voirie",
-        "date_heure": "2025-02-03T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "2025-02-03T00:00:00+00:00",
+        "date_fin": "2027-03-05T00:00:00+00:00",
+        "date_saisie": "2025-02-03T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2629,16 +2735,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Michel Colomb, de la Rue de Châteaugiron jusqu'au 33",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-02-10T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-02-10T00:00:00+00:00",
+        "date_fin": "2025-12-31T00:00:00+00:00",
+        "date_saisie": "2025-02-10T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2779,16 +2887,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Capitaine Maignan, de la Rue du Papier Timbré jusqu'à la Place du 50ème d'Artillerie, par phases successives à l'avancement des travaux, Place du 50ème d'Artillerie, sur partie nord",
         "commune": "35238 - Rennes",
-        "type_coupure": "Mise en impasse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-08T00:00:00+00:00"
+        "type_coupure": "Mise en impasse",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-08T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-08T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -2811,16 +2921,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Voies Diverses CR n°108 \"La Lande Noire\" : section comprise entre la RD40 et le CR N°36, la Lande Noire",
         "commune": "35351 - le Verger",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur voirie",
-        "date_heure": "2025-08-25T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "2025-08-25T00:00:00+00:00",
+        "date_fin": "2025-11-21T00:00:00+00:00",
+        "date_saisie": "2025-08-25T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3243,16 +3355,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Emeraude  :section entre le rond-point de la Bégassière et le rond-point des Marais (RD29), Rond-point de la Bégassière",
         "commune": "35189 - Montgermont",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur voirie",
-        "date_heure": "2025-08-26T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "2025-08-26T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-26T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3275,16 +3389,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Avenue de Guyenne, du Boulevard d'Anjou jusqu'à la Rue de Gascogne",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2026-02-28T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3327,16 +3443,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "du 20 au 22 Rue des Veyettes",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-15T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-15T00:00:00+00:00",
+        "date_fin": "2025-11-19T00:00:00+00:00",
+        "date_saisie": "2025-09-15T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3385,16 +3503,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "les Champs",
         "commune": "35139 - Laillé",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-22T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-22T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-09-22T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3425,16 +3545,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route départementale 77,  de le Pont Saint-Armel jusqu'à Pierrefitte",
         "commune": "35047 - Bruz",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-22T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-22T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-09-22T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3481,16 +3603,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Le vallon, La Jousselinais, La Sonnerie",
         "commune": "35206 - Noyal-Châtillon-sur-Seiche",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-29T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-29T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-09-29T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3673,16 +3797,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Pierre et Marie Curie",
         "commune": "35066 - Chartres-de-Bretagne",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-01T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-01T00:00:00+00:00",
+        "date_fin": "2026-01-31T00:00:00+00:00",
+        "date_saisie": "2025-10-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3719,16 +3845,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "à l'intersection de la Rue Victor Ségalen et de la Rue de Plaisance,à l'intersection de la Rue Armand Rébillon et de la Rue de Plaisance",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "d'aménagement de chaussée",
-        "date_heure": "2025-10-06T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "d'aménagement de chaussée",
+        "date_debut": "2025-10-06T00:00:00+00:00",
+        "date_fin": "2025-12-01T00:00:00+00:00",
+        "date_saisie": "2025-10-06T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3861,16 +3989,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "les Tesnières",
         "commune": "35081 - Clayes, 35275 - Saint-Gilles",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages de fibre optique",
-        "date_heure": "2025-10-06T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages de fibre optique",
+        "date_debut": "2025-10-06T00:00:00+00:00",
+        "date_fin": "2025-12-05T00:00:00+00:00",
+        "date_saisie": "2025-10-06T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3901,16 +4031,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Moulin de Charbonnière",
         "commune": "35278 - Saint-Grégoire",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "d'installation de chantier",
-        "date_heure": "2025-10-07T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "d'installation de chantier",
+        "date_debut": "2025-10-07T00:00:00+00:00",
+        "date_fin": "2026-05-31T00:00:00+00:00",
+        "date_saisie": "2025-10-07T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3949,16 +4081,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue d'Antrain, du n°31 jusqu'à la Place Saint-Jean Eudes",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -3985,16 +4119,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "7 le Brossais",
         "commune": "35032 - Bourgbarré",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages électriques",
-        "date_heure": "2025-10-15T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages électriques",
+        "date_debut": "2025-10-15T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-15T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4197,16 +4333,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Châteaubriant",
         "commune": "35088 - Corps-Nuds",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-16T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-16T00:00:00+00:00",
+        "date_fin": "2025-10-30T00:00:00+00:00",
+        "date_saisie": "2025-10-16T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4331,16 +4469,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Jules Verne",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-17T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-17T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-17T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4363,16 +4503,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Monselet, de la Rue Eugène Pottier jusqu'au 6",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-17T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-17T00:00:00+00:00",
+        "date_fin": "2025-11-07T00:00:00+00:00",
+        "date_saisie": "2025-10-17T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4395,16 +4537,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "à l'intersection de l'Avenue des Buttes de Coësmes et la rue Antoine Becquerel",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4491,16 +4635,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Haut de la Lande",
         "commune": "35266 - Saint-Erblon, 35352 - Vern-sur-Seiche",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2026-01-20T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4607,16 +4753,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue du Breil au droit et à l'avancement des travaux",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-22T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-22T00:00:00+00:00",
+        "date_fin": "2025-11-04T00:00:00+00:00",
+        "date_saisie": "2025-10-22T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4639,16 +4787,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "66 Boulevard de Metz",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages de gaz",
-        "date_heure": "2025-10-22T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages de gaz",
+        "date_debut": "2025-10-22T00:00:00+00:00",
+        "date_fin": "2025-11-07T00:00:00+00:00",
+        "date_saisie": "2025-10-22T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4695,16 +4845,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Mail Germaine Poinso-Chapuis",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-23T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-23T00:00:00+00:00",
+        "date_fin": "2025-11-25T00:00:00+00:00",
+        "date_saisie": "2025-10-23T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4823,16 +4975,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Avenue Chardonnet, au droit des travaux",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -4931,16 +5085,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "les Apprix",
         "commune": "35250 - Saint-Armel",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "Peinture routière sur passage à niveau",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "Peinture routière sur passage à niveau",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5161,16 +5317,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de l'Hôtel de Ville",
         "commune": "35139 - Laillé",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages de fibre optique",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages de fibre optique",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5205,16 +5363,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Bahon Rault",
         "commune": "35238 - Rennes, 35278 - Saint-Grégoire",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5359,16 +5519,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "la Maison Neuve, Le Bois Ricoul,",
         "commune": "35088 - Corps-Nuds",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5447,16 +5609,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Durafour,Rue René Marcille, de la Rue Edouard Jordan jusqu'à la Rue Durafour",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "de réaménagement de voirie",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "de réaménagement de voirie",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-11-21T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5507,16 +5671,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de la Petite Touche, Allée Aline Landais",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5563,16 +5729,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Jean Macé",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-28T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-28T00:00:00+00:00",
+        "date_fin": "2025-11-07T00:00:00+00:00",
+        "date_saisie": "2025-10-28T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5595,16 +5763,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "du 43 au 47 Rue Coutanceau",
         "commune": "35238 - Rennes",
-        "type_coupure": "Mise en impasse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-30T00:00:00+00:00"
+        "type_coupure": "Mise en impasse",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-30T00:00:00+00:00",
+        "date_fin": "2025-10-30T00:00:00+00:00",
+        "date_saisie": "2025-10-30T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5627,16 +5797,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "2 Rue de la Cochardière",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "fouilles d'archéologie préventive",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "fouilles d'archéologie préventive",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5667,16 +5839,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Paris section comprise entre le giratoire Avenue des Peupliers et la Giratoire Rue de la Chalotais",
         "commune": "35051 - Cesson-Sévigné",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-11-03T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5719,16 +5893,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Frépignon",
         "commune": "35245 - Romillé",
-        "type_coupure": "Limitation de vitesse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages électriques",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Limitation de vitesse",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages électriques",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-11-07T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5755,16 +5931,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Armorique, Avenue de Rochester, Avenue Général George S. Patton",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-06-02T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-06-02T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-06-02T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5787,16 +5965,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "7 Boulevard de Beaumont",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages électriques",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages électriques",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5847,16 +6027,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route départementale 21, dans le sens depuis le rond-point RD21/RueSt-Brieuc/Grippail et l'intersection de la bretelle d'entrée RN12 Rennes\nFermeture de la  bretelle de sortie RN12 en provenance de St-Brieuc vers la RD21 (St-Gilles) : fermée au droit de la RD21",
         "commune": "35275 - Saint-Gilles",
-        "type_coupure": "Neutralisation de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-25T00:00:00+00:00"
+        "type_coupure": "Neutralisation de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-25T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-25T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -5879,16 +6061,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "du 21 Rue des Mesliers",
         "commune": "35051 - Cesson-Sévigné",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-25T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-25T00:00:00+00:00",
+        "date_fin": "2025-11-28T00:00:00+00:00",
+        "date_saisie": "2025-08-25T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -6103,16 +6287,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Emeraude :section entre le rond-point de la Bégassière et le rond-point des Marais (RD29)",
         "commune": "35189 - Montgermont",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Interdiction de dépasser",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-26T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-26T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-26T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -6327,16 +6513,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Emeraude :section entre le rond-point de la Bégassière et le rond-point des Marais (RD29)",
         "commune": "35189 - Montgermont",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-26T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-26T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-26T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -6759,16 +6947,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Emeraude  :section entre le rond-point de la Bégassière et le rond-point des Marais (RD29), Rond-point de la Bégassière",
         "commune": "35189 - Montgermont",
-        "type_coupure": "Limitation de vitesse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur voirie",
-        "date_heure": "2025-08-26T00:00:00+00:00"
+        "type_coupure": "Limitation de vitesse",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "2025-08-26T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-26T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -6983,16 +7173,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Emeraude :section entre le rond-point de la Bégassière et le rond-point des Marais (RD29)",
         "commune": "35189 - Montgermont",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-26T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-26T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-26T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7045,16 +7237,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de la Sauvaie au droit et à l'avancement des travaux",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages d'éclairage public",
-        "date_heure": "2025-10-30T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages d'éclairage public",
+        "date_debut": "2025-10-30T00:00:00+00:00",
+        "date_fin": "2025-11-07T00:00:00+00:00",
+        "date_saisie": "2025-10-30T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7109,16 +7303,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard du Duc Jean V, de la Rue Michel Gérard jusqu'au Rond Point Carré An Diskuiz/Bd Patrice Dumaine de la Josserie, Rue Michel Gérard, Rue du Père Grignon de Montfort, depuis la Résidence An Diskuiz jusqu'au Bd Duc Jean V",
         "commune": "35210 - Pacé",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-26T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-26T00:00:00+00:00",
+        "date_fin": "2025-12-26T00:00:00+00:00",
+        "date_saisie": "2025-08-26T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7141,16 +7337,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "4 la Touche, Voie communale 131",
         "commune": "35024 - Betton",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages d'eaux pluviales",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages d'eaux pluviales",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7197,16 +7395,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Jean Macé, du 2 jusqu'à la Rue George Sand",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation à double sens",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages de transport ou distribution de chaleur",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Circulation à double sens",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages de transport ou distribution de chaleur",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-11-05T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7261,16 +7461,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Place Lucien Daniel",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "travaux de renouvellement, d’extension et de modification du réseau de distribution d’eau potable",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "travaux de renouvellement, d’extension et de modification du réseau de distribution d’eau potable",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2025-12-12T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7317,16 +7519,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Piste cyclable Châteaugiron, du Boulevard Léon Bourgeois jusqu'à la rocade",
         "commune": "35238 - Rennes",
-        "type_coupure": "Voie réservée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-10T00:00:00+00:00"
+        "type_coupure": "Voie réservée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-10T00:00:00+00:00",
+        "date_fin": "2026-06-26T00:00:00+00:00",
+        "date_saisie": "2025-09-10T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7349,16 +7553,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Vern, de la Rue Le Dantec jusqu'au 95",
         "commune": "35238 - Rennes",
-        "type_coupure": "Neutralisation de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2024-09-23T00:00:00+00:00"
+        "type_coupure": "Neutralisation de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2024-09-23T00:00:00+00:00",
+        "date_fin": "2026-08-14T00:00:00+00:00",
+        "date_saisie": "2024-09-23T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7415,16 +7621,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard René Laënnec, de la Rue Dupont des Loges jusqu'à la Rue Saint-Hélier",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-11-04T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -7897,16 +8105,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Avenue de Rochester",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de tourner",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-06-02T00:00:00+00:00"
+        "type_coupure": "Interdiction de tourner",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-06-02T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-06-02T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -8981,16 +9191,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard d'Armorique",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de tourner",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-06-02T00:00:00+00:00"
+        "type_coupure": "Interdiction de tourner",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-06-02T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-06-02T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9035,16 +9247,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de Plaisance, de la Rue Armand Rébillon jusqu'à la Rue Victor Ségalen",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interdiction de stationnement",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "d'aménagement de chaussée",
-        "date_heure": "2025-10-06T00:00:00+00:00"
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "d'aménagement de chaussée",
+        "date_debut": "2025-10-06T00:00:00+00:00",
+        "date_fin": "2025-12-01T00:00:00+00:00",
+        "date_saisie": "2025-10-06T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9095,16 +9309,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Boulevard Villebois Mareuil",
         "commune": "35238 - Rennes",
-        "type_coupure": "Fermeture sens nord-sud",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "REV Chantepie",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Fermeture sens nord-sud",
+        "sens_circulation": "",
+        "commentaire": "REV Chantepie",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9127,16 +9343,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de l'Alma, du Boulevard de Beaumont jusqu'à la Rue Gurvand",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages électriques",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages électriques",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9159,16 +9377,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Jean Guéhenno, du Boulevard de la Duchesse Anne jusqu'à la Rue George Sand",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-11-04T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9525,16 +9745,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Louvrel, RD 36",
         "commune": "35047 - Bruz, 35363 - Pont-Péan",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur voirie",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-10-30T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9585,16 +9807,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route départementale 21, dans le sens depuis le rond-point RD21/RueSt-Brieuc/Grippail et l'intersection de la bretelle d'entrée RN12 Rennes\nFermeture de la  bretelle de sortie RN12 en provenance de St-Brieuc vers la RD21 (St-Gilles) : fermée au droit de la RD21",
         "commune": "35275 - Saint-Gilles",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-25T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-25T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-25T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9625,16 +9849,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Parking au sud de la Mairie",
         "commune": "35139 - Laillé",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-07-07T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-07-07T00:00:00+00:00",
+        "date_fin": "2025-11-30T00:00:00+00:00",
+        "date_saisie": "2025-07-07T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9657,16 +9883,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue de la Chalotais section comprise entre le Rue du Manoir et le rond-point de la Frinière",
         "commune": "35051 - Cesson-Sévigné, 35334 - Thorigné-Fouillard",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-27T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-27T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-27T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9745,16 +9973,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "la Douettée",
         "commune": "35032 - Bourgbarré",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages d'eau potable",
-        "date_heure": "2025-10-30T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages d'eau potable",
+        "date_debut": "2025-10-30T00:00:00+00:00",
+        "date_fin": "2025-11-30T00:00:00+00:00",
+        "date_saisie": "2025-10-30T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9787,16 +10017,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "du 63 au 71 Boulevard de Metz",
         "commune": "35238 - Rennes",
-        "type_coupure": "Neutralisation de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "d'installation de chantier",
-        "date_heure": "2025-02-03T00:00:00+00:00"
+        "type_coupure": "Neutralisation de voie",
+        "sens_circulation": "",
+        "commentaire": "d'installation de chantier",
+        "date_debut": "2025-02-03T00:00:00+00:00",
+        "date_fin": "2025-11-30T00:00:00+00:00",
+        "date_saisie": "2025-02-03T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9833,16 +10065,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route départementale 224 : section depuis la limite d'agglomération de Le Rheu jusqu'au carrefour à feux RN24, Route départementale 129 : intersection au lieudit Le Plessix Saucourt et la RN24",
         "commune": "35240 - le Rheu",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Circulation interdite",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-02-24T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-02-24T00:00:00+00:00",
+        "date_fin": "2026-05-26T00:00:00+00:00",
+        "date_saisie": "2025-02-24T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9885,16 +10119,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Nantaise, de la Place Maréchal Foch jusqu'au 10",
         "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Rétrécissement temporaire de largeur de voie",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "pour les entreprises BARTHÉLÉMY / ASPO / MARC / CRÉZÉ / DLE / BOUYGUES ES / JOUBREL, afin de procéder à la réalisation de travaux d'aménagement des abords des remparts des Portes Mordelaises",
-        "date_heure": "2025-08-01T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "pour les entreprises BARTHÉLÉMY / ASPO / MARC / CRÉZÉ / DLE / BOUYGUES ES / JOUBREL, afin de procéder à la réalisation de travaux d'aménagement des abords des remparts des Portes Mordelaises",
+        "date_debut": "2025-08-01T00:00:00+00:00",
+        "date_fin": "2025-11-28T00:00:00+00:00",
+        "date_saisie": "2025-08-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -9937,16 +10173,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Nantaise, de la Place Maréchal Foch jusqu'au 10",
         "commune": "35238 - Rennes",
-        "type_coupure": "Interruption de circulation travaux",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "pour les entreprises BARTHÉLÉMY / ASPO / MARC / CRÉZÉ / DLE / BOUYGUES ES / JOUBREL, afin de procéder à la réalisation de travaux d'aménagement des abords des remparts des Portes Mordelaises",
-        "date_heure": "2025-08-01T00:00:00+00:00"
+        "type_coupure": "Interruption de circulation travaux",
+        "sens_circulation": "",
+        "commentaire": "pour les entreprises BARTHÉLÉMY / ASPO / MARC / CRÉZÉ / DLE / BOUYGUES ES / JOUBREL, afin de procéder à la réalisation de travaux d'aménagement des abords des remparts des Portes Mordelaises",
+        "date_debut": "2025-08-01T00:00:00+00:00",
+        "date_fin": "2025-11-28T00:00:00+00:00",
+        "date_saisie": "2025-08-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10105,16 +10343,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue du Papier Timbré, par phases successives à l'avancement des travaux",
         "commune": "35238 - Rennes",
-        "type_coupure": "Mise en impasse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-08T00:00:00+00:00"
+        "type_coupure": "Mise en impasse",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-08-08T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-08-08T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10137,16 +10377,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "le Bois de Betton",
         "commune": "35024 - Betton",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "d'implantation et déroulage de câbles",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "d'implantation et déroulage de câbles",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2025-11-28T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10361,16 +10603,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Place Lucien Daniel, douze emplacements, pour l'installation de la base-vie, Rue Edouard Jordan, Rue Durafour, Rue René Marcille",
         "commune": "35238 - Rennes",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "travaux de renouvellement, d’extension et de modification du réseau de distribution d’eau potable",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "travaux de renouvellement, d’extension et de modification du réseau de distribution d’eau potable",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2025-12-12T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10457,16 +10701,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route départementale 77,  de Pierrefitte jusqu'à la Roche Marguerite",
         "commune": "35047 - Bruz",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "aménagement du REV Bruz/Laillé",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "aménagement du REV Bruz/Laillé",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10569,16 +10815,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Surcouf",
         "commune": "35047 - Bruz",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10621,16 +10869,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue d'Antrain, de la Place Saint-Jean Eudes jusqu'à la Rue de Bonne Nouvelle. Par sections, à l'avancement.",
         "commune": "35238 - Rennes",
-        "type_coupure": "Mise en impasse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "de réaménagement de voirie",
-        "date_heure": "2025-09-01T00:00:00+00:00"
+        "type_coupure": "Mise en impasse",
+        "sens_circulation": "",
+        "commentaire": "de réaménagement de voirie",
+        "date_debut": "2025-09-01T00:00:00+00:00",
+        "date_fin": "2026-04-30T00:00:00+00:00",
+        "date_saisie": "2025-09-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10705,16 +10955,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue du Pré du Bois",
         "commune": "35238 - Rennes",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-15T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-15T00:00:00+00:00",
+        "date_fin": "2025-11-19T00:00:00+00:00",
+        "date_saisie": "2025-09-15T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10747,16 +10999,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "face au 1 Avenue Georges-Henri Rivière,face au 18 Rue Jean-François Millet",
         "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Circulation alternée",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "sur réseaux ou ouvrages d'eau potable",
-        "date_heure": "2025-09-29T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages d'eau potable",
+        "date_debut": "2025-09-29T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-09-29T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10811,16 +11065,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue des Pins",
         "commune": "35240 - le Rheu",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
         "type_coupure": "Circulation à double sens",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-29T00:00:00+00:00"
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-29T00:00:00+00:00",
+        "date_fin": "2025-11-05T00:00:00+00:00",
+        "date_saisie": "2025-09-29T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10875,16 +11131,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue des Pins",
         "commune": "35240 - le Rheu",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-29T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-29T00:00:00+00:00",
+        "date_fin": "2025-11-05T00:00:00+00:00",
+        "date_saisie": "2025-09-29T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10931,16 +11189,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Voie communale 206,  de le Vallon jusqu'à la Bézalais, la Reboursais",
         "commune": "35206 - Noyal-Châtillon-sur-Seiche",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-09-29T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-09-29T00:00:00+00:00",
+        "date_fin": "2025-11-28T00:00:00+00:00",
+        "date_saisie": "2025-09-29T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -10963,16 +11223,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "du 6 Rue de Rennes",
         "commune": "35039 - Brécé",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-01T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-01T00:00:00+00:00",
+        "date_fin": "2025-10-30T00:00:00+00:00",
+        "date_saisie": "2025-10-01T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11007,16 +11269,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Route de Domloup section comprise entre la rue du Perron et la Rue de la Chevalerie",
         "commune": "35051 - Cesson-Sévigné",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11043,16 +11307,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "13 Rue des Monts d'Arrée",
         "commune": "35250 - Saint-Armel",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur voirie",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-11-28T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11305,16 +11571,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "la Cornillère - rue des Entrepreneurs selon les trois phases",
         "commune": "35120 - Gévezé, 35177 - la Mézière",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-13T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-13T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-10-13T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11389,16 +11657,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "au lieudit :  la Touche Huet",
         "commune": "35120 - Gévezé",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "sur réseaux ou ouvrages de télécommunications",
-        "date_heure": "2025-10-15T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages de télécommunications",
+        "date_debut": "2025-10-15T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-15T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11433,16 +11703,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "34 Rue Jean-Baptiste Godin, voie impasse et parking",
         "commune": "35275 - Saint-Gilles",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-15T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-15T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-15T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11489,16 +11761,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "au nord de la  Rue Allory",
         "commune": "35210 - Pacé",
-        "type_coupure": "Circulation alternée",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11521,16 +11795,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "3 Rue François Broussais",
         "commune": "35238 - Rennes",
-        "type_coupure": "Mise en impasse",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "de réfection de chaussée",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Mise en impasse",
+        "sens_circulation": "",
+        "commentaire": "de réfection de chaussée",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11553,16 +11829,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "27 Avenue des Peupliers",
         "commune": "35051 - Cesson-Sévigné",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "de raccordement",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "de raccordement",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-10-31T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11697,16 +11975,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Chemin de la Ry",
         "commune": "35250 - Saint-Armel",
-        "type_coupure": "Circulation interdite",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-12-15T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11729,16 +12009,18 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue Clément Ader",
         "commune": "35051 - Cesson-Sévigné",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "d'hydrocurage et inspection télévisée",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "d'hydrocurage et inspection télévisée",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     },
     {
@@ -11761,21 +12043,23 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
         "route": "Rue des Landes de Vaux",
         "commune": "35051 - Cesson-Sévigné",
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "etat": "Route fermée",
         "cause": "Travaux",
-        "priorite": "Moyenne",
         "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-10-20T00:00:00+00:00"
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "2025-10-20T00:00:00+00:00",
+        "date_fin": "2025-12-19T00:00:00+00:00",
+        "date_saisie": "2025-10-20T00:00:00+00:00",
+        "gestionnaire": "Rennes Métropole"
       }
     }
   ],
   "metadata": {
-    "generated": "2025-10-29T13:38:44.019Z",
+    "generated": "2025-10-29T13:52:16.540Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 142,
     "sources": {
