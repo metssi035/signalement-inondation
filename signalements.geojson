@@ -724,34 +724,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.1638041347194505,
-          47.2745712559495
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D213 / Saint-Brevin-les-Pins",
-        "commune": "Saint-Nazaire / Saint-Brevin",
-        "etat": "Accident",
-        "cause": "Accident",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Accident",
-        "sens_circulation": "",
-        "commentaire": "Accident",
-        "date_debut": "29/10/2025 à 17h09",
-        "date_fin": "",
-        "date_saisie": "29/10/2025 à 17h09",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -2.1779154525742417,
           47.296822887133565
         ]
@@ -12421,12 +12393,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-10-29T17:44:13.435Z",
+    "generated": "2025-10-29T18:37:37.096Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 144,
+    "total_count": 143,
     "sources": {
       "grist_35": 21,
-      "cd44": 23,
+      "cd44": 22,
       "rennes_metropole": 100
     }
   }
