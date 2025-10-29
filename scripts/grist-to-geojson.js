@@ -155,12 +155,7 @@ function gristToFeature(record) {
                 priorite: record.fields.Priorite || 'Moyenne',
                 statut: record.fields.Statut || 'Actif',
                 description: record.fields.Description || '',
-                date_heure: record.fields.Date_heure || '',
-                // ✅ Pas de segments pour Grist
-                is_main_segment: true,
-                parent_id: null,
-                segment_number: null,
-                total_segments: 1
+                date_heure: record.fields.Date_heure || ''
             }
         };
     } catch (e) {
@@ -193,12 +188,7 @@ function cd44ToFeature(item) {
                 priorite: 'Moyenne',
                 statut: 'Actif',
                 description: item.ligne1 || '',
-                date_heure: item.datepublication || '',
-                // ✅ Pas de segments pour CD44
-                is_main_segment: true,
-                parent_id: null,
-                segment_number: null,
-                total_segments: 1
+                date_heure: item.datepublication || ''
             }
         };
     } catch (e) {
@@ -206,78 +196,46 @@ function cd44ToFeature(item) {
     }
 }
 
-// ✅ NOUVEAU : Convertir Rennes Métropole avec gestion des segments
+// ✅ SOLUTION 1 : Garder le MultiLineString tel quel
 function rennesMetropoleToFeatures(item) {
-    const features = [];
-    
     try {
-        let geometries = [];
+        let geometry = null;
         
         if (item.geo_shape && item.geo_shape.geometry) {
-            const geom = item.geo_shape.geometry;
-            if (geom.type === 'Point') {
-                geometries.push({
-                    type: 'Point',
-                    coordinates: geom.coordinates
-                });
-            } else if (geom.type === 'LineString') {
-                geometries.push({
-                    type: 'LineString',
-                    coordinates: geom.coordinates
-                });
-            } else if (geom.type === 'MultiLineString') {
-                // ✅ Découper pour mviewer (qui ne supporte pas MultiLineString)
-                geom.coordinates.forEach(lineCoords => {
-                    geometries.push({
-                        type: 'LineString',
-                        coordinates: lineCoords
-                    });
-                });
-            }
+            // ✅ Garder la géométrie originale (Point, LineString, ou MultiLineString)
+            geometry = item.geo_shape.geometry;
         } else if (item.geo_point_2d) {
-            geometries.push({
+            geometry = {
                 type: 'Point',
                 coordinates: [item.geo_point_2d.lon, item.geo_point_2d.lat]
-            });
+            };
         }
         
-        if (geometries.length === 0) return [];
+        if (!geometry) return [];
         
-        // ✅ Créer les features avec marquage du segment principal
-        const parentId = `rm-${item.recordid}`;
-        
-        geometries.forEach((geometry, idx) => {
-            features.push({
-                type: 'Feature',
-                geometry: geometry,
-                properties: {
-                    id: `${parentId}-${idx}`,
-                    // ✅ NOUVEAU : Identifiants pour grouper
-                    parent_id: parentId,
-                    is_main_segment: idx === 0,  // Seul le 1er segment sera affiché
-                    segment_number: idx + 1,
-                    total_segments: geometries.length,
-                    
-                    source: 'Rennes Métropole',
-                    gestionnaire: 'Rennes Métropole',
-                    administration: 'Rennes Métropole',
-                    route: item.localisation || item.rue || '',
-                    commune: item.commune || 'Rennes',
-                    type_coupure: item.type || '',
-                    cause: 'Travaux',
-                    priorite: 'Moyenne',
-                    statut: 'Actif',
-                    description: item.libelle || '',
-                    date_heure: item.date_deb || ''
-                }
-            });
-        });
+        // ✅ UN SEUL objet avec toute la géométrie
+        return [{
+            type: 'Feature',
+            geometry: geometry,
+            properties: {
+                id: `rm-${item.recordid}`,
+                source: 'Rennes Métropole',
+                gestionnaire: 'Rennes Métropole',
+                administration: 'Rennes Métropole',
+                route: item.localisation || item.rue || '',
+                commune: item.commune || 'Rennes',
+                type_coupure: item.type || '',
+                cause: 'Travaux',
+                priorite: 'Moyenne',
+                statut: 'Actif',
+                description: item.libelle || '',
+                date_heure: item.date_deb || ''
+            }
+        }];
         
     } catch (e) {
         return [];
     }
-    
-    return features;
 }
 
 // Fusion principale
@@ -341,6 +299,7 @@ async function mergeSources() {
             stats: {
                 points: features.filter(f => f.geometry.type === 'Point').length,
                 lines: features.filter(f => f.geometry.type === 'LineString').length,
+                multilines: features.filter(f => f.geometry.type === 'MultiLineString').length,
                 by_source: {
                     grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
                     cd44: features.filter(f => f.properties.source === 'CD44').length,
@@ -358,7 +317,8 @@ async function mergeSources() {
         console.log(`   - Rennes Métropole: ${rennesMetropoleRecords.length}`);
         console.log(`   - Total features: ${features.length}`);
         console.log(`   - Points: ${metadata.stats.points}`);
-        console.log(`   - Lignes: ${metadata.stats.lines}`);
+        console.log(`   - LineStrings: ${metadata.stats.lines}`);
+        console.log(`   - MultiLineStrings: ${metadata.stats.multilines}`);
         
     } catch (error) {
         console.error('❌ Erreur fusion:', error.message);
