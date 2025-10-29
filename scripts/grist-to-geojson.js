@@ -146,16 +146,18 @@ function gristToFeature(record) {
             properties: {
                 id: record.id,
                 source: 'Grist 35',
-                gestionnaire: record.fields.Gestionnaire || '',
-                administration: record.fields.Gestionnaire || '',
                 route: record.fields.Route || '',
                 commune: record.fields.Commune || '',
-                type_coupure: record.fields.Type_coupure || '',
-                cause: cause,
-                priorite: record.fields.Priorite || 'Moyenne',
+                etat: record.fields.Type_coupure || 'Route fermée',
+                cause: cause || 'Inondation',
                 statut: record.fields.Statut || 'Actif',
-                description: record.fields.Description || '',
-                date_heure: record.fields.Date_heure || ''
+                type_coupure: record.fields.Type_coupure || '',
+                sens_circulation: record.fields.sens_circulation || '',
+                commentaire: record.fields.Description || '',
+                date_debut: record.fields.Date_heure || '',
+                date_fin: record.fields.Date_fin || '',
+                date_saisie: record.fields.Date_heure || '',
+                gestionnaire: record.fields.Gestionnaire || ''
             }
         };
     } catch (e) {
@@ -179,16 +181,18 @@ function cd44ToFeature(item) {
             properties: {
                 id: `cd44-${item.recordid}`,
                 source: 'CD44',
-                gestionnaire: 'CD44',
-                administration: 'CD44',
                 route: route,
                 commune: item.ligne3 || 'Commune',
-                type_coupure: item.type || '',
+                etat: item.type || 'Route fermée',
                 cause: item.nature || '',
-                priorite: 'Moyenne',
                 statut: 'Actif',
-                description: item.ligne1 || '',
-                date_heure: item.datepublication || ''
+                type_coupure: item.type || '',
+                sens_circulation: '',
+                commentaire: item.ligne1 || '',
+                date_debut: item.datepublication || '',
+                date_fin: '',
+                date_saisie: item.datepublication || '',
+                gestionnaire: 'CD44'
             }
         };
     } catch (e) {
@@ -196,13 +200,12 @@ function cd44ToFeature(item) {
     }
 }
 
-// ✅ SOLUTION 1 : Garder le MultiLineString tel quel
+// Convertir Rennes Métropole
 function rennesMetropoleToFeatures(item) {
     try {
         let geometry = null;
         
         if (item.geo_shape && item.geo_shape.geometry) {
-            // ✅ Garder la géométrie originale (Point, LineString, ou MultiLineString)
             geometry = item.geo_shape.geometry;
         } else if (item.geo_point_2d) {
             geometry = {
@@ -213,23 +216,24 @@ function rennesMetropoleToFeatures(item) {
         
         if (!geometry) return [];
         
-        // ✅ UN SEUL objet avec toute la géométrie
         return [{
             type: 'Feature',
             geometry: geometry,
             properties: {
                 id: `rm-${item.recordid}`,
                 source: 'Rennes Métropole',
-                gestionnaire: 'Rennes Métropole',
-                administration: 'Rennes Métropole',
                 route: item.localisation || item.rue || '',
                 commune: item.commune || 'Rennes',
-                type_coupure: item.type || '',
+                etat: 'Route fermée',
                 cause: 'Travaux',
-                priorite: 'Moyenne',
                 statut: 'Actif',
-                description: item.libelle || '',
-                date_heure: item.date_deb || ''
+                type_coupure: item.type || '',
+                sens_circulation: '',
+                commentaire: item.libelle || '',
+                date_debut: item.date_deb || '',
+                date_fin: item.date_fin || '',
+                date_saisie: item.date_deb || '',
+                gestionnaire: 'Rennes Métropole'
             }
         }];
         
