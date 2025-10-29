@@ -103,7 +103,7 @@ async function fetchCD44Data() {
     }
 }
 
-// Récupérer Rennes Métropole (avec node-fetch comme le HTML)
+// Récupérer Rennes Métropole
 async function fetchRennesMetropoleData() {
     try {
         console.log('🔗 [Rennes Métropole] Récupération...');
@@ -147,6 +147,7 @@ function gristToFeature(record) {
                 id: record.id,
                 source: 'Grist 35',
                 gestionnaire: record.fields.Gestionnaire || '',
+                administration: record.fields.Gestionnaire || '',
                 route: record.fields.Route || '',
                 commune: record.fields.Commune || '',
                 type_coupure: record.fields.Type_coupure || '',
@@ -154,7 +155,12 @@ function gristToFeature(record) {
                 priorite: record.fields.Priorite || 'Moyenne',
                 statut: record.fields.Statut || 'Actif',
                 description: record.fields.Description || '',
-                date_heure: record.fields.Date_heure || ''
+                date_heure: record.fields.Date_heure || '',
+                // ✅ Pas de segments pour Grist
+                is_main_segment: true,
+                parent_id: null,
+                segment_number: null,
+                total_segments: 1
             }
         };
     } catch (e) {
@@ -179,6 +185,7 @@ function cd44ToFeature(item) {
                 id: `cd44-${item.recordid}`,
                 source: 'CD44',
                 gestionnaire: 'CD44',
+                administration: 'CD44',
                 route: route,
                 commune: item.ligne3 || 'Commune',
                 type_coupure: item.type || '',
@@ -186,7 +193,12 @@ function cd44ToFeature(item) {
                 priorite: 'Moyenne',
                 statut: 'Actif',
                 description: item.ligne1 || '',
-                date_heure: item.datepublication || ''
+                date_heure: item.datepublication || '',
+                // ✅ Pas de segments pour CD44
+                is_main_segment: true,
+                parent_id: null,
+                segment_number: null,
+                total_segments: 1
             }
         };
     } catch (e) {
@@ -194,7 +206,7 @@ function cd44ToFeature(item) {
     }
 }
 
-// Convertir Rennes Métropole - CONVERTIR MultiLineString en plusieurs LineString
+// ✅ NOUVEAU : Convertir Rennes Métropole avec gestion des segments
 function rennesMetropoleToFeatures(item) {
     const features = [];
     
@@ -214,7 +226,7 @@ function rennesMetropoleToFeatures(item) {
                     coordinates: geom.coordinates
                 });
             } else if (geom.type === 'MultiLineString') {
-                // Convertir chaque ligne du MultiLineString en feature séparée
+                // ✅ Découper pour mviewer (qui ne supporte pas MultiLineString)
                 geom.coordinates.forEach(lineCoords => {
                     geometries.push({
                         type: 'LineString',
@@ -231,15 +243,24 @@ function rennesMetropoleToFeatures(item) {
         
         if (geometries.length === 0) return [];
         
-        // Créer une feature pour chaque géométrie
+        // ✅ Créer les features avec marquage du segment principal
+        const parentId = `rm-${item.recordid}`;
+        
         geometries.forEach((geometry, idx) => {
             features.push({
                 type: 'Feature',
                 geometry: geometry,
                 properties: {
-                    id: `rm-${item.recordid}-${idx}`,
+                    id: `${parentId}-${idx}`,
+                    // ✅ NOUVEAU : Identifiants pour grouper
+                    parent_id: parentId,
+                    is_main_segment: idx === 0,  // Seul le 1er segment sera affiché
+                    segment_number: idx + 1,
+                    total_segments: geometries.length,
+                    
                     source: 'Rennes Métropole',
                     gestionnaire: 'Rennes Métropole',
+                    administration: 'Rennes Métropole',
                     route: item.localisation || item.rue || '',
                     commune: item.commune || 'Rennes',
                     type_coupure: item.type || '',
