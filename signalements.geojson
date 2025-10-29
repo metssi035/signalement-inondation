@@ -16185,110 +16185,6 @@
         "type": "LineString",
         "coordinates": [
           [
-            -1.83791498285296,
-            48.16339904251084
-          ],
-          [
-            -1.837022365965204,
-            48.16285893049707
-          ],
-          [
-            -1.836558687817112,
-            48.162603057139826
-          ],
-          [
-            -1.836013405873479,
-            48.16217538189829
-          ],
-          [
-            -1.835581111518774,
-            48.1617554734499
-          ],
-          [
-            -1.83526409791691,
-            48.16126813797954
-          ],
-          [
-            -1.83503036000872,
-            48.16077104532646
-          ],
-          [
-            -1.834924814003597,
-            48.16044379588966
-          ],
-          [
-            -1.83467539388693,
-            48.158683207913285
-          ]
-        ]
-      },
-      "properties": {
-        "id": "rm-undefined-0",
-        "parent_id": "rm-undefined",
-        "is_main_segment": true,
-        "segment_number": 1,
-        "total_segments": 1,
-        "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
-        "route": "Route départementale 21, dans le sens depuis le rond-point RD21/RueSt-Brieuc/Grippail et l'intersection de la bretelle d'entrée RN12 Rennes\nFermeture de la  bretelle de sortie RN12 en provenance de St-Brieuc vers la RD21 (St-Gilles) : fermée au droit de la RD21",
-        "commune": "35275 - Saint-Gilles",
-        "type_coupure": "Circulation interdite",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-08-25T00:00:00+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            -1.721776061440317,
-            47.978317277511195
-          ],
-          [
-            -1.721218824668999,
-            47.978312059147775
-          ],
-          [
-            -1.721217074094114,
-            47.97845363648774
-          ],
-          [
-            -1.721785866910853,
-            47.978459083129785
-          ]
-        ]
-      },
-      "properties": {
-        "id": "rm-undefined-0",
-        "parent_id": "rm-undefined",
-        "is_main_segment": true,
-        "segment_number": 1,
-        "total_segments": 1,
-        "source": "Rennes Métropole",
-        "gestionnaire": "Rennes Métropole",
-        "administration": "Rennes Métropole",
-        "route": "Parking au sud de la Mairie",
-        "commune": "35139 - Laillé",
-        "type_coupure": "Circulation interdite",
-        "cause": "Travaux",
-        "priorite": "Moyenne",
-        "statut": "Actif",
-        "description": "",
-        "date_heure": "2025-07-07T00:00:00+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
             -1.597219164846404,
             48.12975442789658
           ],
@@ -19724,10 +19620,106 @@
         "description": "",
         "date_heure": "2025-10-20T00:00:00+00:00"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.610719709548932,
+            48.12718336029739
+          ],
+          [
+            -1.610542368389242,
+            48.127128523602934
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rm-undefined-0",
+        "parent_id": "rm-undefined",
+        "is_main_segment": true,
+        "segment_number": 1,
+        "total_segments": 1,
+        "source": "Rennes Métropole",
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole",
+        "route": "Rue du Douet",
+        "commune": "35051 - Cesson-Sévigné",
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "cause": "Travaux",
+        "priorite": "Moyenne",
+        "statut": "Actif",
+        "description": "",
+        "date_heure": "2025-10-20T00:00:00+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.83791498285296,
+            48.16339904251084
+          ],
+          [
+            -1.837022365965204,
+            48.16285893049707
+          ],
+          [
+            -1.836558687817112,
+            48.162603057139826
+          ],
+          [
+            -1.836013405873479,
+            48.16217538189829
+          ],
+          [
+            -1.835581111518774,
+            48.1617554734499
+          ],
+          [
+            -1.83526409791691,
+            48.16126813797954
+          ],
+          [
+            -1.83503036000872,
+            48.16077104532646
+          ],
+          [
+            -1.834924814003597,
+            48.16044379588966
+          ],
+          [
+            -1.83467539388693,
+            48.158683207913285
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rm-undefined-0",
+        "parent_id": "rm-undefined",
+        "is_main_segment": true,
+        "segment_number": 1,
+        "total_segments": 1,
+        "source": "Rennes Métropole",
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole",
+        "route": "Route départementale 21, dans le sens depuis le rond-point RD21/RueSt-Brieuc/Grippail et l'intersection de la bretelle d'entrée RN12 Rennes\nFermeture de la  bretelle de sortie RN12 en provenance de St-Brieuc vers la RD21 (St-Gilles) : fermée au droit de la RD21",
+        "commune": "35275 - Saint-Gilles",
+        "type_coupure": "Circulation interdite",
+        "cause": "Travaux",
+        "priorite": "Moyenne",
+        "statut": "Actif",
+        "description": "",
+        "date_heure": "2025-08-25T00:00:00+00:00"
+      }
     }
   ],
   "metadata": {
-    "generated": "2025-10-29T10:28:51.347Z",
+    "generated": "2025-10-29T10:48:23.520Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 458,
     "sources": {
