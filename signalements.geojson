@@ -836,62 +836,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.1779154525742417,
-          47.296822887133565
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D213 / Montoir-de-Bretagne",
-        "commune": "Saint-Brevin vers Saint-Nazaire",
-        "etat": "Ouvrage d'art",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Ouvrage d'art",
-        "sens_circulation": "",
-        "commentaire": "Travaux sur ouvrage d'art",
-        "date_debut": "29/10/2025 à 05h18",
-        "date_fin": "",
-        "date_saisie": "29/10/2025 à 05h18",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1011315760383624,
-          47.331848333802256
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D100 / Donges",
-        "commune": "Donges / Montoir-de-Bretagne",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "28/10/2025 à 11h02",
-        "date_fin": "",
-        "date_saisie": "28/10/2025 à 11h02",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.2508602817771286,
           47.074598726963025
         ]
@@ -9631,12 +9575,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-10-31T22:43:07.110Z",
+    "generated": "2025-10-31T23:22:56.304Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 143,
+    "total_count": 141,
     "sources": {
       "grist_35": 21,
-      "cd44": 22,
+      "cd44": 20,
       "rennes_metropole": 100
     }
   }
