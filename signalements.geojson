@@ -724,6 +724,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Bac de réserve",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Bac de réserve",
+        "sens_circulation": "",
+        "commentaire": "Bac de réserve",
+        "date_debut": "31/10/2025 à 14h05",
+        "date_fin": "",
+        "date_saisie": "31/10/2025 à 14h05",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.282724158481199,
           47.125501876575015
         ]
@@ -968,34 +996,6 @@
         "date_debut": "20/10/2025 à 06h00",
         "date_fin": "",
         "date_saisie": "20/10/2025 à 06h00",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Bac de réserve",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bac de réserve",
-        "sens_circulation": "",
-        "commentaire": "Bac de réserve",
-        "date_debut": "17/10/2025 à 15h10",
-        "date_fin": "",
-        "date_saisie": "17/10/2025 à 15h10",
         "gestionnaire": "CD44"
       }
     },
@@ -9631,7 +9631,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-10-31T13:34:53.807Z",
+    "generated": "2025-10-31T14:27:15.663Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 143,
     "sources": {
