@@ -780,62 +780,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.282724158481199,
-          47.125501876575015
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Travaux de réfection de chaussée",
-        "commune": "D149 - Gorges",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "31/10/2025 à 04h57",
-        "date_fin": "",
-        "date_saisie": "31/10/2025 à 04h57",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.282769070040469,
-          47.125489051767694
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D254 / Mouzillon",
-        "commune": "Mouzillon / Gorges",
-        "etat": "Réfection de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Réfection de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Travaux de réfection de chaussée",
-        "date_debut": "31/10/2025 à 04h57",
-        "date_fin": "",
-        "date_saisie": "31/10/2025 à 04h57",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.7194768037047006,
           47.138570062824165
         ]
@@ -9591,12 +9535,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-01T22:41:08.407Z",
+    "generated": "2025-11-01T23:21:53.099Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 141,
+    "total_count": 139,
     "sources": {
       "grist_35": 21,
-      "cd44": 20,
+      "cd44": 18,
       "rennes_metropole": 100
     }
   }
