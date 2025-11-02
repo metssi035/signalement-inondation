@@ -724,6 +724,146 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.7534205040926696,
+          47.20451320069573
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Couëron / Le Pellerin",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Risque d'arrêt cause Marée haute",
+        "date_debut": "11/02/2025 à 11h00",
+        "date_fin": "",
+        "date_saisie": "11/02/2025 à 11h00",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7534205040926696,
+          47.20451320069573
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Couëron / Le Pellerin",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Risque d'arrêt cause Marée haute",
+        "date_debut": "11/02/2025 à 11h00",
+        "date_fin": "",
+        "date_saisie": "11/02/2025 à 11h00",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7534205040926696,
+          47.20451320069573
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Couëron / Le Pellerin",
+        "etat": "Autre",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Autre",
+        "sens_circulation": "",
+        "commentaire": "Arrêt cause",
+        "date_debut": "11/02/2025 à 10h59",
+        "date_fin": "",
+        "date_saisie": "11/02/2025 à 10h59",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7534205040926696,
+          47.20451320069573
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Couëron / Le Pellerin",
+        "etat": "Autre",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Autre",
+        "sens_circulation": "",
+        "commentaire": "Arrêt cause travaux voirie",
+        "date_debut": "11/02/2025 à 10h57",
+        "date_fin": "",
+        "date_saisie": "11/02/2025 à 10h57",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7534205040926696,
+          47.20451320069573
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Couëron / Le Pellerin",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Risque d'arrêt cause Marée haute",
+        "date_debut": "11/02/2025 à 10h54",
+        "date_fin": "",
+        "date_saisie": "11/02/2025 à 10h54",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.0296761823388727,
           47.44610587634307
         ]
@@ -11211,12 +11351,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-02T10:41:37.258Z",
+    "generated": "2025-11-02T11:18:35.023Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 139,
+    "total_count": 144,
     "sources": {
       "grist_35": 21,
-      "cd44": 18,
+      "cd44": 23,
       "rennes_metropole": 100
     }
   }
