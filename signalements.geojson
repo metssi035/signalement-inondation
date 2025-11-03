@@ -1434,62 +1434,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.105080989600077,
-          47.35636363992174
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D773 / Donges",
-        "commune": "Besné / Donges",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "11/03/2025 à 07h06",
-        "date_fin": "",
-        "date_saisie": "11/03/2025 à 07h06",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2508602817771286,
-          47.074598726963025
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D88 / Gétigné",
-        "commune": "Gétigné / Clisson",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "11/03/2025 à 07h06",
-        "date_fin": "",
-        "date_saisie": "11/03/2025 à 07h06",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.7534205040926696,
           47.20451320069573
         ]
@@ -1678,34 +1622,6 @@
         "date_debut": "31/10/2025 à 14h05",
         "date_fin": "",
         "date_saisie": "31/10/2025 à 14h05",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7194768037047006,
-          47.138570062824165
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D751 / Saint-Léger-les-Vignes",
-        "commune": "St Léger vers Port St Pere",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "31/10/2025 à 04h50",
-        "date_fin": "",
-        "date_saisie": "31/10/2025 à 04h50",
         "gestionnaire": "CD44"
       }
     },
@@ -1930,34 +1846,6 @@
         "date_debut": "07/04/2024 à 07h24",
         "date_fin": "",
         "date_saisie": "07/04/2024 à 07h24",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5390604287433998,
-          47.11189364107012
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D178 / Pont-Saint-Martin",
-        "commune": "Machecoul vers Nantes",
-        "etat": "Bouchon",
-        "cause": "Bouchon",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bouchon",
-        "sens_circulation": "",
-        "commentaire": "Bouchon sur 3.6 km",
-        "date_debut": "07/03/2024 à 08h30",
-        "date_fin": "",
-        "date_saisie": "07/03/2024 à 08h30",
         "gestionnaire": "CD44"
       }
     },
@@ -11355,12 +11243,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-03T22:43:30.975Z",
+    "generated": "2025-11-03T23:23:48.708Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 166,
+    "total_count": 162,
     "sources": {
       "grist_35": 38,
-      "cd44": 28,
+      "cd44": 24,
       "rennes_metropole": 100
     }
   }
