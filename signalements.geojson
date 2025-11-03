@@ -1238,6 +1238,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.5371711225794478,
+          47.11307536273751
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D178 / Pont-Saint-Martin",
+        "commune": "Les Sorinières / Pont-Saint-Martin",
+        "etat": "Bouchon",
+        "cause": "Bouchon",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Bouchon",
+        "sens_circulation": "",
+        "commentaire": "Bouchon",
+        "date_debut": "11/03/2025 à 16h09",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 16h09",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.5835719876618564,
           47.50157033033594
         ]
@@ -1258,34 +1286,6 @@
         "date_debut": "11/03/2025 à 15h16",
         "date_fin": "",
         "date_saisie": "11/03/2025 à 15h16",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.17065632662583,
-          47.28518966931715
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D213 / Montoir-de-Bretagne",
-        "commune": "Saint-Nazaire vers Saint-Brevin",
-        "etat": "VL en panne",
-        "cause": "Autre danger",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "VL en panne",
-        "sens_circulation": "",
-        "commentaire": "Véhicule en panne",
-        "date_debut": "11/03/2025 à 15h15",
-        "date_fin": "",
-        "date_saisie": "11/03/2025 à 15h15",
         "gestionnaire": "CD44"
       }
     },
@@ -11383,7 +11383,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-03T15:46:17.366Z",
+    "generated": "2025-11-03T16:31:10.230Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 167,
     "sources": {
