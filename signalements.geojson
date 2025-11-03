@@ -724,6 +724,174 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -2.0483678524744464,
+          47.130485983472106
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Travaux / D751 / Pornic",
+        "commune": "Commune",
+        "etat": "Tous les véhicules",
+        "cause": "Déviation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "11/03/2025 à 09h13",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 09h13",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.050183286183444,
+          47.1194731984549
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Travaux / D6 / Chauvé",
+        "commune": "Commune",
+        "etat": "Tous les véhicules",
+        "cause": "Déviation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "11/03/2025 à 09h13",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 09h13",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.04795268947461,
+          47.12899775626146
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D6 / Pornic",
+        "commune": "Commune",
+        "etat": "Réfection de chaussée",
+        "cause": "Chantier",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Réfection de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Travaux de réfection de chaussée",
+        "date_debut": "11/03/2025 à 09h13",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 09h13",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1859829885165918,
+          47.43141861582423
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Autres / D19 / Maumusson",
+        "commune": "Commune",
+        "etat": "Tous les véhicules",
+        "cause": "Déviation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "11/03/2025 à 08h44",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 08h44",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8742998766200782,
+          47.543264560718804
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Travaux / D35 / Le Gâvre",
+        "commune": "Commune",
+        "etat": "Tous les véhicules",
+        "cause": "Déviation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Tous les véhicules",
+        "sens_circulation": "",
+        "commentaire": "Déviation",
+        "date_debut": "11/03/2025 à 08h43",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 08h43",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8741222832798654,
+          47.54314134349416
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D35 / Plessé",
+        "commune": "Commune",
+        "etat": "Ouvrage d'art",
+        "cause": "Chantier",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Ouvrage d'art",
+        "sens_circulation": "",
+        "commentaire": "Travaux sur ouvrage d'art",
+        "date_debut": "11/03/2025 à 08h43",
+        "date_fin": "",
+        "date_saisie": "11/03/2025 à 08h43",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.105080989600077,
           47.35636363992174
         ]
@@ -732,7 +900,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D773 / Donges",
-        "commune": "Besné / Donges",
+        "commune": "Commune",
         "etat": "Aménagement de chaussée",
         "cause": "Chantier",
         "statut": "Actif",
@@ -760,7 +928,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D88 / Gétigné",
-        "commune": "Gétigné / Clisson",
+        "commune": "Commune",
         "etat": "Aménagement de chaussée",
         "cause": "Chantier",
         "statut": "Actif",
@@ -788,7 +956,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
+        "commune": "Commune",
         "etat": "Marée haute",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -816,7 +984,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
+        "commune": "Commune",
         "etat": "Marée haute",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -844,7 +1012,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
+        "commune": "Commune",
         "etat": "Autre",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -872,7 +1040,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
+        "commune": "Commune",
         "etat": "Autre",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -900,7 +1068,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
+        "commune": "Commune",
         "etat": "Marée haute",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -928,7 +1096,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D33 / Sainte-Anne-sur-Brivet",
-        "commune": "Ste-Anne-sur-Brivet / Pontchâteau",
+        "commune": "Commune",
         "etat": "Divers",
         "cause": "Autre danger",
         "statut": "Actif",
@@ -956,7 +1124,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
+        "commune": "Commune",
         "etat": "Bac de réserve",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -984,7 +1152,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D751 / Saint-Léger-les-Vignes",
-        "commune": "St Léger vers Port St Pere",
+        "commune": "Commune",
         "etat": "Aménagement de chaussée",
         "cause": "Chantier",
         "statut": "Actif",
@@ -1068,7 +1236,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D33 / Bonnoeuvre",
-        "commune": "Saint-Mars-la-Jaille / Bonnoeuvre",
+        "commune": "Commune",
         "etat": "Tranchée / raccordement",
         "cause": "Chantier",
         "statut": "Actif",
@@ -1096,7 +1264,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D18 / La Roche-Blanche",
-        "commune": "La Roche-Bl / Pouillé-les-Côteaux",
+        "commune": "Commune",
         "etat": "Autres",
         "cause": "Chantier",
         "statut": "Actif",
@@ -1124,7 +1292,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D33 / Saffré",
-        "commune": "Saffré / Puceul",
+        "commune": "Commune",
         "etat": "Tranchée / raccordement",
         "cause": "Chantier",
         "statut": "Actif",
@@ -1152,7 +1320,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D1 / Saffré",
-        "commune": "Abbaretz / Saffré",
+        "commune": "Commune",
         "etat": "Aménagement de chaussée",
         "cause": "Chantier",
         "statut": "Actif",
@@ -1172,34 +1340,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.7836021878359964,
-          47.65704036763818
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D129 / Conquereuil",
-        "commune": "Guémené-Penfao / Conquereuil",
-        "etat": "Tranchée / raccordement",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tranchée / raccordement",
-        "sens_circulation": "",
-        "commentaire": "Travaux sur réseaux",
-        "date_debut": "10/06/2025 à 13h42",
-        "date_fin": "",
-        "date_saisie": "10/06/2025 à 13h42",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.7191523709366827,
           47.13872841192744
         ]
@@ -1208,7 +1348,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D751 / Saint-Léger-les-Vignes",
-        "commune": "Saint-Léger vers Port St Pere",
+        "commune": "Commune",
         "etat": "Aménagement de chaussée",
         "cause": "Chantier",
         "statut": "Actif",
@@ -1264,7 +1404,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D723 / Bouguenais",
-        "commune": "Pornic vers Nantes",
+        "commune": "Commune",
         "etat": "Bouchon",
         "cause": "Bouchon",
         "statut": "Actif",
@@ -1292,7 +1432,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D178 / Pont-Saint-Martin",
-        "commune": "Machecoul vers Nantes",
+        "commune": "Commune",
         "etat": "Bouchon",
         "cause": "Bouchon",
         "statut": "Actif",
@@ -1320,7 +1460,7 @@
         "id": "cd44-undefined",
         "source": "CD44",
         "route": "D537 / Treillières",
-        "commune": "Orvault / Treillières",
+        "commune": "Commune",
         "etat": "Obstacle",
         "cause": "Autre danger",
         "statut": "Actif",
@@ -10701,12 +10841,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-03T08:36:06.515Z",
+    "generated": "2025-11-03T09:31:25.638Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 144,
+    "total_count": 149,
     "sources": {
       "grist_35": 21,
-      "cd44": 23,
+      "cd44": 28,
       "rennes_metropole": 100
     }
   }
