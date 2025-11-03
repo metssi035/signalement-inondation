@@ -1109,15 +1109,127 @@
         "commune": "Saint-Vran",
         "etat": "Totale",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
         "date_debut": "03/11/2025 à 14h26",
         "date_fin": "",
         "date_saisie": "03/11/2025 à 14h26",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.449271386591037,
+          48.193963478979704
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "source": "Grist 35",
+        "route": "N 164",
+        "commune": "Merdrignac",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h27",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h27",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5779055450347736,
+          48.17207756729317
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "source": "Grist 35",
+        "route": "N 164",
+        "commune": "Plémet",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h28",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h28",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.021486854374386,
+          48.298152152518504
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "source": "Grist 35",
+        "route": "D 25",
+        "commune": "Plouasne",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h28",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h28",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1026155862759792,
+          48.089176069536556
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "source": "Grist 35",
+        "route": "N 157",
+        "commune": "Erbrée",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h33",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h33",
         "gestionnaire": "CD35"
       }
     },
@@ -11243,11 +11355,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-03T14:27:00.010Z",
+    "generated": "2025-11-03T14:48:04.009Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 162,
+    "total_count": 166,
     "sources": {
-      "grist_35": 34,
+      "grist_35": 38,
       "cd44": 28,
       "rennes_metropole": 100
     }
