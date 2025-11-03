@@ -565,9 +565,9 @@
         "commune": "Maxent",
         "etat": "Totale",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
@@ -716,6 +716,408 @@
         "date_debut": "29/10/2025 à 16h06",
         "date_fin": "",
         "date_saisie": "29/10/2025 à 16h06",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.201557062383296,
+          48.07187356261881
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "source": "Grist 35",
+        "route": "N 157",
+        "commune": "Étrelles",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 13h38",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 13h38",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.279560212709887,
+            48.075597113070124
+          ],
+          [
+            -1.2702066996344152,
+            48.07525288673568
+          ]
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "source": "Grist 35",
+        "route": "N 157",
+        "commune": "Torcé",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 13h39",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 13h39",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9218033568768569,
+          48.11143482239626
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "source": "Grist 35",
+        "route": "D 62",
+        "commune": "Talensac",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 13h49",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 13h49",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.336934190722775,
+          47.71091435061764
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "source": "Grist 35",
+        "route": "D 774",
+        "commune": "Pluherlin",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 13h53",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 13h53",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.487555752829586,
+          47.83443035727872
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "source": "Grist 35",
+        "route": "D 163",
+        "commune": "Thourie",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 13h59",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 13h59",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.21676270667085,
+            48.19332098985172
+          ],
+          [
+            -2.2125579163892106,
+            48.189772019321
+          ],
+          [
+            -2.209897742945746,
+            48.18633729768348
+          ],
+          [
+            -2.2050064562915983,
+            48.180955770966264
+          ]
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "source": "Grist 35",
+        "route": "N 164",
+        "commune": "Saint-Méen-le-Grand",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h04",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h04",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7356016312532287,
+          48.167456945604606
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "source": "Grist 35",
+        "route": "D 700",
+        "commune": "Loudéac",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h09",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h09",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1616453639860205,
+          48.272570208963366
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "source": "Grist 35",
+        "route": "N 12",
+        "commune": "Saint-Jouan-de-l'Isle",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h09",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h09",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.4893713529867838,
+            47.96692083663524
+          ],
+          [
+            -1.4819915169822888,
+            47.97416431271857
+          ]
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "source": "Grist 35",
+        "route": "D 777",
+        "commune": "Janzé",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h10",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h10",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0880698198804675,
+          48.0081521544619
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "source": "Grist 35",
+        "route": "D 61",
+        "commune": "Plélan-le-Grand",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h14",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h14",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.968101429961057,
+            48.05627532746954
+          ],
+          [
+            -0.9599492855374848,
+            48.056504896576975
+          ]
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "source": "Grist 35",
+        "route": "Rue Principale",
+        "commune": "Loiron-Ruillé",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h15",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h15",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.402768882726336,
+            47.941829521387845
+          ],
+          [
+            -2.400108709282851,
+            47.94269231210689
+          ]
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "source": "Grist 35",
+        "route": "Boulevard Robert Schuman",
+        "commune": "Ploërmel",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h21",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h21",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4427958374952756,
+          48.225372165301565
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "source": "Grist 35",
+        "route": "D 6",
+        "commune": "Saint-Vran",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 14h26",
+        "date_fin": "",
+        "date_saisie": "03/11/2025 à 14h26",
         "gestionnaire": "CD35"
       }
     },
@@ -10841,11 +11243,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-03T13:35:54.555Z",
+    "generated": "2025-11-03T14:27:00.010Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 149,
+    "total_count": 162,
     "sources": {
-      "grist_35": 21,
+      "grist_35": 34,
       "cd44": 28,
       "rennes_metropole": 100
     }
