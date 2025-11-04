@@ -1364,34 +1364,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.5371711225794478,
-          47.11307536273751
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D178 / Pont-Saint-Martin",
-        "commune": "Nantes/ Machecoul",
-        "etat": "Bouchon",
-        "cause": "Bouchon",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bouchon",
-        "sens_circulation": "",
-        "commentaire": "Bouchon",
-        "date_debut": "11/04/2025 à 16h10",
-        "date_fin": "",
-        "date_saisie": "11/04/2025 à 16h10",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.6743617405076974,
           47.19644470749437
         ]
@@ -12925,12 +12897,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-04T17:43:22.698Z",
+    "generated": "2025-11-04T18:37:13.674Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 174,
+    "total_count": 173,
     "sources": {
       "grist_35": 42,
-      "cd44": 32,
+      "cd44": 31,
       "rennes_metropole": 100
     }
   }
