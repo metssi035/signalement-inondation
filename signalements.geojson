@@ -325,9 +325,9 @@
         "commune": "Montauban-de-Bretagne",
         "etat": "Totale",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
@@ -938,34 +938,6 @@
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1616453639860205,
-          48.272570208963366
-        ]
-      },
-      "properties": {
-        "id": 71,
-        "source": "Grist 35",
-        "route": "N 12",
-        "commune": "Saint-Jouan-de-l'Isle",
-        "etat": "Totale",
-        "cause": "Inondation",
-        "statut": "Résolu",
-        "statut_actif": false,
-        "statut_resolu": true,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "03/11/2025 à 14h09",
-        "date_fin": "",
-        "date_saisie": "03/11/2025 à 14h09",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
         "type": "LineString",
         "coordinates": [
           [
@@ -1231,6 +1203,90 @@
         "date_fin": "",
         "date_saisie": "03/11/2025 à 14h33",
         "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3887190507768412,
+          48.0917026273022
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "source": "Grist 35",
+        "route": "N 157",
+        "commune": "Saint-Didier",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "04/11/2025 à 11h00",
+        "date_fin": "",
+        "date_saisie": "04/11/2025 à 11h00",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9882027231103132,
+          48.185519140984546
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "source": "Grist 35",
+        "route": "N 12",
+        "commune": "Bédée",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "04/11/2025 à 11h11",
+        "date_fin": "",
+        "date_saisie": "04/11/2025 à 11h11",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2852221678031164,
+          48.34132400417822
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "source": "Grist 35",
+        "route": "N 12",
+        "commune": "Trémeur",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "04/11/2025 à 11h13",
+        "date_fin": "",
+        "date_saisie": "04/11/2025 à 11h13",
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -12603,11 +12659,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-04T10:30:51.786Z",
+    "generated": "2025-11-04T11:23:59.913Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 163,
+    "total_count": 165,
     "sources": {
-      "grist_35": 38,
+      "grist_35": 40,
       "cd44": 25,
       "rennes_metropole": 100
     }
