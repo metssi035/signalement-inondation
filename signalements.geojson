@@ -1294,6 +1294,76 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.850706626140151,
+          47.9229112453083
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "source": "Grist 35",
+        "route": "D 177",
+        "commune": "Guignen",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "04/11/2025 à 14h46",
+        "date_fin": "",
+        "date_saisie": "04/11/2025 à 14h46",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.83871829811354,
+            47.93318780255634
+          ],
+          [
+            -1.835328722274272,
+            47.935287585800374
+          ],
+          [
+            -1.8312526500624962,
+            47.938106338825314
+          ],
+          [
+            -1.8308664958529477,
+            47.93891166860739
+          ]
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "source": "Grist 35",
+        "route": "D 177",
+        "commune": "Guignen",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "04/11/2025 à 14h47",
+        "date_fin": "",
+        "date_saisie": "04/11/2025 à 14h47",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.175475415190956,
           47.291482819559995
         ]
@@ -1311,9 +1381,9 @@
         "type_coupure": "Entretien courant",
         "sens_circulation": "",
         "commentaire": "Travaux d'entretien courant",
-        "date_debut": "11/04/2025 à 12h09",
+        "date_debut": "11/04/2025 à 14h42",
         "date_fin": "",
-        "date_saisie": "11/04/2025 à 12h09",
+        "date_saisie": "11/04/2025 à 14h42",
         "gestionnaire": "CD44"
       }
     },
@@ -12659,11 +12729,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-04T14:27:36.660Z",
+    "generated": "2025-11-04T14:48:41.599Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 165,
+    "total_count": 167,
     "sources": {
-      "grist_35": 40,
+      "grist_35": 42,
       "cd44": 25,
       "rennes_metropole": 100
     }
