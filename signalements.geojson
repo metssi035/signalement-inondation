@@ -1447,9 +1447,9 @@
         "type_coupure": "Entretien courant",
         "sens_circulation": "",
         "commentaire": "Travaux d'entretien courant",
-        "date_debut": "11/05/2025 à 08h01",
+        "date_debut": "11/05/2025 à 14h23",
         "date_fin": "",
-        "date_saisie": "11/05/2025 à 08h01",
+        "date_saisie": "11/05/2025 à 14h23",
         "gestionnaire": "CD44"
       }
     },
@@ -13683,7 +13683,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-05T13:37:47.174Z",
+    "generated": "2025-11-05T14:27:19.075Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 176,
     "sources": {
