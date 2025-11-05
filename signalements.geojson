@@ -1381,6 +1381,34 @@
         "type_coupure": "Marée haute",
         "sens_circulation": "",
         "commentaire": "Arrêt cause Marée haute",
+        "date_debut": "11/05/2025 à 04h53",
+        "date_fin": "",
+        "date_saisie": "11/05/2025 à 04h53",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Arrêt cause Marée haute",
         "date_debut": "11/04/2025 à 15h29",
         "date_fin": "",
         "date_saisie": "11/04/2025 à 15h29",
@@ -1496,34 +1524,6 @@
         "date_debut": "11/04/2025 à 15h26",
         "date_fin": "",
         "date_saisie": "11/04/2025 à 15h26",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
-        "date_debut": "11/04/2025 à 15h25",
-        "date_fin": "",
-        "date_saisie": "11/04/2025 à 15h25",
         "gestionnaire": "CD44"
       }
     },
@@ -12897,7 +12897,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-05T04:30:17.672Z",
+    "generated": "2025-11-05T05:26:56.682Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 173,
     "sources": {
