@@ -1486,6 +1486,146 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Risque d'arrêt cause Marée haute",
+        "date_debut": "11/06/2025 à 16h19",
+        "date_fin": "",
+        "date_saisie": "11/06/2025 à 16h19",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Risque d'arrêt cause Marée haute",
+        "date_debut": "11/06/2025 à 16h17",
+        "date_fin": "",
+        "date_saisie": "11/06/2025 à 16h17",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Arrêt cause Marée haute",
+        "date_debut": "11/06/2025 à 16h15",
+        "date_fin": "",
+        "date_saisie": "11/06/2025 à 16h15",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Arrêt cause Marée haute",
+        "date_debut": "11/06/2025 à 16h15",
+        "date_fin": "",
+        "date_saisie": "11/06/2025 à 16h15",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5154496474385726,
+          47.13513083674325
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D178 / Les Sorinières",
+        "commune": "Nantes / Machecoul",
+        "etat": "Bouchon",
+        "cause": "Bouchon",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Bouchon",
+        "sens_circulation": "",
+        "commentaire": "Bouchon",
+        "date_debut": "11/06/2025 à 16h14",
+        "date_fin": "",
+        "date_saisie": "11/06/2025 à 16h14",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.5456161624720683,
           47.514749926814254
         ]
@@ -1786,90 +1926,6 @@
         "date_debut": "11/05/2025 à 04h53",
         "date_fin": "",
         "date_saisie": "11/05/2025 à 04h53",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
-        "date_debut": "11/04/2025 à 15h29",
-        "date_fin": "",
-        "date_saisie": "11/04/2025 à 15h29",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
-        "date_debut": "11/04/2025 à 15h29",
-        "date_fin": "",
-        "date_saisie": "11/04/2025 à 15h29",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
-        "date_debut": "11/04/2025 à 15h28",
-        "date_fin": "",
-        "date_saisie": "11/04/2025 à 15h28",
         "gestionnaire": "CD44"
       }
     },
@@ -11249,12 +11305,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-06T15:48:24.332Z",
+    "generated": "2025-11-06T16:35:08.897Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 179,
+    "total_count": 181,
     "sources": {
       "grist_35": 46,
-      "cd44": 33,
+      "cd44": 35,
       "rennes_metropole": 100
     }
   }
