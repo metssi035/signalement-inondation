@@ -1430,6 +1430,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.5456161624720683,
+          47.514749926814254
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D1 / Saffré",
+        "commune": "Abbaretz / Saffré",
+        "etat": "Aménagement de chaussée",
+        "cause": "Chantier",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "11/06/2025 à 10h29",
+        "date_fin": "",
+        "date_saisie": "11/06/2025 à 10h29",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.6743617405076974,
           47.19644470749437
         ]
@@ -2178,34 +2206,6 @@
         "date_debut": "16/10/2025 à 06h41",
         "date_fin": "",
         "date_saisie": "16/10/2025 à 06h41",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5456161624720683,
-          47.514749926814254
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D1 / Saffré",
-        "commune": "Abbaretz / Saffré",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "13/10/2025 à 07h47",
-        "date_fin": "",
-        "date_saisie": "13/10/2025 à 07h47",
         "gestionnaire": "CD44"
       }
     },
@@ -11193,7 +11193,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-06T10:30:05.712Z",
+    "generated": "2025-11-06T10:49:27.595Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 177,
     "sources": {
