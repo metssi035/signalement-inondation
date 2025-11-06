@@ -1990,34 +1990,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.5835719876618564,
-          47.50157033033594
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D33 / Saffré",
-        "commune": "Saffré / Puceul",
-        "etat": "Tranchée / raccordement",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tranchée / raccordement",
-        "sens_circulation": "",
-        "commentaire": "Travaux sur réseaux",
-        "date_debut": "11/03/2025 à 15h16",
-        "date_fin": "",
-        "date_saisie": "11/03/2025 à 15h16",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.1859829885165918,
           47.43141861582423
         ]
@@ -2150,34 +2122,6 @@
         "date_debut": "11/01/2025 à 11h02",
         "date_fin": "",
         "date_saisie": "11/01/2025 à 11h02",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Bac de réserve",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bac de réserve",
-        "sens_circulation": "",
-        "commentaire": "Bac de réserve",
-        "date_debut": "31/10/2025 à 14h05",
-        "date_fin": "",
-        "date_saisie": "31/10/2025 à 14h05",
         "gestionnaire": "CD44"
       }
     },
@@ -11277,12 +11221,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-06T22:43:31.272Z",
+    "generated": "2025-11-06T23:23:25.770Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 180,
+    "total_count": 178,
     "sources": {
       "grist_35": 46,
-      "cd44": 34,
+      "cd44": 32,
       "rennes_metropole": 100
     }
   }
