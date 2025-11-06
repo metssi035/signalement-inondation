@@ -1430,6 +1430,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.72210693359375,
+          48.06012683815906
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "source": "Grist 35",
+        "route": "D 177",
+        "commune": "Chartres-de-Bretagne",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "06/11/2025 à 11h23",
+        "date_fin": "",
+        "date_saisie": "06/11/2025 à 11h23",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.5456161624720683,
           47.514749926814254
         ]
@@ -11193,11 +11221,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-06T11:23:06.910Z",
+    "generated": "2025-11-06T11:41:40.060Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 177,
+    "total_count": 178,
     "sources": {
-      "grist_35": 44,
+      "grist_35": 45,
       "cd44": 33,
       "rennes_metropole": 100
     }
