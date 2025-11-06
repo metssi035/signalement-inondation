@@ -1486,26 +1486,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.1681534313883852,
-          47.28209407833602
+          -1.6743617405076974,
+          47.19644470749437
         ]
       },
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "route": "D213 / Pont de St Nazaire",
-        "commune": "Pont de St Nazaire",
-        "etat": "VL en panne",
-        "cause": "Autre danger",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "VL en panne",
+        "type_coupure": "Marée haute",
         "sens_circulation": "",
-        "commentaire": "Véhicule en panne",
-        "date_debut": "11/06/2025 à 17h33",
+        "commentaire": "Arrêt cause Marée haute",
+        "date_debut": "11/06/2025 à 18h24",
         "date_fin": "",
-        "date_saisie": "11/06/2025 à 17h33",
+        "date_saisie": "11/06/2025 à 18h24",
         "gestionnaire": "CD44"
       }
     },
@@ -1590,62 +1590,6 @@
         "date_debut": "11/06/2025 à 16h15",
         "date_fin": "",
         "date_saisie": "11/06/2025 à 16h15",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
-        "date_debut": "11/06/2025 à 16h15",
-        "date_fin": "",
-        "date_saisie": "11/06/2025 à 16h15",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5154496474385726,
-          47.13513083674325
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D178 / Les Sorinières",
-        "commune": "Nantes / Machecoul",
-        "etat": "Bouchon",
-        "cause": "Bouchon",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bouchon",
-        "sens_circulation": "",
-        "commentaire": "Bouchon",
-        "date_debut": "11/06/2025 à 16h14",
-        "date_fin": "",
-        "date_saisie": "11/06/2025 à 16h14",
         "gestionnaire": "CD44"
       }
     },
@@ -11333,12 +11277,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-06T17:44:11.367Z",
+    "generated": "2025-11-06T18:38:18.654Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 182,
+    "total_count": 180,
     "sources": {
       "grist_35": 46,
-      "cd44": 36,
+      "cd44": 34,
       "rennes_metropole": 100
     }
   }
