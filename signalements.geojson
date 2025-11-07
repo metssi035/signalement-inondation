@@ -1502,10 +1502,10 @@
         "statut_resolu": false,
         "type_coupure": "Marée haute",
         "sens_circulation": "",
-        "commentaire": "Risque d'arrêt cause Marée haute",
-        "date_debut": "11/07/2025 à 05h34",
+        "commentaire": "Arrêt cause Marée haute",
+        "date_debut": "11/07/2025 à 06h20",
         "date_fin": "",
-        "date_saisie": "11/07/2025 à 05h34",
+        "date_saisie": "11/07/2025 à 06h20",
         "gestionnaire": "CD44"
       }
     },
@@ -1530,7 +1530,7 @@
         "statut_resolu": false,
         "type_coupure": "Marée haute",
         "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
+        "commentaire": "Risque d'arrêt cause Marée haute",
         "date_debut": "11/07/2025 à 05h34",
         "date_fin": "",
         "date_saisie": "11/07/2025 à 05h34",
@@ -11221,7 +11221,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-07T05:44:49.528Z",
+    "generated": "2025-11-07T06:38:15.194Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 178,
     "sources": {
