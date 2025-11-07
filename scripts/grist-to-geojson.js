@@ -14,7 +14,9 @@ const CD56_WFS_CONFIG = {
     request: 'GetFeature',
     typeName: 'TEST_INONDATION_V2:Routes_Concernees',
     outputFormat: 'application/json',
-    maxFeatures: 1000
+    maxFeatures: 200,  // Normalement 116 entités totales
+    // Filtre CQL pour ne récupérer que les routes coupées
+    cqlFilter: "conditions_circulation='COUPÉE'"
 };
 
 console.log('🚀 Démarrage de la fusion des 4 sources...\n');
@@ -173,14 +175,20 @@ async function fetchCD56Data() {
     try {
         console.log('🔗 [CD56] Récupération via WFS...');
         
-        // Construction de l'URL WFS
-        const wfsUrl = `${CD56_WFS_CONFIG.baseUrl}?` +
+        // Construction de l'URL WFS avec filtre CQL
+        let wfsUrl = `${CD56_WFS_CONFIG.baseUrl}?` +
             `service=${CD56_WFS_CONFIG.service}&` +
             `version=${CD56_WFS_CONFIG.version}&` +
             `request=${CD56_WFS_CONFIG.request}&` +
             `typeNames=${CD56_WFS_CONFIG.typeName}&` +
             `outputFormat=${encodeURIComponent(CD56_WFS_CONFIG.outputFormat)}&` +
             `count=${CD56_WFS_CONFIG.maxFeatures}`;
+        
+        // Ajouter le filtre CQL si présent
+        if (CD56_WFS_CONFIG.cqlFilter) {
+            wfsUrl += `&CQL_FILTER=${encodeURIComponent(CD56_WFS_CONFIG.cqlFilter)}`;
+            console.log(`   📌 Filtre: ${CD56_WFS_CONFIG.cqlFilter}`);
+        }
         
         console.log(`   URL: ${wfsUrl}`);
         
@@ -359,7 +367,7 @@ function cd56ToFeature(feature) {
         const props = feature.properties || {};
         
         // Mapping des propriétés CD56 vers notre format unifié
-        // À adapter selon les propriétés réelles du flux CD56
+        // Note: conditions_circulation = "COUPÉE" (déjà filtré côté serveur)
         const statut = props.statut || props.etat || 'Actif';
         
         return {
@@ -370,18 +378,19 @@ function cd56ToFeature(feature) {
                 source: 'CD56',
                 route: props.route || props.rd || props.voie || props.axe || '',
                 commune: props.commune || props.ville || '',
-                etat: props.type_evenement || props.type || 'Route impactée',
-                cause: props.cause || props.nature || 'Inondation',
+                etat: 'Route fermée',  // Puisque conditions_circulation="COUPÉE"
+                cause: props.cause || props.nature || props.raison_coupure || 'Inondation',
                 statut: statut,
                 statut_actif: statut.toLowerCase() === 'actif' || statut.toLowerCase() === 'en cours',
                 statut_resolu: statut.toLowerCase() === 'résolu' || statut.toLowerCase() === 'terminé',
-                type_coupure: props.type_coupure || props.type || '',
+                type_coupure: props.type_coupure || props.type || 'Coupure totale',
                 sens_circulation: props.sens || props.sens_circulation || '',
                 commentaire: props.commentaire || props.description || props.libelle || '',
                 date_debut: formatDate(props.date_debut || props.date_deb || props.date),
                 date_fin: formatDate(props.date_fin),
                 date_saisie: formatDate(props.date_creation || props.date_saisie || props.date),
                 gestionnaire: 'CD56',
+                conditions_circulation: props.conditions_circulation || 'COUPÉE',
                 
                 // Propriétés supplémentaires spécifiques CD56
                 cd56_raw: {
