@@ -1486,6 +1486,62 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.5154496474385726,
+          47.13513083674325
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D178 / Les Sorinières",
+        "commune": "Les Sorinières / Pont-Saint-Martin",
+        "etat": "Bouchon",
+        "cause": "Bouchon",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Bouchon",
+        "sens_circulation": "",
+        "commentaire": "Bouchon",
+        "date_debut": "11/07/2025 à 15h22",
+        "date_fin": "",
+        "date_saisie": "11/07/2025 à 15h22",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1624755377350398,
+          47.2697429049478
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D213 / Saint-Brevin-les-Pins",
+        "commune": "Saint-Nazaire vers Saint-Brevin",
+        "etat": "VL en panne",
+        "cause": "Autre danger",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "VL en panne",
+        "sens_circulation": "",
+        "commentaire": "Véhicule en panne",
+        "date_debut": "11/07/2025 à 15h08",
+        "date_fin": "",
+        "date_saisie": "11/07/2025 à 15h08",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.6743617405076974,
           47.19644470749437
         ]
@@ -1646,34 +1702,6 @@
         "date_debut": "11/06/2025 à 10h29",
         "date_fin": "",
         "date_saisie": "11/06/2025 à 10h29",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause Marée haute",
-        "date_debut": "11/06/2025 à 05h48",
-        "date_fin": "",
-        "date_saisie": "11/06/2025 à 05h48",
         "gestionnaire": "CD44"
       }
     },
@@ -11331,8 +11359,8 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-07T14:45:44.184Z",
+    "generated": "2025-11-07T15:27:22.107Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
-    "total_count": 177
+    "total_count": 178
   }
 }
