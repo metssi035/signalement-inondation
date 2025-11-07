@@ -13,7 +13,7 @@ const CD56_WFS_CONFIG = {
     version: '2.0.0',
     request: 'GetFeature',
     typeName: 'TEST_INONDATION_V2:Routes_Concernees',
-    outputFormat: 'application/json',
+    outputFormat: 'geojson',  // ✅ Changé de application/json à geojson
     maxFeatures: 200,  // Normalement 116 entités totales
     // ⚠️ FILTRE DÉSACTIVÉ - Récupère toutes les routes, filtre côté client
     // cqlFilter: "conditions_circulation='COUPÉE'"
@@ -172,68 +172,90 @@ async function fetchRennesMetropoleData() {
 
 // 🆕 Récupérer CD56 via WFS
 async function fetchCD56Data() {
-    try {
-        console.log('🔗 [CD56] Récupération via WFS...');
-        
-        // Construction de l'URL WFS avec filtre CQL
-        let wfsUrl = `${CD56_WFS_CONFIG.baseUrl}?` +
-            `service=${CD56_WFS_CONFIG.service}&` +
-            `version=${CD56_WFS_CONFIG.version}&` +
-            `request=${CD56_WFS_CONFIG.request}&` +
-            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
-            `outputFormat=${encodeURIComponent(CD56_WFS_CONFIG.outputFormat)}&` +
-            `count=${CD56_WFS_CONFIG.maxFeatures}`;
-        
-        // Ajouter le filtre CQL si présent
-        if (CD56_WFS_CONFIG.cqlFilter) {
-            wfsUrl += `&CQL_FILTER=${encodeURIComponent(CD56_WFS_CONFIG.cqlFilter)}`;
-            console.log(`   📌 Filtre: ${CD56_WFS_CONFIG.cqlFilter}`);
-        }
-        
-        console.log(`   URL: ${wfsUrl}`);
-        
-        const response = await fetch(wfsUrl, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0',
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (!response.ok) {
-            console.error(`❌ [CD56] HTTP ${response.status}`);
-            return [];
-        }
-        
-        const data = await response.json();
-        
-        // WFS retourne généralement un GeoJSON FeatureCollection
-        const features = data.features || [];
-        console.log(`✅ [CD56] ${features.length} features`);
-        
-        // Debug: afficher les propriétés du premier élément
-        if (features.length > 0) {
-            console.log('   📋 Exemple de propriétés CD56:');
-            const props = features[0].properties || {};
-            Object.keys(props).slice(0, 10).forEach(key => {
-                console.log(`      - ${key}: ${props[key]}`);
-            });
+async function fetchCD56Data() {
+    console.log('🔗 [CD56] Récupération via WFS...');
+    
+    // Liste des formats à essayer dans l'ordre
+    const formats = ['geojson', 'application/json', 'json', 'application/geo+json'];
+    
+    for (const format of formats) {
+        try {
+            console.log(`   Tentative avec outputFormat: ${format}`);
             
-            // Chercher le champ qui pourrait indiquer l'état
-            const etatFields = ['conditions_circulation', 'etat', 'statut', 'type', 'state'];
-            etatFields.forEach(field => {
-                if (props[field]) {
-                    console.log(`   ⭐ Champ "${field}" trouvé: ${props[field]}`);
+            // Construction de l'URL WFS
+            let wfsUrl = `${CD56_WFS_CONFIG.baseUrl}?` +
+                `service=${CD56_WFS_CONFIG.service}&` +
+                `version=${CD56_WFS_CONFIG.version}&` +
+                `request=${CD56_WFS_CONFIG.request}&` +
+                `typeNames=${CD56_WFS_CONFIG.typeName}&` +
+                `outputFormat=${encodeURIComponent(format)}&` +
+                `count=${CD56_WFS_CONFIG.maxFeatures}`;
+            
+            // Ajouter le filtre CQL si présent
+            if (CD56_WFS_CONFIG.cqlFilter) {
+                wfsUrl += `&CQL_FILTER=${encodeURIComponent(CD56_WFS_CONFIG.cqlFilter)}`;
+                console.log(`   📌 Filtre: ${CD56_WFS_CONFIG.cqlFilter}`);
+            }
+            
+            const response = await fetch(wfsUrl, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0',
+                    'Accept': 'application/json, application/geo+json, application/vnd.geo+json'
                 }
             });
+            
+            console.log(`   Statut HTTP: ${response.status}`);
+            
+            if (!response.ok) {
+                console.log(`   ❌ Échec avec ${format} (HTTP ${response.status})`);
+                continue; // Essayer le format suivant
+            }
+            
+            const text = await response.text();
+            
+            // Vérifier si c'est du XML au lieu de JSON
+            if (text.trim().startsWith('<')) {
+                console.log(`   ❌ ${format} retourne du XML, essai suivant...`);
+                continue;
+            }
+            
+            const data = JSON.parse(text);
+            const features = data.features || [];
+            
+            console.log(`✅ [CD56] ${features.length} features (format: ${format})`);
+            
+            // Debug: afficher les propriétés du premier élément
+            if (features.length > 0) {
+                console.log('   📋 Exemple de propriétés CD56:');
+                const props = features[0].properties || {};
+                Object.keys(props).slice(0, 10).forEach(key => {
+                    console.log(`      - ${key}: ${props[key]}`);
+                });
+                
+                // Chercher le champ qui pourrait indiquer l'état
+                const etatFields = ['conditions_circulation', 'etat', 'statut', 'type', 'state'];
+                etatFields.forEach(field => {
+                    if (props[field]) {
+                        console.log(`   ⭐ Champ "${field}" trouvé: ${props[field]}`);
+                    }
+                });
+            }
+            
+            return features;
+            
+        } catch (error) {
+            console.log(`   ❌ Erreur avec ${format}: ${error.message}`);
+            continue;
         }
-        
-        return features;
-        
-    } catch (error) {
-        console.error('❌ [CD56]', error.message);
-        return [];
     }
+    
+    // Si tous les formats ont échoué
+    console.error('❌ [CD56] Impossible de récupérer les données avec aucun format');
+    console.error('   Formats essayés: ' + formats.join(', '));
+    console.error('   Le serveur WFS peut nécessiter un format spécifique ou être indisponible');
+    return [];
 }
+
 
 // Convertir Grist
 function gristToFeature(record) {
