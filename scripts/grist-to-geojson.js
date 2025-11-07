@@ -9,7 +9,7 @@ const TABLE_ID = 'Signalements';
 // Configuration CD56 ArcGIS REST API
 const CD56_CONFIG = {
     // API REST ArcGIS (au lieu de WFS qui retourne du XML)
-    baseUrl: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer',
+    baseUrl: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer?request=getcapabilities&service=wfs',
     // Paramètres de la requête
     where: "conditions_circulation='COUPÉE'",  // Filtre sur les routes coupées
     outFields: '*',  // Tous les champs
