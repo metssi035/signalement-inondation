@@ -1502,6 +1502,62 @@
         "statut_resolu": false,
         "type_coupure": "Marée haute",
         "sens_circulation": "",
+        "commentaire": "Risque d'arrêt cause Marée haute",
+        "date_debut": "11/07/2025 à 05h34",
+        "date_fin": "",
+        "date_saisie": "11/07/2025 à 05h34",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
+        "commentaire": "Arrêt cause Marée haute",
+        "date_debut": "11/07/2025 à 05h34",
+        "date_fin": "",
+        "date_saisie": "11/07/2025 à 05h34",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6743617405076974,
+          47.19644470749437
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "Bacs de Loire",
+        "commune": "Liaison : Basse-Indre / Indret",
+        "etat": "Marée haute",
+        "cause": "Bacs de Loire",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Marée haute",
+        "sens_circulation": "",
         "commentaire": "Arrêt cause Marée haute",
         "date_debut": "11/06/2025 à 18h24",
         "date_fin": "",
@@ -1534,34 +1590,6 @@
         "date_debut": "11/06/2025 à 16h19",
         "date_fin": "",
         "date_saisie": "11/06/2025 à 16h19",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Marée haute",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Marée haute",
-        "sens_circulation": "",
-        "commentaire": "Risque d'arrêt cause Marée haute",
-        "date_debut": "11/06/2025 à 16h17",
-        "date_fin": "",
-        "date_saisie": "11/06/2025 à 16h17",
         "gestionnaire": "CD44"
       }
     },
@@ -2010,34 +2038,6 @@
         "date_debut": "11/03/2025 à 08h44",
         "date_fin": "",
         "date_saisie": "11/03/2025 à 08h44",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7534205040926696,
-          47.20451320069573
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
-        "etat": "Autre",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Autre",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause",
-        "date_debut": "11/02/2025 à 10h59",
-        "date_fin": "",
-        "date_saisie": "11/02/2025 à 10h59",
         "gestionnaire": "CD44"
       }
     },
@@ -11221,7 +11221,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-07T05:26:29.091Z",
+    "generated": "2025-11-07T05:44:49.528Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
     "total_count": 178,
     "sources": {
