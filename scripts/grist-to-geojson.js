@@ -13,10 +13,8 @@ const CD56_WFS_CONFIG = {
     version: '2.0.0',
     request: 'GetFeature',
     typeName: 'TEST_INONDATION_V2:Routes_Concernees',
-    outputFormat: 'geojson',  // ✅ Changé de application/json à geojson
-    maxFeatures: 200,  // Normalement 116 entités totales
-    // ⚠️ FILTRE DÉSACTIVÉ - Récupère toutes les routes, filtre côté client
-    // cqlFilter: "conditions_circulation='COUPÉE'"
+    outputFormat: 'geojson',
+    maxFeatures: 200
 };
 
 console.log('🚀 Démarrage de la fusion des 4 sources...\n');
@@ -170,8 +168,7 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// 🆕 Récupérer CD56 via WFS
-async function fetchCD56Data() {
+// Récupérer CD56 via WFS
 async function fetchCD56Data() {
     console.log('🔗 [CD56] Récupération via WFS...');
     
@@ -182,7 +179,6 @@ async function fetchCD56Data() {
         try {
             console.log(`   Tentative avec outputFormat: ${format}`);
             
-            // Construction de l'URL WFS
             let wfsUrl = `${CD56_WFS_CONFIG.baseUrl}?` +
                 `service=${CD56_WFS_CONFIG.service}&` +
                 `version=${CD56_WFS_CONFIG.version}&` +
@@ -190,12 +186,6 @@ async function fetchCD56Data() {
                 `typeNames=${CD56_WFS_CONFIG.typeName}&` +
                 `outputFormat=${encodeURIComponent(format)}&` +
                 `count=${CD56_WFS_CONFIG.maxFeatures}`;
-            
-            // Ajouter le filtre CQL si présent
-            if (CD56_WFS_CONFIG.cqlFilter) {
-                wfsUrl += `&CQL_FILTER=${encodeURIComponent(CD56_WFS_CONFIG.cqlFilter)}`;
-                console.log(`   📌 Filtre: ${CD56_WFS_CONFIG.cqlFilter}`);
-            }
             
             const response = await fetch(wfsUrl, {
                 headers: {
@@ -208,12 +198,11 @@ async function fetchCD56Data() {
             
             if (!response.ok) {
                 console.log(`   ❌ Échec avec ${format} (HTTP ${response.status})`);
-                continue; // Essayer le format suivant
+                continue;
             }
             
             const text = await response.text();
             
-            // Vérifier si c'est du XML au lieu de JSON
             if (text.trim().startsWith('<')) {
                 console.log(`   ❌ ${format} retourne du XML, essai suivant...`);
                 continue;
@@ -224,21 +213,8 @@ async function fetchCD56Data() {
             
             console.log(`✅ [CD56] ${features.length} features (format: ${format})`);
             
-            // Debug: afficher les propriétés du premier élément
             if (features.length > 0) {
-                console.log('   📋 Exemple de propriétés CD56:');
-                const props = features[0].properties || {};
-                Object.keys(props).slice(0, 10).forEach(key => {
-                    console.log(`      - ${key}: ${props[key]}`);
-                });
-                
-                // Chercher le champ qui pourrait indiquer l'état
-                const etatFields = ['conditions_circulation', 'etat', 'statut', 'type', 'state'];
-                etatFields.forEach(field => {
-                    if (props[field]) {
-                        console.log(`   ⭐ Champ "${field}" trouvé: ${props[field]}`);
-                    }
-                });
+                console.log('   📋 Propriétés: ' + Object.keys(features[0].properties || {}).slice(0, 5).join(', '));
             }
             
             return features;
@@ -249,13 +225,9 @@ async function fetchCD56Data() {
         }
     }
     
-    // Si tous les formats ont échoué
-    console.error('❌ [CD56] Impossible de récupérer les données avec aucun format');
-    console.error('   Formats essayés: ' + formats.join(', '));
-    console.error('   Le serveur WFS peut nécessiter un format spécifique ou être indisponible');
+    console.error('❌ [CD56] Impossible de récupérer les données');
     return [];
 }
-
 
 // Convertir Grist
 function gristToFeature(record) {
@@ -390,22 +362,19 @@ function rennesMetropoleToFeatures(item) {
     }
 }
 
-// 🆕 Convertir CD56
+// Convertir CD56
 function cd56ToFeature(feature) {
     try {
-        // La feature vient déjà avec une geometry du WFS
         const geometry = feature.geometry;
-        
         if (!geometry) return null;
         
         const props = feature.properties || {};
         
-        // 🔍 FILTRE EXACT : conditions_circulation = "COUPÉE"
+        // FILTRE EXACT : conditions_circulation = "COUPÉE"
         if (props.conditions_circulation !== 'COUPÉE') {
-            return null;  // On ignore cette route
+            return null;
         }
         
-        // Mapping des propriétés CD56 vers notre format unifié
         const statut = props.statut || props.etat || 'Actif';
         
         return {
@@ -414,26 +383,22 @@ function cd56ToFeature(feature) {
             properties: {
                 id: `cd56-${props.objectid || props.OBJECTID || props.id || feature.id}`,
                 source: 'CD56',
-                route: props.route || props.rd || props.voie || props.axe || '',
+                route: props.route || props.rd || props.voie || '',
                 commune: props.commune || props.ville || '',
                 etat: 'Route fermée',
                 cause: props.cause || props.nature || 'Inondation',
                 statut: statut,
-                statut_actif: statut.toLowerCase() === 'actif' || statut.toLowerCase() === 'en cours',
-                statut_resolu: statut.toLowerCase() === 'résolu' || statut.toLowerCase() === 'terminé',
-                type_coupure: props.type_coupure || props.type || 'Coupure totale',
-                sens_circulation: props.sens || props.sens_circulation || '',
-                commentaire: props.commentaire || props.description || props.libelle || '',
+                statut_actif: statut.toLowerCase() === 'actif',
+                statut_resolu: statut.toLowerCase() === 'résolu',
+                type_coupure: props.type_coupure || props.type || '',
+                sens_circulation: props.sens || '',
+                commentaire: props.commentaire || props.description || '',
                 date_debut: formatDate(props.date_debut || props.date_deb || props.date),
                 date_fin: formatDate(props.date_fin),
-                date_saisie: formatDate(props.date_creation || props.date_saisie || props.date),
+                date_saisie: formatDate(props.date_creation || props.date),
                 gestionnaire: 'CD56',
                 conditions_circulation: 'COUPÉE',
-                
-                // Propriétés supplémentaires spécifiques CD56
-                cd56_raw: {
-                    ...props
-                }
+                cd56_raw: { ...props }
             }
         };
     } catch (e) {
@@ -458,35 +423,28 @@ async function mergeSources() {
         
         let features = [];
         
-        // Conversion Grist
-        console.log('🔄 Conversion Grist 35...');
         gristRecords.forEach(record => {
             const feature = gristToFeature(record);
             if (feature) features.push(feature);
         });
         
-        // Conversion CD44
-        console.log('🔄 Conversion CD44...');
         cd44Records.forEach(item => {
             const feature = cd44ToFeature(item);
             if (feature) features.push(feature);
         });
         
-        // Conversion Rennes Métropole
-        console.log('🔄 Conversion Rennes Métropole...');
         rennesMetropoleRecords.forEach(item => {
             const rmsFeatures = rennesMetropoleToFeatures(item);
             features.push(...rmsFeatures);
         });
         
-        // 🆕 Conversion CD56
-        console.log('🔄 Conversion CD56...');
+        // Conversion CD56
         cd56Features.forEach(feature => {
             const converted = cd56ToFeature(feature);
             if (converted) features.push(converted);
         });
         
-        console.log(`\n✅ ${features.length} features créées\n`);
+        console.log(`✅ ${features.length} features créées\n`);
         
         const geojson = {
             type: 'FeatureCollection',
@@ -520,7 +478,6 @@ async function mergeSources() {
                 points: features.filter(f => f.geometry.type === 'Point').length,
                 lines: features.filter(f => f.geometry.type === 'LineString').length,
                 multilines: features.filter(f => f.geometry.type === 'MultiLineString').length,
-                polygons: features.filter(f => f.geometry.type === 'Polygon').length,
                 by_source: {
                     grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
                     cd44: features.filter(f => f.properties.source === 'CD44').length,
@@ -542,18 +499,6 @@ async function mergeSources() {
         console.log(`   - Points: ${metadata.stats.points}`);
         console.log(`   - LineStrings: ${metadata.stats.lines}`);
         console.log(`   - MultiLineStrings: ${metadata.stats.multilines}`);
-        console.log(`   - Polygons: ${metadata.stats.polygons}`);
-        
-        // Sauvegarde d'un exemple de données CD56 pour analyse
-        if (cd56Features.length > 0) {
-            const cd56Sample = {
-                count: cd56Features.length,
-                firstFeature: cd56Features[0],
-                allProperties: cd56Features.map(f => Object.keys(f.properties || {}))
-            };
-            fs.writeFileSync('cd56_sample.json', JSON.stringify(cd56Sample, null, 2));
-            console.log('   - Échantillon CD56 sauvegardé dans cd56_sample.json');
-        }
         
     } catch (error) {
         console.error('❌ Erreur fusion:', error.message);
