@@ -6,15 +6,15 @@ const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
 const TABLE_ID = 'Signalements';
 
-// Configuration CD56 WFS
-const CD56_WFS_CONFIG = {
-    baseUrl: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer',
-    service: 'WFS',
-    version: '2.0.0',
-    request: 'GetFeature',
-    typeName: 'TEST_INONDATION_V2:Routes_Concernees',
-    outputFormat: 'geojson',
-    maxFeatures: 200
+// Configuration CD56 ArcGIS REST API
+const CD56_CONFIG = {
+    // API REST ArcGIS (au lieu de WFS qui retourne du XML)
+    baseUrl: 'https://services9.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/FeatureServer/0/query',
+    // Paramètres de la requête
+    where: "conditions_circulation='COUPÉE'",  // Filtre sur les routes coupées
+    outFields: '*',  // Tous les champs
+    returnGeometry: true,
+    f: 'geojson'  // Format GeoJSON natif !
 };
 
 console.log('🚀 Démarrage de la fusion des 4 sources...\n');
@@ -169,64 +169,60 @@ async function fetchRennesMetropoleData() {
 }
 
 // Récupérer CD56 via WFS
+// Récupérer CD56 via ArcGIS REST API
 async function fetchCD56Data() {
-    console.log('🔗 [CD56] Récupération via WFS...');
-    
-    // Liste des formats à essayer dans l'ordre
-    const formats = ['geojson', 'application/json', 'json', 'application/geo+json'];
-    
-    for (const format of formats) {
-        try {
-            console.log(`   Tentative avec outputFormat: ${format}`);
-            
-            let wfsUrl = `${CD56_WFS_CONFIG.baseUrl}?` +
-                `service=${CD56_WFS_CONFIG.service}&` +
-                `version=${CD56_WFS_CONFIG.version}&` +
-                `request=${CD56_WFS_CONFIG.request}&` +
-                `typeNames=${CD56_WFS_CONFIG.typeName}&` +
-                `outputFormat=${encodeURIComponent(format)}&` +
-                `count=${CD56_WFS_CONFIG.maxFeatures}`;
-            
-            const response = await fetch(wfsUrl, {
-                headers: {
-                    'User-Agent': 'Mozilla/5.0',
-                    'Accept': 'application/json, application/geo+json, application/vnd.geo+json'
-                }
-            });
-            
-            console.log(`   Statut HTTP: ${response.status}`);
-            
-            if (!response.ok) {
-                console.log(`   ❌ Échec avec ${format} (HTTP ${response.status})`);
-                continue;
+    try {
+        console.log('🔗 [CD56] Récupération via ArcGIS REST API...');
+        
+        // Construction de l'URL avec les paramètres
+        const params = new URLSearchParams({
+            where: CD56_CONFIG.where,
+            outFields: CD56_CONFIG.outFields,
+            returnGeometry: CD56_CONFIG.returnGeometry,
+            f: CD56_CONFIG.f
+        });
+        
+        const url = `${CD56_CONFIG.baseUrl}?${params.toString()}`;
+        console.log(`   📌 Filtre: ${CD56_CONFIG.where}`);
+        
+        const response = await fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0',
+                'Accept': 'application/json'
             }
-            
+        });
+        
+        console.log(`   Statut HTTP: ${response.status}`);
+        
+        if (!response.ok) {
+            console.error(`❌ [CD56] HTTP ${response.status}`);
             const text = await response.text();
-            
-            if (text.trim().startsWith('<')) {
-                console.log(`   ❌ ${format} retourne du XML, essai suivant...`);
-                continue;
-            }
-            
-            const data = JSON.parse(text);
-            const features = data.features || [];
-            
-            console.log(`✅ [CD56] ${features.length} features (format: ${format})`);
-            
-            if (features.length > 0) {
-                console.log('   📋 Propriétés: ' + Object.keys(features[0].properties || {}).slice(0, 5).join(', '));
-            }
-            
-            return features;
-            
-        } catch (error) {
-            console.log(`   ❌ Erreur avec ${format}: ${error.message}`);
-            continue;
+            console.error(`   Réponse: ${text.substring(0, 200)}`);
+            return [];
         }
+        
+        const data = await response.json();
+        
+        // L'API REST retourne directement un GeoJSON
+        const features = data.features || [];
+        console.log(`✅ [CD56] ${features.length} features`);
+        
+        if (features.length > 0) {
+            const props = features[0].properties || {};
+            console.log('   📋 Propriétés: ' + Object.keys(props).slice(0, 8).join(', '));
+            
+            // Vérifier si conditions_circulation existe
+            if (props.conditions_circulation) {
+                console.log(`   ⭐ conditions_circulation: ${props.conditions_circulation}`);
+            }
+        }
+        
+        return features;
+        
+    } catch (error) {
+        console.error('❌ [CD56]', error.message);
+        return [];
     }
-    
-    console.error('❌ [CD56] Impossible de récupérer les données');
-    return [];
 }
 
 // Convertir Grist
