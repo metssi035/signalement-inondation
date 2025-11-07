@@ -1,18 +1,18 @@
 {
-  "lastUpdate": "2025-11-07T06:38:15.199Z",
+  "lastUpdate": "2025-11-07T07:25:30.674Z",
   "sources": {
     "grist_35": 46,
-    "cd44": 32,
+    "cd44": 31,
     "rennes_metropole": 100,
-    "total": 178
+    "total": 177
   },
   "stats": {
-    "points": 62,
+    "points": 61,
     "lines": 16,
     "multilines": 100,
     "by_source": {
       "grist_35": 46,
-      "cd44": 32,
+      "cd44": 31,
       "rennes_metropole": 100
     }
   }

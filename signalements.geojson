@@ -2055,34 +2055,6 @@
         "source": "CD44",
         "route": "Bacs de Loire",
         "commune": "Liaison : Couëron / Le Pellerin",
-        "etat": "Autre",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Autre",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause travaux voirie",
-        "date_debut": "11/02/2025 à 10h57",
-        "date_fin": "",
-        "date_saisie": "11/02/2025 à 10h57",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7534205040926696,
-          47.20451320069573
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Couëron / Le Pellerin",
         "etat": "Marée haute",
         "cause": "Bacs de Loire",
         "statut": "Actif",
@@ -11221,12 +11193,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-07T06:38:15.194Z",
+    "generated": "2025-11-07T07:25:30.668Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole",
-    "total_count": 178,
+    "total_count": 177,
     "sources": {
       "grist_35": 46,
-      "cd44": 32,
+      "cd44": 31,
       "rennes_metropole": 100
     }
   }
