@@ -15,8 +15,8 @@ const CD56_WFS_CONFIG = {
     typeName: 'TEST_INONDATION_V2:Routes_Concernees',
     outputFormat: 'application/json',
     maxFeatures: 200,  // Normalement 116 entités totales
-    // Filtre CQL pour ne récupérer que les routes coupées
-    cqlFilter: "conditions_circulation='COUPÉE'"
+    // ⚠️ FILTRE DÉSACTIVÉ - Récupère toutes les routes, filtre côté client
+    // cqlFilter: "conditions_circulation='COUPÉE'"
 };
 
 console.log('🚀 Démarrage de la fusion des 4 sources...\n');
@@ -212,7 +212,19 @@ async function fetchCD56Data() {
         
         // Debug: afficher les propriétés du premier élément
         if (features.length > 0) {
-            console.log('   📋 Propriétés disponibles:', Object.keys(features[0].properties || {}));
+            console.log('   📋 Exemple de propriétés CD56:');
+            const props = features[0].properties || {};
+            Object.keys(props).slice(0, 10).forEach(key => {
+                console.log(`      - ${key}: ${props[key]}`);
+            });
+            
+            // Chercher le champ qui pourrait indiquer l'état
+            const etatFields = ['conditions_circulation', 'etat', 'statut', 'type', 'state'];
+            etatFields.forEach(field => {
+                if (props[field]) {
+                    console.log(`   ⭐ Champ "${field}" trouvé: ${props[field]}`);
+                }
+            });
         }
         
         return features;
@@ -366,20 +378,24 @@ function cd56ToFeature(feature) {
         
         const props = feature.properties || {};
         
+        // 🔍 FILTRE EXACT : conditions_circulation = "COUPÉE"
+        if (props.conditions_circulation !== 'COUPÉE') {
+            return null;  // On ignore cette route
+        }
+        
         // Mapping des propriétés CD56 vers notre format unifié
-        // Note: conditions_circulation = "COUPÉE" (déjà filtré côté serveur)
         const statut = props.statut || props.etat || 'Actif';
         
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd56-${props.objectid || props.id || feature.id}`,
+                id: `cd56-${props.objectid || props.OBJECTID || props.id || feature.id}`,
                 source: 'CD56',
                 route: props.route || props.rd || props.voie || props.axe || '',
                 commune: props.commune || props.ville || '',
-                etat: 'Route fermée',  // Puisque conditions_circulation="COUPÉE"
-                cause: props.cause || props.nature || props.raison_coupure || 'Inondation',
+                etat: 'Route fermée',
+                cause: props.cause || props.nature || 'Inondation',
                 statut: statut,
                 statut_actif: statut.toLowerCase() === 'actif' || statut.toLowerCase() === 'en cours',
                 statut_resolu: statut.toLowerCase() === 'résolu' || statut.toLowerCase() === 'terminé',
@@ -390,7 +406,7 @@ function cd56ToFeature(feature) {
                 date_fin: formatDate(props.date_fin),
                 date_saisie: formatDate(props.date_creation || props.date_saisie || props.date),
                 gestionnaire: 'CD56',
-                conditions_circulation: props.conditions_circulation || 'COUPÉE',
+                conditions_circulation: 'COUPÉE',
                 
                 // Propriétés supplémentaires spécifiques CD56
                 cd56_raw: {
