@@ -6,27 +6,20 @@ const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
 const TABLE_ID = 'Signalements';
 
-// Configuration CD56 ArcGIS REST API
-const CD56_CONFIG = {
-    baseUrl: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/FeatureServer/0/query',
-    outFields: '*',       // Tous les champs
-    returnGeometry: true, // Récupérer la géométrie
-    f: 'geojson'          // Format GeoJSON natif
-};
+// Chemin vers le GeoJSON CD56 exporté depuis QGIS
+const CD56_LOCAL_FILE = './cd56_signalements_qgis.geojson';
 
 console.log('🚀 Démarrage de la fusion des 4 sources...\n');
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
     if (!dateValue) return '';
-    
     try {
         let date;
         if (typeof dateValue === 'string') date = new Date(dateValue);
         else if (typeof dateValue === 'number') date = new Date(dateValue * 1000);
         else return '';
         if (isNaN(date.getTime())) return '';
-        
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const year = date.getFullYear();
@@ -45,7 +38,6 @@ async function fetchGristData() {
             console.warn('⚠️ Grist credentials manquants');
             return [];
         }
-
         console.log('🔗 [Grist 35] Récupération...');
         const options = {
             hostname: 'grist.dataregion.fr',
@@ -56,7 +48,6 @@ async function fetchGristData() {
                 'Content-Type': 'application/json'
             }
         };
-
         return new Promise((resolve) => {
             https.get(options, (res) => {
                 let data = '';
@@ -145,39 +136,19 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// Récupérer CD56 (sans filtre)
+// Récupérer CD56 depuis GeoJSON local
 async function fetchCD56Data() {
     try {
-        console.log('🔗 [CD56] Récupération test (sans filtre)...');
-
-        const params = new URLSearchParams({
-            where: '1=1',        // pas de filtre
-            outFields: CD56_CONFIG.outFields,
-            returnGeometry: CD56_CONFIG.returnGeometry,
-            f: CD56_CONFIG.f
-        });
-
-        const url = `${CD56_CONFIG.baseUrl}?${params.toString()}`;
-        console.log(`URL : ${url}`);
-
-        const response = await fetch(url, {
-            headers: { 'User-Agent': 'Mozilla/5.0' }
-        });
-
-        console.log(`   Statut HTTP: ${response.status}`);
-
-        if (!response.ok) {
-            const text = await response.text();
-            console.error('❌ [CD56] Erreur serveur :', text.substring(0, 300));
+        console.log('🔗 [CD56] Récupération depuis fichier local...');
+        if (!fs.existsSync(CD56_LOCAL_FILE)) {
+            console.error(`❌ Fichier CD56 introuvable : ${CD56_LOCAL_FILE}`);
             return [];
         }
-
-        const data = await response.json();
+        const raw = fs.readFileSync(CD56_LOCAL_FILE);
+        const data = JSON.parse(raw);
         const features = data.features || [];
         console.log(`✅ [CD56] Total features récupérées : ${features.length}`);
-
         return features;
-
     } catch (error) {
         console.error('❌ [CD56]', error.message);
         return [];
@@ -292,7 +263,7 @@ function rennesMetropoleToFeatures(item) {
     }
 }
 
-// Convertir CD56 (sans filtrage)
+// Convertir CD56
 function cd56ToFeature(feature) {
     try {
         const geometry = feature.geometry;
