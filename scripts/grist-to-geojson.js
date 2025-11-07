@@ -8,10 +8,10 @@ const TABLE_ID = 'Signalements';
 
 // Configuration CD56 ArcGIS REST API
 const CD56_CONFIG = {
-    where: "conditions_circulation='COUPÉE'",  // Filtre sur les routes coupées
-    outFields: '*',  // Tous les champs
-    returnGeometry: true,
-    f: 'geojson'  // Format GeoJSON natif
+    baseUrl: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/FeatureServer/0/query',
+    outFields: '*',       // Tous les champs
+    returnGeometry: true, // Récupérer la géométrie
+    f: 'geojson'          // Format GeoJSON natif
 };
 
 console.log('🚀 Démarrage de la fusion des 4 sources...\n');
@@ -22,32 +22,17 @@ function formatDate(dateValue) {
     
     try {
         let date;
+        if (typeof dateValue === 'string') date = new Date(dateValue);
+        else if (typeof dateValue === 'number') date = new Date(dateValue * 1000);
+        else return '';
+        if (isNaN(date.getTime())) return '';
         
-        // Si c'est une string ISO
-        if (typeof dateValue === 'string') {
-            date = new Date(dateValue);
-        } 
-        // Si c'est un timestamp
-        else if (typeof dateValue === 'number') {
-            date = new Date(dateValue * 1000);
-        } else {
-            return '';
-        }
-        
-        // Vérifier validité
-        if (isNaN(date.getTime())) {
-            return '';
-        }
-        
-        // Format JJ/MM/AAAA HH:MM
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const year = date.getFullYear();
         const hours = String(date.getHours()).padStart(2, '0');
         const minutes = String(date.getMinutes()).padStart(2, '0');
-        
         return `${day}/${month}/${year} à ${hours}h${minutes}`;
-        
     } catch (e) {
         return '';
     }
@@ -62,7 +47,6 @@ async function fetchGristData() {
         }
 
         console.log('🔗 [Grist 35] Récupération...');
-        
         const options = {
             hostname: 'grist.dataregion.fr',
             path: `/o/inforoute/api/docs/${GRIST_DOC_ID}/tables/${TABLE_ID}/records`,
@@ -107,17 +91,13 @@ async function fetchGristData() {
 async function fetchCD44Data() {
     try {
         console.log('🔗 [CD44] Récupération...');
-        
         return new Promise((resolve) => {
             const options = {
                 hostname: 'data.loire-atlantique.fr',
                 path: '/api/explore/v2.1/catalog/datasets/224400028_info-route-departementale/records?limit=100',
                 method: 'GET',
-                headers: {
-                    'User-Agent': 'Mozilla/5.0'
-                }
+                headers: { 'User-Agent': 'Mozilla/5.0' }
             };
-
             https.get(options, (res) => {
                 let data = '';
                 res.on('data', chunk => { data += chunk; });
@@ -165,42 +145,36 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// Récupérer CD56 via ArcGIS REST API (FeatureServer)
+// Récupérer CD56 (sans filtre)
 async function fetchCD56Data() {
     try {
-        console.log('🔗 [CD56] Récupération via ArcGIS REST FeatureServer...');
-
-        const baseUrl = 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/FeatureServer/0/query';
+        console.log('🔗 [CD56] Récupération test (sans filtre)...');
 
         const params = new URLSearchParams({
-            where: CD56_CONFIG.where,    // Filtre exact
+            where: '1=1',        // pas de filtre
             outFields: CD56_CONFIG.outFields,
-            returnGeometry: 'true',
+            returnGeometry: CD56_CONFIG.returnGeometry,
             f: CD56_CONFIG.f
         });
 
-        const url = `${baseUrl}?${params.toString()}`;
-        console.log(`   📌 URL: ${url}`);
+        const url = `${CD56_CONFIG.baseUrl}?${params.toString()}`;
+        console.log(`URL : ${url}`);
 
         const response = await fetch(url, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0',
-                'Accept': 'application/json'
-            }
+            headers: { 'User-Agent': 'Mozilla/5.0' }
         });
 
         console.log(`   Statut HTTP: ${response.status}`);
 
         if (!response.ok) {
-            console.error(`❌ [CD56] HTTP ${response.status}`);
             const text = await response.text();
-            console.error(`   Réponse: ${text.substring(0, 200)}`);
+            console.error('❌ [CD56] Erreur serveur :', text.substring(0, 300));
             return [];
         }
 
         const data = await response.json();
         const features = data.features || [];
-        console.log(`✅ [CD56] ${features.length} features récupérées`);
+        console.log(`✅ [CD56] Total features récupérées : ${features.length}`);
 
         return features;
 
@@ -214,24 +188,13 @@ async function fetchCD56Data() {
 function gristToFeature(record) {
     try {
         let geometry;
-        
-        if (record.fields.geojson) {
-            geometry = JSON.parse(record.fields.geojson);
-        } else if (record.fields.Latitude && record.fields.Longitude) {
-            geometry = {
-                type: 'Point',
-                coordinates: [record.fields.Longitude, record.fields.Latitude]
-            };
-        } else {
-            return null;
-        }
-        
-        const cause = Array.isArray(record.fields.Cause) ? 
-                     record.fields.Cause.filter(c => c !== 'L').join(', ') : 
-                     (record.fields.Cause || '');
-        
+        if (record.fields.geojson) geometry = JSON.parse(record.fields.geojson);
+        else if (record.fields.Latitude && record.fields.Longitude) geometry = { type: 'Point', coordinates: [record.fields.Longitude, record.fields.Latitude] };
+        else return null;
+
+        const cause = Array.isArray(record.fields.Cause) ? record.fields.Cause.filter(c => c !== 'L').join(', ') : (record.fields.Cause || '');
         const statut = record.fields.Statut || 'Actif';
-        
+
         return {
             type: 'Feature',
             geometry: geometry,
@@ -262,14 +225,10 @@ function gristToFeature(record) {
 // Convertir CD44
 function cd44ToFeature(item) {
     try {
-        const geometry = {
-            type: 'Point',
-            coordinates: [item.longitude, item.latitude]
-        };
-        
+        const geometry = { type: 'Point', coordinates: [item.longitude, item.latitude] };
         const route = Array.isArray(item.ligne2) ? item.ligne2.join(' / ') : (item.ligne2 || 'Route');
         const statut = 'Actif';
-        
+
         return {
             type: 'Feature',
             geometry: geometry,
@@ -301,20 +260,11 @@ function cd44ToFeature(item) {
 function rennesMetropoleToFeatures(item) {
     try {
         let geometry = null;
-        
-        if (item.geo_shape && item.geo_shape.geometry) {
-            geometry = item.geo_shape.geometry;
-        } else if (item.geo_point_2d) {
-            geometry = {
-                type: 'Point',
-                coordinates: [item.geo_point_2d.lon, item.geo_point_2d.lat]
-            };
-        }
-        
+        if (item.geo_shape && item.geo_shape.geometry) geometry = item.geo_shape.geometry;
+        else if (item.geo_point_2d) geometry = { type: 'Point', coordinates: [item.geo_point_2d.lon, item.geo_point_2d.lat] };
         if (!geometry) return [];
-        
+
         const statut = 'Actif';
-        
         return [{
             type: 'Feature',
             geometry: geometry,
@@ -337,27 +287,20 @@ function rennesMetropoleToFeatures(item) {
                 gestionnaire: 'Rennes Métropole'
             }
         }];
-        
     } catch (e) {
         return [];
     }
 }
 
-// Convertir CD56
+// Convertir CD56 (sans filtrage)
 function cd56ToFeature(feature) {
     try {
         const geometry = feature.geometry;
         if (!geometry) return null;
-        
         const props = feature.properties || {};
-        
-        // FILTRE EXACT : conditions_circulation = "COUPÉE"
-        if (props.conditions_circulation !== 'COUPÉE') {
-            return null;
-        }
-        
+
         const statut = props.statut || props.etat || 'Actif';
-        
+
         return {
             type: 'Feature',
             geometry: geometry,
@@ -378,7 +321,6 @@ function cd56ToFeature(feature) {
                 date_fin: formatDate(props.date_fin),
                 date_saisie: formatDate(props.date_creation || props.date),
                 gestionnaire: 'CD56',
-                conditions_circulation: 'COUPÉE',
                 cd56_raw: { ...props }
             }
         };
@@ -392,95 +334,28 @@ function cd56ToFeature(feature) {
 async function mergeSources() {
     try {
         console.log('');
-        
+
         const [gristRecords, cd44Records, rennesMetropoleRecords, cd56Features] = await Promise.all([
             fetchGristData(),
             fetchCD44Data(),
             fetchRennesMetropoleData(),
             fetchCD56Data()
         ]);
-        
+
         console.log(`\n📊 Total brut: ${gristRecords.length + cd44Records.length + rennesMetropoleRecords.length + cd56Features.length} records\n`);
-        
+
         let features = [];
-        
-        gristRecords.forEach(record => {
-            const feature = gristToFeature(record);
-            if (feature) features.push(feature);
-        });
-        
-        cd44Records.forEach(item => {
-            const feature = cd44ToFeature(item);
-            if (feature) features.push(feature);
-        });
-        
-        rennesMetropoleRecords.forEach(item => {
-            const rmsFeatures = rennesMetropoleToFeatures(item);
-            features.push(...rmsFeatures);
-        });
-        
-        // Conversion CD56
-        cd56Features.forEach(feature => {
-            const converted = cd56ToFeature(feature);
-            if (converted) features.push(converted);
-        });
-        
+        gristRecords.forEach(record => { const feature = gristToFeature(record); if (feature) features.push(feature); });
+        cd44Records.forEach(item => { const feature = cd44ToFeature(item); if (feature) features.push(feature); });
+        rennesMetropoleRecords.forEach(item => { const rmsFeatures = rennesMetropoleToFeatures(item); features.push(...rmsFeatures); });
+        cd56Features.forEach(feature => { const converted = cd56ToFeature(feature); if (converted) features.push(converted); });
+
         console.log(`✅ ${features.length} features créées\n`);
-        
-        const geojson = {
-            type: 'FeatureCollection',
-            features: features,
-            metadata: {
-                generated: new Date().toISOString(),
-                source: 'Fusion Grist 35 + CD44 + Rennes Métropole + CD56',
-                total_count: features.length,
-                sources: {
-                    grist_35: gristRecords.length,
-                    cd44: cd44Records.length,
-                    rennes_metropole: rennesMetropoleRecords.length,
-                    cd56: cd56Features.length
-                }
-            }
-        };
-        
+
+        const geojson = { type: 'FeatureCollection', features: features, metadata: { generated: new Date().toISOString(), source: 'Fusion Grist 35 + CD44 + Rennes Métropole + CD56', total_count: features.length } };
         fs.writeFileSync('signalements.geojson', JSON.stringify(geojson, null, 2));
         console.log('✅ Fichier signalements.geojson créé');
-        
-        const metadata = {
-            lastUpdate: new Date().toISOString(),
-            sources: {
-                grist_35: gristRecords.length,
-                cd44: cd44Records.length,
-                rennes_metropole: rennesMetropoleRecords.length,
-                cd56: cd56Features.length,
-                total: features.length
-            },
-            stats: {
-                points: features.filter(f => f.geometry.type === 'Point').length,
-                lines: features.filter(f => f.geometry.type === 'LineString').length,
-                multilines: features.filter(f => f.geometry.type === 'MultiLineString').length,
-                by_source: {
-                    grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
-                    cd44: features.filter(f => f.properties.source === 'CD44').length,
-                    rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
-                    cd56: features.filter(f => f.properties.source === 'CD56').length
-                }
-            }
-        };
-        
-        fs.writeFileSync('metadata.json', JSON.stringify(metadata, null, 2));
-        console.log('✅ Métadonnées créées');
-        
-        console.log('\n📊 Statistiques finales:');
-        console.log(`   - Grist 35: ${gristRecords.length}`);
-        console.log(`   - CD44: ${cd44Records.length}`);
-        console.log(`   - Rennes Métropole: ${rennesMetropoleRecords.length}`);
-        console.log(`   - CD56: ${cd56Features.length}`);
-        console.log(`   - Total features: ${features.length}`);
-        console.log(`   - Points: ${metadata.stats.points}`);
-        console.log(`   - LineStrings: ${metadata.stats.lines}`);
-        console.log(`   - MultiLineStrings: ${metadata.stats.multilines}`);
-        
+
     } catch (error) {
         console.error('❌ Erreur fusion:', error.message);
         process.exit(1);
