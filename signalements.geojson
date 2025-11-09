@@ -2215,6 +2215,158 @@
         "coordinates": [
           [
             [
+              -1.683136812517992,
+              48.11016614515085
+            ],
+            [
+              -1.684436907377407,
+              48.11016440712451
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Quai Duguay-Trouin, de la Rue Le Bouteiller jusqu'au Pont de la Mission",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "13/10/2025 à 00h00",
+        "date_fin": "05/12/2025 à 00h00",
+        "date_saisie": "13/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.633087585912986,
+              48.07723193242996
+            ],
+            [
+              -1.631924266933327,
+              48.076817044303276
+            ],
+            [
+              -1.631202669240455,
+              48.07608023897482
+            ],
+            [
+              -1.631111277020417,
+              48.074687297769835
+            ],
+            [
+              -1.630615728488838,
+              48.073659801348235
+            ],
+            [
+              -1.628881702683704,
+              48.07250199519346
+            ],
+            [
+              -1.62859630528899,
+              48.07213054771991
+            ],
+            [
+              -1.627454112011766,
+              48.07082498573041
+            ],
+            [
+              -1.626851165444711,
+              48.06972296079132
+            ],
+            [
+              -1.626540221327599,
+              48.06831633497666
+            ],
+            [
+              -1.626191913078337,
+              48.06799246856525
+            ],
+            [
+              -1.624203661665766,
+              48.06661957793585
+            ]
+          ],
+          [
+            [
+              -1.624196126448552,
+              48.066652468928815
+            ],
+            [
+              -1.621417060931585,
+              48.06582946278375
+            ],
+            [
+              -1.619981854629543,
+              48.06518888053905
+            ],
+            [
+              -1.619663076235297,
+              48.06481875700076
+            ],
+            [
+              -1.619397552714262,
+              48.06391712919208
+            ],
+            [
+              -1.619340978239809,
+              48.063097203261144
+            ]
+          ],
+          [
+            [
+              -1.624274469090139,
+              48.066599418675565
+            ],
+            [
+              -1.624607625540056,
+              48.06619180083679
+            ],
+            [
+              -1.624414707534694,
+              48.06572651784907
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "rue de la Hallerais entre la rue du pré long et la VC5 Chantepie déviation des 2 sens de circulation\nrue de la Hallerais depuis le rond point de l'hermine et jusqu'à la rue du pré long deviation un sens de circulation",
+        "commune": "35055 - Chantepie, 35352 - Vern-sur-Seiche",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "06/10/2025 à 00h00",
+        "date_fin": "30/01/2026 à 00h00",
+        "date_saisie": "06/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
               -1.684767806591074,
               48.10831331134001
             ],
@@ -2368,158 +2520,6 @@
         "date_debut": "03/11/2025 à 00h00",
         "date_fin": "11/11/2025 à 00h00",
         "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.683136812517992,
-              48.11016614515085
-            ],
-            [
-              -1.684436907377407,
-              48.11016440712451
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Quai Duguay-Trouin, de la Rue Le Bouteiller jusqu'au Pont de la Mission",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "13/10/2025 à 00h00",
-        "date_fin": "05/12/2025 à 00h00",
-        "date_saisie": "13/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.633087585912986,
-              48.07723193242996
-            ],
-            [
-              -1.631924266933327,
-              48.076817044303276
-            ],
-            [
-              -1.631202669240455,
-              48.07608023897482
-            ],
-            [
-              -1.631111277020417,
-              48.074687297769835
-            ],
-            [
-              -1.630615728488838,
-              48.073659801348235
-            ],
-            [
-              -1.628881702683704,
-              48.07250199519346
-            ],
-            [
-              -1.62859630528899,
-              48.07213054771991
-            ],
-            [
-              -1.627454112011766,
-              48.07082498573041
-            ],
-            [
-              -1.626851165444711,
-              48.06972296079132
-            ],
-            [
-              -1.626540221327599,
-              48.06831633497666
-            ],
-            [
-              -1.626191913078337,
-              48.06799246856525
-            ],
-            [
-              -1.624203661665766,
-              48.06661957793585
-            ]
-          ],
-          [
-            [
-              -1.624196126448552,
-              48.066652468928815
-            ],
-            [
-              -1.621417060931585,
-              48.06582946278375
-            ],
-            [
-              -1.619981854629543,
-              48.06518888053905
-            ],
-            [
-              -1.619663076235297,
-              48.06481875700076
-            ],
-            [
-              -1.619397552714262,
-              48.06391712919208
-            ],
-            [
-              -1.619340978239809,
-              48.063097203261144
-            ]
-          ],
-          [
-            [
-              -1.624274469090139,
-              48.066599418675565
-            ],
-            [
-              -1.624607625540056,
-              48.06619180083679
-            ],
-            [
-              -1.624414707534694,
-              48.06572651784907
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "rue de la Hallerais entre la rue du pré long et la VC5 Chantepie déviation des 2 sens de circulation\nrue de la Hallerais depuis le rond point de l'hermine et jusqu'à la rue du pré long deviation un sens de circulation",
-        "commune": "35055 - Chantepie, 35352 - Vern-sur-Seiche",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "06/10/2025 à 00h00",
-        "date_fin": "30/01/2026 à 00h00",
-        "date_saisie": "06/10/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12155,7 +12155,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-09T20:25:30.005Z",
+    "generated": "2025-11-09T20:41:23.793Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
     "total_count": 172
   }
