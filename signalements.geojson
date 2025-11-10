@@ -1486,34 +1486,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.3119283448959298,
-          47.360648685278896
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D723 / Oudon",
-        "commune": "Couffé / Oudon",
-        "etat": "Obstacle",
-        "cause": "Autre danger",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Obstacle",
-        "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
-        "date_debut": "11/10/2025 à 16h12",
-        "date_fin": "",
-        "date_saisie": "11/10/2025 à 16h12",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.6743617405076974,
           47.19644470749437
         ]
@@ -2047,12 +2019,12 @@
         "coordinates": [
           [
             [
-              -1.658467979503552,
-              48.10926520420856
+              -1.665772643251681,
+              48.11626046080034
             ],
             [
-              -1.658394044174838,
-              48.109278120441
+              -1.665704381366451,
+              48.116258842267136
             ]
           ]
         ],
@@ -2061,79 +2033,7 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "route": "71 Rue Alphonse Guérin",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "d'installation de chantier",
-        "date_debut": "27/06/2025 à 00h00",
-        "date_fin": "30/01/2026 à 00h00",
-        "date_saisie": "27/06/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.700159849444994,
-              48.10943259366614
-            ],
-            [
-              -1.700353699281341,
-              48.10957983689126
-            ],
-            [
-              -1.700458451896204,
-              48.10979911513316
-            ],
-            [
-              -1.700531081243717,
-              48.109881479216
-            ],
-            [
-              -1.700719624749106,
-              48.10997343164202
-            ],
-            [
-              -1.70119544793733,
-              48.11009211445729
-            ]
-          ],
-          [
-            [
-              -1.70119544793733,
-              48.11009211445729
-            ],
-            [
-              -1.701412301035865,
-              48.11010199027196
-            ]
-          ],
-          [
-            [
-              -1.70119544793733,
-              48.11009211445729
-            ],
-            [
-              -1.701191614058903,
-              48.11015810860085
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue de la Carrière, de la Rue Desaix jusqu'au 37",
+        "route": "66 Boulevard de Sévigné",
         "commune": "35238 - Rennes",
         "etat": "Route fermée",
         "cause": "Travaux",
@@ -2142,9 +2042,9 @@
         "statut_resolu": false,
         "type_coupure": "Rétrécissement temporaire de largeur de voie",
         "sens_circulation": "",
-        "commentaire": "",
+        "commentaire": "sur réseaux ou ouvrages d'eau potable",
         "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "15/11/2025 à 00h00",
+        "date_fin": "21/11/2025 à 00h00",
         "date_saisie": "03/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
@@ -2155,16 +2055,32 @@
         "coordinates": [
           [
             [
-              -1.678570318293718,
-              48.101640895713125
+              -1.69920976978966,
+              48.088538607326896
             ],
             [
-              -1.678591666454645,
-              48.10176797982388
+              -1.698464652158282,
+              48.088940772258596
             ],
             [
-              -1.676485212781493,
-              48.10204192253365
+              -1.698000845153548,
+              48.0893398808931
+            ],
+            [
+              -1.697852409804336,
+              48.08960219664349
+            ],
+            [
+              -1.697179546950561,
+              48.090567397269915
+            ],
+            [
+              -1.696912576085712,
+              48.09082047615736
+            ],
+            [
+              -1.696629874087257,
+              48.09108546078078
             ]
           ]
         ],
@@ -2173,19 +2089,99 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "route": "Rue Louis Blériot",
+        "route": "Rue de la Pilate, du 148 jusqu'à la Rue des Vingt-cinq Fusillés",
+        "commune": "35281 - Saint-Jacques-de-la-Lande",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "17/10/2025 à 00h00",
+        "date_fin": "30/11/2025 à 00h00",
+        "date_saisie": "17/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.683136812517992,
+              48.11016614515085
+            ],
+            [
+              -1.684436907377407,
+              48.11016440712451
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Quai Duguay-Trouin, de la Rue Le Bouteiller jusqu'au Pont de la Mission",
         "commune": "35238 - Rennes",
         "etat": "Route fermée",
         "cause": "Travaux",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Mise en impasse",
+        "type_coupure": "Circulation interdite",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "04/12/2024 à 00h00",
-        "date_fin": "31/05/2027 à 00h00",
-        "date_saisie": "04/12/2024 à 00h00",
+        "date_debut": "13/10/2025 à 00h00",
+        "date_fin": "05/12/2025 à 00h00",
+        "date_saisie": "13/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.721776061440317,
+              47.978317277511195
+            ],
+            [
+              -1.721218824668999,
+              47.978312059147775
+            ],
+            [
+              -1.721217074094114,
+              47.97845363648774
+            ],
+            [
+              -1.721785866910853,
+              47.978459083129785
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Parking au sud de la Mairie",
+        "commune": "35139 - Laillé",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "07/07/2025 à 00h00",
+        "date_fin": "30/11/2025 à 00h00",
+        "date_saisie": "07/07/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2235,28 +2231,32 @@
         "coordinates": [
           [
             [
-              -1.597524633105407,
-              48.199702459712114
+              -1.632339415654435,
+              48.10088465271729
             ],
             [
-              -1.598898467694085,
-              48.19801455087787
+              -1.632650978223525,
+              48.101175053289275
+            ]
+          ],
+          [
+            [
+              -1.629869799767313,
+              48.096196102065015
             ],
             [
-              -1.599567376727748,
-              48.19720509545435
+              -1.62981915478523,
+              48.09568942079659
+            ]
+          ],
+          [
+            [
+              -1.63194747509805,
+              48.10051932775266
             ],
             [
-              -1.599004919033252,
-              48.19713182362628
-            ],
-            [
-              -1.597925481121203,
-              48.197022875301855
-            ],
-            [
-              -1.59432367572492,
-              48.19658658313275
+              -1.631733316156137,
+              48.10031820344556
             ]
           ]
         ],
@@ -2265,8 +2265,8 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "route": "Route départementale 97,  de l'Oliverie jusqu'au Chemin des Cavaliers, Chemin des Cavaliers",
-        "commune": "35024 - Betton, 35315 - Saint-Sulpice-la-Forêt",
+        "route": "du 20 au 22 Rue des Veyettes",
+        "commune": "35238 - Rennes",
         "etat": "Route fermée",
         "cause": "Travaux",
         "statut": "Actif",
@@ -2274,190 +2274,10 @@
         "statut_resolu": false,
         "type_coupure": "Circulation alternée",
         "sens_circulation": "",
-        "commentaire": "de renouvellement de conduite d'eau potable",
-        "date_debut": "29/09/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "29/09/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.790082031715203,
-              48.104022108714226
-            ],
-            [
-              -1.789676400944032,
-              48.10416345229318
-            ],
-            [
-              -1.789570221215735,
-              48.104223643304735
-            ]
-          ],
-          [
-            [
-              -1.793766025200644,
-              48.10140354701293
-            ],
-            [
-              -1.793629616504358,
-              48.10161172426346
-            ],
-            [
-              -1.793494369004636,
-              48.10177033686252
-            ],
-            [
-              -1.7933142674292,
-              48.101947513569314
-            ]
-          ],
-          [
-            [
-              -1.790481770690656,
-              48.10384221432212
-            ],
-            [
-              -1.790082031715203,
-              48.104022108714226
-            ]
-          ],
-          [
-            [
-              -1.792183477245975,
-              48.10271001804642
-            ],
-            [
-              -1.791920836678248,
-              48.10295868306685
-            ],
-            [
-              -1.791664795852066,
-              48.103174841461076
-            ],
-            [
-              -1.791517668199624,
-              48.10328215150886
-            ]
-          ],
-          [
-            [
-              -1.792514511293424,
-              48.102384675346514
-            ],
-            [
-              -1.792345045618789,
-              48.10253459379744
-            ],
-            [
-              -1.792183477245975,
-              48.10271001804642
-            ]
-          ],
-          [
-            [
-              -1.791343212776437,
-              48.10339077607756
-            ],
-            [
-              -1.790918644314197,
-              48.10362765598872
-            ],
-            [
-              -1.790481770690656,
-              48.10384221432212
-            ]
-          ],
-          [
-            [
-              -1.791517668199624,
-              48.10328215150886
-            ],
-            [
-              -1.791343212776437,
-              48.10339077607756
-            ]
-          ],
-          [
-            [
-              -1.7933142674292,
-              48.101947513569314
-            ],
-            [
-              -1.792955558304014,
-              48.102167668846185
-            ]
-          ],
-          [
-            [
-              -1.792955558304014,
-              48.102167668846185
-            ],
-            [
-              -1.792514511293424,
-              48.102384675346514
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue de Vezin",
-        "commune": "35240 - le Rheu",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "20/10/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "20/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.616098617704525,
-              48.12992368654296
-            ],
-            [
-              -1.615102144614241,
-              48.13025650487003
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue de la Pommeraie",
-        "commune": "35051 - Cesson-Sévigné",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "20/10/2025 à 00h00",
-        "date_fin": "19/12/2025 à 00h00",
-        "date_saisie": "20/10/2025 à 00h00",
+        "date_debut": "15/09/2025 à 00h00",
+        "date_fin": "19/11/2025 à 00h00",
+        "date_saisie": "15/09/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2703,46 +2523,6 @@
         "coordinates": [
           [
             [
-              -1.676897071091977,
-              48.12369799067409
-            ],
-            [
-              -1.676723483807495,
-              48.12372972020935
-            ],
-            [
-              -1.676415281984687,
-              48.12377505291897
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 45 au 47 Rue Armand Rébillon",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "31/10/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
-        "date_saisie": "31/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.679646974974785,
               48.108602677435556
             ],
@@ -2797,586 +2577,6 @@
         "commentaire": "",
         "date_debut": "03/11/2025 à 00h00",
         "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.679646974974785,
-              48.108602677435556
-            ],
-            [
-              -1.679671941177408,
-              48.10860262092253
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "à l'intersection de la Place Honoré Commeurec et de la Rue Poullain Duparc, entrée ou sortie de la place",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "de réaménagement de voirie",
-        "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.739979416942896,
-              47.97918100626148
-            ],
-            [
-              -1.740123650501327,
-              47.978463382586085
-            ],
-            [
-              -1.740167991633429,
-              47.9782319542131
-            ]
-          ],
-          [
-            [
-              -1.696785536776648,
-              47.99100806459791
-            ],
-            [
-              -1.695596196661974,
-              47.990908209706156
-            ],
-            [
-              -1.695434615124257,
-              47.99089464261878
-            ],
-            [
-              -1.6947111271493,
-              47.990833891790274
-            ],
-            [
-              -1.694101900084164,
-              47.99073790067583
-            ]
-          ],
-          [
-            [
-              -1.703573540360939,
-              47.98813256877492
-            ],
-            [
-              -1.703512976393783,
-              47.9882185519583
-            ],
-            [
-              -1.703372917748454,
-              47.98839828753713
-            ],
-            [
-              -1.703215025057324,
-              47.9885355926045
-            ],
-            [
-              -1.703077281210297,
-              47.98861591659218
-            ]
-          ],
-          [
-            [
-              -1.707428157115137,
-              47.98166707504601
-            ],
-            [
-              -1.707388487063411,
-              47.9817014237873
-            ],
-            [
-              -1.706917630008601,
-              47.98210383564223
-            ],
-            [
-              -1.706399873473234,
-              47.98252445207225
-            ],
-            [
-              -1.706140650439754,
-              47.982761054935516
-            ],
-            [
-              -1.706016489177501,
-              47.982953761142916
-            ],
-            [
-              -1.705950592022486,
-              47.98309859089354
-            ],
-            [
-              -1.705849222736154,
-              47.983532877306416
-            ],
-            [
-              -1.705699609258781,
-              47.984228860798545
-            ],
-            [
-              -1.705488663086933,
-              47.98520599139702
-            ],
-            [
-              -1.705433603418027,
-              47.98539355927489
-            ],
-            [
-              -1.70530240009274,
-              47.98567641420529
-            ],
-            [
-              -1.705180552497123,
-              47.98586441848331
-            ]
-          ],
-          [
-            [
-              -1.737176745052598,
-              47.98044548966548
-            ],
-            [
-              -1.73780532590884,
-              47.980495010332135
-            ],
-            [
-              -1.738518736698142,
-              47.98052643679506
-            ],
-            [
-              -1.73883524251752,
-              47.98051589663052
-            ],
-            [
-              -1.739013660078911,
-              47.98049429966398
-            ],
-            [
-              -1.739168443080507,
-              47.98045047560943
-            ],
-            [
-              -1.739305772504369,
-              47.9803965958597
-            ]
-          ],
-          [
-            [
-              -1.732749992371653,
-              47.98038090847377
-            ],
-            [
-              -1.733381708966049,
-              47.980293361806204
-            ],
-            [
-              -1.734111651226675,
-              47.980212311019784
-            ],
-            [
-              -1.735968895618059,
-              47.980350323163464
-            ],
-            [
-              -1.737176745052598,
-              47.98044548966548
-            ]
-          ],
-          [
-            [
-              -1.698545315940728,
-              47.99079107011461
-            ],
-            [
-              -1.698131097041902,
-              47.99093022272978
-            ],
-            [
-              -1.697627913747573,
-              47.991028313027286
-            ],
-            [
-              -1.697209281010295,
-              47.991035405143975
-            ],
-            [
-              -1.696785536776648,
-              47.99100806459791
-            ]
-          ],
-          [
-            [
-              -1.745349959083503,
-              47.973285428375455
-            ],
-            [
-              -1.74616251208351,
-              47.97292085310829
-            ],
-            [
-              -1.747082748226805,
-              47.972487468115744
-            ],
-            [
-              -1.747407328896432,
-              47.972358209353416
-            ],
-            [
-              -1.747762899137599,
-              47.97224746469777
-            ],
-            [
-              -1.748153935558283,
-              47.972139973186934
-            ],
-            [
-              -1.748522432353451,
-              47.97207098708548
-            ]
-          ],
-          [
-            [
-              -1.709409206401704,
-              47.97901985124754
-            ],
-            [
-              -1.709304676747135,
-              47.97907778460549
-            ],
-            [
-              -1.709089235512137,
-              47.97927516878648
-            ],
-            [
-              -1.708611068118791,
-              47.979859371105185
-            ],
-            [
-              -1.708576210744032,
-              47.97992669084675
-            ]
-          ],
-          [
-            [
-              -1.698622858387013,
-              47.99076502018179
-            ],
-            [
-              -1.698545315940728,
-              47.99079107011461
-            ]
-          ],
-          [
-            [
-              -1.710363523596925,
-              47.97872788176223
-            ],
-            [
-              -1.710205580438329,
-              47.97878602096829
-            ]
-          ],
-          [
-            [
-              -1.700935036739112,
-              47.98998375952718
-            ],
-            [
-              -1.700491963241904,
-              47.990137081516565
-            ],
-            [
-              -1.698622858387013,
-              47.99076502018179
-            ]
-          ],
-          [
-            [
-              -1.743148196655013,
-              47.97431486548248
-            ],
-            [
-              -1.743454103161333,
-              47.974136015450405
-            ],
-            [
-              -1.744712596646341,
-              47.9735713913557
-            ]
-          ],
-          [
-            [
-              -1.708542157989623,
-              47.979992961040544
-            ],
-            [
-              -1.708373407267808,
-              47.98031836226237
-            ],
-            [
-              -1.707995609014454,
-              47.98109258921641
-            ],
-            [
-              -1.707820536458912,
-              47.98132732444637
-            ],
-            [
-              -1.707572349489173,
-              47.981542223419055
-            ]
-          ],
-          [
-            [
-              -1.694101900084164,
-              47.99073790067583
-            ],
-            [
-              -1.693211745704604,
-              47.990562346469034
-            ],
-            [
-              -1.692046557564237,
-              47.990351560433716
-            ],
-            [
-              -1.690523808656986,
-              47.99011657113465
-            ]
-          ],
-          [
-            [
-              -1.741207393144783,
-              47.97573580064762
-            ],
-            [
-              -1.742416352603136,
-              47.97482041864539
-            ],
-            [
-              -1.743148196655013,
-              47.97431486548248
-            ]
-          ],
-          [
-            [
-              -1.710205580438329,
-              47.97878602096829
-            ],
-            [
-              -1.710041726550979,
-              47.978828236387635
-            ],
-            [
-              -1.709905619676991,
-              47.978847158754355
-            ],
-            [
-              -1.709670849331568,
-              47.9789064691491
-            ]
-          ],
-          [
-            [
-              -1.744712596646341,
-              47.9735713913557
-            ],
-            [
-              -1.745349959083503,
-              47.973285428375455
-            ]
-          ],
-          [
-            [
-              -1.704600263975623,
-              47.98666687606901
-            ],
-            [
-              -1.704445333733216,
-              47.98689484091679
-            ],
-            [
-              -1.703785606719193,
-              47.9878314938126
-            ]
-          ],
-          [
-            [
-              -1.709670849331568,
-              47.9789064691491
-            ],
-            [
-              -1.709606547914174,
-              47.978928154960045
-            ],
-            [
-              -1.709468025890246,
-              47.97898725193239
-            ],
-            [
-              -1.709409206401704,
-              47.97901985124754
-            ]
-          ],
-          [
-            [
-              -1.703785606719193,
-              47.9878314938126
-            ],
-            [
-              -1.703573540360939,
-              47.98813256877492
-            ]
-          ],
-          [
-            [
-              -1.705180552497123,
-              47.98586441848331
-            ],
-            [
-              -1.70492087132065,
-              47.986195128089854
-            ],
-            [
-              -1.704600263975623,
-              47.98666687606901
-            ]
-          ],
-          [
-            [
-              -1.739305772504369,
-              47.9803965958597
-            ],
-            [
-              -1.739433410300865,
-              47.98033428797264
-            ],
-            [
-              -1.739677703944341,
-              47.98011620326721
-            ],
-            [
-              -1.739814496078189,
-              47.979908811316946
-            ],
-            [
-              -1.739934710786352,
-              47.979403435425894
-            ],
-            [
-              -1.739979416942896,
-              47.97918100626148
-            ]
-          ],
-          [
-            [
-              -1.708576210744032,
-              47.97992669084675
-            ],
-            [
-              -1.708542157989623,
-              47.979992961040544
-            ]
-          ],
-          [
-            [
-              -1.740167991633429,
-              47.9782319542131
-            ],
-            [
-              -1.740427374190553,
-              47.97660767106588
-            ],
-            [
-              -1.740544835853846,
-              47.97630526364231
-            ],
-            [
-              -1.740777246173922,
-              47.976060159341735
-            ],
-            [
-              -1.741207393144783,
-              47.97573580064762
-            ]
-          ],
-          [
-            [
-              -1.703077281210297,
-              47.98861591659218
-            ],
-            [
-              -1.702530738971513,
-              47.98885168543756
-            ],
-            [
-              -1.702222875134159,
-              47.98909200320448
-            ],
-            [
-              -1.701561085789879,
-              47.98973368731455
-            ],
-            [
-              -1.701346450745817,
-              47.98984139051917
-            ],
-            [
-              -1.700935036739112,
-              47.98998375952718
-            ]
-          ],
-          [
-            [
-              -1.707572349489173,
-              47.981542223419055
-            ],
-            [
-              -1.707428157115137,
-              47.98166707504601
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Route départementale 39",
-        "commune": "35139 - Laillé, 35208 - Orgères",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
         "date_saisie": "03/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
@@ -3591,90 +2791,6 @@
         "coordinates": [
           [
             [
-              -1.690611462171855,
-              48.09442988947427
-            ],
-            [
-              -1.690945309726715,
-              48.09447258320831
-            ],
-            [
-              -1.691172909074296,
-              48.094456254660926
-            ],
-            [
-              -1.691683089740285,
-              48.09435799425825
-            ],
-            [
-              -1.691973408000037,
-              48.094268706555106
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue de la Pilate, de la Rue de Nantes jusqu'à la Rue Honoré Commeurec",
-        "commune": "35281 - Saint-Jacques-de-la-Lande",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "requalification quartier Pigeon Blanc",
-        "date_debut": "06/11/2025 à 00h00",
-        "date_fin": "13/11/2025 à 00h00",
-        "date_saisie": "06/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.616724486523428,
-              48.10436243740117
-            ],
-            [
-              -1.616894934709924,
-              48.104317580422816
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 21 Rue des Mesliers",
-        "commune": "35051 - Cesson-Sévigné",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation alternée",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "25/08/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
-        "date_saisie": "25/08/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.621923069620593,
               48.171875591438386
             ],
@@ -3702,436 +2818,6 @@
         "date_debut": "01/09/2025 à 00h00",
         "date_fin": "28/11/2025 à 00h00",
         "date_saisie": "01/09/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.657900771676295,
-              48.11210094514371
-            ],
-            [
-              -1.658049375907296,
-              48.11216268499723
-            ],
-            [
-              -1.65818659247552,
-              48.1122309231079
-            ],
-            [
-              -1.658289490393058,
-              48.1122975778962
-            ],
-            [
-              -1.65840443969305,
-              48.11237698995596
-            ],
-            [
-              -1.658507757526975,
-              48.112463180575986
-            ],
-            [
-              -1.65860653195279,
-              48.11256162940511
-            ],
-            [
-              -1.658684230952644,
-              48.112659129920345
-            ],
-            [
-              -1.65876224714157,
-              48.112782477988134
-            ],
-            [
-              -1.658798563082844,
-              48.11287615863668
-            ],
-            [
-              -1.658823743877953,
-              48.11297020032639
-            ],
-            [
-              -1.658773409452928,
-              48.11307730336875
-            ],
-            [
-              -1.658723717445238,
-              48.11317960472864
-            ],
-            [
-              -1.658692074153773,
-              48.11328658118096
-            ]
-          ],
-          [
-            [
-              -1.658692074153773,
-              48.11328658118096
-            ],
-            [
-              -1.658973370573683,
-              48.11421228739009
-            ]
-          ],
-          [
-            [
-              -1.657404312099246,
-              48.11322458317103
-            ],
-            [
-              -1.656969444355507,
-              48.11194187696932
-            ]
-          ],
-          [
-            [
-              -1.656969444355507,
-              48.11194187696932
-            ],
-            [
-              -1.656091853274101,
-              48.11183396823842
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue René Marcille, dans un sens, de la Rue Edouard Jordan jusqu'à la Rue de Paris,Rue Durafour, dans un sens, de la Rue Elisa Mercœur jusqu'au Boulevard de Strasbourg",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "travaux de renouvellement, d’extension et de modification du réseau de distribution d’eau potable",
-        "date_debut": "01/09/2025 à 00h00",
-        "date_fin": "12/12/2025 à 00h00",
-        "date_saisie": "01/09/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.7134924752958,
-              48.12135060854164
-            ],
-            [
-              -1.713491988215752,
-              48.121373710485706
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "à l'intersection du Boulevard d'Anjou et de l'Avenue de Guyenne",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "de la prolongation de la ligne de métro A",
-        "date_debut": "01/09/2025 à 00h00",
-        "date_fin": "28/02/2026 à 00h00",
-        "date_saisie": "01/09/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.676897071091977,
-              48.12369799067409
-            ],
-            [
-              -1.676723483807495,
-              48.12372972020935
-            ],
-            [
-              -1.676415281984687,
-              48.12377505291897
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 45 au 47 Rue Armand Rébillon",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "31/10/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
-        "date_saisie": "31/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.69920976978966,
-              48.088538607326896
-            ],
-            [
-              -1.698464652158282,
-              48.088940772258596
-            ],
-            [
-              -1.698000845153548,
-              48.0893398808931
-            ],
-            [
-              -1.697852409804336,
-              48.08960219664349
-            ],
-            [
-              -1.697179546950561,
-              48.090567397269915
-            ],
-            [
-              -1.696912576085712,
-              48.09082047615736
-            ],
-            [
-              -1.696629874087257,
-              48.09108546078078
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue de la Pilate, du 148 jusqu'à la Rue des Vingt-cinq Fusillés",
-        "commune": "35281 - Saint-Jacques-de-la-Lande",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "17/10/2025 à 00h00",
-        "date_fin": "30/11/2025 à 00h00",
-        "date_saisie": "17/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.672288996672871,
-              48.172948403099106
-            ],
-            [
-              -1.672174954788124,
-              48.172932616930744
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "4 la Noë-Huet",
-        "commune": "35024 - Betton",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Limitation de vitesse",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "10/11/2025 à 00h00",
-        "date_fin": "05/12/2025 à 00h00",
-        "date_saisie": "10/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.594018808303276,
-              48.01415428706999
-            ],
-            [
-              -1.593833471541955,
-              48.01416110154311
-            ]
-          ],
-          [
-            [
-              -1.593145738000242,
-              48.015091087196254
-            ],
-            [
-              -1.593183714929804,
-              48.0148958431133
-            ]
-          ],
-          [
-            [
-              -1.592897466123135,
-              48.01642899047431
-            ],
-            [
-              -1.592982466895009,
-              48.016678085018896
-            ],
-            [
-              -1.593075918284328,
-              48.01687992553557
-            ]
-          ],
-          [
-            [
-              -1.592861754030145,
-              48.015705299161354
-            ],
-            [
-              -1.592841847994349,
-              48.01578109400373
-            ],
-            [
-              -1.592828862020438,
-              48.01595691294266
-            ],
-            [
-              -1.592836780942055,
-              48.01614598926186
-            ],
-            [
-              -1.592897466123135,
-              48.01642899047431
-            ]
-          ],
-          [
-            [
-              -1.593145738000242,
-              48.015091087196254
-            ],
-            [
-              -1.593099515836012,
-              48.015139886494985
-            ],
-            [
-              -1.593014386980296,
-              48.015250344879824
-            ],
-            [
-              -1.592962035292141,
-              48.015346687839816
-            ],
-            [
-              -1.592932749529871,
-              48.01542411771724
-            ],
-            [
-              -1.592861754030145,
-              48.015705299161354
-            ]
-          ],
-          [
-            [
-              -1.594071214884626,
-              48.013977955398836
-            ],
-            [
-              -1.594018808303276,
-              48.01415428706999
-            ]
-          ],
-          [
-            [
-              -1.594018808303276,
-              48.01415428706999
-            ],
-            [
-              -1.593958962916003,
-              48.01435564646635
-            ],
-            [
-              -1.59391581471367,
-              48.014465635345175
-            ],
-            [
-              -1.593818877190694,
-              48.01456593674238
-            ],
-            [
-              -1.593551271822022,
-              48.014759339219395
-            ],
-            [
-              -1.593306335493553,
-              48.01494650646411
-            ],
-            [
-              -1.593145738000242,
-              48.015091087196254
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Chemin de la Ry",
-        "commune": "35250 - Saint-Armel",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "sur voirie",
-        "date_debut": "20/10/2025 à 00h00",
-        "date_fin": "15/12/2025 à 00h00",
-        "date_saisie": "20/10/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4201,102 +2887,6 @@
         "coordinates": [
           [
             [
-              -1.717747702910751,
-              48.121459978839525
-            ],
-            [
-              -1.717822190697877,
-              48.12145692309
-            ],
-            [
-              -1.718962240989737,
-              48.12171051549454
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Avenue de Guyenne à partir du numéro 23 et jusqu'a la zone de retournement en bout de l'Avenue",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "d'extension et de restructuration du groupe scolaire Guyenne",
-        "date_debut": "17/01/2025 à 00h00",
-        "date_fin": "11/12/2025 à 00h00",
-        "date_saisie": "17/01/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.685201705584906,
-              48.11047543397691
-            ],
-            [
-              -1.685383539839664,
-              48.11085666026391
-            ]
-          ],
-          [
-            [
-              -1.685383539839664,
-              48.11085666026391
-            ],
-            [
-              -1.685508843056028,
-              48.111119174954496
-            ]
-          ],
-          [
-            [
-              -1.685606687804323,
-              48.111343894463374
-            ],
-            [
-              -1.685605791776582,
-              48.11133108833262
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue Nantaise, de la Place Maréchal Foch jusqu'au 10",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "pour les entreprises BARTHÉLÉMY / ASPO / MARC / CRÉZÉ / DLE / BOUYGUES ES / JOUBREL, afin de procéder à la réalisation de travaux d'aménagement des abords des remparts des Portes Mordelaises",
-        "date_debut": "01/08/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
-        "date_saisie": "01/08/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.769611663444461,
               48.14864522168342
             ],
@@ -4356,170 +2946,6 @@
         "date_debut": "26/08/2025 à 00h00",
         "date_fin": "26/12/2025 à 00h00",
         "date_saisie": "26/08/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.66333308838101,
-              48.128237233305136
-            ],
-            [
-              -1.663309030418233,
-              48.128233420366854
-            ],
-            [
-              -1.662970257858058,
-              48.128192302185994
-            ],
-            [
-              -1.662552854677079,
-              48.12815535000133
-            ],
-            [
-              -1.659299142624567,
-              48.127915413062055
-            ]
-          ],
-          [
-            [
-              -1.662327605951633,
-              48.12830717375395
-            ],
-            [
-              -1.661287404831163,
-              48.12822919560272
-            ],
-            [
-              -1.658903318551466,
-              48.1280875443878
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Avenue de Rochester, de l'Avenue Général George S. Patton jusqu'à la Rue Poullart des Places sur la partie Nord",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Mesure libre circulation",
-        "sens_circulation": "",
-        "commentaire": "de réaménagement de voirie",
-        "date_debut": "20/10/2025 à 00h00",
-        "date_fin": "30/06/2026 à 00h00",
-        "date_saisie": "20/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.783841073406549,
-              48.15811393566481
-            ],
-            [
-              -1.784031071894703,
-              48.158465855450466
-            ]
-          ],
-          [
-            [
-              -1.783841073406549,
-              48.15811393566481
-            ],
-            [
-              -1.783454804486409,
-              48.15812781297156
-            ]
-          ],
-          [
-            [
-              -1.78436501053683,
-              48.15809511033244
-            ],
-            [
-              -1.783841073406549,
-              48.15811393566481
-            ]
-          ],
-          [
-            [
-              -1.784351843538539,
-              48.15770541956883
-            ],
-            [
-              -1.78436501053683,
-              48.15809511033244
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Impasse Françoise Giroud",
-        "commune": "35210 - Pacé",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "MESURE DVPNO - MJC + OR",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "05/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "05/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.675133789036229,
-              48.12386652128322
-            ],
-            [
-              -1.675093770860644,
-              48.12389477681496
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "76 Canal Saint-Martin",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "Démontage de la base nautique",
-        "date_debut": "10/11/2025 à 00h00",
-        "date_fin": "12/11/2025 à 00h00",
-        "date_saisie": "10/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6507,12 +4933,12 @@
         "coordinates": [
           [
             [
-              -1.665772643251681,
-              48.11626046080034
+              -1.658467979503552,
+              48.10926520420856
             ],
             [
-              -1.665704381366451,
-              48.116258842267136
+              -1.658394044174838,
+              48.109278120441
             ]
           ]
         ],
@@ -6521,7 +4947,79 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "route": "66 Boulevard de Sévigné",
+        "route": "71 Rue Alphonse Guérin",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "d'installation de chantier",
+        "date_debut": "27/06/2025 à 00h00",
+        "date_fin": "30/01/2026 à 00h00",
+        "date_saisie": "27/06/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.700159849444994,
+              48.10943259366614
+            ],
+            [
+              -1.700353699281341,
+              48.10957983689126
+            ],
+            [
+              -1.700458451896204,
+              48.10979911513316
+            ],
+            [
+              -1.700531081243717,
+              48.109881479216
+            ],
+            [
+              -1.700719624749106,
+              48.10997343164202
+            ],
+            [
+              -1.70119544793733,
+              48.11009211445729
+            ]
+          ],
+          [
+            [
+              -1.70119544793733,
+              48.11009211445729
+            ],
+            [
+              -1.701412301035865,
+              48.11010199027196
+            ]
+          ],
+          [
+            [
+              -1.70119544793733,
+              48.11009211445729
+            ],
+            [
+              -1.701191614058903,
+              48.11015810860085
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue de la Carrière, de la Rue Desaix jusqu'au 37",
         "commune": "35238 - Rennes",
         "etat": "Route fermée",
         "cause": "Travaux",
@@ -6530,9 +5028,9 @@
         "statut_resolu": false,
         "type_coupure": "Rétrécissement temporaire de largeur de voie",
         "sens_circulation": "",
-        "commentaire": "sur réseaux ou ouvrages d'eau potable",
+        "commentaire": "",
         "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "21/11/2025 à 00h00",
+        "date_fin": "15/11/2025 à 00h00",
         "date_saisie": "03/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
@@ -6543,32 +5041,16 @@
         "coordinates": [
           [
             [
-              -1.69920976978966,
-              48.088538607326896
+              -1.678570318293718,
+              48.101640895713125
             ],
             [
-              -1.698464652158282,
-              48.088940772258596
+              -1.678591666454645,
+              48.10176797982388
             ],
             [
-              -1.698000845153548,
-              48.0893398808931
-            ],
-            [
-              -1.697852409804336,
-              48.08960219664349
-            ],
-            [
-              -1.697179546950561,
-              48.090567397269915
-            ],
-            [
-              -1.696912576085712,
-              48.09082047615736
-            ],
-            [
-              -1.696629874087257,
-              48.09108546078078
+              -1.676485212781493,
+              48.10204192253365
             ]
           ]
         ],
@@ -6577,55 +5059,19 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "route": "Rue de la Pilate, du 148 jusqu'à la Rue des Vingt-cinq Fusillés",
-        "commune": "35281 - Saint-Jacques-de-la-Lande",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "17/10/2025 à 00h00",
-        "date_fin": "30/11/2025 à 00h00",
-        "date_saisie": "17/10/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.683136812517992,
-              48.11016614515085
-            ],
-            [
-              -1.684436907377407,
-              48.11016440712451
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Quai Duguay-Trouin, de la Rue Le Bouteiller jusqu'au Pont de la Mission",
+        "route": "Rue Louis Blériot",
         "commune": "35238 - Rennes",
         "etat": "Route fermée",
         "cause": "Travaux",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
+        "type_coupure": "Mise en impasse",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "13/10/2025 à 00h00",
-        "date_fin": "05/12/2025 à 00h00",
-        "date_saisie": "13/10/2025 à 00h00",
+        "date_debut": "04/12/2024 à 00h00",
+        "date_fin": "31/05/2027 à 00h00",
+        "date_saisie": "04/12/2024 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6635,20 +5081,28 @@
         "coordinates": [
           [
             [
-              -1.721776061440317,
-              47.978317277511195
+              -1.597524633105407,
+              48.199702459712114
             ],
             [
-              -1.721218824668999,
-              47.978312059147775
+              -1.598898467694085,
+              48.19801455087787
             ],
             [
-              -1.721217074094114,
-              47.97845363648774
+              -1.599567376727748,
+              48.19720509545435
             ],
             [
-              -1.721785866910853,
-              47.978459083129785
+              -1.599004919033252,
+              48.19713182362628
+            ],
+            [
+              -1.597925481121203,
+              48.197022875301855
+            ],
+            [
+              -1.59432367572492,
+              48.19658658313275
             ]
           ]
         ],
@@ -6657,64 +5111,8 @@
       "properties": {
         "id": "rm-undefined",
         "source": "Rennes Métropole",
-        "route": "Parking au sud de la Mairie",
-        "commune": "35139 - Laillé",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "07/07/2025 à 00h00",
-        "date_fin": "30/11/2025 à 00h00",
-        "date_saisie": "07/07/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.632339415654435,
-              48.10088465271729
-            ],
-            [
-              -1.632650978223525,
-              48.101175053289275
-            ]
-          ],
-          [
-            [
-              -1.629869799767313,
-              48.096196102065015
-            ],
-            [
-              -1.62981915478523,
-              48.09568942079659
-            ]
-          ],
-          [
-            [
-              -1.63194747509805,
-              48.10051932775266
-            ],
-            [
-              -1.631733316156137,
-              48.10031820344556
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 20 au 22 Rue des Veyettes",
-        "commune": "35238 - Rennes",
+        "route": "Route départementale 97,  de l'Oliverie jusqu'au Chemin des Cavaliers, Chemin des Cavaliers",
+        "commune": "35024 - Betton, 35315 - Saint-Sulpice-la-Forêt",
         "etat": "Route fermée",
         "cause": "Travaux",
         "statut": "Actif",
@@ -6722,10 +5120,10 @@
         "statut_resolu": false,
         "type_coupure": "Circulation alternée",
         "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "15/09/2025 à 00h00",
-        "date_fin": "19/11/2025 à 00h00",
-        "date_saisie": "15/09/2025 à 00h00",
+        "commentaire": "de renouvellement de conduite d'eau potable",
+        "date_debut": "29/09/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "29/09/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7423,6 +5821,226 @@
         "coordinates": [
           [
             [
+              -1.790082031715203,
+              48.104022108714226
+            ],
+            [
+              -1.789676400944032,
+              48.10416345229318
+            ],
+            [
+              -1.789570221215735,
+              48.104223643304735
+            ]
+          ],
+          [
+            [
+              -1.793766025200644,
+              48.10140354701293
+            ],
+            [
+              -1.793629616504358,
+              48.10161172426346
+            ],
+            [
+              -1.793494369004636,
+              48.10177033686252
+            ],
+            [
+              -1.7933142674292,
+              48.101947513569314
+            ]
+          ],
+          [
+            [
+              -1.790481770690656,
+              48.10384221432212
+            ],
+            [
+              -1.790082031715203,
+              48.104022108714226
+            ]
+          ],
+          [
+            [
+              -1.792183477245975,
+              48.10271001804642
+            ],
+            [
+              -1.791920836678248,
+              48.10295868306685
+            ],
+            [
+              -1.791664795852066,
+              48.103174841461076
+            ],
+            [
+              -1.791517668199624,
+              48.10328215150886
+            ]
+          ],
+          [
+            [
+              -1.792514511293424,
+              48.102384675346514
+            ],
+            [
+              -1.792345045618789,
+              48.10253459379744
+            ],
+            [
+              -1.792183477245975,
+              48.10271001804642
+            ]
+          ],
+          [
+            [
+              -1.791343212776437,
+              48.10339077607756
+            ],
+            [
+              -1.790918644314197,
+              48.10362765598872
+            ],
+            [
+              -1.790481770690656,
+              48.10384221432212
+            ]
+          ],
+          [
+            [
+              -1.791517668199624,
+              48.10328215150886
+            ],
+            [
+              -1.791343212776437,
+              48.10339077607756
+            ]
+          ],
+          [
+            [
+              -1.7933142674292,
+              48.101947513569314
+            ],
+            [
+              -1.792955558304014,
+              48.102167668846185
+            ]
+          ],
+          [
+            [
+              -1.792955558304014,
+              48.102167668846185
+            ],
+            [
+              -1.792514511293424,
+              48.102384675346514
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue de Vezin",
+        "commune": "35240 - le Rheu",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "20/10/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "20/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.616098617704525,
+              48.12992368654296
+            ],
+            [
+              -1.615102144614241,
+              48.13025650487003
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue de la Pommeraie",
+        "commune": "35051 - Cesson-Sévigné",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "20/10/2025 à 00h00",
+        "date_fin": "19/12/2025 à 00h00",
+        "date_saisie": "20/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.676897071091977,
+              48.12369799067409
+            ],
+            [
+              -1.676723483807495,
+              48.12372972020935
+            ],
+            [
+              -1.676415281984687,
+              48.12377505291897
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 45 au 47 Rue Armand Rébillon",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "31/10/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "31/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
               -1.697231913669725,
               48.007337461418956
             ],
@@ -7489,6 +6107,42 @@
         "commentaire": "",
         "date_debut": "03/11/2025 à 00h00",
         "date_fin": "11/11/2025 à 00h00",
+        "date_saisie": "03/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.679646974974785,
+              48.108602677435556
+            ],
+            [
+              -1.679671941177408,
+              48.10860262092253
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "à l'intersection de la Place Honoré Commeurec et de la Rue Poullain Duparc, entrée ou sortie de la place",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "de réaménagement de voirie",
+        "date_debut": "03/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
         "date_saisie": "03/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
@@ -8043,6 +6697,598 @@
         "coordinates": [
           [
             [
+              -1.739979416942896,
+              47.97918100626148
+            ],
+            [
+              -1.740123650501327,
+              47.978463382586085
+            ],
+            [
+              -1.740167991633429,
+              47.9782319542131
+            ]
+          ],
+          [
+            [
+              -1.696785536776648,
+              47.99100806459791
+            ],
+            [
+              -1.695596196661974,
+              47.990908209706156
+            ],
+            [
+              -1.695434615124257,
+              47.99089464261878
+            ],
+            [
+              -1.6947111271493,
+              47.990833891790274
+            ],
+            [
+              -1.694101900084164,
+              47.99073790067583
+            ]
+          ],
+          [
+            [
+              -1.703573540360939,
+              47.98813256877492
+            ],
+            [
+              -1.703512976393783,
+              47.9882185519583
+            ],
+            [
+              -1.703372917748454,
+              47.98839828753713
+            ],
+            [
+              -1.703215025057324,
+              47.9885355926045
+            ],
+            [
+              -1.703077281210297,
+              47.98861591659218
+            ]
+          ],
+          [
+            [
+              -1.707428157115137,
+              47.98166707504601
+            ],
+            [
+              -1.707388487063411,
+              47.9817014237873
+            ],
+            [
+              -1.706917630008601,
+              47.98210383564223
+            ],
+            [
+              -1.706399873473234,
+              47.98252445207225
+            ],
+            [
+              -1.706140650439754,
+              47.982761054935516
+            ],
+            [
+              -1.706016489177501,
+              47.982953761142916
+            ],
+            [
+              -1.705950592022486,
+              47.98309859089354
+            ],
+            [
+              -1.705849222736154,
+              47.983532877306416
+            ],
+            [
+              -1.705699609258781,
+              47.984228860798545
+            ],
+            [
+              -1.705488663086933,
+              47.98520599139702
+            ],
+            [
+              -1.705433603418027,
+              47.98539355927489
+            ],
+            [
+              -1.70530240009274,
+              47.98567641420529
+            ],
+            [
+              -1.705180552497123,
+              47.98586441848331
+            ]
+          ],
+          [
+            [
+              -1.737176745052598,
+              47.98044548966548
+            ],
+            [
+              -1.73780532590884,
+              47.980495010332135
+            ],
+            [
+              -1.738518736698142,
+              47.98052643679506
+            ],
+            [
+              -1.73883524251752,
+              47.98051589663052
+            ],
+            [
+              -1.739013660078911,
+              47.98049429966398
+            ],
+            [
+              -1.739168443080507,
+              47.98045047560943
+            ],
+            [
+              -1.739305772504369,
+              47.9803965958597
+            ]
+          ],
+          [
+            [
+              -1.732749992371653,
+              47.98038090847377
+            ],
+            [
+              -1.733381708966049,
+              47.980293361806204
+            ],
+            [
+              -1.734111651226675,
+              47.980212311019784
+            ],
+            [
+              -1.735968895618059,
+              47.980350323163464
+            ],
+            [
+              -1.737176745052598,
+              47.98044548966548
+            ]
+          ],
+          [
+            [
+              -1.698545315940728,
+              47.99079107011461
+            ],
+            [
+              -1.698131097041902,
+              47.99093022272978
+            ],
+            [
+              -1.697627913747573,
+              47.991028313027286
+            ],
+            [
+              -1.697209281010295,
+              47.991035405143975
+            ],
+            [
+              -1.696785536776648,
+              47.99100806459791
+            ]
+          ],
+          [
+            [
+              -1.745349959083503,
+              47.973285428375455
+            ],
+            [
+              -1.74616251208351,
+              47.97292085310829
+            ],
+            [
+              -1.747082748226805,
+              47.972487468115744
+            ],
+            [
+              -1.747407328896432,
+              47.972358209353416
+            ],
+            [
+              -1.747762899137599,
+              47.97224746469777
+            ],
+            [
+              -1.748153935558283,
+              47.972139973186934
+            ],
+            [
+              -1.748522432353451,
+              47.97207098708548
+            ]
+          ],
+          [
+            [
+              -1.709409206401704,
+              47.97901985124754
+            ],
+            [
+              -1.709304676747135,
+              47.97907778460549
+            ],
+            [
+              -1.709089235512137,
+              47.97927516878648
+            ],
+            [
+              -1.708611068118791,
+              47.979859371105185
+            ],
+            [
+              -1.708576210744032,
+              47.97992669084675
+            ]
+          ],
+          [
+            [
+              -1.698622858387013,
+              47.99076502018179
+            ],
+            [
+              -1.698545315940728,
+              47.99079107011461
+            ]
+          ],
+          [
+            [
+              -1.710363523596925,
+              47.97872788176223
+            ],
+            [
+              -1.710205580438329,
+              47.97878602096829
+            ]
+          ],
+          [
+            [
+              -1.700935036739112,
+              47.98998375952718
+            ],
+            [
+              -1.700491963241904,
+              47.990137081516565
+            ],
+            [
+              -1.698622858387013,
+              47.99076502018179
+            ]
+          ],
+          [
+            [
+              -1.743148196655013,
+              47.97431486548248
+            ],
+            [
+              -1.743454103161333,
+              47.974136015450405
+            ],
+            [
+              -1.744712596646341,
+              47.9735713913557
+            ]
+          ],
+          [
+            [
+              -1.708542157989623,
+              47.979992961040544
+            ],
+            [
+              -1.708373407267808,
+              47.98031836226237
+            ],
+            [
+              -1.707995609014454,
+              47.98109258921641
+            ],
+            [
+              -1.707820536458912,
+              47.98132732444637
+            ],
+            [
+              -1.707572349489173,
+              47.981542223419055
+            ]
+          ],
+          [
+            [
+              -1.694101900084164,
+              47.99073790067583
+            ],
+            [
+              -1.693211745704604,
+              47.990562346469034
+            ],
+            [
+              -1.692046557564237,
+              47.990351560433716
+            ],
+            [
+              -1.690523808656986,
+              47.99011657113465
+            ]
+          ],
+          [
+            [
+              -1.741207393144783,
+              47.97573580064762
+            ],
+            [
+              -1.742416352603136,
+              47.97482041864539
+            ],
+            [
+              -1.743148196655013,
+              47.97431486548248
+            ]
+          ],
+          [
+            [
+              -1.710205580438329,
+              47.97878602096829
+            ],
+            [
+              -1.710041726550979,
+              47.978828236387635
+            ],
+            [
+              -1.709905619676991,
+              47.978847158754355
+            ],
+            [
+              -1.709670849331568,
+              47.9789064691491
+            ]
+          ],
+          [
+            [
+              -1.744712596646341,
+              47.9735713913557
+            ],
+            [
+              -1.745349959083503,
+              47.973285428375455
+            ]
+          ],
+          [
+            [
+              -1.704600263975623,
+              47.98666687606901
+            ],
+            [
+              -1.704445333733216,
+              47.98689484091679
+            ],
+            [
+              -1.703785606719193,
+              47.9878314938126
+            ]
+          ],
+          [
+            [
+              -1.709670849331568,
+              47.9789064691491
+            ],
+            [
+              -1.709606547914174,
+              47.978928154960045
+            ],
+            [
+              -1.709468025890246,
+              47.97898725193239
+            ],
+            [
+              -1.709409206401704,
+              47.97901985124754
+            ]
+          ],
+          [
+            [
+              -1.703785606719193,
+              47.9878314938126
+            ],
+            [
+              -1.703573540360939,
+              47.98813256877492
+            ]
+          ],
+          [
+            [
+              -1.705180552497123,
+              47.98586441848331
+            ],
+            [
+              -1.70492087132065,
+              47.986195128089854
+            ],
+            [
+              -1.704600263975623,
+              47.98666687606901
+            ]
+          ],
+          [
+            [
+              -1.739305772504369,
+              47.9803965958597
+            ],
+            [
+              -1.739433410300865,
+              47.98033428797264
+            ],
+            [
+              -1.739677703944341,
+              47.98011620326721
+            ],
+            [
+              -1.739814496078189,
+              47.979908811316946
+            ],
+            [
+              -1.739934710786352,
+              47.979403435425894
+            ],
+            [
+              -1.739979416942896,
+              47.97918100626148
+            ]
+          ],
+          [
+            [
+              -1.708576210744032,
+              47.97992669084675
+            ],
+            [
+              -1.708542157989623,
+              47.979992961040544
+            ]
+          ],
+          [
+            [
+              -1.740167991633429,
+              47.9782319542131
+            ],
+            [
+              -1.740427374190553,
+              47.97660767106588
+            ],
+            [
+              -1.740544835853846,
+              47.97630526364231
+            ],
+            [
+              -1.740777246173922,
+              47.976060159341735
+            ],
+            [
+              -1.741207393144783,
+              47.97573580064762
+            ]
+          ],
+          [
+            [
+              -1.703077281210297,
+              47.98861591659218
+            ],
+            [
+              -1.702530738971513,
+              47.98885168543756
+            ],
+            [
+              -1.702222875134159,
+              47.98909200320448
+            ],
+            [
+              -1.701561085789879,
+              47.98973368731455
+            ],
+            [
+              -1.701346450745817,
+              47.98984139051917
+            ],
+            [
+              -1.700935036739112,
+              47.98998375952718
+            ]
+          ],
+          [
+            [
+              -1.707572349489173,
+              47.981542223419055
+            ],
+            [
+              -1.707428157115137,
+              47.98166707504601
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Route départementale 39",
+        "commune": "35139 - Laillé, 35208 - Orgères",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "03/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.690611462171855,
+              48.09442988947427
+            ],
+            [
+              -1.690945309726715,
+              48.09447258320831
+            ],
+            [
+              -1.691172909074296,
+              48.094456254660926
+            ],
+            [
+              -1.691683089740285,
+              48.09435799425825
+            ],
+            [
+              -1.691973408000037,
+              48.094268706555106
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue de la Pilate, de la Rue de Nantes jusqu'à la Rue Honoré Commeurec",
+        "commune": "35281 - Saint-Jacques-de-la-Lande",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "requalification quartier Pigeon Blanc",
+        "date_debut": "06/11/2025 à 00h00",
+        "date_fin": "13/11/2025 à 00h00",
+        "date_saisie": "06/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
               -1.664676737723228,
               48.11534300174206
             ],
@@ -8271,6 +7517,42 @@
         "coordinates": [
           [
             [
+              -1.616724486523428,
+              48.10436243740117
+            ],
+            [
+              -1.616894934709924,
+              48.104317580422816
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 21 Rue des Mesliers",
+        "commune": "35051 - Cesson-Sévigné",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "25/08/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "25/08/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
               -1.658995412750044,
               48.11420612761402
             ],
@@ -8298,6 +7580,696 @@
         "date_debut": "01/09/2025 à 00h00",
         "date_fin": "12/12/2025 à 00h00",
         "date_saisie": "01/09/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.657900771676295,
+              48.11210094514371
+            ],
+            [
+              -1.658049375907296,
+              48.11216268499723
+            ],
+            [
+              -1.65818659247552,
+              48.1122309231079
+            ],
+            [
+              -1.658289490393058,
+              48.1122975778962
+            ],
+            [
+              -1.65840443969305,
+              48.11237698995596
+            ],
+            [
+              -1.658507757526975,
+              48.112463180575986
+            ],
+            [
+              -1.65860653195279,
+              48.11256162940511
+            ],
+            [
+              -1.658684230952644,
+              48.112659129920345
+            ],
+            [
+              -1.65876224714157,
+              48.112782477988134
+            ],
+            [
+              -1.658798563082844,
+              48.11287615863668
+            ],
+            [
+              -1.658823743877953,
+              48.11297020032639
+            ],
+            [
+              -1.658773409452928,
+              48.11307730336875
+            ],
+            [
+              -1.658723717445238,
+              48.11317960472864
+            ],
+            [
+              -1.658692074153773,
+              48.11328658118096
+            ]
+          ],
+          [
+            [
+              -1.658692074153773,
+              48.11328658118096
+            ],
+            [
+              -1.658973370573683,
+              48.11421228739009
+            ]
+          ],
+          [
+            [
+              -1.657404312099246,
+              48.11322458317103
+            ],
+            [
+              -1.656969444355507,
+              48.11194187696932
+            ]
+          ],
+          [
+            [
+              -1.656969444355507,
+              48.11194187696932
+            ],
+            [
+              -1.656091853274101,
+              48.11183396823842
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue René Marcille, dans un sens, de la Rue Edouard Jordan jusqu'à la Rue de Paris,Rue Durafour, dans un sens, de la Rue Elisa Mercœur jusqu'au Boulevard de Strasbourg",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "travaux de renouvellement, d’extension et de modification du réseau de distribution d’eau potable",
+        "date_debut": "01/09/2025 à 00h00",
+        "date_fin": "12/12/2025 à 00h00",
+        "date_saisie": "01/09/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.7134924752958,
+              48.12135060854164
+            ],
+            [
+              -1.713491988215752,
+              48.121373710485706
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "à l'intersection du Boulevard d'Anjou et de l'Avenue de Guyenne",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "de la prolongation de la ligne de métro A",
+        "date_debut": "01/09/2025 à 00h00",
+        "date_fin": "28/02/2026 à 00h00",
+        "date_saisie": "01/09/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.676897071091977,
+              48.12369799067409
+            ],
+            [
+              -1.676723483807495,
+              48.12372972020935
+            ],
+            [
+              -1.676415281984687,
+              48.12377505291897
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 45 au 47 Rue Armand Rébillon",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "31/10/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "31/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.69920976978966,
+              48.088538607326896
+            ],
+            [
+              -1.698464652158282,
+              48.088940772258596
+            ],
+            [
+              -1.698000845153548,
+              48.0893398808931
+            ],
+            [
+              -1.697852409804336,
+              48.08960219664349
+            ],
+            [
+              -1.697179546950561,
+              48.090567397269915
+            ],
+            [
+              -1.696912576085712,
+              48.09082047615736
+            ],
+            [
+              -1.696629874087257,
+              48.09108546078078
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue de la Pilate, du 148 jusqu'à la Rue des Vingt-cinq Fusillés",
+        "commune": "35281 - Saint-Jacques-de-la-Lande",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "17/10/2025 à 00h00",
+        "date_fin": "30/11/2025 à 00h00",
+        "date_saisie": "17/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.672288996672871,
+              48.172948403099106
+            ],
+            [
+              -1.672174954788124,
+              48.172932616930744
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "4 la Noë-Huet",
+        "commune": "35024 - Betton",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Limitation de vitesse",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "10/11/2025 à 00h00",
+        "date_fin": "05/12/2025 à 00h00",
+        "date_saisie": "10/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.594018808303276,
+              48.01415428706999
+            ],
+            [
+              -1.593833471541955,
+              48.01416110154311
+            ]
+          ],
+          [
+            [
+              -1.593145738000242,
+              48.015091087196254
+            ],
+            [
+              -1.593183714929804,
+              48.0148958431133
+            ]
+          ],
+          [
+            [
+              -1.592897466123135,
+              48.01642899047431
+            ],
+            [
+              -1.592982466895009,
+              48.016678085018896
+            ],
+            [
+              -1.593075918284328,
+              48.01687992553557
+            ]
+          ],
+          [
+            [
+              -1.592861754030145,
+              48.015705299161354
+            ],
+            [
+              -1.592841847994349,
+              48.01578109400373
+            ],
+            [
+              -1.592828862020438,
+              48.01595691294266
+            ],
+            [
+              -1.592836780942055,
+              48.01614598926186
+            ],
+            [
+              -1.592897466123135,
+              48.01642899047431
+            ]
+          ],
+          [
+            [
+              -1.593145738000242,
+              48.015091087196254
+            ],
+            [
+              -1.593099515836012,
+              48.015139886494985
+            ],
+            [
+              -1.593014386980296,
+              48.015250344879824
+            ],
+            [
+              -1.592962035292141,
+              48.015346687839816
+            ],
+            [
+              -1.592932749529871,
+              48.01542411771724
+            ],
+            [
+              -1.592861754030145,
+              48.015705299161354
+            ]
+          ],
+          [
+            [
+              -1.594071214884626,
+              48.013977955398836
+            ],
+            [
+              -1.594018808303276,
+              48.01415428706999
+            ]
+          ],
+          [
+            [
+              -1.594018808303276,
+              48.01415428706999
+            ],
+            [
+              -1.593958962916003,
+              48.01435564646635
+            ],
+            [
+              -1.59391581471367,
+              48.014465635345175
+            ],
+            [
+              -1.593818877190694,
+              48.01456593674238
+            ],
+            [
+              -1.593551271822022,
+              48.014759339219395
+            ],
+            [
+              -1.593306335493553,
+              48.01494650646411
+            ],
+            [
+              -1.593145738000242,
+              48.015091087196254
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Chemin de la Ry",
+        "commune": "35250 - Saint-Armel",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "sur voirie",
+        "date_debut": "20/10/2025 à 00h00",
+        "date_fin": "15/12/2025 à 00h00",
+        "date_saisie": "20/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.717747702910751,
+              48.121459978839525
+            ],
+            [
+              -1.717822190697877,
+              48.12145692309
+            ],
+            [
+              -1.718962240989737,
+              48.12171051549454
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Avenue de Guyenne à partir du numéro 23 et jusqu'a la zone de retournement en bout de l'Avenue",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "d'extension et de restructuration du groupe scolaire Guyenne",
+        "date_debut": "17/01/2025 à 00h00",
+        "date_fin": "11/12/2025 à 00h00",
+        "date_saisie": "17/01/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.685201705584906,
+              48.11047543397691
+            ],
+            [
+              -1.685383539839664,
+              48.11085666026391
+            ]
+          ],
+          [
+            [
+              -1.685383539839664,
+              48.11085666026391
+            ],
+            [
+              -1.685508843056028,
+              48.111119174954496
+            ]
+          ],
+          [
+            [
+              -1.685606687804323,
+              48.111343894463374
+            ],
+            [
+              -1.685605791776582,
+              48.11133108833262
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue Nantaise, de la Place Maréchal Foch jusqu'au 10",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "pour les entreprises BARTHÉLÉMY / ASPO / MARC / CRÉZÉ / DLE / BOUYGUES ES / JOUBREL, afin de procéder à la réalisation de travaux d'aménagement des abords des remparts des Portes Mordelaises",
+        "date_debut": "01/08/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "01/08/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.66333308838101,
+              48.128237233305136
+            ],
+            [
+              -1.663309030418233,
+              48.128233420366854
+            ],
+            [
+              -1.662970257858058,
+              48.128192302185994
+            ],
+            [
+              -1.662552854677079,
+              48.12815535000133
+            ],
+            [
+              -1.659299142624567,
+              48.127915413062055
+            ]
+          ],
+          [
+            [
+              -1.662327605951633,
+              48.12830717375395
+            ],
+            [
+              -1.661287404831163,
+              48.12822919560272
+            ],
+            [
+              -1.658903318551466,
+              48.1280875443878
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Avenue de Rochester, de l'Avenue Général George S. Patton jusqu'à la Rue Poullart des Places sur la partie Nord",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Mesure libre circulation",
+        "sens_circulation": "",
+        "commentaire": "de réaménagement de voirie",
+        "date_debut": "20/10/2025 à 00h00",
+        "date_fin": "30/06/2026 à 00h00",
+        "date_saisie": "20/10/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.783841073406549,
+              48.15811393566481
+            ],
+            [
+              -1.784031071894703,
+              48.158465855450466
+            ]
+          ],
+          [
+            [
+              -1.783841073406549,
+              48.15811393566481
+            ],
+            [
+              -1.783454804486409,
+              48.15812781297156
+            ]
+          ],
+          [
+            [
+              -1.78436501053683,
+              48.15809511033244
+            ],
+            [
+              -1.783841073406549,
+              48.15811393566481
+            ]
+          ],
+          [
+            [
+              -1.784351843538539,
+              48.15770541956883
+            ],
+            [
+              -1.78436501053683,
+              48.15809511033244
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Impasse Françoise Giroud",
+        "commune": "35210 - Pacé",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "MESURE DVPNO - MJC + OR",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "05/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "05/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.675133789036229,
+              48.12386652128322
+            ],
+            [
+              -1.675093770860644,
+              48.12389477681496
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "76 Canal Saint-Martin",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "Démontage de la base nautique",
+        "date_debut": "10/11/2025 à 00h00",
+        "date_fin": "12/11/2025 à 00h00",
+        "date_saisie": "10/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10151,88 +10123,6 @@
         "coordinates": [
           [
             [
-              -1.689509223336059,
-              48.136719932504406
-            ],
-            [
-              -1.689539409797744,
-              48.13691299691601
-            ]
-          ],
-          [
-            [
-              -1.689102144751066,
-              48.137285620511776
-            ],
-            [
-              -1.688922683662262,
-              48.13730138295567
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue du Chesnay Beauregard, 1 Rue de la Longeraie",
-        "commune": "35278 - Saint-Grégoire",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.680146299016823,
-              48.10860154614619
-            ],
-            [
-              -1.679646974974785,
-              48.108602677435556
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue Poullain Duparc, de la Rue de Nemours jusqu'à la Place Honoré Commeurec",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.724059401224591,
               47.96808953691515
             ],
@@ -11233,370 +11123,6 @@
         "coordinates": [
           [
             [
-              -1.594737335301141,
-              48.00139031928677
-            ],
-            [
-              -1.594971890365797,
-              48.00266940657921
-            ],
-            [
-              -1.596754158799914,
-              48.00610305059738
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "le Petit Beauregard",
-        "commune": "35032 - Bourgbarré, 35250 - Saint-Armel",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
-        "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.676432466600104,
-              48.03724432073735
-            ],
-            [
-              -1.676629972153713,
-              48.03757949204397
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Allée des Monts Gaultier",
-        "commune": "35206 - Noyal-Châtillon-sur-Seiche",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
-        "sens_circulation": "",
-        "commentaire": "sur réseaux ou ouvrages d'eau potable",
-        "date_debut": "03/11/2025 à 00h00",
-        "date_fin": "07/12/2025 à 00h00",
-        "date_saisie": "03/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.658019334037937,
-              48.12443982890524
-            ],
-            [
-              -1.658001880768736,
-              48.12444856485861
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "178bis Rue de Fougères",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
-        "sens_circulation": "",
-        "commentaire": "sur réseaux ou ouvrages de gaz",
-        "date_debut": "04/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "04/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.683363838369169,
-              48.15096655374672
-            ],
-            [
-              -1.683447064841707,
-              48.151002588261186
-            ],
-            [
-              -1.683437689874357,
-              48.15108462938217
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue du Pressoir Godier à l'intersection rue des Melliers",
-        "commune": "35278 - Saint-Grégoire",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "05/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "05/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.853338328963483,
-              48.258983742393525
-            ],
-            [
-              -1.853256851510022,
-              48.25913137722837
-            ],
-            [
-              -1.853110349478884,
-              48.25928174883545
-            ],
-            [
-              -1.852940055600131,
-              48.25939287888991
-            ],
-            [
-              -1.852857631837549,
-              48.25953049251357
-            ],
-            [
-              -1.85281705722593,
-              48.25974071837264
-            ],
-            [
-              -1.852748875066987,
-              48.26013596102308
-            ]
-          ],
-          [
-            [
-              -1.852748875066987,
-              48.26013596102308
-            ],
-            [
-              -1.85267863400988,
-              48.26077938411164
-            ],
-            [
-              -1.852679345426576,
-              48.26111817245411
-            ]
-          ],
-          [
-            [
-              -1.852748875066987,
-              48.26013596102308
-            ],
-            [
-              -1.852419560764025,
-              48.2601535002558
-            ],
-            [
-              -1.852263476222881,
-              48.26016181324718
-            ],
-            [
-              -1.852130083534961,
-              48.2601382222817
-            ],
-            [
-              -1.851987909090017,
-              48.2601043191294
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "section  le Chatellier jusqu'à Le Bas Bourg",
-        "commune": "35058 - la Chapelle-Chaussée",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation alternée",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "05/11/2025 à 00h00",
-        "date_fin": "19/12/2025 à 00h00",
-        "date_saisie": "05/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.690611462171855,
-              48.09442988947427
-            ],
-            [
-              -1.690945309726715,
-              48.09447258320831
-            ],
-            [
-              -1.691172909074296,
-              48.094456254660926
-            ],
-            [
-              -1.691683089740285,
-              48.09435799425825
-            ],
-            [
-              -1.691973408000037,
-              48.094268706555106
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Rue de la Pilate, de la Rue de Nantes jusqu'à la Rue Honoré Commeurec",
-        "commune": "35281 - Saint-Jacques-de-la-Lande",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "requalification quartier Pigeon Blanc",
-        "date_debut": "06/11/2025 à 00h00",
-        "date_fin": "13/11/2025 à 00h00",
-        "date_saisie": "06/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.579640548950171,
-              48.10878658692842
-            ],
-            [
-              -1.579578594101178,
-              48.10894109930172
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "1E Rue de Forge",
-        "commune": "35051 - Cesson-Sévigné",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "10/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "10/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.677832843048697,
-              48.108750436069485
-            ],
-            [
-              -1.677833522787119,
-              48.10868835445233
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 13 au 15 Rue Maréchal Joffre",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Rétrécissement temporaire de largeur de voie",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "10/11/2025 à 00h00",
-        "date_fin": "14/11/2025 à 00h00",
-        "date_saisie": "10/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.770235565449349,
               48.21378943888625
             ],
@@ -12263,158 +11789,6 @@
         "coordinates": [
           [
             [
-              -1.664676737723228,
-              48.11534300174206
-            ],
-            [
-              -1.664671700315415,
-              48.115462687243415
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "5 Rue Waldeck-Rousseau",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "branchement unitaire",
-        "date_debut": "09/11/2025 à 00h00",
-        "date_fin": "12/11/2025 à 00h00",
-        "date_saisie": "09/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.683159709981929,
-              48.119957936858306
-            ],
-            [
-              -1.684635735174968,
-              48.11890087472904
-            ],
-            [
-              -1.684718310341724,
-              48.118842545105636
-            ],
-            [
-              -1.684885239270821,
-              48.118724731904315
-            ],
-            [
-              -1.68500667406024,
-              48.11861571017256
-            ],
-            [
-              -1.685114360830463,
-              48.11849904858516
-            ],
-            [
-              -1.685162503375427,
-              48.11851234891579
-            ],
-            [
-              -1.685020395030953,
-              48.11865942213181
-            ],
-            [
-              -1.684906631870217,
-              48.118751801341574
-            ],
-            [
-              -1.684746070323719,
-              48.11886690761773
-            ],
-            [
-              -1.682732385717365,
-              48.12033001070837
-            ],
-            [
-              -1.68271053791787,
-              48.12027960107081
-            ],
-            [
-              -1.682483389166665,
-              48.1204422662116
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 47 au 50bis Boulevard de Chézy, dans la contre-allée",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "06/01/2025 à 00h00",
-        "date_fin": "31/07/2026 à 00h00",
-        "date_saisie": "06/01/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.616724486523428,
-              48.10436243740117
-            ],
-            [
-              -1.616894934709924,
-              48.104317580422816
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 21 Rue des Mesliers",
-        "commune": "35051 - Cesson-Sévigné",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "25/08/2025 à 00h00",
-        "date_fin": "28/11/2025 à 00h00",
-        "date_saisie": "25/08/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.740918239092074,
               48.045643914135944
             ],
@@ -12762,62 +12136,6 @@
         "date_debut": "05/11/2025 à 00h00",
         "date_fin": "14/11/2025 à 00h00",
         "date_saisie": "05/11/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.714658010937528,
-              48.12070388439588
-            ],
-            [
-              -1.714655787412245,
-              48.12079894037788
-            ]
-          ],
-          [
-            [
-              -1.714655787412245,
-              48.12079894037788
-            ],
-            [
-              -1.714650255645173,
-              48.12096108565409
-            ]
-          ],
-          [
-            [
-              -1.714650255645173,
-              48.12096108565409
-            ],
-            [
-              -1.714645111520261,
-              48.12111184991069
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "du 3 au 9 Rue de Gascogne",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Interdiction de stationnement",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "01/09/2025 à 00h00",
-        "date_fin": "28/02/2026 à 00h00",
-        "date_saisie": "01/09/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -13658,11 +12976,665 @@
         "date_saisie": "31/10/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.689509223336059,
+              48.136719932504406
+            ],
+            [
+              -1.689539409797744,
+              48.13691299691601
+            ]
+          ],
+          [
+            [
+              -1.689102144751066,
+              48.137285620511776
+            ],
+            [
+              -1.688922683662262,
+              48.13730138295567
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue du Chesnay Beauregard, 1 Rue de la Longeraie",
+        "commune": "35278 - Saint-Grégoire",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "03/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.680146299016823,
+              48.10860154614619
+            ],
+            [
+              -1.679646974974785,
+              48.108602677435556
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue Poullain Duparc, de la Rue de Nemours jusqu'à la Place Honoré Commeurec",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "03/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.594737335301141,
+              48.00139031928677
+            ],
+            [
+              -1.594971890365797,
+              48.00266940657921
+            ],
+            [
+              -1.596754158799914,
+              48.00610305059738
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "le Petit Beauregard",
+        "commune": "35032 - Bourgbarré, 35250 - Saint-Armel",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "03/11/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "03/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.676432466600104,
+              48.03724432073735
+            ],
+            [
+              -1.676629972153713,
+              48.03757949204397
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Allée des Monts Gaultier",
+        "commune": "35206 - Noyal-Châtillon-sur-Seiche",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie - PLATEFORMES",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages d'eau potable",
+        "date_debut": "03/11/2025 à 00h00",
+        "date_fin": "07/12/2025 à 00h00",
+        "date_saisie": "03/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.658019334037937,
+              48.12443982890524
+            ],
+            [
+              -1.658001880768736,
+              48.12444856485861
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "178bis Rue de Fougères",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "sur réseaux ou ouvrages de gaz",
+        "date_debut": "04/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "04/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.683363838369169,
+              48.15096655374672
+            ],
+            [
+              -1.683447064841707,
+              48.151002588261186
+            ],
+            [
+              -1.683437689874357,
+              48.15108462938217
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue du Pressoir Godier à l'intersection rue des Melliers",
+        "commune": "35278 - Saint-Grégoire",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "05/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "05/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.853338328963483,
+              48.258983742393525
+            ],
+            [
+              -1.853256851510022,
+              48.25913137722837
+            ],
+            [
+              -1.853110349478884,
+              48.25928174883545
+            ],
+            [
+              -1.852940055600131,
+              48.25939287888991
+            ],
+            [
+              -1.852857631837549,
+              48.25953049251357
+            ],
+            [
+              -1.85281705722593,
+              48.25974071837264
+            ],
+            [
+              -1.852748875066987,
+              48.26013596102308
+            ]
+          ],
+          [
+            [
+              -1.852748875066987,
+              48.26013596102308
+            ],
+            [
+              -1.85267863400988,
+              48.26077938411164
+            ],
+            [
+              -1.852679345426576,
+              48.26111817245411
+            ]
+          ],
+          [
+            [
+              -1.852748875066987,
+              48.26013596102308
+            ],
+            [
+              -1.852419560764025,
+              48.2601535002558
+            ],
+            [
+              -1.852263476222881,
+              48.26016181324718
+            ],
+            [
+              -1.852130083534961,
+              48.2601382222817
+            ],
+            [
+              -1.851987909090017,
+              48.2601043191294
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "section  le Chatellier jusqu'à Le Bas Bourg",
+        "commune": "35058 - la Chapelle-Chaussée",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation alternée",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "05/11/2025 à 00h00",
+        "date_fin": "19/12/2025 à 00h00",
+        "date_saisie": "05/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.690611462171855,
+              48.09442988947427
+            ],
+            [
+              -1.690945309726715,
+              48.09447258320831
+            ],
+            [
+              -1.691172909074296,
+              48.094456254660926
+            ],
+            [
+              -1.691683089740285,
+              48.09435799425825
+            ],
+            [
+              -1.691973408000037,
+              48.094268706555106
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Rue de la Pilate, de la Rue de Nantes jusqu'à la Rue Honoré Commeurec",
+        "commune": "35281 - Saint-Jacques-de-la-Lande",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "requalification quartier Pigeon Blanc",
+        "date_debut": "06/11/2025 à 00h00",
+        "date_fin": "13/11/2025 à 00h00",
+        "date_saisie": "06/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.579640548950171,
+              48.10878658692842
+            ],
+            [
+              -1.579578594101178,
+              48.10894109930172
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "1E Rue de Forge",
+        "commune": "35051 - Cesson-Sévigné",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "10/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "10/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.677832843048697,
+              48.108750436069485
+            ],
+            [
+              -1.677833522787119,
+              48.10868835445233
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 13 au 15 Rue Maréchal Joffre",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Rétrécissement temporaire de largeur de voie",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "10/11/2025 à 00h00",
+        "date_fin": "14/11/2025 à 00h00",
+        "date_saisie": "10/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.664676737723228,
+              48.11534300174206
+            ],
+            [
+              -1.664671700315415,
+              48.115462687243415
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "5 Rue Waldeck-Rousseau",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "branchement unitaire",
+        "date_debut": "09/11/2025 à 00h00",
+        "date_fin": "12/11/2025 à 00h00",
+        "date_saisie": "09/11/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.683159709981929,
+              48.119957936858306
+            ],
+            [
+              -1.684635735174968,
+              48.11890087472904
+            ],
+            [
+              -1.684718310341724,
+              48.118842545105636
+            ],
+            [
+              -1.684885239270821,
+              48.118724731904315
+            ],
+            [
+              -1.68500667406024,
+              48.11861571017256
+            ],
+            [
+              -1.685114360830463,
+              48.11849904858516
+            ],
+            [
+              -1.685162503375427,
+              48.11851234891579
+            ],
+            [
+              -1.685020395030953,
+              48.11865942213181
+            ],
+            [
+              -1.684906631870217,
+              48.118751801341574
+            ],
+            [
+              -1.684746070323719,
+              48.11886690761773
+            ],
+            [
+              -1.682732385717365,
+              48.12033001070837
+            ],
+            [
+              -1.68271053791787,
+              48.12027960107081
+            ],
+            [
+              -1.682483389166665,
+              48.1204422662116
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 47 au 50bis Boulevard de Chézy, dans la contre-allée",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "06/01/2025 à 00h00",
+        "date_fin": "31/07/2026 à 00h00",
+        "date_saisie": "06/01/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.616724486523428,
+              48.10436243740117
+            ],
+            [
+              -1.616894934709924,
+              48.104317580422816
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 21 Rue des Mesliers",
+        "commune": "35051 - Cesson-Sévigné",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "25/08/2025 à 00h00",
+        "date_fin": "28/11/2025 à 00h00",
+        "date_saisie": "25/08/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.714658010937528,
+              48.12070388439588
+            ],
+            [
+              -1.714655787412245,
+              48.12079894037788
+            ]
+          ],
+          [
+            [
+              -1.714655787412245,
+              48.12079894037788
+            ],
+            [
+              -1.714650255645173,
+              48.12096108565409
+            ]
+          ],
+          [
+            [
+              -1.714650255645173,
+              48.12096108565409
+            ],
+            [
+              -1.714645111520261,
+              48.12111184991069
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "du 3 au 9 Rue de Gascogne",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Interdiction de stationnement",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "01/09/2025 à 00h00",
+        "date_fin": "28/02/2026 à 00h00",
+        "date_saisie": "01/09/2025 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
     }
   ],
   "metadata": {
-    "generated": "2025-11-10T17:41:14.663Z",
+    "generated": "2025-11-10T18:37:37.974Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
-    "total_count": 166
+    "total_count": 165
   }
 }
