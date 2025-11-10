@@ -1503,9 +1503,9 @@
         "type_coupure": "Obstacle",
         "sens_circulation": "",
         "commentaire": "Obstacle sur la chaussée",
-        "date_debut": "11/10/2025 à 15h24",
+        "date_debut": "11/10/2025 à 16h12",
         "date_fin": "",
-        "date_saisie": "11/10/2025 à 15h24",
+        "date_saisie": "11/10/2025 à 16h12",
         "gestionnaire": "CD44"
       }
     },
@@ -13661,7 +13661,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-10T15:46:39.057Z",
+    "generated": "2025-11-10T16:35:05.607Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
     "total_count": 166
   }
