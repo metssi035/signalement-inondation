@@ -1486,15 +1486,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.8269176352700858,
-          46.951397969284336
+          -1.9399234131100949,
+          47.37095408499638
         ]
       },
       "properties": {
         "id": "cd44-undefined",
         "source": "CD44",
-        "route": "D95 / Machecoul-Saint-Même",
-        "commune": "Machecoul-Saint-Même / Paulx",
+        "route": "D3 / Savenay",
+        "commune": "Campbon / Savenay",
         "etat": "Accident",
         "cause": "Accident",
         "statut": "Actif",
@@ -1503,9 +1503,9 @@
         "type_coupure": "Accident",
         "sens_circulation": "",
         "commentaire": "Accident",
-        "date_debut": "11/12/2025 à 14h41",
+        "date_debut": "11/12/2025 à 15h07",
         "date_fin": "",
-        "date_saisie": "11/12/2025 à 14h41",
+        "date_saisie": "11/12/2025 à 15h07",
         "gestionnaire": "CD44"
       }
     },
@@ -12317,7 +12317,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-12T14:49:27.075Z",
+    "generated": "2025-11-12T15:30:04.115Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
     "total_count": 160,
     "sources": {
