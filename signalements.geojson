@@ -1486,6 +1486,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.7191523709366827,
+          47.13872841192744
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D751 / Saint-Léger-les-Vignes",
+        "commune": "Saint-Léger vers Port St Pere",
+        "etat": "Aménagement de chaussée",
+        "cause": "Chantier",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Aménagement de chaussée",
+        "sens_circulation": "",
+        "commentaire": "Aménagement de chaussée",
+        "date_debut": "11/12/2025 à 20h00",
+        "date_fin": "",
+        "date_saisie": "11/12/2025 à 20h00",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.5456161624720683,
           47.514749926814254
         ]
@@ -1730,34 +1758,6 @@
         "date_debut": "16/10/2025 à 06h41",
         "date_fin": "",
         "date_saisie": "16/10/2025 à 06h41",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7191523709366827,
-          47.13872841192744
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D751 / Saint-Léger-les-Vignes",
-        "commune": "Saint-Léger vers Port St Pere",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "10/04/2025 à 08h13",
-        "date_fin": "",
-        "date_saisie": "10/04/2025 à 08h13",
         "gestionnaire": "CD44"
       }
     },
@@ -12289,7 +12289,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-12T19:41:19.095Z",
+    "generated": "2025-11-12T20:29:36.708Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
     "total_count": 159,
     "sources": {
