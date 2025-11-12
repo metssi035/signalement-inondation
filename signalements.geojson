@@ -11203,8 +11203,14 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-12T07:25:46.376Z",
+    "generated": "2025-11-12T07:42:50.687Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
-    "total_count": 159
+    "total_count": 159,
+    "sources": {
+      "grist_35": 46,
+      "cd44": 13,
+      "rennes_metropole": 100,
+      "cd56": 0
+    }
   }
 }
