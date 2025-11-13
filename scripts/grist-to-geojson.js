@@ -89,53 +89,93 @@ function findPositions(obj) {
 }
 
 async function parseCD35(xmlText) {
-    const json = await parseStringPromise(xmlText, { explicitArray: false });
-    const features = [];
+    try {
+        const json = await parseStringPromise(xmlText, { explicitArray: false });
+        const features = [];
 
-    const positions = findPositions(json);
-    console.log(`   CD35 → ${positions.length} positions trouvées`);
+        // Fonction récursive pour trouver les balises pos ou gml:pos
+        function findPositions(obj) {
+            const results = [];
+            if (!obj || typeof obj !== 'object') return results;
+            for (const key of Object.keys(obj)) {
+                const val = obj[key];
+                if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
+                    results.push(val);
+                } else if (typeof val === 'object') {
+                    results.push(...findPositions(val));
+                }
+            }
+            return results;
+        }
 
-    for (const pos of positions) {
-        const coords = pos.trim().split(/\s+/);
-        if (coords.length < 2) continue;
-        const x = parseFloat(coords[0]);
-        const y = parseFloat(coords[1]);
-        if (isNaN(x) || isNaN(y)) continue;
+        const positions = findPositions(json);
+        console.log(`   CD35 → ${positions.length} positions trouvées`);
 
-        const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
-        features.push({
-            type: 'Feature',
-            geometry: { type: 'Point', coordinates: [lng, lat] },
-            properties: { source: 'CD35 Inondations' }
-        });
+        for (const pos of positions) {
+            const coords = pos.trim().split(/\s+/);
+            if (coords.length < 2) continue;
+            const x = parseFloat(coords[0]);
+            const y = parseFloat(coords[1]);
+            if (isNaN(x) || isNaN(y)) continue;
+
+            const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
+            features.push({
+                type: 'Feature',
+                geometry: { type: 'Point', coordinates: [lng, lat] },
+                properties: { source: 'CD35 Inondations' }
+            });
+        }
+
+        return features;
+    } catch (error) {
+        console.error('   Erreur parsing CD35:', error.message);
+        return [];
     }
-
-    return features;
 }
 
 async function parseCD56(xmlText) {
-    const json = await parseStringPromise(xmlText, { explicitArray: false });
-    const features = [];
+    try {
+        const json = await parseStringPromise(xmlText, { explicitArray: false });
+        const features = [];
 
-    const positions = findPositions(json);
-    console.log(`   CD56 → ${positions.length} positions trouvées`);
+        // Fonction récursive pour trouver les balises pos ou gml:pos
+        function findPositions(obj) {
+            const results = [];
+            if (!obj || typeof obj !== 'object') return results;
+            for (const key of Object.keys(obj)) {
+                const val = obj[key];
+                if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
+                    results.push(val);
+                } else if (typeof val === 'object') {
+                    results.push(...findPositions(val));
+                }
+            }
+            return results;
+        }
 
-    for (const pos of positions) {
-        const coords = pos.trim().split(/\s+/);
-        if (coords.length < 2) continue;
-        const x = parseFloat(coords[0]);
-        const y = parseFloat(coords[1]);
-        if (isNaN(x) || isNaN(y)) continue;
+        const positions = findPositions(json);
+        console.log(`   CD56 → ${positions.length} positions trouvées`);
 
-        const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
-        features.push({
-            type: 'Feature',
-            geometry: { type: 'Point', coordinates: [lng, lat] },
-            properties: { source: 'CD56' }
-        });
+        for (const pos of positions) {
+            const coords = pos.trim().split(/\s+/);
+            if (coords.length < 2) continue;
+            const x = parseFloat(coords[0]);
+            const y = parseFloat(coords[1]);
+            if (isNaN(x) || isNaN(y)) continue;
+
+            const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
+            features.push({
+                type: 'Feature',
+                geometry: { type: 'Point', coordinates: [lng, lat] },
+                properties: { source: 'CD56' }
+            });
+        }
+
+        return features;
+    } catch (error) {
+        console.error('   Erreur parsing CD56:', error.message);
+        return [];
     }
-
-    return features;
 }
 
 // =====================================================
