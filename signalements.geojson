@@ -2147,46 +2147,6 @@
         "coordinates": [
           [
             [
-              -1.717747702910751,
-              48.121459978839525
-            ],
-            [
-              -1.717822190697877,
-              48.12145692309
-            ],
-            [
-              -1.718962240989737,
-              48.12171051549454
-            ]
-          ]
-        ],
-        "type": "MultiLineString"
-      },
-      "properties": {
-        "id": "rm-undefined",
-        "source": "Rennes Métropole",
-        "route": "Avenue de Guyenne à partir du numéro 23 et jusqu'a la zone de retournement en bout de l'Avenue",
-        "commune": "35238 - Rennes",
-        "etat": "Route fermée",
-        "cause": "Travaux",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Circulation interdite",
-        "sens_circulation": "",
-        "commentaire": "d'extension et de restructuration du groupe scolaire Guyenne",
-        "date_debut": "17/01/2025 à 00h00",
-        "date_fin": "11/12/2025 à 00h00",
-        "date_saisie": "17/01/2025 à 00h00",
-        "gestionnaire": "Rennes Métropole"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          [
-            [
               -1.637466021632065,
               48.095672952121795
             ],
@@ -2432,6 +2392,46 @@
         "date_debut": "04/12/2024 à 00h00",
         "date_fin": "31/05/2027 à 00h00",
         "date_saisie": "04/12/2024 à 00h00",
+        "gestionnaire": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -1.717747702910751,
+              48.121459978839525
+            ],
+            [
+              -1.717822190697877,
+              48.12145692309
+            ],
+            [
+              -1.718962240989737,
+              48.12171051549454
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": "rm-undefined",
+        "source": "Rennes Métropole",
+        "route": "Avenue de Guyenne à partir du numéro 23 et jusqu'a la zone de retournement en bout de l'Avenue",
+        "commune": "35238 - Rennes",
+        "etat": "Route fermée",
+        "cause": "Travaux",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Circulation interdite",
+        "sens_circulation": "",
+        "commentaire": "d'extension et de restructuration du groupe scolaire Guyenne",
+        "date_debut": "17/01/2025 à 00h00",
+        "date_fin": "11/12/2025 à 00h00",
+        "date_saisie": "17/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10743,13 +10743,14 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-13T09:29:28.038Z",
-    "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD56",
+    "generated": "2025-11-13T09:41:41.028Z",
+    "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 159,
     "sources": {
       "grist_35": 46,
       "cd44": 13,
       "rennes_metropole": 100,
+      "cd35_inondations": 0,
       "cd56": 0
     }
   }
