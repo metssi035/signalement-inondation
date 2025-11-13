@@ -166,7 +166,7 @@ async function main() {
     features: allFeatures
   };
 
-  const outputPath = './output/signalements_fusion.geojson';
+  const outputPath = './output/signalements.geojson';
   fs.mkdirSync('./output', { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2), 'utf8');
   console.log(`\n✅ Fichier GeoJSON écrit : ${outputPath}`);
