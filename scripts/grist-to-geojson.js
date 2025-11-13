@@ -3,10 +3,10 @@
  * Génère un fichier GeoJSON consolidé
  */
 
-import fs from 'fs';
-import fetch from 'node-fetch';
-import proj4 from 'proj4';
-import { parseStringPromise } from 'xml2js';
+const fs = require('fs');
+const fetch = require('node-fetch');
+const proj4 = require('proj4');
+const { parseStringPromise } = require('xml2js');
 
 // Définition de la projection Lambert 93 (EPSG:2154)
 proj4.defs("EPSG:2154", "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs");
