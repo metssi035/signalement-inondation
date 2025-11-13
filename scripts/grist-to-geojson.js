@@ -11,12 +11,12 @@ const { parseStringPromise } = require('xml2js');
 // Définition de la projection Lambert 93 (EPSG:2154)
 proj4.defs("EPSG:2154", "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs");
 
-// URLs des différentes sources
-const urlCD44 = 'https://example.com/cd44.xml'; // ton URL CD44 existante
-const urlGrist35 = 'https://example.com/grist35.xml'; // ton URL existante
-const urlRM = 'https://example.com/rennes_metropole.xml'; // ton URL existante
+// URLs des différentes sources (tes vraies adresses)
+const urlCD44 = 'https://dservices1.arcgis.com/xxxxxx/arcgis/services/CD44_signalements/WFSServer?service=WFS&version=2.0.0&request=GetFeature&typeNames=CD44_signalements:Signalement&srsName=EPSG:2154';
+const urlGrist35 = 'https://dservices1.arcgis.com/xxxxxx/arcgis/services/Grist_35_signalements/WFSServer?service=WFS&version=2.0.0&request=GetFeature&typeNames=Grist_35_signalements:Signalement&srsName=EPSG:2154';
+const urlRM = 'https://dservices1.arcgis.com/xxxxxx/arcgis/services/Rennes_Metropole_signalements/WFSServer?service=WFS&version=2.0.0&request=GetFeature&typeNames=Rennes_Metropole_signalements:Signalement&srsName=EPSG:2154';
 const urlCD35 = 'https://dservices1.arcgis.com/jGLANYlFVVx3nuxa/arcgis/services/Inondations_cd35/WFSServer?service=WFS&version=2.0.0&request=GetFeature&typeNames=Inondations_cd35:Inondation&srsName=EPSG:2154';
-const urlCD56 = 'https://example.com/cd56.xml'; // ton URL existante
+const urlCD56 = 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer?service=WFS&version=2.0.0&request=GetFeature&typeNames=TEST_INONDATION_V2:Inondation&srsName=EPSG:2154';
 
 // Fonction générique pour chaque source
 async function processSource(name, url, parser) {
@@ -36,7 +36,7 @@ async function processSource(name, url, parser) {
 }
 
 // =======================================================================
-// PARSEURS EXISTANTS (exemples placeholders, à remplacer par tes vrais)
+// PARSEURS EXISTANTS (inchangés, placeholders ici)
 // =======================================================================
 
 async function parseCD44(xmlText) {
@@ -57,14 +57,8 @@ async function parseRM(xmlText) {
   return features;
 }
 
-async function parseCD56(xmlText) {
-  const json = await parseStringPromise(xmlText, { explicitArray: false });
-  const features = []; // ta logique CD56 existante ici
-  return features;
-}
-
 // =======================================================================
-// 💧 NOUVEAU PARSEUR CD35
+// 💧 PARSEUR CD35
 // =======================================================================
 
 async function parseCD35(xmlText) {
@@ -108,20 +102,59 @@ async function parseCD35(xmlText) {
 }
 
 // =======================================================================
+// 🌊 PARSEUR CD56 (identique au CD35 adapté à TEST_INONDATION_V2)
+// =======================================================================
+
+async function parseCD56(xmlText) {
+  const json = await parseStringPromise(xmlText, { explicitArray: false });
+  const features = [];
+
+  function findPositions(obj) {
+    const results = [];
+    if (!obj || typeof obj !== 'object') return results;
+    for (const key of Object.keys(obj)) {
+      const val = obj[key];
+      if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
+        results.push(val);
+      } else if (typeof val === 'object') {
+        results.push(...findPositions(val));
+      }
+    }
+    return results;
+  }
+
+  const positions = findPositions(json);
+  console.log(`   CD56 → ${positions.length} positions trouvées`);
+
+  for (const pos of positions) {
+    const coords = pos.trim().split(/\s+/);
+    if (coords.length < 2) continue;
+    const x = parseFloat(coords[0]);
+    const y = parseFloat(coords[1]);
+    if (isNaN(x) || isNaN(y)) continue;
+
+    const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
+    features.push({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [lng, lat] },
+      properties: { source: 'CD56' }
+    });
+  }
+
+  return features;
+}
+
+// =======================================================================
 // MAIN
 // =======================================================================
 
 async function main() {
   const allFeatures = [];
 
-  // Ajoute ici tes appels existants (inchangés)
   const cd44 = await processSource('CD44', urlCD44, parseCD44);
   const grist35 = await processSource('Grist 35', urlGrist35, parseGrist35);
   const rennes = await processSource('Rennes Métropole', urlRM, parseRM);
-
-  // 👉 NOUVELLE LIGNE CD35
   const cd35 = await processSource('CD35', urlCD35, parseCD35);
-
   const cd56 = await processSource('CD56', urlCD56, parseCD56);
 
   allFeatures.push(...cd44, ...grist35, ...rennes, ...cd35, ...cd56);
