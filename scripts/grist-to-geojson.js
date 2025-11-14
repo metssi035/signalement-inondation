@@ -87,105 +87,71 @@ function convertLambert93ToWGS84(x, y) {
 // PARSING WFS XML POUR CD35
 // =====================================================
 
-async function fetchWFSData(config, sourceName) {
+async function fetchCD35InondationsData() {
     try {
-        console.log(`🔗 [${sourceName}] Récupération via WFS...`);
+        console.log(`🔗 [CD35 Inondations] Récupération via WFS...`);
         
-        const wfsUrl = `${config.url}?` +
+        const wfsUrl = `${CD35_WFS_CONFIG.url}?` +
             `service=WFS&` +
             `version=2.0.0&` +
             `request=GetFeature&` +
-            `typeNames=${config.typeName}&` +
-            `srsName=${config.srsName}`;
+            `typeNames=${CD35_WFS_CONFIG.typeName}&` +
+            `srsName=${CD35_WFS_CONFIG.srsName}`;
         
         console.log(`   URL: ${wfsUrl.substring(0, 80)}...`);
         
         const response = await fetch(wfsUrl);
         
         if (!response.ok) {
-            console.error(`❌ [${sourceName}] HTTP ${response.status}`);
+            console.error(`❌ [CD35 Inondations] HTTP ${response.status}`);
             return [];
         }
         
         const xmlText = await response.text();
         console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
         
-        const parser = new xml2js.Parser({
-            explicitArray: false,
-            ignoreAttrs: false,
-            tagNameProcessors: [xml2js.processors.stripPrefix]
-        });
+        const parser = new xml2js.Parser({ explicitArray: false });
+        const json = await parser.parseStringPromise(xmlText);
         
-        const result = await parser.parseStringPromise(xmlText);
+        // Fonction récursive pour trouver les balises pos
+        function findPositions(obj) {
+            const results = [];
+            if (!obj || typeof obj !== 'object') return results;
+            for (const key of Object.keys(obj)) {
+                const val = obj[key];
+                if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
+                    results.push(val);
+                } else if (typeof val === 'object') {
+                    results.push(...findPositions(val));
+                }
+            }
+            return results;
+        }
+        
+        const positions = findPositions(json);
+        console.log(`   ${positions.length} positions trouvées`);
         
         const features = [];
-        const members = result.FeatureCollection?.member || [];
-        const memberArray = Array.isArray(members) ? members : [members];
+        for (const pos of positions) {
+            const coords = pos.trim().split(/\s+/);
+            if (coords.length < 2) continue;
+            const x = parseFloat(coords[0]);
+            const y = parseFloat(coords[1]);
+            if (isNaN(x) || isNaN(y)) continue;
+            
+            const [lng, lat] = convertLambert93ToWGS84(x, y);
+            features.push({
+                type: 'Feature',
+                geometry: { type: 'Point', coordinates: [lng, lat] },
+                properties: {}
+            });
+        }
         
-        console.log(`   ${memberArray.length} features trouvées`);
-        
-        memberArray.forEach(member => {
-            try {
-                const featureData = member.Inondation || member[Object.keys(member)[0]];
-                
-                if (!featureData) return;
-                
-                const properties = {};
-                Object.keys(featureData).forEach(key => {
-                    if (key !== 'geometry' && key !== 'shape') {
-                        properties[key] = featureData[key];
-                    }
-                });
-                
-                let geometry = null;
-                const geomField = featureData.geometry || featureData.shape || featureData.SHAPE;
-                
-                if (geomField) {
-                    if (geomField.Point && geomField.Point.pos) {
-                        const coords = geomField.Point.pos.split(' ');
-                        const x = parseFloat(coords[0]);
-                        const y = parseFloat(coords[1]);
-                        const [lng, lat] = convertLambert93ToWGS84(x, y);
-                        
-                        geometry = {
-                            type: 'Point',
-                            coordinates: [lng, lat]
-                        };
-                    }
-                    else if (geomField.LineString && geomField.LineString.posList) {
-                        const coords = geomField.LineString.posList.split(' ');
-                        const coordinates = [];
-                        for (let i = 0; i < coords.length; i += 2) {
-                            const x = parseFloat(coords[i]);
-                            const y = parseFloat(coords[i + 1]);
-                            const [lng, lat] = convertLambert93ToWGS84(x, y);
-                            coordinates.push([lng, lat]);
-                        }
-                        geometry = {
-                            type: 'LineString',
-                            coordinates: coordinates
-                        };
-                    }
-                }
-                
-                if (geometry) {
-                    features.push({
-                        type: 'Feature',
-                        geometry: geometry,
-                        properties: properties
-                    });
-                }
-                
-            } catch (e) {
-                console.warn(`   ⚠️ Erreur parsing feature:`, e.message);
-            }
-        });
-        
-        console.log(`✅ [${sourceName}] ${features.length} features parsées avec succès`);
+        console.log(`✅ [CD35 Inondations] ${features.length} features parsées avec succès`);
         return features;
         
     } catch (error) {
-        console.error(`❌ [${sourceName}]`, error.message);
+        console.error(`❌ [CD35 Inondations]`, error.message);
         return [];
     }
 }
@@ -300,11 +266,6 @@ async function fetchRennesMetropoleData() {
         console.error('❌ [Rennes Métropole]', error.message);
         return [];
     }
-}
-
-// Récupérer CD35 Inondations (WFS)
-async function fetchCD35InondationsData() {
-    return fetchWFSData(CD35_WFS_CONFIG, 'CD35 Inondations');
 }
 
 // Récupérer CD56 (API REST ArcGIS)
@@ -527,11 +488,6 @@ function cd56ToFeature(feature) {
         
         const props = feature.properties || {};
         
-        const conditionsCirculation = props.conditions_circulation || props.conditionsCirculation || '';
-        if (conditionsCirculation.toUpperCase() !== 'COUPÉE') {
-            return null;
-        }
-        
         const statut = props.statut || props.Statut || 'Actif';
         
         return {
@@ -553,8 +509,7 @@ function cd56ToFeature(feature) {
                 date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
                 date_fin: formatDate(props.date_fin || props.dateFin),
                 date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
-                gestionnaire: 'CD56',
-                conditions_circulation: 'COUPÉE'
+                gestionnaire: 'CD56'
             }
         };
     } catch (e) {
