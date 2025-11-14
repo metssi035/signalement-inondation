@@ -16,7 +16,7 @@ console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. Rennes Métropole (API REST)');
 console.log('   4. CD35 Inondations (WFS XML)');
-console.log('   5. CD56 (WFS XML)\n');
+console.log('   5. CD56 (OGC API REST)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -28,11 +28,8 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_WFS_CONFIG = {
-    url: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer',
-    typeName: 'TEST_INONDATION_V2:Inondation',
-    srsName: 'EPSG:2154'
-};
+const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/OGCFeatureServer';
+const CD56_OGC_COLLECTION = 'TEST_INONDATION_V2:Inondation';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -283,21 +280,15 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// Récupérer CD56 (WFS)
+// Récupérer CD56 (OGC API REST)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via WFS...`);
+        console.log(`🔗 [CD56] Récupération via OGC API REST...`);
         
-        const wfsUrl = `${CD56_WFS_CONFIG.url}?` +
-            `service=WFS&` +
-            `version=2.0.0&` +
-            `request=GetFeature&` +
-            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
-            `srsName=${CD56_WFS_CONFIG.srsName}`;
+        const url = `${CD56_OGC_BASE}/collections/${encodeURIComponent(CD56_OGC_COLLECTION)}/items?f=json`;
+        console.log(`   URL: ${url.substring(0, 80)}...`);
         
-        console.log(`   URL: ${wfsUrl.substring(0, 80)}...`);
-        
-        const response = await fetch(wfsUrl, {
+        const response = await fetch(url, {
             headers: {
                 'User-Agent': 'Mozilla/5.0'
             }
@@ -308,60 +299,14 @@ async function fetchCD56Data() {
             return [];
         }
         
-        const xmlText = await response.text();
-        console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
+        const data = await response.json();
+        console.log(`   Réponse JSON reçue`);
         
-        const parser = new xml2js.Parser({ 
-            explicitArray: false,
-            tagNameProcessors: [xml2js.processors.stripPrefix]
-        });
-        const json = await parser.parseStringPromise(xmlText);
+        // L'API OGC retourne les features dans data.features
+        const features = data.features || [];
         
-        const features = [];
-        const members = json.FeatureCollection?.member || [];
-        const memberArray = Array.isArray(members) ? members : [members];
+        console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
         
-        console.log(`   ${memberArray.length} members trouvés`);
-        
-        memberArray.forEach(member => {
-            try {
-                const inondation = member.Inondation;
-                if (!inondation) return;
-                
-                // Extraire la géométrie
-                const shape = inondation.Shape || inondation.geometry;
-                if (!shape || !shape.Point || !shape.Point.pos) return;
-                
-                const coords = shape.Point.pos.split(' ');
-                const x = parseFloat(coords[0]);
-                const y = parseFloat(coords[1]);
-                if (isNaN(x) || isNaN(y)) return;
-                
-                const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
-                
-                // Extraire toutes les propriétés
-                const properties = {};
-                Object.keys(inondation).forEach(key => {
-                    if (key !== 'Shape' && key !== 'geometry') {
-                        properties[key] = inondation[key];
-                    }
-                });
-                
-                features.push({
-                    type: 'Feature',
-                    geometry: { 
-                        type: 'Point', 
-                        coordinates: [lng, lat] 
-                    },
-                    properties: properties
-                });
-                
-            } catch (e) {
-                console.warn(`   ⚠️ Erreur parsing feature:`, e.message);
-            }
-        });
-        
-        console.log(`✅ [CD56] ${features.length} features parsées avec succès`);
         return features;
         
     } catch (error) {
@@ -550,6 +495,12 @@ function cd56ToFeature(feature) {
         
         const props = feature.properties || {};
         
+        // Filtre : ne garder que COUPÉE ou INONDÉE PARTIELLE
+        const conditionsCirculation = props.conditions_circulation || props.conditionsCirculation || '';
+        if (!['COUPÉE', 'INONDÉE PARTIELLE'].includes(conditionsCirculation.toUpperCase())) {
+            return null;
+        }
+        
         return {
             type: 'Feature',
             geometry: geometry,
@@ -569,7 +520,8 @@ function cd56ToFeature(feature) {
                 date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
                 date_fin: formatDate(props.date_fin || props.dateFin),
                 date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
-                gestionnaire: 'CD56'
+                gestionnaire: 'CD56',
+                conditions_circulation: conditionsCirculation
             }
         };
     } catch (e) {
