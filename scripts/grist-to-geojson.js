@@ -16,7 +16,7 @@ console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. Rennes Métropole (API REST)');
 console.log('   4. CD35 Inondations (WFS XML)');
-console.log('   5. CD56 (OGC API REST)\n');
+console.log('   5. CD56 (WFS XML)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -28,7 +28,11 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_OGC_URL = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/OGCFeatureServer/collections/TEST_INONDATION_V2:Inondation/items';
+const CD56_WFS_CONFIG = {
+    url: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer',
+    typeName: 'TEST_INONDATION_V2:Inondation',
+    srsName: 'EPSG:2154'
+};
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -106,42 +110,57 @@ async function fetchCD35InondationsData() {
         const xmlText = await response.text();
         console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
         
-        const parser = new xml2js.Parser({ explicitArray: false });
+        const parser = new xml2js.Parser({ 
+            explicitArray: false,
+            tagNameProcessors: [xml2js.processors.stripPrefix]
+        });
         const json = await parser.parseStringPromise(xmlText);
         
-        // Fonction récursive pour trouver les balises pos
-        function findPositions(obj) {
-            const results = [];
-            if (!obj || typeof obj !== 'object') return results;
-            for (const key of Object.keys(obj)) {
-                const val = obj[key];
-                if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
-                    results.push(val);
-                } else if (typeof val === 'object') {
-                    results.push(...findPositions(val));
-                }
-            }
-            return results;
-        }
-        
-        const positions = findPositions(json);
-        console.log(`   ${positions.length} positions trouvées`);
-        
         const features = [];
-        for (const pos of positions) {
-            const coords = pos.trim().split(/\s+/);
-            if (coords.length < 2) continue;
-            const x = parseFloat(coords[0]);
-            const y = parseFloat(coords[1]);
-            if (isNaN(x) || isNaN(y)) continue;
-            
-            const [lng, lat] = convertLambert93ToWGS84(x, y);
-            features.push({
-                type: 'Feature',
-                geometry: { type: 'Point', coordinates: [lng, lat] },
-                properties: {}
-            });
-        }
+        const members = json.FeatureCollection?.member || [];
+        const memberArray = Array.isArray(members) ? members : [members];
+        
+        console.log(`   ${memberArray.length} members trouvés`);
+        
+        memberArray.forEach(member => {
+            try {
+                const inondation = member.Inondation;
+                if (!inondation) return;
+                
+                // Extraire la géométrie
+                const shape = inondation.Shape || inondation.geometry;
+                if (!shape || !shape.Point || !shape.Point.pos) return;
+                
+                const coords = shape.Point.pos.split(' ');
+                const x = parseFloat(coords[0]);
+                const y = parseFloat(coords[1]);
+                if (isNaN(x) || isNaN(y)) return;
+                
+                const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
+                
+                // Extraire les propriétés
+                features.push({
+                    type: 'Feature',
+                    geometry: { 
+                        type: 'Point', 
+                        coordinates: [lng, lat] 
+                    },
+                    properties: {
+                        OBJECTID: inondation.OBJECTID,
+                        route: inondation.route,
+                        etat_circulation: inondation.etat_circulation,
+                        commune: inondation.commune,
+                        agence: inondation.agence,
+                        PR_debut: inondation.PR_début,
+                        PR_fin: inondation.PR_fin,
+                        lieu_dit: inondation.lieu_dit
+                    }
+                });
+                
+            } catch (e) {
+                console.warn(`   ⚠️ Erreur parsing feature:`, e.message);
+            }
+        });
         
         console.log(`✅ [CD35 Inondations] ${features.length} features parsées avec succès`);
         return features;
@@ -264,15 +283,21 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// Récupérer CD56 (OGC API REST - sans token)
+// Récupérer CD56 (WFS)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via OGC API REST...`);
+        console.log(`🔗 [CD56] Récupération via WFS...`);
         
-        const url = `${CD56_OGC_URL}?f=json`;
-        console.log(`   URL: ${url.substring(0, 80)}...`);
+        const wfsUrl = `${CD56_WFS_CONFIG.url}?` +
+            `service=WFS&` +
+            `version=2.0.0&` +
+            `request=GetFeature&` +
+            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
+            `srsName=${CD56_WFS_CONFIG.srsName}`;
         
-        const response = await fetch(url, {
+        console.log(`   URL: ${wfsUrl.substring(0, 80)}...`);
+        
+        const response = await fetch(wfsUrl, {
             headers: {
                 'User-Agent': 'Mozilla/5.0'
             }
@@ -283,29 +308,61 @@ async function fetchCD56Data() {
             return [];
         }
         
-        const data = await response.json();
-        console.log(`   Réponse JSON reçue`);
+        const xmlText = await response.text();
+        console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
         
-        // L'API OGC retourne les features dans data.features
-        const features = data.features || [];
+        const parser = new xml2js.Parser({ 
+            explicitArray: false,
+            tagNameProcessors: [xml2js.processors.stripPrefix]
+        });
+        const json = await parser.parseStringPromise(xmlText);
         
-        // Convertir en GeoJSON standard si nécessaire
-        const geojsonFeatures = features.map(feature => {
-            // Vérifier si c'est déjà du GeoJSON standard
-            if (feature.type === 'Feature' && feature.geometry) {
-                return feature;
+        const features = [];
+        const members = json.FeatureCollection?.member || [];
+        const memberArray = Array.isArray(members) ? members : [members];
+        
+        console.log(`   ${memberArray.length} members trouvés`);
+        
+        memberArray.forEach(member => {
+            try {
+                const inondation = member.Inondation;
+                if (!inondation) return;
+                
+                // Extraire la géométrie
+                const shape = inondation.Shape || inondation.geometry;
+                if (!shape || !shape.Point || !shape.Point.pos) return;
+                
+                const coords = shape.Point.pos.split(' ');
+                const x = parseFloat(coords[0]);
+                const y = parseFloat(coords[1]);
+                if (isNaN(x) || isNaN(y)) return;
+                
+                const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
+                
+                // Extraire toutes les propriétés
+                const properties = {};
+                Object.keys(inondation).forEach(key => {
+                    if (key !== 'Shape' && key !== 'geometry') {
+                        properties[key] = inondation[key];
+                    }
+                });
+                
+                features.push({
+                    type: 'Feature',
+                    geometry: { 
+                        type: 'Point', 
+                        coordinates: [lng, lat] 
+                    },
+                    properties: properties
+                });
+                
+            } catch (e) {
+                console.warn(`   ⚠️ Erreur parsing feature:`, e.message);
             }
-            // Sinon, essayer de convertir
-            return {
-                type: 'Feature',
-                geometry: feature.geometry || null,
-                properties: feature.properties || feature.attributes || {}
-            };
-        }).filter(f => f.geometry !== null);
+        });
         
-        console.log(`✅ [CD56] ${geojsonFeatures.length} features récupérées avec succès`);
-        
-        return geojsonFeatures;
+        console.log(`✅ [CD56] ${features.length} features parsées avec succès`);
+        return features;
         
     } catch (error) {
         console.error(`❌ [CD56]`, error.message);
@@ -452,26 +509,31 @@ function cd35InondationsToFeature(feature) {
         const geometry = feature.geometry;
         if (!geometry) return null;
         
+        const props = feature.properties || {};
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd35-inond-${Math.random().toString(36).substr(2, 9)}`,
+                id: `cd35-inond-${props.OBJECTID || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD35 Inondations',
-                route: '',
-                commune: '',
-                etat: 'Route fermée',
+                route: props.route || '',
+                commune: props.commune || '',
+                etat: props.etat_circulation || 'Route fermée',
                 cause: 'Inondation',
                 statut: 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
                 type_coupure: 'Totale',
                 sens_circulation: '',
-                commentaire: '',
+                commentaire: props.lieu_dit || '',
                 date_debut: '',
                 date_fin: '',
                 date_saisie: new Date().toISOString(),
-                gestionnaire: 'CD35'
+                gestionnaire: 'CD35',
+                agence: props.agence || '',
+                pr_debut: props.PR_debut || '',
+                pr_fin: props.PR_fin || ''
             }
         };
     } catch (e) {
@@ -492,18 +554,18 @@ function cd56ToFeature(feature) {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd56-${props.OBJECTID || props.objectid || props.id || Math.random().toString(36).substr(2, 9)}`,
+                id: `cd56-${props.OBJECTID || props.objectid || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD56',
                 route: props.route || props.Route || props.rd || '',
                 commune: props.commune || props.Commune || '',
-                etat: 'Route fermée',
+                etat: props.etat_circulation || 'Route fermée',
                 cause: props.cause || props.Cause || 'Inondation',
                 statut: props.statut || props.Statut || 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
                 type_coupure: props.type_coupure || props.typeCoupure || '',
                 sens_circulation: props.sens || props.Sens || '',
-                commentaire: props.commentaire || props.Commentaire || props.description || '',
+                commentaire: props.commentaire || props.Commentaire || props.description || props.lieu_dit || '',
                 date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
                 date_fin: formatDate(props.date_fin || props.dateFin),
                 date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
