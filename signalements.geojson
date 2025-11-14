@@ -11553,24 +11553,836 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-14T09:53:53.972Z",
+        "date_saisie": "2025-11-14T09:57:07.102Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
         "pr_fin": "8+500"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.21304574138723,
+          47.7260504636724
+        ]
+      },
+      "properties": {
+        "id": "cd56-56",
+        "source": "CD56",
+        "route": "D14",
+        "commune": "PEILLAC",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le Pont d'Oust",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.48649464842115,
+          47.5531459087067
+        ]
+      },
+      "properties": {
+        "id": "cd56-59",
+        "source": "CD56",
+        "route": "D020",
+        "commune": "MUZILLAC",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Penesclus",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.29496303264746,
+          47.6022116091491
+        ]
+      },
+      "properties": {
+        "id": "cd56-60",
+        "source": "CD56",
+        "route": "D21",
+        "commune": "PÉAULE",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le Poteau",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10731541422727,
+          47.6046283866609
+        ]
+      },
+      "properties": {
+        "id": "cd56-61",
+        "source": "CD56",
+        "route": "D114",
+        "commune": "RIEUX",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "La Crolaie",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.15419459933442,
+          47.7891386654214
+        ]
+      },
+      "properties": {
+        "id": "cd56-65",
+        "source": "CD56",
+        "route": "D138",
+        "commune": "LA GACILLY (Glénac)",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.16764656290585,
+          47.7223354248694
+        ]
+      },
+      "properties": {
+        "id": "cd56-66",
+        "source": "CD56",
+        "route": "D138",
+        "commune": "PEILLAC",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Branféré",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.08897349724938,
+          47.8443079634133
+        ]
+      },
+      "properties": {
+        "id": "cd56-68",
+        "source": "CD56",
+        "route": "D14",
+        "commune": "CARENTOIR (Quelneuc) ",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.21225784272479,
+          47.7325638164653
+        ]
+      },
+      "properties": {
+        "id": "cd56-69",
+        "source": "CD56",
+        "route": "D14",
+        "commune": "LES FOUGERETS",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le Pont d'Oust",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31764952202289,
+          47.7591634307121
+        ]
+      },
+      "properties": {
+        "id": "cd56-70",
+        "source": "CD56",
+        "route": "D149",
+        "commune": "SAINT-CONGARD",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "La Tronçonnais",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11730620140454,
+          47.728385001674
+        ]
+      },
+      "properties": {
+        "id": "cd56-71",
+        "source": "CD56",
+        "route": "D149",
+        "commune": "LA GACILLY (Glénac)",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le passage",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11260161106869,
+          47.7439309289594
+        ]
+      },
+      "properties": {
+        "id": "cd56-72",
+        "source": "CD56",
+        "route": "D149A",
+        "commune": "COURNON",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1468027869172,
+          47.6789983541054
+        ]
+      },
+      "properties": {
+        "id": "cd56-73",
+        "source": "CD56",
+        "route": "D153",
+        "commune": "SAINT-JACUT-LES-PINS",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "La Vacherie",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10540319665902,
+          47.6762552253726
+        ]
+      },
+      "properties": {
+        "id": "cd56-74",
+        "source": "CD56",
+        "route": "D153A",
+        "commune": "SAINT-PERREUX",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Bourg",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1059156864573,
+          47.6663548292285
+        ]
+      },
+      "properties": {
+        "id": "cd56-75",
+        "source": "CD56",
+        "route": "D153A",
+        "commune": "SAINT-PERREUX",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Pont de La Vieille Draye",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11318550502771,
+          47.5707989491676
+        ]
+      },
+      "properties": {
+        "id": "cd56-76",
+        "source": "CD56",
+        "route": "D176",
+        "commune": "THÉHILLAC",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Bas du bourg",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10499461266322,
+          47.6651356043173
+        ]
+      },
+      "properties": {
+        "id": "cd56-80",
+        "source": "CD56",
+        "route": "D764",
+        "commune": "SAINT-PERREUX",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "La Vieille Draye",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31722129404455,
+          47.7559532617245
+        ]
+      },
+      "properties": {
+        "id": "cd56-81",
+        "source": "CD56",
+        "route": "D764",
+        "commune": "SAINT-CONGARD",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le Moulin de Bélée",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09878569777953,
+          47.6441463769875
+        ]
+      },
+      "properties": {
+        "id": "cd56-85",
+        "source": "CD56",
+        "route": "D775B",
+        "commune": "SAINT-JEAN-LA-POTERIE",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10268146671805,
+          47.9402958799186
+        ]
+      },
+      "properties": {
+        "id": "cd56-86",
+        "source": "CD56",
+        "route": "D311",
+        "commune": "GUER",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "INONDÉE PARTIELLE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.26605826438245,
+          47.7437489330227
+        ]
+      },
+      "properties": {
+        "id": "cd56-87",
+        "source": "CD56",
+        "route": "D777",
+        "commune": "SAINT-GRAVÉ",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le Gueslin",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.25849231219605,
+          47.7458635819539
+        ]
+      },
+      "properties": {
+        "id": "cd56-88",
+        "source": "CD56",
+        "route": "D777",
+        "commune": "SAINT-MARTIN-SUR-OUST",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Le Bout du Pont",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "INONDÉE PARTIELLE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11615279877046,
+          47.5825732674795
+        ]
+      },
+      "properties": {
+        "id": "cd56-91",
+        "source": "CD56",
+        "route": "D114",
+        "commune": "RIEUX",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Pont Cran",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10176801401889,
+          47.6308796671222
+        ]
+      },
+      "properties": {
+        "id": "cd56-92",
+        "source": "CD56",
+        "route": "D775",
+        "commune": "RIEUX",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Giratoire d'Aucfer",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.35004438530293,
+          48.0243350944362
+        ]
+      },
+      "properties": {
+        "id": "cd56-109",
+        "source": "CD56",
+        "route": "D154",
+        "commune": "NÉANT-SUR-YVEL",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Quengo",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.48640975203912,
+          48.0011055427704
+        ]
+      },
+      "properties": {
+        "id": "cd56-111",
+        "source": "CD56",
+        "route": "D157",
+        "commune": "LA GRÉE-SAINT-LAURENT",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Moivran",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31811891357394,
+          48.0533596198331
+        ]
+      },
+      "properties": {
+        "id": "cd56-113",
+        "source": "CD56",
+        "route": "D167",
+        "commune": "MAURON",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Pléguer",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.37924887224811,
+          47.8056840606482
+        ]
+      },
+      "properties": {
+        "id": "cd56-115",
+        "source": "CD56",
+        "route": "D764",
+        "commune": "MALESTROIT",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "Agglomération Malestroit",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "COUPÉE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.44057802028887,
+          47.5546317286191
+        ]
+      },
+      "properties": {
+        "id": "cd56-118",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "gestionnaire": "CD56",
+        "conditions_circulation": "INONDÉE PARTIELLE"
+      }
     }
   ],
   "metadata": {
-    "generated": "2025-11-14T09:53:53.972Z",
+    "generated": "2025-11-14T09:57:07.102Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 161,
+    "total_count": 189,
     "sources": {
       "grist_35": 46,
       "cd44": 14,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
-      "cd56": 0
+      "cd56": 117
     }
   }
 }
