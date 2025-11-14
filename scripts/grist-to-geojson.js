@@ -2,6 +2,10 @@ const https = require('https');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const xml2js = require('xml2js');
+const proj4 = require('proj4');
+
+// Définition de la projection Lambert 93 (EPSG:2154)
+proj4.defs("EPSG:2154", "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs");
 
 const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
@@ -12,7 +16,7 @@ console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. Rennes Métropole (API REST)');
 console.log('   4. CD35 Inondations (WFS XML)');
-console.log('   5. CD56 (WFS XML)\n');
+console.log('   5. CD56 (OGC API REST)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -24,11 +28,7 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_WFS_CONFIG = {
-    url: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer',
-    typeName: 'TEST_INONDATION_V2:Inondation',
-    srsName: 'EPSG:2154'
-};
+const CD56_OGC_URL = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/OGCFeatureServer/collections/TEST_INONDATION_V2:Inondation/items';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -72,19 +72,7 @@ function formatDate(dateValue) {
 // =====================================================
 
 function convertLambert93ToWGS84(x, y) {
-    const e = 0.08181919106;
-    const a = 6378137.0;
-    const lambda0 = 3 * Math.PI / 180;
-    const phi0 = 46.5 * Math.PI / 180;
-    const phi1 = 44 * Math.PI / 180;
-    const phi2 = 49 * Math.PI / 180;
-    const x0 = 700000;
-    const y0 = 6600000;
-    
-    const lng = lambda0 + (x - x0) / (a * Math.cos(phi0) * 111320);
-    const lat = phi0 + (y - y0) / (a * 111320);
-    
-    return [lng * 180 / Math.PI, lat * 180 / Math.PI];
+    return proj4("EPSG:2154", "EPSG:4326", [x, y]);
 }
 
 // =====================================================
@@ -276,21 +264,15 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// Récupérer CD56 (WFS)
+// Récupérer CD56 (OGC API REST - sans token)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via WFS...`);
+        console.log(`🔗 [CD56] Récupération via OGC API REST...`);
         
-        const wfsUrl = `${CD56_WFS_CONFIG.url}?` +
-            `service=WFS&` +
-            `version=2.0.0&` +
-            `request=GetFeature&` +
-            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
-            `srsName=${CD56_WFS_CONFIG.srsName}`;
+        const url = `${CD56_OGC_URL}?f=json`;
+        console.log(`   URL: ${url.substring(0, 80)}...`);
         
-        console.log(`   URL: ${wfsUrl.substring(0, 80)}...`);
-        
-        const response = await fetch(wfsUrl, {
+        const response = await fetch(url, {
             headers: {
                 'User-Agent': 'Mozilla/5.0'
             }
@@ -301,48 +283,29 @@ async function fetchCD56Data() {
             return [];
         }
         
-        const xmlText = await response.text();
-        console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
+        const data = await response.json();
+        console.log(`   Réponse JSON reçue`);
         
-        const parser = new xml2js.Parser({ explicitArray: false });
-        const json = await parser.parseStringPromise(xmlText);
+        // L'API OGC retourne les features dans data.features
+        const features = data.features || [];
         
-        // Fonction récursive pour trouver les balises pos
-        function findPositions(obj) {
-            const results = [];
-            if (!obj || typeof obj !== 'object') return results;
-            for (const key of Object.keys(obj)) {
-                const val = obj[key];
-                if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
-                    results.push(val);
-                } else if (typeof val === 'object') {
-                    results.push(...findPositions(val));
-                }
+        // Convertir en GeoJSON standard si nécessaire
+        const geojsonFeatures = features.map(feature => {
+            // Vérifier si c'est déjà du GeoJSON standard
+            if (feature.type === 'Feature' && feature.geometry) {
+                return feature;
             }
-            return results;
-        }
-        
-        const positions = findPositions(json);
-        console.log(`   ${positions.length} positions trouvées`);
-        
-        const features = [];
-        for (const pos of positions) {
-            const coords = pos.trim().split(/\s+/);
-            if (coords.length < 2) continue;
-            const x = parseFloat(coords[0]);
-            const y = parseFloat(coords[1]);
-            if (isNaN(x) || isNaN(y)) continue;
-            
-            const [lng, lat] = convertLambert93ToWGS84(x, y);
-            features.push({
+            // Sinon, essayer de convertir
+            return {
                 type: 'Feature',
-                geometry: { type: 'Point', coordinates: [lng, lat] },
-                properties: {}
-            });
-        }
+                geometry: feature.geometry || null,
+                properties: feature.properties || feature.attributes || {}
+            };
+        }).filter(f => f.geometry !== null);
         
-        console.log(`✅ [CD56] ${features.length} features parsées avec succès`);
-        return features;
+        console.log(`✅ [CD56] ${geojsonFeatures.length} features récupérées avec succès`);
+        
+        return geojsonFeatures;
         
     } catch (error) {
         console.error(`❌ [CD56]`, error.message);
@@ -523,25 +486,27 @@ function cd56ToFeature(feature) {
         const geometry = feature.geometry;
         if (!geometry) return null;
         
+        const props = feature.properties || {};
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd56-${Math.random().toString(36).substr(2, 9)}`,
+                id: `cd56-${props.OBJECTID || props.objectid || props.id || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD56',
-                route: '',
-                commune: '',
+                route: props.route || props.Route || props.rd || '',
+                commune: props.commune || props.Commune || '',
                 etat: 'Route fermée',
-                cause: 'Inondation',
-                statut: 'Actif',
+                cause: props.cause || props.Cause || 'Inondation',
+                statut: props.statut || props.Statut || 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: '',
-                sens_circulation: '',
-                commentaire: '',
-                date_debut: '',
-                date_fin: '',
-                date_saisie: new Date().toISOString(),
+                type_coupure: props.type_coupure || props.typeCoupure || '',
+                sens_circulation: props.sens || props.Sens || '',
+                commentaire: props.commentaire || props.Commentaire || props.description || '',
+                date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
+                date_fin: formatDate(props.date_fin || props.dateFin),
+                date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
                 gestionnaire: 'CD56'
             }
         };
