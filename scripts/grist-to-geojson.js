@@ -12,7 +12,7 @@ console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. Rennes Métropole (API REST)');
 console.log('   4. CD35 Inondations (WFS XML)');
-console.log('   5. CD56 (API REST ArcGIS)\n');
+console.log('   5. CD56 (WFS XML)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -24,7 +24,11 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_REST_URL = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/FeatureServer/0/query';
+const CD56_WFS_CONFIG = {
+    url: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/TEST_INONDATION_V2/WFSServer',
+    typeName: 'TEST_INONDATION_V2:Inondation',
+    srsName: 'EPSG:2154'
+};
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -100,7 +104,11 @@ async function fetchCD35InondationsData() {
         
         console.log(`   URL: ${wfsUrl.substring(0, 80)}...`);
         
-        const response = await fetch(wfsUrl);
+        const response = await fetch(wfsUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        });
         
         if (!response.ok) {
             console.error(`❌ [CD35 Inondations] HTTP ${response.status}`);
@@ -268,34 +276,72 @@ async function fetchRennesMetropoleData() {
     }
 }
 
-// Récupérer CD56 (API REST ArcGIS)
+// Récupérer CD56 (WFS)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via API REST ArcGIS...`);
+        console.log(`🔗 [CD56] Récupération via WFS...`);
         
-        const queryParams = new URLSearchParams({
-            where: '1=1',
-            outFields: '*',
-            f: 'geojson',
-            outSR: '4326'
+        const wfsUrl = `${CD56_WFS_CONFIG.url}?` +
+            `service=WFS&` +
+            `version=2.0.0&` +
+            `request=GetFeature&` +
+            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
+            `srsName=${CD56_WFS_CONFIG.srsName}`;
+        
+        console.log(`   URL: ${wfsUrl.substring(0, 80)}...`);
+        
+        const response = await fetch(wfsUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
         });
-        
-        const url = `${CD56_REST_URL}?${queryParams.toString()}`;
-        console.log(`   URL: ${url.substring(0, 80)}...`);
-        
-        const response = await fetch(url);
         
         if (!response.ok) {
             console.error(`❌ [CD56] HTTP ${response.status}`);
             return [];
         }
         
-        const geojson = await response.json();
-        console.log(`   Réponse GeoJSON reçue`);
+        const xmlText = await response.text();
+        console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
         
-        const features = geojson.features || [];
-        console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
+        const parser = new xml2js.Parser({ explicitArray: false });
+        const json = await parser.parseStringPromise(xmlText);
         
+        // Fonction récursive pour trouver les balises pos
+        function findPositions(obj) {
+            const results = [];
+            if (!obj || typeof obj !== 'object') return results;
+            for (const key of Object.keys(obj)) {
+                const val = obj[key];
+                if (typeof val === 'string' && (key.endsWith(':pos') || key === 'pos')) {
+                    results.push(val);
+                } else if (typeof val === 'object') {
+                    results.push(...findPositions(val));
+                }
+            }
+            return results;
+        }
+        
+        const positions = findPositions(json);
+        console.log(`   ${positions.length} positions trouvées`);
+        
+        const features = [];
+        for (const pos of positions) {
+            const coords = pos.trim().split(/\s+/);
+            if (coords.length < 2) continue;
+            const x = parseFloat(coords[0]);
+            const y = parseFloat(coords[1]);
+            if (isNaN(x) || isNaN(y)) continue;
+            
+            const [lng, lat] = convertLambert93ToWGS84(x, y);
+            features.push({
+                type: 'Feature',
+                geometry: { type: 'Point', coordinates: [lng, lat] },
+                properties: {}
+            });
+        }
+        
+        console.log(`✅ [CD56] ${features.length} features parsées avec succès`);
         return features;
         
     } catch (error) {
@@ -443,35 +489,26 @@ function cd35InondationsToFeature(feature) {
         const geometry = feature.geometry;
         if (!geometry) return null;
         
-        const props = feature.properties || {};
-        
-        const etatCirculation = props.etat_circulation || props.etatCirculation || 'Non spécifié';
-        const statut = etatCirculation.toLowerCase().includes('fermée') || 
-                      etatCirculation.toLowerCase().includes('fermé') ? 'Actif' : 'Actif';
-        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd35-inond-${props.OBJECTID || props.objectid || feature.id || ''}`,
+                id: `cd35-inond-${Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD35 Inondations',
-                route: props.route || props.Route || '',
-                commune: props.commune || props.Commune || '',
-                etat: etatCirculation,
+                route: '',
+                commune: '',
+                etat: 'Route fermée',
                 cause: 'Inondation',
-                statut: statut,
-                statut_actif: statut === 'Actif',
-                statut_resolu: statut === 'Résolu',
+                statut: 'Actif',
+                statut_actif: true,
+                statut_resolu: false,
                 type_coupure: 'Totale',
                 sens_circulation: '',
-                commentaire: props.lieu_dit || props.lieuDit || '',
+                commentaire: '',
                 date_debut: '',
                 date_fin: '',
                 date_saisie: new Date().toISOString(),
-                gestionnaire: 'CD35',
-                agence: props.agence || props.Agence || '',
-                pr_debut: props.PR_debut || props.PRDebut || '',
-                pr_fin: props.PR_fin || props.PRFin || ''
+                gestionnaire: 'CD35'
             }
         };
     } catch (e) {
@@ -486,29 +523,25 @@ function cd56ToFeature(feature) {
         const geometry = feature.geometry;
         if (!geometry) return null;
         
-        const props = feature.properties || {};
-        
-        const statut = props.statut || props.Statut || 'Actif';
-        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd56-${props.OBJECTID || props.objectid || props.id || feature.id || ''}`,
+                id: `cd56-${Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD56',
-                route: props.route || props.Route || props.rd || '',
-                commune: props.commune || props.Commune || '',
+                route: '',
+                commune: '',
                 etat: 'Route fermée',
-                cause: props.cause || props.Cause || 'Inondation',
-                statut: statut,
-                statut_actif: statut.toLowerCase() === 'actif',
-                statut_resolu: statut.toLowerCase() === 'résolu',
-                type_coupure: props.type_coupure || props.typeCoupure || '',
-                sens_circulation: props.sens || props.Sens || '',
-                commentaire: props.commentaire || props.Commentaire || props.description || '',
-                date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
-                date_fin: formatDate(props.date_fin || props.dateFin),
-                date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
+                cause: 'Inondation',
+                statut: 'Actif',
+                statut_actif: true,
+                statut_resolu: false,
+                type_coupure: '',
+                sens_circulation: '',
+                commentaire: '',
+                date_debut: '',
+                date_fin: '',
+                date_saisie: new Date().toISOString(),
                 gestionnaire: 'CD56'
             }
         };
