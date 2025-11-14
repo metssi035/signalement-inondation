@@ -1486,6 +1486,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.8296298182081812,
+          47.00257113112172
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D13 / Machecoul-Saint-Même",
+        "commune": "Machecoul-Saint-Même",
+        "etat": "Obstacle",
+        "cause": "Autre danger",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Obstacle",
+        "sens_circulation": "",
+        "commentaire": "Obstacle sur la chaussée",
+        "date_debut": "14/11/2025 à 15h22",
+        "date_fin": "",
+        "date_saisie": "14/11/2025 à 15h22",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.7191523709366827,
           47.13872841192744
         ]
@@ -11525,7 +11553,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-14T14:44:02.425Z",
+        "date_saisie": "2025-11-14T15:24:21.876Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -12346,12 +12374,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-14T14:44:02.425Z",
+    "generated": "2025-11-14T15:24:21.877Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 188,
+    "total_count": 189,
     "sources": {
       "grist_35": 46,
-      "cd44": 13,
+      "cd44": 14,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
       "cd56": 117
