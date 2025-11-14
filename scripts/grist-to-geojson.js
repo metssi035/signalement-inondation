@@ -29,7 +29,6 @@ const CD35_WFS_CONFIG = {
 };
 
 const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/OGCFeatureServer';
-const CD56_OGC_COLLECTION = 'TEST_INONDATION_V2:Inondation';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -285,21 +284,50 @@ async function fetchCD56Data() {
     try {
         console.log(`🔗 [CD56] Récupération via OGC API REST...`);
         
-        const url = `${CD56_OGC_BASE}/collections/${encodeURIComponent(CD56_OGC_COLLECTION)}/items?f=json`;
-        console.log(`   URL: ${url.substring(0, 80)}...`);
+        // D'abord, récupérer la liste des collections pour trouver le bon ID
+        const collectionsUrl = `${CD56_OGC_BASE}/collections?f=json`;
+        console.log(`   URL collections: ${collectionsUrl.substring(0, 80)}...`);
         
-        const response = await fetch(url, {
+        const collectionsResponse = await fetch(collectionsUrl, {
             headers: {
                 'User-Agent': 'Mozilla/5.0'
             }
         });
         
-        if (!response.ok) {
-            console.error(`❌ [CD56] HTTP ${response.status}`);
+        if (!collectionsResponse.ok) {
+            console.error(`❌ [CD56] HTTP ${collectionsResponse.status} sur /collections`);
             return [];
         }
         
-        const data = await response.json();
+        const collectionsData = await collectionsResponse.json();
+        
+        // Trouver la première collection (ou celle qui contient "Inondation")
+        const collections = collectionsData.collections || [];
+        if (collections.length === 0) {
+            console.error(`❌ [CD56] Aucune collection trouvée`);
+            return [];
+        }
+        
+        const collection = collections[0]; // Prendre la première
+        const collectionId = collection.id;
+        console.log(`   Collection trouvée: ${collectionId}`);
+        
+        // Maintenant récupérer les items
+        const itemsUrl = `${CD56_OGC_BASE}/collections/${collectionId}/items?f=json`;
+        console.log(`   URL items: ${itemsUrl.substring(0, 80)}...`);
+        
+        const itemsResponse = await fetch(itemsUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        });
+        
+        if (!itemsResponse.ok) {
+            console.error(`❌ [CD56] HTTP ${itemsResponse.status} sur /items`);
+            return [];
+        }
+        
+        const data = await itemsResponse.json();
         console.log(`   Réponse JSON reçue`);
         
         // L'API OGC retourne les features dans data.features
