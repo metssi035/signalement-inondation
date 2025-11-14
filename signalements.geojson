@@ -11528,18 +11528,3294 @@
         "date_saisie": "10/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999609434968098,
+          46.50001429077784
+        ]
+      },
+      "properties": {
+        "id": "cd35-inond-w2jie2dg6",
+        "source": "CD35 Inondations",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999951344843489,
+          46.500011673512695
+        ]
+      },
+      "properties": {
+        "id": "cd56-1576a7hgh",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999951551812913,
+          46.500011612372866
+        ]
+      },
+      "properties": {
+        "id": "cd56-83cw94idr",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999949745631078,
+          46.50001188698685
+        ]
+      },
+      "properties": {
+        "id": "cd56-m10zq513g",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955161664317,
+          46.50001246906884
+        ]
+      },
+      "properties": {
+        "id": "cd56-263wi86jm",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999529393572724,
+          46.50001284393553
+        ]
+      },
+      "properties": {
+        "id": "cd56-wmuded8zf",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953346969149,
+          46.500012687454195
+        ]
+      },
+      "properties": {
+        "id": "cd56-2ztrswp86",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953743791061,
+          46.50001225335213
+        ]
+      },
+      "properties": {
+        "id": "cd56-3k54oraaw",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955062057615,
+          46.50001201293579
+        ]
+      },
+      "properties": {
+        "id": "cd56-wto0ut9gd",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999538959654264,
+          46.50001222103151
+        ]
+      },
+      "properties": {
+        "id": "cd56-lv8levo1u",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999547422988355,
+          46.500012578116674
+        ]
+      },
+      "properties": {
+        "id": "cd56-6bi986df2",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999546062320435,
+          46.50001274876591
+        ]
+      },
+      "properties": {
+        "id": "cd56-msx86lb7p",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999944055495942,
+          46.50001415493921
+        ]
+      },
+      "properties": {
+        "id": "cd56-1xp4ky7dm",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999447070683893,
+          46.50001429845339
+        ]
+      },
+      "properties": {
+        "id": "cd56-uez5ngsbj",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999465198902016,
+          46.50001382093813
+        ]
+      },
+      "properties": {
+        "id": "cd56-i7fkxirjy",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999946788434166,
+          46.50001669857719
+        ]
+      },
+      "properties": {
+        "id": "cd56-5blayaqea",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999452489194227,
+          46.500013379168266
+        ]
+      },
+      "properties": {
+        "id": "cd56-vyecfc555",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999457397772082,
+          46.500014034471185
+        ]
+      },
+      "properties": {
+        "id": "cd56-a3y8aqaus",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999444518301717,
+          46.500013456778284
+        ]
+      },
+      "properties": {
+        "id": "cd56-qp3ja86an",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999446891695225,
+          46.50001419973312
+        ]
+      },
+      "properties": {
+        "id": "cd56-ngul0h0gx",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999481833594053,
+          46.50001273308171
+        ]
+      },
+      "properties": {
+        "id": "cd56-m6799bqno",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999414512283904,
+          46.500016300523136
+        ]
+      },
+      "properties": {
+        "id": "cd56-leyguvmx3",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999943910020169,
+          46.50001622508225
+        ]
+      },
+      "properties": {
+        "id": "cd56-bzdy18h81",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999444314506913,
+          46.50001449302193
+        ]
+      },
+      "properties": {
+        "id": "cd56-rk7myezy6",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999446666564333,
+          46.50001480072557
+        ]
+      },
+      "properties": {
+        "id": "cd56-qvaicmmc5",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999473770604674,
+          46.50001208563703
+        ]
+      },
+      "properties": {
+        "id": "cd56-31s1y6u8k",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999457872265554,
+          46.500015505247006
+        ]
+      },
+      "properties": {
+        "id": "cd56-fz8w855bh",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999947850749736,
+          46.500012413857
+        ]
+      },
+      "properties": {
+        "id": "cd56-wunnu1agi",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999947097802739,
+          46.500014267528
+        ]
+      },
+      "properties": {
+        "id": "cd56-31jkflvnk",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999946585784714,
+          46.50001488926435
+        ]
+      },
+      "properties": {
+        "id": "cd56-e15qqbcny",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999946905674792,
+          46.50001465764312
+        ]
+      },
+      "properties": {
+        "id": "cd56-5f9yi60so",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999946506967801,
+          46.50001381679516
+        ]
+      },
+      "properties": {
+        "id": "cd56-ekb1tkqia",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999433605831016,
+          46.50001269623642
+        ]
+      },
+      "properties": {
+        "id": "cd56-8007vqx5o",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999946871439751,
+          46.50001370611888
+        ]
+      },
+      "properties": {
+        "id": "cd56-snpbziv1w",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999942282171681,
+          46.50001567598421
+        ]
+      },
+      "properties": {
+        "id": "cd56-fnjd27qny",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999946159033664,
+          46.50001390710523
+        ]
+      },
+      "properties": {
+        "id": "cd56-2o5p3l9wr",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.99994630751759,
+          46.50001388176486
+        ]
+      },
+      "properties": {
+        "id": "cd56-nzwdr5r0h",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999470588339,
+          46.50001365723203
+        ]
+      },
+      "properties": {
+        "id": "cd56-8cwr5flu8",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999460909656848,
+          46.50001341865315
+        ]
+      },
+      "properties": {
+        "id": "cd56-csg2emd1g",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999485111696265,
+          46.500013990181635
+        ]
+      },
+      "properties": {
+        "id": "cd56-h8pbbjjb9",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999526058976778,
+          46.500014061141435
+        ]
+      },
+      "properties": {
+        "id": "cd56-xpte8d481",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999497501761336,
+          46.50001369338413
+        ]
+      },
+      "properties": {
+        "id": "cd56-xm6rgm4nx",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999950816633484,
+          46.50001378616028
+        ]
+      },
+      "properties": {
+        "id": "cd56-gfge8kbu7",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999528089421985,
+          46.500016101918156
+        ]
+      },
+      "properties": {
+        "id": "cd56-cihc8fn0q",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.99995218775609,
+          46.500013709497644
+        ]
+      },
+      "properties": {
+        "id": "cd56-58bp34qmj",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999533977138664,
+          46.50001546365514
+        ]
+      },
+      "properties": {
+        "id": "cd56-9hlbrijfl",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953066394914,
+          46.50001581638026
+        ]
+      },
+      "properties": {
+        "id": "cd56-etg5rov2d",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999947449319464,
+          46.50001570248499
+        ]
+      },
+      "properties": {
+        "id": "cd56-p9af1y9y7",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999522884167016,
+          46.50001336745675
+        ]
+      },
+      "properties": {
+        "id": "cd56-v35yx7od0",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999528129409567,
+          46.50001283611198
+        ]
+      },
+      "properties": {
+        "id": "cd56-2jsfvaunq",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999952291211495,
+          46.500012586312224
+        ]
+      },
+      "properties": {
+        "id": "cd56-cariiq1ov",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999506629737986,
+          46.5000148705871
+        ]
+      },
+      "properties": {
+        "id": "cd56-uk5amz0z7",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999517523205497,
+          46.500015057110986
+        ]
+      },
+      "properties": {
+        "id": "cd56-j3k6185cz",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999951573436216,
+          46.500015503307864
+        ]
+      },
+      "properties": {
+        "id": "cd56-5lyb3fhd6",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999509848896326,
+          46.500012480932874
+        ]
+      },
+      "properties": {
+        "id": "cd56-5u1uqu613",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999544516685046,
+          46.50001252483106
+        ]
+      },
+      "properties": {
+        "id": "cd56-yzv8krkp9",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999542197241365,
+          46.50001203023554
+        ]
+      },
+      "properties": {
+        "id": "cd56-96yywiqpd",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999542322620183,
+          46.50001208819753
+        ]
+      },
+      "properties": {
+        "id": "cd56-m7iz4bb7y",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999553477161682,
+          46.500013023152334
+        ]
+      },
+      "properties": {
+        "id": "cd56-9cmlkyylm",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999951665755824,
+          46.500010595817606
+        ]
+      },
+      "properties": {
+        "id": "cd56-ypuz6sv93",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953393330591,
+          46.500010955409216
+        ]
+      },
+      "properties": {
+        "id": "cd56-xg5wtwnzu",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999550447073906,
+          46.50001090213973
+        ]
+      },
+      "properties": {
+        "id": "cd56-gkxj8kvpp",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999485344576136,
+          46.500012494223604
+        ]
+      },
+      "properties": {
+        "id": "cd56-jy6jlqkn3",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999482024012765,
+          46.50001206088252
+        ]
+      },
+      "properties": {
+        "id": "cd56-ml8z7vqdw",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999487902855035,
+          46.500012065822766
+        ]
+      },
+      "properties": {
+        "id": "cd56-twgrb69d9",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999547894082124,
+          46.500012571318784
+        ]
+      },
+      "properties": {
+        "id": "cd56-jlxvtup8d",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999546146773826,
+          46.500011978959265
+        ]
+      },
+      "properties": {
+        "id": "cd56-9enu96igb",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999554039789618,
+          46.500012503835386
+        ]
+      },
+      "properties": {
+        "id": "cd56-mv9v34833",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999554069859427,
+          46.50001303940787
+        ]
+      },
+      "properties": {
+        "id": "cd56-j1esd4yo6",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999954232229194,
+          46.50001208819107
+        ]
+      },
+      "properties": {
+        "id": "cd56-l9dei7ydn",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999533315063474,
+          46.50001236861199
+        ]
+      },
+      "properties": {
+        "id": "cd56-ctzlredkc",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955061276855,
+          46.50001201326422
+        ]
+      },
+      "properties": {
+        "id": "cd56-4l3g3yxa5",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999551156346396,
+          46.500012150511495
+        ]
+      },
+      "properties": {
+        "id": "cd56-58qtkfynk",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999954760714693,
+          46.50001158301058
+        ]
+      },
+      "properties": {
+        "id": "cd56-8qskzn8d6",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999551217904528,
+          46.50001154220711
+        ]
+      },
+      "properties": {
+        "id": "cd56-4h8lagwn1",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955108959492,
+          46.500011453831355
+        ]
+      },
+      "properties": {
+        "id": "cd56-gp5n726y9",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999549645997616,
+          46.500010601793186
+        ]
+      },
+      "properties": {
+        "id": "cd56-6hzpose25",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999487883195357,
+          46.50001233507365
+        ]
+      },
+      "properties": {
+        "id": "cd56-y7d01sfyp",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999949072225483,
+          46.50001228052351
+        ]
+      },
+      "properties": {
+        "id": "cd56-p94zee7c9",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999949266579651,
+          46.50001223378562
+        ]
+      },
+      "properties": {
+        "id": "cd56-9orklr9ef",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999551160203306,
+          46.50001144256287
+        ]
+      },
+      "properties": {
+        "id": "cd56-5orfvptc9",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953332445369,
+          46.50001233972097
+        ]
+      },
+      "properties": {
+        "id": "cd56-mi1bevnm2",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953224393328,
+          46.50001275200911
+        ]
+      },
+      "properties": {
+        "id": "cd56-iwsmjqztp",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999954994308504,
+          46.500012310050415
+        ]
+      },
+      "properties": {
+        "id": "cd56-a4ccg2sk8",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.99995507218405,
+          46.500012146360454
+        ]
+      },
+      "properties": {
+        "id": "cd56-xosl0es77",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955152894247,
+          46.50001125235034
+        ]
+      },
+      "properties": {
+        "id": "cd56-uunu6ci71",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955367777952,
+          46.50001390363204
+        ]
+      },
+      "properties": {
+        "id": "cd56-bxo3c1zgr",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999953770224363,
+          46.50001220982759
+        ]
+      },
+      "properties": {
+        "id": "cd56-giukwjdy1",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999538383790934,
+          46.50001222569819
+        ]
+      },
+      "properties": {
+        "id": "cd56-oyl5eiw6e",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999547490783187,
+          46.50001255962906
+        ]
+      },
+      "properties": {
+        "id": "cd56-v9vpybd2v",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999541409763903,
+          46.50001262707534
+        ]
+      },
+      "properties": {
+        "id": "cd56-vv675xh8m",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999549484300556,
+          46.500010708294226
+        ]
+      },
+      "properties": {
+        "id": "cd56-de23460yk",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999955115543199,
+          46.50001113482453
+        ]
+      },
+      "properties": {
+        "id": "cd56-yu9rgmnqk",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999459236778665,
+          46.50001198003576
+        ]
+      },
+      "properties": {
+        "id": "cd56-8ol6mwba1",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999458478491783,
+          46.500011991108146
+        ]
+      },
+      "properties": {
+        "id": "cd56-2y7em8mkm",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999449592761787,
+          46.50000915389729
+        ]
+      },
+      "properties": {
+        "id": "cd56-qz6jx6wr2",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999467283109484,
+          46.50001165764935
+        ]
+      },
+      "properties": {
+        "id": "cd56-5kgbbg5tf",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999466275882045,
+          46.50001124111495
+        ]
+      },
+      "properties": {
+        "id": "cd56-oics073f3",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999467321479263,
+          46.5000112795201
+        ]
+      },
+      "properties": {
+        "id": "cd56-wjyqdpdk7",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999467420586563,
+          46.50001128381155
+        ]
+      },
+      "properties": {
+        "id": "cd56-98nqnx3hj",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999473301738293,
+          46.500013597174345
+        ]
+      },
+      "properties": {
+        "id": "cd56-ol1ri9txf",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999499262516065,
+          46.50001526944005
+        ]
+      },
+      "properties": {
+        "id": "cd56-xog4vbkk0",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999497407437072,
+          46.50001544814847
+        ]
+      },
+      "properties": {
+        "id": "cd56-vld0ftcz1",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999506142595256,
+          46.50001465440961
+        ]
+      },
+      "properties": {
+        "id": "cd56-tmgj1ogow",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999477230591167,
+          46.5000159008842
+        ]
+      },
+      "properties": {
+        "id": "cd56-ln1h2wfan",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999479806994023,
+          46.500015895145054
+        ]
+      },
+      "properties": {
+        "id": "cd56-l0v3awwc3",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999497297157633,
+          46.500015394975016
+        ]
+      },
+      "properties": {
+        "id": "cd56-m5dwvjuke",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999531033989575,
+          46.50001448971659
+        ]
+      },
+      "properties": {
+        "id": "cd56-c0gjt7x39",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999523513206445,
+          46.5000143972253
+        ]
+      },
+      "properties": {
+        "id": "cd56-ybjdo31fi",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999532814931524,
+          46.500014754063535
+        ]
+      },
+      "properties": {
+        "id": "cd56-wkncy6h3f",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999475933755657,
+          46.50001586076989
+        ]
+      },
+      "properties": {
+        "id": "cd56-1pn2br7oi",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999520715857853,
+          46.500014602504706
+        ]
+      },
+      "properties": {
+        "id": "cd56-r4hilbbrk",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999947167735868,
+          46.500015470302934
+        ]
+      },
+      "properties": {
+        "id": "cd56-2ayq1l23u",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999535853014483,
+          46.500015000784714
+        ]
+      },
+      "properties": {
+        "id": "cd56-9jf9wp01w",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999482123471757,
+          46.50001632128801
+        ]
+      },
+      "properties": {
+        "id": "cd56-86pev1pq5",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.999952832980466,
+          46.50001280995497
+        ]
+      },
+      "properties": {
+        "id": "cd56-lrqwlpv5z",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9999494499480805,
+          46.500014863449486
+        ]
+      },
+      "properties": {
+        "id": "cd56-x4f3g9y2v",
+        "source": "CD56",
+        "route": "",
+        "commune": "",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-14T09:03:58.132Z",
+        "gestionnaire": "CD56"
+      }
     }
   ],
   "metadata": {
-    "generated": "2025-11-14T08:59:04.440Z",
+    "generated": "2025-11-14T09:03:58.132Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 160,
+    "total_count": 277,
     "sources": {
       "grist_35": 46,
       "cd44": 14,
       "rennes_metropole": 100,
-      "cd35_inondations": 0,
-      "cd56": 0
+      "cd35_inondations": 1,
+      "cd56": 116
     }
   }
 }
