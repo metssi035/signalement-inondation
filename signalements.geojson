@@ -1486,6 +1486,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.526600977684357,
+          47.39519422723796
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D69 / Casson",
+        "commune": "Casson / Sucé-sur-Erdre",
+        "etat": "Divers",
+        "cause": "Autre danger",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Divers",
+        "sens_circulation": "",
+        "commentaire": "Divers",
+        "date_debut": "15/11/2025 à 10h42",
+        "date_fin": "",
+        "date_saisie": "15/11/2025 à 10h42",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.7191523709366827,
           47.13872841192744
         ]
@@ -10953,7 +10981,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-15T10:42:39.263Z",
+        "date_saisie": "2025-11-15T11:19:26.028Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -11774,12 +11802,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-15T10:42:39.263Z",
+    "generated": "2025-11-15T11:19:26.028Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 188,
+    "total_count": 189,
     "sources": {
       "grist_35": 46,
-      "cd44": 13,
+      "cd44": 14,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
       "cd56": 117
