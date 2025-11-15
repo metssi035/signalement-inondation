@@ -10962,37 +10962,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.4703177158948915,
-          48.00932098300118
-        ]
-      },
-      "properties": {
-        "id": "cd35-inond-473",
-        "source": "CD35 Inondations",
-        "route": "D37",
-        "commune": "Amanlis",
-        "etat": "Route fermée",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "test",
-        "date_debut": "",
-        "date_fin": "",
-        "date_saisie": "2025-11-15T20:42:02.429Z",
-        "gestionnaire": "CD35",
-        "agence": "Vitré",
-        "pr_debut": "7+800",
-        "pr_fin": "8+500"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -2.21304574138723,
           47.7260504636724
         ]
@@ -11802,14 +11771,14 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-15T20:42:02.429Z",
+    "generated": "2025-11-15T21:20:56.898Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 189,
+    "total_count": 188,
     "sources": {
       "grist_35": 46,
       "cd44": 14,
       "rennes_metropole": 100,
-      "cd35_inondations": 1,
+      "cd35_inondations": 0,
       "cd56": 117
     }
   }
