@@ -1486,6 +1486,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.3217412728050657,
+          47.58176975719642
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D14 / Grand-Auverné",
+        "commune": "Grand-Auverné / Riaillé",
+        "etat": "Obstacle",
+        "cause": "Autre danger",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Obstacle",
+        "sens_circulation": "",
+        "commentaire": "Obstacle sur la chaussée",
+        "date_debut": "16/11/2025 à 09h29",
+        "date_fin": "",
+        "date_saisie": "16/11/2025 à 09h29",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.124758680647657,
           47.44182081343768
         ]
@@ -10463,7 +10491,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-16T09:25:06.591Z",
+        "date_saisie": "2025-11-16T09:41:28.252Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -11284,12 +11312,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-16T09:25:06.591Z",
+    "generated": "2025-11-16T09:41:28.253Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 189,
+    "total_count": 190,
     "sources": {
       "grist_35": 46,
-      "cd44": 14,
+      "cd44": 15,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
       "cd56": 117
