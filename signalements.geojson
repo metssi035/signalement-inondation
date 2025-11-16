@@ -10463,7 +10463,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-16T08:31:41.554Z",
+        "date_saisie": "2025-11-16T09:25:06.591Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -11284,7 +11284,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-16T08:31:41.555Z",
+    "generated": "2025-11-16T09:25:06.591Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 189,
     "sources": {
