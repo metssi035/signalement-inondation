@@ -1503,9 +1503,9 @@
         "type_coupure": "Obstacle",
         "sens_circulation": "",
         "commentaire": "Obstacle sur la chaussée",
-        "date_debut": "16/11/2025 à 09h29",
+        "date_debut": "16/11/2025 à 13h29",
         "date_fin": "",
-        "date_saisie": "16/11/2025 à 09h29",
+        "date_saisie": "16/11/2025 à 13h29",
         "gestionnaire": "CD44"
       }
     },
@@ -10491,7 +10491,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-16T13:28:45.346Z",
+        "date_saisie": "2025-11-16T13:43:16.536Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -11312,7 +11312,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-16T13:28:45.347Z",
+    "generated": "2025-11-16T13:43:16.536Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 190,
     "sources": {
