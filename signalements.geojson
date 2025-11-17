@@ -76,6 +76,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.228628726235529,
+          47.36376010270054
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D723 / Oudon",
+        "commune": "Oudon / Saint-Géréon",
+        "etat": "Accident",
+        "cause": "Accident",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Accident",
+        "sens_circulation": "",
+        "commentaire": "Accident",
+        "date_debut": "17/11/2025 à 13h45",
+        "date_fin": "",
+        "date_saisie": "17/11/2025 à 13h45",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.2089194821179923,
           47.43269718280346
         ]
@@ -8977,7 +9005,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-17T13:37:07.899Z",
+        "date_saisie": "2025-11-17T14:27:26.987Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -9796,12 +9824,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-17T13:37:07.900Z",
+    "generated": "2025-11-17T14:27:26.987Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 154,
+    "total_count": 155,
     "sources": {
       "grist_35": 2,
-      "cd44": 24,
+      "cd44": 25,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
       "cd56": 116
