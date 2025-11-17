@@ -573,36 +573,77 @@ async function mergeSources() {
         
         const totalBrut = gristRecords.length + cd44Records.length + rennesMetropoleRecords.length + 
                          cd35InondationsFeatures.length + cd56Features.length;
-        console.log(`\n📊 Total brut: ${totalBrut} records\n`);
+        console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
         
         let features = [];
+        let stats = {
+            grist_recupere: gristRecords.length,
+            grist_garde: 0,
+            cd44_recupere: cd44Records.length,
+            cd44_garde: 0,
+            rennes_recupere: rennesMetropoleRecords.length,
+            rennes_garde: 0,
+            cd35_recupere: cd35InondationsFeatures.length,
+            cd35_garde: 0,
+            cd56_recupere: cd56Features.length,
+            cd56_garde: 0
+        };
         
+        // Grist 35
         gristRecords.forEach(record => {
             const feature = gristToFeature(record);
-            if (feature) features.push(feature);
+            if (feature) {
+                features.push(feature);
+                stats.grist_garde++;
+            }
         });
+        console.log(`   Grist 35: ${stats.grist_recupere} récupérés → ${stats.grist_garde} gardés`);
         
+        // CD44
         cd44Records.forEach(item => {
             const feature = cd44ToFeature(item);
-            if (feature) features.push(feature);
+            if (feature) {
+                features.push(feature);
+                stats.cd44_garde++;
+            }
         });
+        console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
         
+        // Rennes Métropole
         rennesMetropoleRecords.forEach(item => {
             const rmsFeatures = rennesMetropoleToFeatures(item);
             features.push(...rmsFeatures);
+            stats.rennes_garde += rmsFeatures.length;
         });
+        console.log(`   Rennes Métropole: ${stats.rennes_recupere} récupérés → ${stats.rennes_garde} gardés`);
         
+        // CD35 Inondations
         cd35InondationsFeatures.forEach(feature => {
             const converted = cd35InondationsToFeature(feature);
-            if (converted) features.push(converted);
+            if (converted) {
+                features.push(converted);
+                stats.cd35_garde++;
+            }
         });
+        console.log(`   CD35 Inondations: ${stats.cd35_recupere} récupérés → ${stats.cd35_garde} gardés`);
         
+        // CD56
         cd56Features.forEach(feature => {
             const converted = cd56ToFeature(feature);
-            if (converted) features.push(converted);
+            if (converted) {
+                features.push(converted);
+                stats.cd56_garde++;
+            }
         });
+        console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        console.log(`✅ ${features.length} features créées\n`);
+        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + stats.cd35_garde + stats.cd56_garde;
+        const totalFiltre = totalBrut - totalGarde;
+        
+        console.log(`\n📊 Résumé:`);
+        console.log(`   Total récupéré: ${totalBrut}`);
+        console.log(`   Total gardé: ${totalGarde}`);
+        console.log(`   Total filtré: ${totalFiltre}\n`);
         
         const geojson = {
             type: 'FeatureCollection',
