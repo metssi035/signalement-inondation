@@ -412,34 +412,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.8741222832798654,
-          47.54314134349416
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D35 / Plessé",
-        "commune": "Le Gâvre / Plessé",
-        "etat": "Ouvrage d'art",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Ouvrage d'art",
-        "sens_circulation": "",
-        "commentaire": "Travaux sur ouvrage d'art",
-        "date_debut": "17/11/2025 à 08h03",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h03",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.3217412728050657,
           47.58176975719642
         ]
@@ -516,34 +488,6 @@
         "date_debut": "11/12/2025 à 20h00",
         "date_fin": "",
         "date_saisie": "11/12/2025 à 20h00",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5456161624720683,
-          47.514749926814254
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D1 / Saffré",
-        "commune": "Abbaretz / Saffré",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "11/06/2025 à 10h29",
-        "date_fin": "",
-        "date_saisie": "11/06/2025 à 10h29",
         "gestionnaire": "CD44"
       }
     },
@@ -9005,7 +8949,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-17T22:44:31.240Z",
+        "date_saisie": "2025-11-17T23:24:39.358Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -9824,12 +9768,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-17T22:44:31.241Z",
+    "generated": "2025-11-17T23:24:39.359Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 155,
+    "total_count": 153,
     "sources": {
       "grist_35": 2,
-      "cd44": 25,
+      "cd44": 23,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
       "cd56": 116
