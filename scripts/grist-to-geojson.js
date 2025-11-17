@@ -333,6 +333,12 @@ async function fetchCD56Data() {
         // L'API OGC retourne les features dans data.features
         const features = data.features || [];
         
+        // Logger les propriétés de la première feature pour debug
+        if (features.length > 0) {
+            console.log(`   🔍 Exemple de propriétés CD56 (première feature):`);
+            console.log(JSON.stringify(features[0].properties, null, 2));
+        }
+        
         console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
         
         return features;
@@ -529,27 +535,43 @@ function cd56ToFeature(feature) {
             return null;
         }
         
+        // Type de coupure selon conditions_circulation
+        const typeCoupure = conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE' ? 'Partielle' : 'Totale';
+        
+        // Lineaire_inonde : seulement si différent de 0 et de "?"
+        const lineaireInonde = props.lineaire_inonde || props.lineaireInonde || '';
+        const lineaireInondeText = (lineaireInonde && lineaireInonde !== '0' && lineaireInonde !== '?') 
+            ? `Longueur linéaire inondée : ${lineaireInonde}` 
+            : '';
+        
+        // Commentaire : evolution + lineaire_inonde si présent
+        let commentaire = props.evolution || '';
+        if (lineaireInondeText) {
+            commentaire = commentaire ? `${commentaire}. ${lineaireInondeText}` : lineaireInondeText;
+        }
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
                 id: `cd56-${props.OBJECTID || props.objectid || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD56',
-                route: props.route || props.Route || props.rd || '',
-                commune: props.commune || props.Commune || '',
-                etat: props.etat_circulation || 'Route fermée',
-                cause: props.cause || props.Cause || 'Inondation',
-                statut: props.statut || props.Statut || 'Actif',
+                route: props.rd || '',
+                commune: props.commune || '',
+                etat: conditionsCirculation,
+                cause: 'Inondation',
+                statut: 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: props.type_coupure || props.typeCoupure || '',
-                sens_circulation: props.sens || props.Sens || '',
-                commentaire: props.commentaire || props.Commentaire || props.description || props.lieu_dit || '',
-                date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
-                date_fin: formatDate(props.date_fin || props.dateFin),
-                date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
+                type_coupure: typeCoupure,
+                sens_circulation: '',
+                commentaire: commentaire,
+                date_debut: formatDate(props.date_constatation || props.dateConstatation),
+                date_fin: '',
+                date_saisie: formatDate(props.date_constatation || props.dateConstatation),
                 gestionnaire: 'CD56',
-                conditions_circulation: conditionsCirculation
+                conditions_circulation: conditionsCirculation,
+                lineaire_inonde: lineaireInonde
             }
         };
     } catch (e) {
