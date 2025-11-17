@@ -28,7 +28,7 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/TEST_INONDATION_V2/OGCFeatureServer';
+const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/OGCFeatureServer';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
