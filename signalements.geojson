@@ -132,34 +132,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.2089194821179923,
-          47.43269718280346
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D25 / Mésanger",
-        "commune": "La Roche-Blanche / Mésanger",
-        "etat": "Accident",
-        "cause": "Accident",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Accident",
-        "sens_circulation": "",
-        "commentaire": "Accident",
-        "date_debut": "17/11/2025 à 09h52",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 09h52",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.7836021878359964,
           47.65704036763818
         ]
@@ -9114,37 +9086,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.4703177158948915,
-          48.00932098300118
-        ]
-      },
-      "properties": {
-        "id": "cd35-inond-473",
-        "source": "CD35 Inondations",
-        "route": "D37",
-        "commune": "Amanlis",
-        "etat": "Route fermée",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "test",
-        "date_debut": "",
-        "date_fin": "",
-        "date_saisie": "2025-11-17T14:48:13.179Z",
-        "gestionnaire": "CD35",
-        "agence": "Vitré",
-        "pr_debut": "7+800",
-        "pr_fin": "8+500"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -2.21304574138723,
           47.7260504636724
         ]
@@ -9952,14 +9893,14 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-17T14:48:13.180Z",
+    "generated": "2025-11-17T15:29:47.434Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 156,
+    "total_count": 154,
     "sources": {
       "grist_35": 2,
-      "cd44": 26,
+      "cd44": 25,
       "rennes_metropole": 100,
-      "cd35_inondations": 1,
+      "cd35_inondations": 0,
       "cd56": 116
     }
   }
