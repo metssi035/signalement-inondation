@@ -43,7 +43,13 @@ function formatDate(dateValue) {
         } 
         // Si c'est un timestamp
         else if (typeof dateValue === 'number') {
-            date = new Date(dateValue * 1000);
+            // ArcGIS retourne des timestamps en millisecondes (> 1000000000000)
+            // Sinon c'est en secondes
+            if (dateValue > 100000000000) {
+                date = new Date(dateValue); // Déjà en millisecondes
+            } else {
+                date = new Date(dateValue * 1000); // En secondes, convertir en millisecondes
+            }
         } else {
             return '';
         }
@@ -535,19 +541,21 @@ function cd56ToFeature(feature) {
             return null;
         }
         
-        // Type de coupure selon conditions_circulation
-        const typeCoupure = conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE' ? 'Partielle' : 'Totale';
-        
         // Lineaire_inonde : seulement si différent de 0 et de "?"
         const lineaireInonde = props.lineaire_inonde || props.lineaireInonde || '';
         const lineaireInondeText = (lineaireInonde && lineaireInonde !== '0' && lineaireInonde !== '?') 
             ? `Longueur linéaire inondée : ${lineaireInonde}` 
             : '';
         
-        // Commentaire : evolution + lineaire_inonde si présent
-        let commentaire = props.evolution || '';
-        if (lineaireInondeText) {
-            commentaire = commentaire ? `${commentaire}. ${lineaireInondeText}` : lineaireInondeText;
+        // Commentaire : si INONDÉE PARTIELLE, on écrit "Inondation partielle" + lineaire_inonde
+        let commentaire = '';
+        if (conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE') {
+            commentaire = 'Inondation partielle';
+            if (lineaireInondeText) {
+                commentaire += `. ${lineaireInondeText}`;
+            }
+        } else if (lineaireInondeText) {
+            commentaire = lineaireInondeText;
         }
         
         return {
@@ -563,7 +571,7 @@ function cd56ToFeature(feature) {
                 statut: 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: typeCoupure,
+                type_coupure: 'Totale',
                 sens_circulation: '',
                 commentaire: commentaire,
                 date_debut: formatDate(props.date_constatation || props.dateConstatation),
