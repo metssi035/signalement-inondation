@@ -398,62 +398,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.124758680647657,
-          47.44182081343768
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D18 / La Roche-Blanche",
-        "commune": "La Roche-Bl / Pouillé-les-Côteaux",
-        "etat": "Autres",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Autres",
-        "sens_circulation": "",
-        "commentaire": "Autres",
-        "date_debut": "17/11/2025 à 08h04",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h04",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1859829885165918,
-          47.43141861582423
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Autres / D19 / Maumusson",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "17/11/2025 à 08h04",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h04",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.3217412728050657,
           47.58176975719642
         ]
@@ -9650,17 +9594,48 @@
         "date_saisie": "18/11/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4703177158948915,
+          48.00932098300118
+        ]
+      },
+      "properties": {
+        "id": "cd35-inond-473",
+        "source": "CD35 Inondations",
+        "route": "D37",
+        "commune": "Amanlis",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "test",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-18T23:24:12.117Z",
+        "gestionnaire": "CD35",
+        "agence": "Vitré",
+        "pr_debut": "7+800",
+        "pr_fin": "8+500"
+      }
     }
   ],
   "metadata": {
-    "generated": "2025-11-18T22:44:38.941Z",
+    "generated": "2025-11-18T23:24:12.117Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 125,
+    "total_count": 124,
     "sources": {
       "grist_35": 2,
-      "cd44": 23,
+      "cd44": 21,
       "rennes_metropole": 100,
-      "cd35_inondations": 0,
+      "cd35_inondations": 1,
       "cd56": 0
     }
   }
