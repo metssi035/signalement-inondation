@@ -43,13 +43,7 @@ function formatDate(dateValue) {
         } 
         // Si c'est un timestamp
         else if (typeof dateValue === 'number') {
-            // ArcGIS retourne des timestamps en millisecondes (> 1000000000000)
-            // Sinon c'est en secondes
-            if (dateValue > 100000000000) {
-                date = new Date(dateValue); // Déjà en millisecondes
-            } else {
-                date = new Date(dateValue * 1000); // En secondes, convertir en millisecondes
-            }
+            date = new Date(dateValue * 1000);
         } else {
             return '';
         }
@@ -339,12 +333,6 @@ async function fetchCD56Data() {
         // L'API OGC retourne les features dans data.features
         const features = data.features || [];
         
-        // Logger les propriétés de la première feature pour debug
-        if (features.length > 0) {
-            console.log(`   🔍 Exemple de propriétés CD56 (première feature):`);
-            console.log(JSON.stringify(features[0].properties, null, 2));
-        }
-        
         console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
         
         return features;
@@ -541,45 +529,27 @@ function cd56ToFeature(feature) {
             return null;
         }
         
-        // Lineaire_inonde : seulement si différent de 0 et de "?"
-        const lineaireInonde = props.lineaire_inonde || props.lineaireInonde || '';
-        const lineaireInondeText = (lineaireInonde && lineaireInonde !== '0' && lineaireInonde !== '?') 
-            ? `Longueur linéaire inondée : ${lineaireInonde}` 
-            : '';
-        
-        // Commentaire : si INONDÉE PARTIELLE, on écrit "Inondation partielle" + lineaire_inonde
-        let commentaire = '';
-        if (conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE') {
-            commentaire = 'Inondation partielle';
-            if (lineaireInondeText) {
-                commentaire += `. ${lineaireInondeText}`;
-            }
-        } else if (lineaireInondeText) {
-            commentaire = lineaireInondeText;
-        }
-        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
                 id: `cd56-${props.OBJECTID || props.objectid || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD56',
-                route: props.rd || '',
-                commune: props.commune || '',
-                etat: conditionsCirculation,
-                cause: 'Inondation',
-                statut: 'Actif',
+                route: props.route || props.Route || props.rd || '',
+                commune: props.commune || props.Commune || '',
+                etat: props.etat_circulation || 'Route fermée',
+                cause: props.cause || props.Cause || 'Inondation',
+                statut: props.statut || props.Statut || 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: 'Totale',
-                sens_circulation: '',
-                commentaire: commentaire,
-                date_debut: formatDate(props.date_constatation || props.dateConstatation),
-                date_fin: '',
-                date_saisie: formatDate(props.date_constatation || props.dateConstatation),
+                type_coupure: props.type_coupure || props.typeCoupure || '',
+                sens_circulation: props.sens || props.Sens || '',
+                commentaire: props.commentaire || props.Commentaire || props.description || props.lieu_dit || '',
+                date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
+                date_fin: formatDate(props.date_fin || props.dateFin),
+                date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
                 gestionnaire: 'CD56',
-                conditions_circulation: conditionsCirculation,
-                lineaire_inonde: lineaireInonde
+                conditions_circulation: conditionsCirculation
             }
         };
     } catch (e) {
@@ -603,77 +573,36 @@ async function mergeSources() {
         
         const totalBrut = gristRecords.length + cd44Records.length + rennesMetropoleRecords.length + 
                          cd35InondationsFeatures.length + cd56Features.length;
-        console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
+        console.log(`\n📊 Total brut: ${totalBrut} records\n`);
         
         let features = [];
-        let stats = {
-            grist_recupere: gristRecords.length,
-            grist_garde: 0,
-            cd44_recupere: cd44Records.length,
-            cd44_garde: 0,
-            rennes_recupere: rennesMetropoleRecords.length,
-            rennes_garde: 0,
-            cd35_recupere: cd35InondationsFeatures.length,
-            cd35_garde: 0,
-            cd56_recupere: cd56Features.length,
-            cd56_garde: 0
-        };
         
-        // Grist 35
         gristRecords.forEach(record => {
             const feature = gristToFeature(record);
-            if (feature) {
-                features.push(feature);
-                stats.grist_garde++;
-            }
+            if (feature) features.push(feature);
         });
-        console.log(`   Grist 35: ${stats.grist_recupere} récupérés → ${stats.grist_garde} gardés`);
         
-        // CD44
         cd44Records.forEach(item => {
             const feature = cd44ToFeature(item);
-            if (feature) {
-                features.push(feature);
-                stats.cd44_garde++;
-            }
+            if (feature) features.push(feature);
         });
-        console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
         
-        // Rennes Métropole
         rennesMetropoleRecords.forEach(item => {
             const rmsFeatures = rennesMetropoleToFeatures(item);
             features.push(...rmsFeatures);
-            stats.rennes_garde += rmsFeatures.length;
         });
-        console.log(`   Rennes Métropole: ${stats.rennes_recupere} récupérés → ${stats.rennes_garde} gardés`);
         
-        // CD35 Inondations
         cd35InondationsFeatures.forEach(feature => {
             const converted = cd35InondationsToFeature(feature);
-            if (converted) {
-                features.push(converted);
-                stats.cd35_garde++;
-            }
+            if (converted) features.push(converted);
         });
-        console.log(`   CD35 Inondations: ${stats.cd35_recupere} récupérés → ${stats.cd35_garde} gardés`);
         
-        // CD56
         cd56Features.forEach(feature => {
             const converted = cd56ToFeature(feature);
-            if (converted) {
-                features.push(converted);
-                stats.cd56_garde++;
-            }
+            if (converted) features.push(converted);
         });
-        console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + stats.cd35_garde + stats.cd56_garde;
-        const totalFiltre = totalBrut - totalGarde;
-        
-        console.log(`\n📊 Résumé:`);
-        console.log(`   Total récupéré: ${totalBrut}`);
-        console.log(`   Total gardé: ${totalGarde}`);
-        console.log(`   Total filtré: ${totalFiltre}\n`);
+        console.log(`✅ ${features.length} features créées\n`);
         
         const geojson = {
             type: 'FeatureCollection',
