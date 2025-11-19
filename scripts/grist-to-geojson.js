@@ -608,10 +608,10 @@ async function mergeSources() {
                 source: 'Fusion Grist 35 + CD44 + CD35 Inondations + CD56',
                 total_count: features.length,
                 sources: {
-                    grist_35: stats.grist_garde,
-                    cd44: stats.cd44_garde,
-                    cd35_inondations: stats.cd35_garde,
-                    cd56: stats.cd56_garde
+                    grist_35: gristRecords.length,
+                    cd44: cd44Records.length,
+                    cd35_inondations: cd35InondationsFeatures.length,
+                    cd56: cd56Features.length
                 }
             }
         };
@@ -622,10 +622,10 @@ async function mergeSources() {
         const metadata = {
             lastUpdate: new Date().toISOString(),
             sources: {
-                grist_35: stats.grist_garde,
-                cd44: stats.cd44_garde,
-                cd35_inondations: stats.cd35_garde,
-                cd56: stats.cd56_garde,
+                grist_35: gristRecords.length,
+                cd44: cd44Records.length,
+                cd35_inondations: cd35InondationsFeatures.length,
+                cd56: cd56Features.length,
                 total: features.length
             },
             stats: {
@@ -646,10 +646,10 @@ async function mergeSources() {
         console.log('✅ Métadonnées créées');
         
         console.log('\n📊 Statistiques finales:');
-        console.log(`   - Grist 35: ${stats.grist_garde}`);
-        console.log(`   - CD44: ${stats.cd44_garde}`);
-        console.log(`   - CD35 Inondations: ${stats.cd35_garde}`);
-        console.log(`   - CD56: ${stats.cd56_garde}`);
+        console.log(`   - Grist 35: ${features.filter(f => f.properties.source === 'Grist 35').length} features`);
+        console.log(`   - CD44: ${features.filter(f => f.properties.source === 'CD44').length} features`);
+        console.log(`   - CD35 Inondations: ${features.filter(f => f.properties.source === 'CD35 Inondations').length} features`);
+        console.log(`   - CD56: ${features.filter(f => f.properties.source === 'CD56').length} features`);
         console.log(`   - Total features: ${features.length}`);
         console.log(`   - Points: ${metadata.stats.points}`);
         console.log(`   - LineStrings: ${metadata.stats.lines}`);
