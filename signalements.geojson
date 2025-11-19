@@ -672,16 +672,47 @@
         "date_saisie": "07/04/2022 à 19h00",
         "gestionnaire": "CD44"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4703177158948915,
+          48.00932098300118
+        ]
+      },
+      "properties": {
+        "id": "cd35-inond-473",
+        "source": "CD35 Inondations",
+        "route": "D37",
+        "commune": "Amanlis",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "test",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-19T09:11:55.886Z",
+        "gestionnaire": "CD35",
+        "agence": "Vitré",
+        "pr_debut": "7+800",
+        "pr_fin": "8+500"
+      }
     }
   ],
   "metadata": {
-    "generated": "2025-11-19T09:10:28.140Z",
+    "generated": "2025-11-19T09:11:55.887Z",
     "source": "Fusion Grist 35 + CD44 + CD35 Inondations + CD56",
-    "total_count": 24,
+    "total_count": 25,
     "sources": {
       "grist_35": 2,
       "cd44": 22,
-      "cd35_inondations": 0,
+      "cd35_inondations": 1,
       "cd56": 0
     }
   }
