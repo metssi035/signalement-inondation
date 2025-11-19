@@ -104,6 +104,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.778068542480469,
+          48.02506490761254
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "source": "Grist 35",
+        "route": "D 177",
+        "commune": "Goven",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "19/11/2025 à 14h38",
+        "date_fin": "",
+        "date_saisie": "19/11/2025 à 14h38",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.2848379032008947,
           47.34707706297137
         ]
@@ -741,6 +769,37 @@
         "date_fin": "",
         "date_saisie": "07/04/2022 à 19h00",
         "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4703177158948915,
+          48.00932098300118
+        ]
+      },
+      "properties": {
+        "id": "cd35-inond-473",
+        "source": "CD35 Inondations",
+        "route": "D37",
+        "commune": "Amanlis",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "test",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-19T14:48:11.116Z",
+        "gestionnaire": "CD35",
+        "agence": "Vitré",
+        "pr_debut": "7+800",
+        "pr_fin": "8+500"
       }
     },
     {
@@ -1555,13 +1614,13 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-19T14:38:16.732Z",
+    "generated": "2025-11-19T14:48:11.117Z",
     "source": "Fusion Grist 35 + CD44 + CD35 Inondations + CD56",
-    "total_count": 53,
+    "total_count": 55,
     "sources": {
-      "grist_35": 3,
+      "grist_35": 4,
       "cd44": 23,
-      "cd35_inondations": 0,
+      "cd35_inondations": 1,
       "cd56": 116
     }
   }
