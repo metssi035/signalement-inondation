@@ -575,7 +575,15 @@ async function mergeSources() {
         });
         console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
         
-      
+        // CD35 Inondations
+        cd35InondationsFeatures.forEach(feature => {
+            const converted = cd35InondationsToFeature(feature);
+            if (converted) {
+                features.push(converted);
+                stats.cd35_garde++;
+            }
+        });
+        console.log(`   CD35: ${stats.cd35_recupere} récupérés → ${stats.cd35_garde} gardés`);
         
         // CD56
         cd56Features.forEach(feature => {
