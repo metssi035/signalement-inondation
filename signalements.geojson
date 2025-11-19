@@ -60,6 +60,48 @@
     {
       "type": "Feature",
       "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.78085274389145,
+            48.14422315012563
+          ],
+          [
+            -1.7736445319800724,
+            48.140326989655236
+          ],
+          [
+            -1.7595713563435902,
+            48.13253378153885
+          ],
+          [
+            -1.7448116843345998,
+            48.127261234691694
+          ]
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "source": "Grist 35",
+        "route": "N 12",
+        "commune": "Pacé",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "19/11/2025 à 10h04",
+        "date_fin": "",
+        "date_saisie": "19/11/2025 à 10h04",
+        "gestionnaire": "DIRO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
         "coordinates": [
           -2.1784591914895355,
@@ -697,7 +739,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-19T10:00:47.888Z",
+        "date_saisie": "2025-11-19T10:06:27.799Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -1516,11 +1558,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-19T10:00:47.888Z",
+    "generated": "2025-11-19T10:06:27.800Z",
     "source": "Fusion Grist 35 + CD44 + CD35 Inondations + CD56",
-    "total_count": 52,
+    "total_count": 53,
     "sources": {
-      "grist_35": 2,
+      "grist_35": 3,
       "cd44": 22,
       "cd35_inondations": 1,
       "cd56": 116
