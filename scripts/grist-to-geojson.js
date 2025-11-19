@@ -268,22 +268,7 @@ async function fetchCD44Data() {
     }
 }
 
-// Récupérer Rennes Métropole
-async function fetchRennesMetropoleData() {
-    try {
-        console.log('🔗 [Rennes Métropole] Récupération...');
-        const response = await fetch(
-            'https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets/travaux_1_jour/records?limit=100'
-        );
-        const data = await response.json();
-        const records = data.results || [];
-        console.log(`✅ [Rennes Métropole] ${records.length} records`);
-        return records;
-    } catch (error) {
-        console.error('❌ [Rennes Métropole]', error.message);
-        return [];
-    }
-}
+
 
 // Récupérer CD56 (OGC API REST)
 async function fetchCD56Data() {
