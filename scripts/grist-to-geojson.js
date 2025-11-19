@@ -15,7 +15,7 @@ console.log('🚀 Démarrage de la fusion des 4 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. CD35 Inondations (WFS XML)');
-console.log('   4. CD56 (MapServer)\n');
+console.log('   4. CD56 (WFS XML - CORRIGÉ)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -27,7 +27,11 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_MAPSERVER = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/MapServer/0';
+const CD56_WFS_CONFIG = {
+    url: 'https://dservices.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/INONDATION/WFSServer',
+    typeName: 'INONDATION:Inondation',
+    srsName: 'EPSG:2154'  // Lambert 93 comme dans QGIS
+};
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -253,21 +257,21 @@ async function fetchCD44Data() {
     }
 }
 
-// Récupérer CD56 (MapServer - API la plus stable)
+// Récupérer CD56 via WFS (exactement comme CD35)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via MapServer...`);
+        console.log(`🔗 [CD56] Récupération via WFS...`);
         
-        // API MapServer classique - LA PLUS STABLE
-        const queryUrl = `${CD56_MAPSERVER}/query?` +
-            `where=1=1&` +
-            `outFields=*&` +
-            `outSR=4326&` +
-            `f=geojson`;
+        const wfsUrl = `${CD56_WFS_CONFIG.url}?` +
+            `service=WFS&` +
+            `version=2.0.0&` +
+            `request=GetFeature&` +
+            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
+            `srsName=${CD56_WFS_CONFIG.srsName}`;
         
-        console.log(`   URL: ${queryUrl}`);
+        console.log(`   URL: ${wfsUrl.substring(0, 100)}...`);
         
-        const response = await fetch(queryUrl, {
+        const response = await fetch(wfsUrl, {
             headers: {
                 'User-Agent': 'Mozilla/5.0'
             }
@@ -275,34 +279,71 @@ async function fetchCD56Data() {
         
         if (!response.ok) {
             console.error(`❌ [CD56] HTTP ${response.status}`);
-            const errorText = await response.text();
-            console.error(`   Erreur: ${errorText.substring(0, 200)}`);
             return [];
         }
         
-        const data = await response.json();
-        console.log(`   Réponse GeoJSON reçue`);
+        const xmlText = await response.text();
+        console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
         
-        // Debug si erreur dans les données
-        if (data.error) {
-            console.error(`   ❌ Erreur dans les données:`, data.error);
-            return [];
-        }
+        const parser = new xml2js.Parser({ 
+            explicitArray: false,
+            tagNameProcessors: [xml2js.processors.stripPrefix]
+        });
+        const json = await parser.parseStringPromise(xmlText);
         
-        // MapServer retourne un GeoJSON standard
-        const features = data.features || [];
+        const features = [];
+        const members = json.FeatureCollection?.member || [];
+        const memberArray = Array.isArray(members) ? members : [members];
+        
+        console.log(`   ${memberArray.length} members trouvés`);
         
         // Debug première feature
-        if (features.length > 0) {
-            console.log(`   🔍 Première feature CD56 (propriétés):`);
-            console.log(JSON.stringify(features[0].properties, null, 2).substring(0, 300));
-        } else {
-            console.log(`   ⚠️ Aucune feature retournée. Structure de la réponse:`);
-            console.log(JSON.stringify(data, null, 2).substring(0, 300));
+        if (memberArray.length > 0) {
+            console.log(`   🔍 DEBUG - Structure première feature:`);
+            console.log(JSON.stringify(memberArray[0], null, 2).substring(0, 800));
         }
         
-        console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
+        memberArray.forEach((member, idx) => {
+            try {
+                const inondation = member.Inondation || member.inondation;
+                if (!inondation) return;
+                
+                // Extraire la géométrie
+                const shape = inondation.Shape || inondation.shape || inondation.geometry;
+                if (!shape || !shape.Point || !shape.Point.pos) return;
+                
+                const coords = shape.Point.pos.split(' ');
+                const x = parseFloat(coords[0]);
+                const y = parseFloat(coords[1]);
+                if (isNaN(x) || isNaN(y)) return;
+                
+                // Convertir Lambert 93 vers WGS84
+                const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
+                
+                // Extraire les propriétés
+                features.push({
+                    type: 'Feature',
+                    geometry: { 
+                        type: 'Point', 
+                        coordinates: [lng, lat] 
+                    },
+                    properties: {
+                        OBJECTID: inondation.OBJECTID || inondation.objectid,
+                        rd: inondation.rd || inondation.RD,
+                        commune: inondation.commune || inondation.COMMUNE,
+                        conditions_circulation: inondation.conditions_circulation || inondation.conditionsCirculation,
+                        date_constatation: inondation.date_constatation || inondation.dateConstatation,
+                        evolution: inondation.evolution || inondation.EVOLUTION,
+                        lineaire_inonde: inondation.lineaire_inonde || inondation.lineaireInonde
+                    }
+                });
+                
+            } catch (e) {
+                console.warn(`   ⚠️ Erreur parsing feature ${idx}:`, e.message);
+            }
+        });
         
+        console.log(`✅ [CD56] ${features.length} features parsées avec succès`);
         return features;
         
     } catch (error) {
