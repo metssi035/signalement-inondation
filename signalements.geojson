@@ -62,6 +62,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -2.1784591914895355,
+          47.2981180521444
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D213 -Pont de Saint Nazaire",
+        "commune": "Saint-Nazaire / Saint-Brevin",
+        "etat": "Entretien courant",
+        "cause": "Chantier",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Entretien courant",
+        "sens_circulation": "",
+        "commentaire": "Travaux d'entretien courant",
+        "date_debut": "19/11/2025 à 08h35",
+        "date_fin": "",
+        "date_saisie": "19/11/2025 à 08h35",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.6743617405076974,
           47.19644470749437
         ]
@@ -11401,7 +11429,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-19T08:35:08.378Z",
+        "date_saisie": "2025-11-19T08:45:56.853Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -11410,12 +11438,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-19T08:35:08.378Z",
+    "generated": "2025-11-19T08:45:56.853Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 124,
+    "total_count": 125,
     "sources": {
       "grist_35": 2,
-      "cd44": 21,
+      "cd44": 22,
       "rennes_metropole": 100,
       "cd35_inondations": 1,
       "cd56": 0
