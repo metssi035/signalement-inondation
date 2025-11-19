@@ -260,7 +260,7 @@ async function fetchCD56Data() {
         console.log(`🔗 [CD56] Récupération via FeatureServer...`);
         
         // API FeatureServer classique - BEAUCOUP PLUS STABLE
-        const queryUrl = `${CD56_FEATURE_SERVICE}/query?where=1=1&outFields=*&f=geojson`;
+        const queryUrl = `${CD56_FEATURE_SERVICE}/query?where=1=1&outFields=*&outSR=4326&f=json`;
         console.log(`   URL: ${queryUrl}`);
         
         const response = await fetch(queryUrl, {
@@ -275,9 +275,61 @@ async function fetchCD56Data() {
         }
         
         const data = await response.json();
-        console.log(`   Réponse GeoJSON reçue`);
+        console.log(`   Réponse JSON reçue`);
         
-        const features = data.features || [];
+        // Vérifier si erreur
+        if (data.error) {
+            console.error(`   ❌ Erreur API: ${JSON.stringify(data.error)}`);
+            return [];
+        }
+        
+        // Format ArcGIS standard : {features: [{attributes: {...}, geometry: {...}}]}
+        const arcgisFeatures = data.features || [];
+        console.log(`   ${arcgisFeatures.length} features ArcGIS brutes trouvées`);
+        
+        // Si vide, afficher la structure
+        if (arcgisFeatures.length === 0) {
+            console.log(`   ⚠️ Réponse vide. Structure:`);
+            console.log(JSON.stringify(data, null, 2).substring(0, 500));
+        }
+        
+        // Convertir en GeoJSON
+        const features = arcgisFeatures.map(f => {
+            try {
+                // Géométrie ArcGIS -> GeoJSON
+                let geometry = null;
+                if (f.geometry) {
+                    if (f.geometry.x !== undefined && f.geometry.y !== undefined) {
+                        // Point
+                        geometry = {
+                            type: 'Point',
+                            coordinates: [f.geometry.x, f.geometry.y]
+                        };
+                    } else if (f.geometry.paths) {
+                        // LineString ou MultiLineString
+                        geometry = {
+                            type: f.geometry.paths.length > 1 ? 'MultiLineString' : 'LineString',
+                            coordinates: f.geometry.paths.length > 1 ? f.geometry.paths : f.geometry.paths[0]
+                        };
+                    } else if (f.geometry.rings) {
+                        // Polygon
+                        geometry = {
+                            type: 'Polygon',
+                            coordinates: f.geometry.rings
+                        };
+                    }
+                }
+                
+                return {
+                    type: 'Feature',
+                    geometry: geometry,
+                    properties: f.attributes || {}
+                };
+            } catch (e) {
+                console.warn(`   ⚠️ Erreur conversion feature:`, e.message);
+                return null;
+            }
+        }).filter(f => f !== null);
         
         // Debug : afficher les propriétés de la première feature
         if (features.length > 0) {
@@ -285,7 +337,7 @@ async function fetchCD56Data() {
             console.log(JSON.stringify(features[0].properties, null, 2));
         }
         
-        console.log(`✅ [CD56] ${features.length} features brutes récupérées`);
+        console.log(`✅ [CD56] ${features.length} features converties en GeoJSON`);
         
         return features;
         
