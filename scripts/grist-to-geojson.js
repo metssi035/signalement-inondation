@@ -11,11 +11,12 @@ const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
 const TABLE_ID = 'Signalements';
 
-console.log('🚀 Démarrage de la fusion des 4 sources...\n');
+console.log('🚀 Démarrage de la fusion des 5 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
-console.log('   3. CD35 Inondations (WFS XML)');
-console.log('   4. CD56 (OGC API REST)\n');
+console.log('   3. Rennes Métropole (API REST)');
+console.log('   4. CD35 Inondations (WFS XML)');
+console.log('   5. CD56 (OGC API REST)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -267,6 +268,23 @@ async function fetchCD44Data() {
     }
 }
 
+// Récupérer Rennes Métropole
+async function fetchRennesMetropoleData() {
+    try {
+        console.log('🔗 [Rennes Métropole] Récupération...');
+        const response = await fetch(
+            'https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets/travaux_1_jour/records?limit=100'
+        );
+        const data = await response.json();
+        const records = data.results || [];
+        console.log(`✅ [Rennes Métropole] ${records.length} records`);
+        return records;
+    } catch (error) {
+        console.error('❌ [Rennes Métropole]', error.message);
+        return [];
+    }
+}
+
 // Récupérer CD56 (OGC API REST)
 async function fetchCD56Data() {
     try {
@@ -424,6 +442,52 @@ function cd44ToFeature(item) {
     }
 }
 
+// Convertir Rennes Métropole
+function rennesMetropoleToFeatures(item) {
+    try {
+        let geometry = null;
+        
+        if (item.geo_shape && item.geo_shape.geometry) {
+            geometry = item.geo_shape.geometry;
+        } else if (item.geo_point_2d) {
+            geometry = {
+                type: 'Point',
+                coordinates: [item.geo_point_2d.lon, item.geo_point_2d.lat]
+            };
+        }
+        
+        if (!geometry) return [];
+        
+        const statut = 'Actif';
+        
+        return [{
+            type: 'Feature',
+            geometry: geometry,
+            properties: {
+                id: `rm-${item.recordid}`,
+                source: 'Rennes Métropole',
+                route: item.localisation || item.rue || '',
+                commune: item.commune || 'Rennes',
+                etat: 'Route fermée',
+                cause: 'Travaux',
+                statut: statut,
+                statut_actif: true,
+                statut_resolu: false,
+                type_coupure: item.type || '',
+                sens_circulation: '',
+                commentaire: item.libelle || '',
+                date_debut: formatDate(item.date_deb),
+                date_fin: formatDate(item.date_fin),
+                date_saisie: formatDate(item.date_deb),
+                gestionnaire: 'Rennes Métropole'
+            }
+        }];
+        
+    } catch (e) {
+        return [];
+    }
+}
+
 // Convertir CD35 Inondations
 function cd35InondationsToFeature(feature) {
     try {
@@ -529,14 +593,15 @@ async function mergeSources() {
     try {
         console.log('');
         
-        const [gristRecords, cd44Records, cd35InondationsFeatures, cd56Features] = await Promise.all([
+        const [gristRecords, cd44Records, rennesMetropoleRecords, cd35InondationsFeatures, cd56Features] = await Promise.all([
             fetchGristData(),
             fetchCD44Data(),
+            fetchRennesMetropoleData(),
             fetchCD35InondationsData(),
             fetchCD56Data()
         ]);
         
-        const totalBrut = gristRecords.length + cd44Records.length + 
+        const totalBrut = gristRecords.length + cd44Records.length + rennesMetropoleRecords.length + 
                          cd35InondationsFeatures.length + cd56Features.length;
         console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
         
@@ -546,6 +611,8 @@ async function mergeSources() {
             grist_garde: 0,
             cd44_recupere: cd44Records.length,
             cd44_garde: 0,
+            rennes_recupere: rennesMetropoleRecords.length,
+            rennes_garde: 0,
             cd35_recupere: cd35InondationsFeatures.length,
             cd35_garde: 0,
             cd56_recupere: cd56Features.length,
@@ -572,6 +639,14 @@ async function mergeSources() {
         });
         console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
         
+        // Rennes Métropole
+        rennesMetropoleRecords.forEach(item => {
+            const rmsFeatures = rennesMetropoleToFeatures(item);
+            features.push(...rmsFeatures);
+            stats.rennes_garde += rmsFeatures.length;
+        });
+        console.log(`   Rennes Métropole: ${stats.rennes_recupere} récupérés → ${stats.rennes_garde} gardés`);
+        
         // CD35 Inondations
         cd35InondationsFeatures.forEach(feature => {
             const converted = cd35InondationsToFeature(feature);
@@ -592,7 +667,7 @@ async function mergeSources() {
         });
         console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.cd35_garde + stats.cd56_garde;
+        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + stats.cd35_garde + stats.cd56_garde;
         const totalFiltre = totalBrut - totalGarde;
         
         console.log(`\n📊 Résumé:`);
@@ -605,11 +680,12 @@ async function mergeSources() {
             features: features,
             metadata: {
                 generated: new Date().toISOString(),
-                source: 'Fusion Grist 35 + CD44 + CD35 Inondations + CD56',
+                source: 'Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56',
                 total_count: features.length,
                 sources: {
                     grist_35: gristRecords.length,
                     cd44: cd44Records.length,
+                    rennes_metropole: rennesMetropoleRecords.length,
                     cd35_inondations: cd35InondationsFeatures.length,
                     cd56: cd56Features.length
                 }
@@ -624,6 +700,7 @@ async function mergeSources() {
             sources: {
                 grist_35: gristRecords.length,
                 cd44: cd44Records.length,
+                rennes_metropole: rennesMetropoleRecords.length,
                 cd35_inondations: cd35InondationsFeatures.length,
                 cd56: cd56Features.length,
                 total: features.length
@@ -636,6 +713,7 @@ async function mergeSources() {
                 by_source: {
                     grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
                     cd44: features.filter(f => f.properties.source === 'CD44').length,
+                    rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
                     cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
                     cd56: features.filter(f => f.properties.source === 'CD56').length
                 }
@@ -646,10 +724,11 @@ async function mergeSources() {
         console.log('✅ Métadonnées créées');
         
         console.log('\n📊 Statistiques finales:');
-        console.log(`   - Grist 35: ${features.filter(f => f.properties.source === 'Grist 35').length} features`);
-        console.log(`   - CD44: ${features.filter(f => f.properties.source === 'CD44').length} features`);
-        console.log(`   - CD35 Inondations: ${features.filter(f => f.properties.source === 'CD35 Inondations').length} features`);
-        console.log(`   - CD56: ${features.filter(f => f.properties.source === 'CD56').length} features`);
+        console.log(`   - Grist 35: ${gristRecords.length}`);
+        console.log(`   - CD44: ${cd44Records.length}`);
+        console.log(`   - Rennes Métropole: ${rennesMetropoleRecords.length}`);
+        console.log(`   - CD35 Inondations: ${cd35InondationsFeatures.length}`);
+        console.log(`   - CD56: ${cd56Features.length}`);
         console.log(`   - Total features: ${features.length}`);
         console.log(`   - Points: ${metadata.stats.points}`);
         console.log(`   - LineStrings: ${metadata.stats.lines}`);
