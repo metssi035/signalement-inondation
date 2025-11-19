@@ -15,7 +15,7 @@ console.log('🚀 Démarrage de la fusion des 4 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. CD35 Inondations (WFS XML)');
-console.log('   4. CD56 (WFS XML - CORRIGÉ)\n');
+console.log('   4. CD56 (MapServer)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -27,12 +27,7 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-// ✅ CORRECTION : CD56 utilise maintenant WFS comme CD35
-const CD56_WFS_CONFIG = {
-    url: 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/services/INONDATION/WFSServer',
-    typeName: 'INONDATION:Inondation',
-    srsName: 'EPSG:4326'
-};
+const CD56_MAPSERVER = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/MapServer/0';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -163,117 +158,6 @@ async function fetchCD35InondationsData() {
     }
 }
 
-// ✅ NOUVEAU : Récupérer CD56 via WFS (comme CD35)
-async function fetchCD56Data() {
-    try {
-        console.log(`🔗 [CD56] Récupération via WFS...`);
-        
-        const wfsUrl = `${CD56_WFS_CONFIG.url}?` +
-            `service=WFS&` +
-            `version=2.0.0&` +
-            `request=GetFeature&` +
-            `typeNames=${CD56_WFS_CONFIG.typeName}&` +
-            `srsName=${CD56_WFS_CONFIG.srsName}`;
-        
-        console.log(`   URL: ${wfsUrl}`);
-        
-        const response = await fetch(wfsUrl, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0'
-            }
-        });
-        
-        if (!response.ok) {
-            console.error(`❌ [CD56] HTTP ${response.status}`);
-            const text = await response.text();
-            console.error(`   Réponse: ${text.substring(0, 500)}`);
-            return [];
-        }
-        
-        const xmlText = await response.text();
-        console.log(`   Réponse XML reçue (${xmlText.length} caractères)`);
-        
-        const parser = new xml2js.Parser({ 
-            explicitArray: false,
-            tagNameProcessors: [xml2js.processors.stripPrefix]
-        });
-        const json = await parser.parseStringPromise(xmlText);
-        
-        const features = [];
-        const members = json.FeatureCollection?.member || [];
-        const memberArray = Array.isArray(members) ? members : [members];
-        
-        console.log(`   ${memberArray.length} members trouvés`);
-        
-        // Debug: afficher la première feature
-        if (memberArray.length > 0) {
-            console.log(`   🔍 DEBUG - Structure première feature:`);
-            console.log(JSON.stringify(memberArray[0], null, 2).substring(0, 500));
-        }
-        
-        memberArray.forEach((member, idx) => {
-            try {
-                const inondation = member.Inondation || member.inondation;
-                if (!inondation) {
-                    console.warn(`   ⚠️ Member ${idx}: pas d'objet Inondation`);
-                    return;
-                }
-                
-                // Extraire la géométrie
-                const shape = inondation.Shape || inondation.shape || inondation.geometry;
-                if (!shape) {
-                    console.warn(`   ⚠️ Feature ${idx}: pas de géométrie`);
-                    return;
-                }
-                
-                let lng, lat;
-                
-                // Essayer différents formats de géométrie
-                if (shape.Point && shape.Point.pos) {
-                    const coords = shape.Point.pos.split(' ');
-                    lng = parseFloat(coords[0]);
-                    lat = parseFloat(coords[1]);
-                } else if (shape.coordinates) {
-                    [lng, lat] = shape.coordinates;
-                }
-                
-                if (isNaN(lng) || isNaN(lat)) {
-                    console.warn(`   ⚠️ Feature ${idx}: coordonnées invalides`);
-                    return;
-                }
-                
-                // Extraire les propriétés
-                features.push({
-                    type: 'Feature',
-                    geometry: { 
-                        type: 'Point', 
-                        coordinates: [lng, lat] 
-                    },
-                    properties: {
-                        OBJECTID: inondation.OBJECTID || inondation.objectid,
-                        rd: inondation.rd || inondation.RD,
-                        commune: inondation.commune || inondation.COMMUNE,
-                        conditions_circulation: inondation.conditions_circulation || inondation.conditionsCirculation,
-                        date_constatation: inondation.date_constatation || inondation.dateConstatation,
-                        evolution: inondation.evolution || inondation.EVOLUTION,
-                        lineaire_inonde: inondation.lineaire_inonde || inondation.lineaireInonde
-                    }
-                });
-                
-            } catch (e) {
-                console.warn(`   ⚠️ Erreur parsing feature ${idx}:`, e.message);
-            }
-        });
-        
-        console.log(`✅ [CD56] ${features.length} features parsées avec succès`);
-        return features;
-        
-    } catch (error) {
-        console.error(`❌ [CD56]`, error.message);
-        return [];
-    }
-}
-
 // Récupérer Grist
 async function fetchGristData() {
     try {
@@ -365,6 +249,64 @@ async function fetchCD44Data() {
         });
     } catch (error) {
         console.error('❌ [CD44]', error.message);
+        return [];
+    }
+}
+
+// Récupérer CD56 (MapServer - API la plus stable)
+async function fetchCD56Data() {
+    try {
+        console.log(`🔗 [CD56] Récupération via MapServer...`);
+        
+        // API MapServer classique - LA PLUS STABLE
+        const queryUrl = `${CD56_MAPSERVER}/query?` +
+            `where=1=1&` +
+            `outFields=*&` +
+            `outSR=4326&` +
+            `f=geojson`;
+        
+        console.log(`   URL: ${queryUrl}`);
+        
+        const response = await fetch(queryUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        });
+        
+        if (!response.ok) {
+            console.error(`❌ [CD56] HTTP ${response.status}`);
+            const errorText = await response.text();
+            console.error(`   Erreur: ${errorText.substring(0, 200)}`);
+            return [];
+        }
+        
+        const data = await response.json();
+        console.log(`   Réponse GeoJSON reçue`);
+        
+        // Debug si erreur dans les données
+        if (data.error) {
+            console.error(`   ❌ Erreur dans les données:`, data.error);
+            return [];
+        }
+        
+        // MapServer retourne un GeoJSON standard
+        const features = data.features || [];
+        
+        // Debug première feature
+        if (features.length > 0) {
+            console.log(`   🔍 Première feature CD56 (propriétés):`);
+            console.log(JSON.stringify(features[0].properties, null, 2).substring(0, 300));
+        } else {
+            console.log(`   ⚠️ Aucune feature retournée. Structure de la réponse:`);
+            console.log(JSON.stringify(data, null, 2).substring(0, 300));
+        }
+        
+        console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
+        
+        return features;
+        
+    } catch (error) {
+        console.error(`❌ [CD56]`, error.message);
         return [];
     }
 }
@@ -495,7 +437,7 @@ function cd35InondationsToFeature(feature) {
     }
 }
 
-// Convertir CD56
+// Convertir CD56 - VERSION ORIGINALE
 function cd56ToFeature(feature) {
     try {
         const geometry = feature.geometry;
@@ -504,48 +446,32 @@ function cd56ToFeature(feature) {
         const props = feature.properties || {};
         
         // Filtre : ne garder que COUPÉE ou INONDÉE PARTIELLE
-        const conditionsCirculation = props.conditions_circulation || '';
+        const conditionsCirculation = props.conditions_circulation || props.conditionsCirculation || '';
         if (!['COUPÉE', 'INONDÉE PARTIELLE'].includes(conditionsCirculation.toUpperCase())) {
             return null;
-        }
-        
-        // Type de coupure selon conditions_circulation
-        const typeCoupure = conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE' ? 'Partielle' : 'Totale';
-        
-        // Lineaire_inonde : seulement si différent de 0 et de "?"
-        const lineaireInonde = props.lineaire_inonde || '';
-        const lineaireInondeText = (lineaireInonde && lineaireInonde !== '0' && lineaireInonde !== '?') 
-            ? `Longueur linéaire inondée : ${lineaireInonde}` 
-            : '';
-        
-        // Commentaire : evolution + lineaire_inonde si présent
-        let commentaire = props.evolution || '';
-        if (lineaireInondeText) {
-            commentaire = commentaire ? `${commentaire}. ${lineaireInondeText}` : lineaireInondeText;
         }
         
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd56-${props.OBJECTID || Math.random().toString(36).substr(2, 9)}`,
+                id: `cd56-${props.OBJECTID || props.objectid || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD56',
-                route: props.rd || '',
-                commune: props.commune || '',
-                etat: conditionsCirculation,
-                cause: 'Inondation',
-                statut: 'Actif',
+                route: props.route || props.Route || props.rd || '',
+                commune: props.commune || props.Commune || '',
+                etat: props.etat_circulation || 'Route fermée',
+                cause: props.cause || props.Cause || 'Inondation',
+                statut: props.statut || props.Statut || 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: typeCoupure,
-                sens_circulation: '',
-                commentaire: commentaire,
-                date_debut: formatDate(props.date_constatation),
-                date_fin: '',
-                date_saisie: formatDate(props.date_constatation),
+                type_coupure: props.type_coupure || props.typeCoupure || '',
+                sens_circulation: props.sens || props.Sens || '',
+                commentaire: props.commentaire || props.Commentaire || props.description || props.lieu_dit || '',
+                date_debut: formatDate(props.date_debut || props.dateDebut || props.date),
+                date_fin: formatDate(props.date_fin || props.dateFin),
+                date_saisie: formatDate(props.date_creation || props.dateCreation || props.date),
                 gestionnaire: 'CD56',
-                conditions_circulation: conditionsCirculation,
-                lineaire_inonde: lineaireInonde
+                conditions_circulation: conditionsCirculation
             }
         };
     } catch (e) {
@@ -568,67 +494,31 @@ async function mergeSources() {
         
         const totalBrut = gristRecords.length + cd44Records.length + 
                          cd35InondationsFeatures.length + cd56Features.length;
-        console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
+        console.log(`\n📊 Total brut: ${totalBrut} records\n`);
         
         let features = [];
-        let stats = {
-            grist_recupere: gristRecords.length,
-            grist_garde: 0,
-            cd44_recupere: cd44Records.length,
-            cd44_garde: 0,
-            cd35_recupere: cd35InondationsFeatures.length,
-            cd35_garde: 0,
-            cd56_recupere: cd56Features.length,
-            cd56_garde: 0
-        };
         
-        // Grist 35
         gristRecords.forEach(record => {
             const feature = gristToFeature(record);
-            if (feature) {
-                features.push(feature);
-                stats.grist_garde++;
-            }
+            if (feature) features.push(feature);
         });
-        console.log(`   Grist 35: ${stats.grist_recupere} récupérés → ${stats.grist_garde} gardés`);
         
-        // CD44
         cd44Records.forEach(item => {
             const feature = cd44ToFeature(item);
-            if (feature) {
-                features.push(feature);
-                stats.cd44_garde++;
-            }
+            if (feature) features.push(feature);
         });
-        console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
         
-        // CD35 Inondations
         cd35InondationsFeatures.forEach(feature => {
             const converted = cd35InondationsToFeature(feature);
-            if (converted) {
-                features.push(converted);
-                stats.cd35_garde++;
-            }
+            if (converted) features.push(converted);
         });
-        console.log(`   CD35 Inondations: ${stats.cd35_recupere} récupérés → ${stats.cd35_garde} gardés`);
         
-        // CD56
         cd56Features.forEach(feature => {
             const converted = cd56ToFeature(feature);
-            if (converted) {
-                features.push(converted);
-                stats.cd56_garde++;
-            }
+            if (converted) features.push(converted);
         });
-        console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.cd35_garde + stats.cd56_garde;
-        const totalFiltre = totalBrut - totalGarde;
-        
-        console.log(`\n📊 Résumé:`);
-        console.log(`   Total récupéré: ${totalBrut}`);
-        console.log(`   Total gardé: ${totalGarde}`);
-        console.log(`   Total filtré: ${totalFiltre}\n`);
+        console.log(`✅ ${features.length} features créées\n`);
         
         const geojson = {
             type: 'FeatureCollection',
