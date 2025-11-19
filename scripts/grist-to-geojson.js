@@ -15,7 +15,7 @@ console.log('🚀 Démarrage de la fusion des 4 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. CD35 Inondations (WFS XML)');
-console.log('   4. CD56 (OGC API REST)\n');
+console.log('   4. CD56 (API FeatureServer)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -27,7 +27,7 @@ const CD35_WFS_CONFIG = {
     srsName: 'EPSG:2154'
 };
 
-const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/OGCFeatureServer';
+const CD56_FEATURE_SERVICE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/FeatureServer/0';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -267,71 +267,31 @@ async function fetchCD44Data() {
     }
 }
 
-// Récupérer CD56 (OGC API REST)
+// Récupérer CD56 (API FeatureServer classique)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via OGC API REST...`);
+        console.log(`🔗 [CD56] Récupération via API FeatureServer...`);
         
-        // D'abord, récupérer la liste des collections pour trouver le bon ID
-        const collectionsUrl = `${CD56_OGC_BASE}/collections?f=json`;
-        console.log(`   URL collections: ${collectionsUrl}`);
+        // API FeatureServer classique d'ArcGIS
+        const queryUrl = `${CD56_FEATURE_SERVICE}/query?where=1=1&outFields=*&f=geojson`;
+        console.log(`   URL: ${queryUrl}`);
         
-        const collectionsResponse = await fetch(collectionsUrl, {
+        const response = await fetch(queryUrl, {
             headers: {
                 'User-Agent': 'Mozilla/5.0'
             }
         });
         
-        if (!collectionsResponse.ok) {
-            console.error(`❌ [CD56] HTTP ${collectionsResponse.status} sur /collections`);
+        if (!response.ok) {
+            console.error(`❌ [CD56] HTTP ${response.status}`);
             return [];
         }
         
-        const collectionsData = await collectionsResponse.json();
+        const data = await response.json();
+        console.log(`   Réponse GeoJSON reçue`);
         
-        // Trouver la première collection (ou celle qui contient "Inondation")
-        const collections = collectionsData.collections || [];
-        if (collections.length === 0) {
-            console.error(`❌ [CD56] Aucune collection trouvée`);
-            return [];
-        }
-        
-        // Logger toute la structure pour debug
-        console.log(`   🔍 Collections disponibles:`);
-        collections.forEach((col, idx) => {
-            console.log(`      [${idx}] id: ${col.id}, title: ${col.title || 'N/A'}`);
-        });
-        
-        const collection = collections[0]; // Prendre la première
-        const collectionId = collection.id;
-        console.log(`   ✓ Collection sélectionnée: ${collectionId}`);
-        
-        // Maintenant récupérer les items
-        const itemsUrl = `${CD56_OGC_BASE}/collections/${encodeURIComponent(collectionId)}/items?f=json`;
-        console.log(`   URL items complète: ${itemsUrl}`);
-        
-        const itemsResponse = await fetch(itemsUrl, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0'
-            }
-        });
-        
-        if (!itemsResponse.ok) {
-            console.error(`❌ [CD56] HTTP ${itemsResponse.status} sur /items`);
-            return [];
-        }
-        
-        const data = await itemsResponse.json();
-        console.log(`   Réponse JSON reçue`);
-        
-        // L'API OGC retourne les features dans data.features
+        // L'API FeatureServer retourne un GeoJSON standard
         const features = data.features || [];
-        
-        // Si pas de features, logger la structure pour debug
-        if (features.length === 0) {
-            console.log(`   ⚠️ Aucune feature trouvée. Structure de la réponse:`);
-            console.log(JSON.stringify(data, null, 2).substring(0, 500));
-        }
         
         // Logger les propriétés de la première feature pour debug
         if (features.length > 0) {
