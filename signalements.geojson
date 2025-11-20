@@ -332,90 +332,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.526600977684357,
-          47.39519422723796
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D69 / Casson",
-        "commune": "Casson / Sucé-sur-Erdre",
-        "etat": "Divers",
-        "cause": "Autre danger",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Divers",
-        "sens_circulation": "",
-        "commentaire": "Divers",
-        "date_debut": "18/11/2025 à 04h39",
-        "date_fin": "",
-        "date_saisie": "18/11/2025 à 04h39",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.31197963860895,
-          47.36064944086997
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Autres / D323 / Oudon",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "18/11/2025 à 04h38",
-        "date_fin": "",
-        "date_saisie": "18/11/2025 à 04h38",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2856879739099136,
-          47.346558869775826
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D323 / Oudon",
-        "commune": "Oudon / Le Cellier",
-        "etat": "Autres",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Autres",
-        "sens_circulation": "",
-        "commentaire": "Autres",
-        "date_debut": "18/11/2025 à 04h38",
-        "date_fin": "",
-        "date_saisie": "18/11/2025 à 04h38",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.1246682529747294,
           47.040735855648464
         ]
@@ -16061,12 +15977,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-20T22:42:50.490Z",
+    "generated": "2025-11-20T23:24:15.765Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 174,
+    "total_count": 171,
     "sources": {
       "grist_35": 7,
-      "cd44": 21,
+      "cd44": 18,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 117
