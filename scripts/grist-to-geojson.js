@@ -24,7 +24,7 @@ console.log('   5. CD56 (OGC API REST)\n');
 // =====================================================
 
 const CD35_WFS_CONFIG = {
-    url: 'https://dservices1.arcgis.com/jGLANYlFVVx3nuxa/arcgis/services/Inondations_cd35/WFSServer?',
+    url: 'https://dservices1.arcgis.com/jGLANYlFVVx3nuxa/arcgis/services/Inondations_cd35/WFSServer',
     typeName: 'Inondations_cd35:Inondation',
     srsName: 'EPSG:2154'
 };
@@ -220,10 +220,6 @@ function rennesMetroToFeature(feature, needsConversion = false) {
         return null;
     }
 }
-
-// =====================================================
-// PARSING WFS XML POUR CD35
-// =====================================================
 
 async function fetchCD35InondationsData() {
     try {
