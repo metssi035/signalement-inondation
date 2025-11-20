@@ -739,7 +739,7 @@
         "commentaire": "test",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-11-20T04:29:57.713Z",
+        "date_saisie": "2025-11-20T04:48:23.105Z",
         "gestionnaire": "CD35",
         "agence": "Vitré",
         "pr_debut": "7+800",
@@ -1558,7 +1558,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-20T04:29:57.714Z",
+    "generated": "2025-11-20T04:48:23.106Z",
     "source": "Fusion Grist 35 + CD44 + CD35 Inondations + CD56",
     "total_count": 53,
     "sources": {
