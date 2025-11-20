@@ -87,9 +87,9 @@
         "commune": "Pacé",
         "etat": "Totale",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
+        "statut": "Résolu",
+        "statut_actif": false,
+        "statut_resolu": true,
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
@@ -125,6 +125,122 @@
         "date_fin": "",
         "date_saisie": "19/11/2025 à 14h38",
         "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.62592508565979,
+          48.17214975360465
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "source": "Grist 35",
+        "route": "C 13",
+        "commune": "Betton",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "20/11/2025 à 10h35",
+        "date_fin": "",
+        "date_saisie": "20/11/2025 à 10h35",
+        "gestionnaire": "CD35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.6311675799075844,
+            48.077337401760126
+          ],
+          [
+            -1.6293646210249337,
+            48.075359886464334
+          ],
+          [
+            -1.6271323862178357,
+            48.07364024616481
+          ],
+          [
+            -1.625501137704948,
+            48.07203519669989
+          ]
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "source": "Grist 35",
+        "route": "Route d'Angers",
+        "commune": "Vern-sur-Seiche",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "20/11/2025 à 10h36",
+        "date_fin": "",
+        "date_saisie": "20/11/2025 à 10h36",
+        "gestionnaire": "DIRO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.7133090675571985,
+            48.08659280675512
+          ],
+          [
+            -1.7094885118296534,
+            48.08687934530955
+          ],
+          [
+            -1.707342132207437,
+            48.08707992134783
+          ],
+          [
+            -1.7086728875732196,
+            48.08510278053884
+          ],
+          [
+            -1.7104329188634297,
+            48.08292497226795
+          ]
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "source": "Grist 35",
+        "route": "Rue du Temple de Blosne",
+        "commune": "Saint-Jacques-de-la-Lande",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "20/11/2025 à 10h38",
+        "date_fin": "",
+        "date_saisie": "20/11/2025 à 10h38",
+        "gestionnaire": "DIRO"
       }
     },
     {
@@ -713,6 +829,37 @@
         "date_fin": "",
         "date_saisie": "07/04/2022 à 19h00",
         "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4703177158948915,
+          48.00932098300118
+        ]
+      },
+      "properties": {
+        "id": "cd35-inond-473",
+        "source": "CD35 Inondations",
+        "route": "D37",
+        "commune": "Amanlis",
+        "etat": "Route fermée",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "test",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-11-20T10:47:35.381Z",
+        "gestionnaire": "CD35",
+        "agence": "Vitré",
+        "pr_debut": "7+800",
+        "pr_fin": "8+500"
       }
     },
     {
@@ -1527,13 +1674,13 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-20T10:28:58.702Z",
+    "generated": "2025-11-20T10:47:35.381Z",
     "source": "Fusion Grist 35 + CD44 + CD35 Inondations + CD56",
-    "total_count": 52,
+    "total_count": 56,
     "sources": {
-      "grist_35": 4,
+      "grist_35": 7,
       "cd44": 21,
-      "cd35_inondations": 0,
+      "cd35_inondations": 1,
       "cd56": 116
     }
   }
