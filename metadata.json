@@ -1,21 +1,21 @@
 {
-  "lastUpdate": "2025-11-20T06:38:08.810Z",
+  "lastUpdate": "2025-11-20T07:25:57.755Z",
   "sources": {
     "grist_35": 4,
     "cd44": 21,
-    "cd35_inondations": 0,
+    "cd35_inondations": 1,
     "cd56": 116,
-    "total": 52
+    "total": 53
   },
   "stats": {
-    "points": 51,
+    "points": 52,
     "lines": 1,
     "multilines": 0,
     "polygons": 0,
     "by_source": {
       "grist_35": 4,
       "cd44": 21,
-      "cd35_inondations": 0,
+      "cd35_inondations": 1,
       "cd56": 27
     }
   }
