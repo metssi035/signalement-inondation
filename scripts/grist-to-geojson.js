@@ -4,16 +4,18 @@ const fetch = require('node-fetch');
 const xml2js = require('xml2js');
 const proj4 = require('proj4');
 
-// Définition de la projection Lambert 93 (EPSG:2154)
+// Définition des projections
 proj4.defs("EPSG:2154", "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs");
+proj4.defs("EPSG:3948", "+proj=lcc +lat_1=47.5 +lat_2=49.5 +lat_0=48.5 +lon_0=3 +x_0=1700000 +y_0=7200000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
 
 const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
 const TABLE_ID = 'Signalements';
 
-console.log('🚀 Démarrage de la fusion des 5 sources...\n');
+console.log('🚀 Démarrage de la fusion des 6 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
+console.log('   3. Rennes Métropole (WFS routes coupées)');
 console.log('   4. CD35 Inondations (WFS XML)');
 console.log('   5. CD56 (OGC API REST)\n');
 
@@ -28,6 +30,8 @@ const CD35_WFS_CONFIG = {
 };
 
 const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/OGCFeatureServer';
+
+const RENNES_METRO_WFS_URL = 'https://public.sig.rennesmetropole.fr/geoserver/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=trp_rout:routes_coupees&OUTPUTFORMAT=json';
 
 // ✅ FONCTION DE FORMATAGE DES DATES
 function formatDate(dateValue) {
@@ -78,6 +82,143 @@ function formatDate(dateValue) {
 
 function convertLambert93ToWGS84(x, y) {
     return proj4("EPSG:2154", "EPSG:4326", [x, y]);
+}
+
+function convertCC48ToWGS84(x, y) {
+    return proj4("EPSG:3948", "EPSG:4326", [x, y]);
+}
+
+// =====================================================
+// RENNES MÉTROPOLE - WFS ROUTES COUPÉES
+// =====================================================
+
+async function fetchRennesMetroData() {
+    try {
+        console.log(`🔗 [Rennes Métropole] Récupération via WFS...`);
+        
+        const response = await fetch(RENNES_METRO_WFS_URL, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        });
+        
+        if (!response.ok) {
+            console.error(`❌ [Rennes Métropole] HTTP ${response.status}`);
+            return [];
+        }
+        
+        const geojson = await response.json();
+        console.log(`   GeoJSON reçu: ${geojson.features?.length || 0} features`);
+        
+        // Filtrer uniquement raison="inondation"
+        const filteredFeatures = (geojson.features || []).filter(feature => {
+            const raison = feature.properties?.raison || '';
+            return raison.toLowerCase() === 'inondation';
+        });
+        
+        console.log(`   Filtrés (raison=inondation): ${filteredFeatures.length} features`);
+        
+        // Vérifier la projection en examinant les coordonnées
+        // Si les coordonnées sont très grandes (> 1000), c'est probablement projeté
+        // Si elles sont entre -180 et 180, c'est WGS84
+        let needsConversion = false;
+        if (filteredFeatures.length > 0) {
+            const firstCoords = filteredFeatures[0].geometry?.coordinates;
+            if (firstCoords && Array.isArray(firstCoords)) {
+                const x = firstCoords[0];
+                if (Math.abs(x) > 1000) {
+                    needsConversion = true;
+                    console.log(`   ⚠️ Coordonnées détectées en projection métrique (probablement EPSG:3948)`);
+                }
+            }
+        }
+        
+        console.log(`✅ [Rennes Métropole] ${filteredFeatures.length} features filtrées avec succès`);
+        return { features: filteredFeatures, needsConversion };
+        
+    } catch (error) {
+        console.error(`❌ [Rennes Métropole]`, error.message);
+        return { features: [], needsConversion: false };
+    }
+}
+
+// Convertir Rennes Métropole
+function rennesMetroToFeature(feature, needsConversion = false) {
+    try {
+        let geometry = feature.geometry;
+        if (!geometry) return null;
+        
+        // Convertir la géométrie si nécessaire
+        if (needsConversion) {
+            if (geometry.type === 'Point') {
+                const [x, y] = geometry.coordinates;
+                const [lng, lat] = convertCC48ToWGS84(x, y);
+                geometry = {
+                    type: 'Point',
+                    coordinates: [lng, lat]
+                };
+            } else if (geometry.type === 'LineString') {
+                geometry = {
+                    type: 'LineString',
+                    coordinates: geometry.coordinates.map(([x, y]) => {
+                        const [lng, lat] = convertCC48ToWGS84(x, y);
+                        return [lng, lat];
+                    })
+                };
+            } else if (geometry.type === 'MultiLineString') {
+                geometry = {
+                    type: 'MultiLineString',
+                    coordinates: geometry.coordinates.map(line => 
+                        line.map(([x, y]) => {
+                            const [lng, lat] = convertCC48ToWGS84(x, y);
+                            return [lng, lat];
+                        })
+                    )
+                };
+            }
+        }
+        
+        const props = feature.properties || {};
+        
+        // Mapping des champs
+        // comm_nom → commune
+        // etat → statut ('terminé' = résolu, 'en cours' = actif)
+        // date_debut → date de début et date de saisie
+        // date_fin → date de fin (quand ça passe en terminé)
+        // toponyme → nom de la route
+        
+        const etat = (props.etat || '').toLowerCase();
+        const isResolu = etat === 'terminé' || etat === 'termine';
+        const isActif = etat === 'en cours';
+        
+        const statut = isResolu ? 'Résolu' : (isActif ? 'Actif' : etat);
+        
+        return {
+            type: 'Feature',
+            geometry: geometry,
+            properties: {
+                id: `rennes-${props.gid || props.id || Math.random().toString(36).substr(2, 9)}`,
+                source: 'Rennes Métropole',
+                route: props.toponyme || '',
+                commune: props.comm_nom || '',
+                etat: etat,
+                cause: 'Inondation',
+                statut: statut,
+                statut_actif: isActif,
+                statut_resolu: isResolu,
+                type_coupure: 'Totale',
+                sens_circulation: '',
+                commentaire: props.commentaire || '',
+                date_debut: formatDate(props.date_debut),
+                date_fin: formatDate(props.date_fin),
+                date_saisie: formatDate(props.date_debut), // date_debut comme date de saisie
+                gestionnaire: 'Rennes Métropole'
+            }
+        };
+    } catch (e) {
+        console.error('Erreur conversion Rennes Métropole:', e.message);
+        return null;
+    }
 }
 
 // =====================================================
@@ -532,14 +673,18 @@ async function mergeSources() {
     try {
         console.log('');
         
-        const [gristRecords, cd44Records, cd35InondationsFeatures, cd56Features] = await Promise.all([
+        const [gristRecords, cd44Records, rennesMetroResult, cd35InondationsFeatures, cd56Features] = await Promise.all([
             fetchGristData(),
             fetchCD44Data(),
+            fetchRennesMetroData(),
             fetchCD35InondationsData(),
             fetchCD56Data()
         ]);
         
-        const totalBrut = gristRecords.length + cd44Records.length + 
+        const rennesMetroFeatures = rennesMetroResult.features || [];
+        const needsConversion = rennesMetroResult.needsConversion || false;
+        
+        const totalBrut = gristRecords.length + cd44Records.length + rennesMetroFeatures.length +
                          cd35InondationsFeatures.length + cd56Features.length;
         console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
         
@@ -549,6 +694,8 @@ async function mergeSources() {
             grist_garde: 0,
             cd44_recupere: cd44Records.length,
             cd44_garde: 0,
+            rennes_recupere: rennesMetroFeatures.length,
+            rennes_garde: 0,
             cd35_recupere: cd35InondationsFeatures.length,
             cd35_garde: 0,
             cd56_recupere: cd56Features.length,
@@ -575,6 +722,16 @@ async function mergeSources() {
         });
         console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
         
+        // Rennes Métropole
+        rennesMetroFeatures.forEach(feature => {
+            const converted = rennesMetroToFeature(feature, needsConversion);
+            if (converted) {
+                features.push(converted);
+                stats.rennes_garde++;
+            }
+        });
+        console.log(`   Rennes Métropole: ${stats.rennes_recupere} récupérés → ${stats.rennes_garde} gardés`);
+        
         // CD35 Inondations
         cd35InondationsFeatures.forEach(feature => {
             const converted = cd35InondationsToFeature(feature);
@@ -595,7 +752,7 @@ async function mergeSources() {
         });
         console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.cd35_garde + stats.cd56_garde;
+        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + stats.cd35_garde + stats.cd56_garde;
         const totalFiltre = totalBrut - totalGarde;
         
         console.log(`\n📊 Résumé:`);
@@ -608,11 +765,12 @@ async function mergeSources() {
             features: features,
             metadata: {
                 generated: new Date().toISOString(),
-                source: 'Fusion Grist 35 + CD44 + CD35 Inondations + CD56',
+                source: 'Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56',
                 total_count: features.length,
                 sources: {
                     grist_35: gristRecords.length,
                     cd44: cd44Records.length,
+                    rennes_metropole: rennesMetroFeatures.length,
                     cd35_inondations: cd35InondationsFeatures.length,
                     cd56: cd56Features.length
                 }
@@ -627,6 +785,7 @@ async function mergeSources() {
             sources: {
                 grist_35: gristRecords.length,
                 cd44: cd44Records.length,
+                rennes_metropole: rennesMetroFeatures.length,
                 cd35_inondations: cd35InondationsFeatures.length,
                 cd56: cd56Features.length,
                 total: features.length
@@ -639,6 +798,7 @@ async function mergeSources() {
                 by_source: {
                     grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
                     cd44: features.filter(f => f.properties.source === 'CD44').length,
+                    rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
                     cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
                     cd56: features.filter(f => f.properties.source === 'CD56').length
                 }
@@ -651,6 +811,7 @@ async function mergeSources() {
         console.log('\n📊 Statistiques finales:');
         console.log(`   - Grist 35: ${gristRecords.length}`);
         console.log(`   - CD44: ${cd44Records.length}`);
+        console.log(`   - Rennes Métropole: ${rennesMetroFeatures.length}`);
         console.log(`   - CD35 Inondations: ${cd35InondationsFeatures.length}`);
         console.log(`   - CD56: ${cd56Features.length}`);
         console.log(`   - Total features: ${features.length}`);
