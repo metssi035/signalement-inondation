@@ -119,7 +119,7 @@ async function fetchRennesMetroData() {
         console.log(`   Filtrés (raison=inondation): ${filteredFeatures.length} features`);
         
         // Vérifier la projection en examinant les coordonnées
-        // Lambert 93 (EPSG:2154): X entre 100000-1300000, Y entre 6000000-7200000
+        // CC48 (EPSG:3948): X entre 1300000-2100000, Y entre 7000000-7500000
         // WGS84: longitude entre -180 et 180, latitude entre -90 et 90
         let needsConversion = false;
         if (filteredFeatures.length > 0) {
@@ -129,14 +129,14 @@ async function fetchRennesMetroData() {
                 if (firstGeom.type === 'Point') {
                     testCoord = firstGeom.coordinates[0];
                 } else if (firstGeom.type === 'LineString') {
-                    testCoord = firstGeom.coordinates[0][0]; // Premier X du premier point
+                    testCoord = firstGeom.coordinates[0][0]; // Premier X du premier point de la ligne
                 } else if (firstGeom.type === 'MultiLineString') {
                     testCoord = firstGeom.coordinates[0][0][0]; // Premier X de la première ligne
                 }
                 
                 if (testCoord && Math.abs(testCoord) > 1000) {
                     needsConversion = true;
-                    console.log(`   ⚠️ Coordonnées détectées en Lambert 93 (EPSG:2154): ${testCoord}`);
+                    console.log(`   ⚠️ Coordonnées détectées en projection métrique CC48 (EPSG:3948): ${testCoord}`);
                 }
             }
         }
@@ -160,7 +160,7 @@ function rennesMetroToFeature(feature, needsConversion = false) {
         if (needsConversion) {
             if (geometry.type === 'Point') {
                 const [x, y] = geometry.coordinates;
-                const [lng, lat] = convertLambert93ToWGS84(x, y);
+                const [lng, lat] = convertCC48ToWGS84(x, y);
                 geometry = {
                     type: 'Point',
                     coordinates: [lng, lat]
@@ -169,7 +169,7 @@ function rennesMetroToFeature(feature, needsConversion = false) {
                 geometry = {
                     type: 'LineString',
                     coordinates: geometry.coordinates.map(([x, y]) => {
-                        const [lng, lat] = convertLambert93ToWGS84(x, y);
+                        const [lng, lat] = convertCC48ToWGS84(x, y);
                         return [lng, lat];
                     })
                 };
@@ -178,7 +178,7 @@ function rennesMetroToFeature(feature, needsConversion = false) {
                     type: 'MultiLineString',
                     coordinates: geometry.coordinates.map(line => 
                         line.map(([x, y]) => {
-                            const [lng, lat] = convertLambert93ToWGS84(x, y);
+                            const [lng, lat] = convertCC48ToWGS84(x, y);
                             return [lng, lat];
                         })
                     )
