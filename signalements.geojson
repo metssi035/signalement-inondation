@@ -248,62 +248,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.5371711225794478,
-          47.11307536273751
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D178 / Pont-Saint-Martin",
-        "commune": "Machecoul / Nantes",
-        "etat": "Bouchon",
-        "cause": "Bouchon",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bouchon",
-        "sens_circulation": "",
-        "commentaire": "Bouchon",
-        "date_debut": "21/11/2025 à 06h44",
-        "date_fin": "",
-        "date_saisie": "21/11/2025 à 06h44",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6218282645603095,
-          47.167100958887225
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D723 / Bouguenais",
-        "commune": "Bouaye vers Bouguenais",
-        "etat": "Bouchon",
-        "cause": "Bouchon",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bouchon",
-        "sens_circulation": "",
-        "commentaire": "Bouchon",
-        "date_debut": "21/11/2025 à 06h41",
-        "date_fin": "",
-        "date_saisie": "21/11/2025 à 06h41",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -2.1784591914895355,
           47.2981180521444
         ]
@@ -16033,12 +15977,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-21T07:42:36.047Z",
+    "generated": "2025-11-21T08:36:31.491Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 173,
+    "total_count": 171,
     "sources": {
       "grist_35": 7,
-      "cd44": 20,
+      "cd44": 18,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 117
