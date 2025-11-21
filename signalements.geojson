@@ -32,34 +32,6 @@
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.8094825744628908,
-          48.07177061055603
-        ]
-      },
-      "properties": {
-        "id": 91,
-        "source": "Grist 35",
-        "route": "N 24",
-        "commune": "Mordelles",
-        "etat": "Totale",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "18/11/2025 à 15h57",
-        "date_fin": "",
-        "date_saisie": "18/11/2025 à 15h57",
-        "gestionnaire": "DIRO"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
         "type": "LineString",
         "coordinates": [
           [
@@ -97,34 +69,6 @@
         "date_fin": "",
         "date_saisie": "19/11/2025 à 10h04",
         "gestionnaire": "DIRO"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.778068542480469,
-          48.02506490761254
-        ]
-      },
-      "properties": {
-        "id": 93,
-        "source": "Grist 35",
-        "route": "D 177",
-        "commune": "Goven",
-        "etat": "Totale",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "19/11/2025 à 14h38",
-        "date_fin": "",
-        "date_saisie": "19/11/2025 à 14h38",
-        "gestionnaire": "CD35"
       }
     },
     {
@@ -194,52 +138,6 @@
         "date_debut": "20/11/2025 à 10h36",
         "date_fin": "",
         "date_saisie": "20/11/2025 à 10h36",
-        "gestionnaire": "DIRO"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            -1.7133090675571985,
-            48.08659280675512
-          ],
-          [
-            -1.7094885118296534,
-            48.08687934530955
-          ],
-          [
-            -1.707342132207437,
-            48.08707992134783
-          ],
-          [
-            -1.7086728875732196,
-            48.08510278053884
-          ],
-          [
-            -1.7104329188634297,
-            48.08292497226795
-          ]
-        ]
-      },
-      "properties": {
-        "id": 96,
-        "source": "Grist 35",
-        "route": "Rue du Temple de Blosne",
-        "commune": "Saint-Jacques-de-la-Lande",
-        "etat": "Totale",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "20/11/2025 à 10h38",
-        "date_fin": "",
-        "date_saisie": "20/11/2025 à 10h38",
         "gestionnaire": "DIRO"
       }
     },
@@ -15949,11 +15847,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-21T11:41:15.093Z",
+    "generated": "2025-11-21T12:21:45.558Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 170,
+    "total_count": 167,
     "sources": {
-      "grist_35": 7,
+      "grist_35": 4,
       "cd44": 17,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
