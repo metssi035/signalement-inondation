@@ -126,17 +126,22 @@ async function fetchRennesMetroData() {
             const firstGeom = filteredFeatures[0].geometry;
             if (firstGeom) {
                 let testCoord;
+                // Extraire le premier X selon le type de géométrie
                 if (firstGeom.type === 'Point') {
                     testCoord = firstGeom.coordinates[0];
                 } else if (firstGeom.type === 'LineString') {
-                    testCoord = firstGeom.coordinates[0][0]; // Premier X du premier point de la ligne
+                    // Pour LineString: coordinates = [[x1,y1], [x2,y2], ...]
+                    testCoord = firstGeom.coordinates[0][0];
                 } else if (firstGeom.type === 'MultiLineString') {
-                    testCoord = firstGeom.coordinates[0][0][0]; // Premier X de la première ligne
+                    // Pour MultiLineString: coordinates = [[[x1,y1], [x2,y2]], [[x3,y3], ...]]
+                    testCoord = firstGeom.coordinates[0][0][0];
                 }
                 
                 if (testCoord && Math.abs(testCoord) > 1000) {
                     needsConversion = true;
-                    console.log(`   ⚠️ Coordonnées détectées en projection métrique CC48 (EPSG:3948): ${testCoord}`);
+                    console.log(`   ⚠️ Coordonnées détectées en projection CC48 (EPSG:3948): X=${testCoord}`);
+                } else {
+                    console.log(`   ✅ Coordonnées déjà en WGS84: X=${testCoord}`);
                 }
             }
         }
