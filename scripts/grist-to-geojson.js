@@ -123,12 +123,20 @@ async function fetchRennesMetroData() {
         // Si elles sont entre -180 et 180, c'est WGS84
         let needsConversion = false;
         if (filteredFeatures.length > 0) {
-            const firstCoords = filteredFeatures[0].geometry?.coordinates;
-            if (firstCoords && Array.isArray(firstCoords)) {
-                const x = firstCoords[0];
-                if (Math.abs(x) > 1000) {
+            const firstGeom = filteredFeatures[0].geometry;
+            if (firstGeom) {
+                let testCoord;
+                if (firstGeom.type === 'Point') {
+                    testCoord = firstGeom.coordinates[0];
+                } else if (firstGeom.type === 'LineString') {
+                    testCoord = firstGeom.coordinates[0][0]; // Premier point de la ligne
+                } else if (firstGeom.type === 'MultiLineString') {
+                    testCoord = firstGeom.coordinates[0][0][0]; // Premier point de la première ligne
+                }
+                
+                if (testCoord && Math.abs(testCoord) > 1000) {
                     needsConversion = true;
-                    console.log(`   ⚠️ Coordonnées détectées en projection métrique (probablement EPSG:3948)`);
+                    console.log(`   ⚠️ Coordonnées détectées en projection métrique (${testCoord}) - probablement EPSG:3948`);
                 }
             }
         }
