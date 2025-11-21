@@ -1,11 +1,11 @@
 🌊 STATISTIQUES INONDATIONS DIR OUEST
 ==================================================
 
-🕐 Généré le: 2025-11-21 01:20:42
+🕐 Généré le: 2025-11-21 06:28:12
 📍 Zone: DIR Ouest (Bretagne / Pays de la Loire)
 🔎 Filtre: EnvironmentalObstruction + flooding/flashFloods
 
-Situations totales: 312
+Situations totales: 310
 Situations DIR Ouest: 86
 EnvironmentalObstruction: 0
 🌊 INONDATIONS: 0
