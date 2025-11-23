@@ -1,53 +1,23 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2025-11-23T12:31:51.964156",
+    "generated_at": "2025-11-23T18:23:58.114591",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 1,
-    "count_active": 1,
+    "count": 0,
+    "count_active": 0,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 197,
-      "dir_ouest": 93,
-      "environmental_obstruction": 1,
-      "inondations": 1,
-      "actives": 1,
+      "total_situations": 205,
+      "dir_ouest": 81,
+      "environmental_obstruction": 0,
+      "inondations": 0,
+      "actives": 0,
       "terminees": 0,
-      "par_severite": {
-        "medium": 1
-      },
-      "par_subtype": {
-        "flooding": 1
-      },
+      "par_severite": {},
+      "par_subtype": {},
       "sans_coords": 0
     }
   },
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.9189088,
-          47.66776
-        ]
-      },
-      "properties": {
-        "id": "251123-000886",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0165",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "medium",
-        "description": "situé 1725 m à l'ouest de Plougoumelen | DIR Ouest/District de Vannes/CEI de Vannes | De Brest vers Nantes",
-        "start_date": "2025-11-23T13:05:09.322+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2025-11-23T12:31:51.963081"
-      }
-    }
-  ]
+  "features": []
 }
