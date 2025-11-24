@@ -151,7 +151,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-67m37idmh",
+        "id": "cd44-qnqpoad69",
         "source": "CD44",
         "route": "D118 / Boussay",
         "commune": "Boussay / Gétigné",
@@ -162,7 +162,7 @@
         "statut_resolu": false,
         "type_coupure": "Obstacle",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Route fermée / déviation",
         "date_debut": "17/11/2025 à 15h39",
         "date_fin": "",
         "date_saisie": "17/11/2025 à 15h39",
@@ -179,7 +179,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-tiinu2r2t",
+        "id": "cd44-q59h6nc7v",
         "source": "CD44",
         "route": "D537 / Treillières",
         "commune": "Orvault / Treillières",
@@ -190,7 +190,7 @@
         "statut_resolu": false,
         "type_coupure": "Obstacle",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
         "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 08h06",
@@ -15427,12 +15427,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T17:45:00.416Z",
+    "generated": "2025-11-24T18:38:58.753Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 152,
     "sources": {
       "grist_35": 4,
-      "cd44": 15,
+      "cd44": 14,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 116
