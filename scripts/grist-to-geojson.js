@@ -33,43 +33,38 @@ const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/
 
 const RENNES_METRO_WFS_URL = 'https://public.sig.rennesmetropole.fr/geoserver/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=trp_rout:routes_coupees&OUTPUTFORMAT=json';
 
-// ✅ FONCTION DE FORMATAGE DES DATES
+// ✅ FONCTION DE FORMATAGE DES DATES - Parse direct sans conversion de fuseau horaire
 function formatDate(dateValue) {
     if (!dateValue) return '';
     
     try {
-        let date;
-        
-        // Si c'est une string ISO
-        if (typeof dateValue === 'string') {
-            date = new Date(dateValue);
-        } 
-        // Si c'est un timestamp
-        else if (typeof dateValue === 'number') {
-            // ArcGIS retourne des timestamps en millisecondes (> 1000000000000)
-            // Sinon c'est en secondes
-            if (dateValue > 100000000000) {
-                date = new Date(dateValue); // Déjà en millisecondes
-            } else {
-                date = new Date(dateValue * 1000); // En secondes, convertir en millisecondes
+        // Si c'est une chaîne ISO (ex: "2025-11-17T14:39:46+00:00")
+        if (typeof dateValue === 'string' && dateValue.includes('T')) {
+            // Parser directement la chaîne sans passer par Date() pour éviter les conversions
+            const isoMatch = dateValue.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/);
+            if (isoMatch) {
+                const [_, year, month, day, hours, minutes, seconds] = isoMatch;
+                return `${day}/${month}/${year} à ${hours}h${minutes}`;
             }
-        } else {
-            return '';
         }
         
-        // Vérifier validité
-        if (isNaN(date.getTime())) {
-            return '';
+        // Si c'est un timestamp (pour compatibilité avec ArcGIS)
+        if (typeof dateValue === 'number') {
+            const date = dateValue > 100000000000 ? new Date(dateValue) : new Date(dateValue * 1000);
+            
+            if (isNaN(date.getTime())) return '';
+            
+            // Utiliser UTC pour éviter les conversions
+            const day = String(date.getUTCDate()).padStart(2, '0');
+            const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+            const year = date.getUTCFullYear();
+            const hours = String(date.getUTCHours()).padStart(2, '0');
+            const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+            
+            return `${day}/${month}/${year} à ${hours}h${minutes}`;
         }
         
-        // Format JJ/MM/AAAA HH:MM
-        const day = String(date.getDate()).padStart(2, '0');
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const year = date.getFullYear();
-        const hours = String(date.getHours()).padStart(2, '0');
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        
-        return `${day}/${month}/${year} à ${hours}h${minutes}`;
+        return '';
         
     } catch (e) {
         return '';
@@ -613,7 +608,7 @@ function cd44ToFeature(item) {
                 route: route,
                 commune: item.ligne3 || 'Commune',
                 etat: item.type || 'Route fermée',
-                cause: item.nature || '',
+                cause: 'Inondation',
                 statut: statut,
                 statut_actif: true,
                 statut_resolu: false,
