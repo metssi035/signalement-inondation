@@ -146,6 +146,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.6218282645603095,
+          47.167100958887225
+        ]
+      },
+      "properties": {
+        "id": "cd44-undefined",
+        "source": "CD44",
+        "route": "D723 / Bouguenais",
+        "commune": "Bouaye vers Bouguenais",
+        "etat": "Bouchon",
+        "cause": "Bouchon",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Bouchon",
+        "sens_circulation": "",
+        "commentaire": "Bouchon sur 2 km",
+        "date_debut": "24/11/2025 à 06h57",
+        "date_fin": "",
+        "date_saisie": "24/11/2025 à 06h57",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.6743617405076974,
           47.19644470749437
         ]
@@ -15819,12 +15847,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T06:39:47.567Z",
+    "generated": "2025-11-24T07:26:10.818Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 166,
+    "total_count": 167,
     "sources": {
       "grist_35": 4,
-      "cd44": 16,
+      "cd44": 17,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 117
