@@ -23,9 +23,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "17/11/2025 à 12h40",
+        "date_debut": "17/11/2025 à 13h40",
         "date_fin": "",
-        "date_saisie": "17/11/2025 à 12h40",
+        "date_saisie": "17/11/2025 à 13h40",
         "gestionnaire": "Redon Agglo"
       }
     },
@@ -65,9 +65,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "19/11/2025 à 10h04",
+        "date_debut": "19/11/2025 à 11h04",
         "date_fin": "",
-        "date_saisie": "19/11/2025 à 10h04",
+        "date_saisie": "19/11/2025 à 11h04",
         "gestionnaire": "DIRO"
       }
     },
@@ -93,9 +93,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "20/11/2025 à 10h35",
+        "date_debut": "20/11/2025 à 11h35",
         "date_fin": "",
-        "date_saisie": "20/11/2025 à 10h35",
+        "date_saisie": "20/11/2025 à 11h35",
         "gestionnaire": "CD35"
       }
     },
@@ -135,9 +135,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "20/11/2025 à 10h36",
+        "date_debut": "20/11/2025 à 11h36",
         "date_fin": "",
-        "date_saisie": "20/11/2025 à 10h36",
+        "date_saisie": "20/11/2025 à 11h36",
         "gestionnaire": "DIRO"
       }
     },
@@ -151,7 +151,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-tko8a9fx2",
+        "id": "cd44-1wq5uguve",
         "source": "CD44",
         "route": "D118 / Boussay",
         "commune": "Boussay / Gétigné",
@@ -163,9 +163,9 @@
         "type_coupure": "Obstacle",
         "sens_circulation": "",
         "commentaire": "Obstacle sur la chaussée - Route fermée / déviation",
-        "date_debut": "17/11/2025 à 14h39",
+        "date_debut": "17/11/2025 à 15h39",
         "date_fin": "",
-        "date_saisie": "17/11/2025 à 14h39",
+        "date_saisie": "17/11/2025 à 15h39",
         "gestionnaire": "CD44"
       }
     },
@@ -179,7 +179,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-pyhlrgwab",
+        "id": "cd44-c6l6k1rw5",
         "source": "CD44",
         "route": "D537 / Treillières",
         "commune": "Orvault / Treillières",
@@ -191,9 +191,9 @@
         "type_coupure": "Obstacle",
         "sens_circulation": "",
         "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
-        "date_debut": "13/05/2024 à 06h06",
+        "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
-        "date_saisie": "13/05/2024 à 06h06",
+        "date_saisie": "13/05/2024 à 08h06",
         "gestionnaire": "CD44"
       }
     },
@@ -297,9 +297,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -551,9 +551,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -705,9 +705,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -823,9 +823,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1021,9 +1021,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "26/01/2025 à 23h00",
+        "date_debut": "27/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "27/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1063,9 +1063,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1169,9 +1169,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 23h00",
-        "date_saisie": "29/01/2025 à 23h00",
+        "date_debut": "30/01/2025 à 00h00",
+        "date_fin": "31/01/2025 à 00h00",
+        "date_saisie": "30/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1219,9 +1219,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1353,9 +1353,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1391,9 +1391,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1509,9 +1509,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1619,9 +1619,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "31/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1849,9 +1849,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1927,9 +1927,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1965,9 +1965,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2043,9 +2043,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2365,9 +2365,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2515,9 +2515,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2621,9 +2621,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2663,9 +2663,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "27/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "27/01/2025 à 23h00",
+        "date_debut": "28/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "28/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2829,9 +2829,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2959,9 +2959,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3069,9 +3069,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3147,9 +3147,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3213,9 +3213,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3335,9 +3335,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 23h00",
+        "date_debut": "27/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "26/01/2025 à 23h00",
+        "date_saisie": "27/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3517,9 +3517,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "31/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3655,9 +3655,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3729,9 +3729,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3823,9 +3823,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "31/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3861,9 +3861,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3895,9 +3895,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4053,9 +4053,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "27/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "27/01/2025 à 23h00",
+        "date_debut": "28/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "28/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4155,9 +4155,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "27/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "27/01/2025 à 23h00",
+        "date_debut": "28/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "28/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4249,9 +4249,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4323,9 +4323,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4513,9 +4513,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4683,9 +4683,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4729,9 +4729,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4799,9 +4799,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4857,9 +4857,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4899,9 +4899,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -4989,9 +4989,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5155,9 +5155,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 08h17",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "26/01/2025 à 08h17",
+        "date_debut": "26/01/2025 à 09h17",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 09h17",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5265,9 +5265,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5351,9 +5351,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5433,9 +5433,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5511,9 +5511,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5577,9 +5577,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5719,9 +5719,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5821,9 +5821,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5891,9 +5891,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -5961,9 +5961,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6015,9 +6015,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6077,9 +6077,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6167,9 +6167,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6265,9 +6265,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6335,9 +6335,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6369,9 +6369,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6479,9 +6479,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6529,9 +6529,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6587,9 +6587,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6653,9 +6653,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -6727,9 +6727,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7029,9 +7029,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7099,9 +7099,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7237,9 +7237,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7327,9 +7327,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7489,9 +7489,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7775,9 +7775,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7877,9 +7877,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -7967,9 +7967,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8033,9 +8033,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8111,9 +8111,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8181,9 +8181,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8291,9 +8291,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8357,9 +8357,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8463,9 +8463,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8645,9 +8645,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8687,9 +8687,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8761,9 +8761,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8875,9 +8875,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -8961,9 +8961,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9051,9 +9051,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9217,9 +9217,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 10h21",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 10h21",
+        "date_debut": "25/01/2025 à 11h21",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 11h21",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9287,9 +9287,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9385,9 +9385,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9431,9 +9431,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9645,9 +9645,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9791,9 +9791,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -9969,9 +9969,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "26/01/2025 à 23h00",
+        "date_debut": "27/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "27/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10103,9 +10103,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10273,9 +10273,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "28/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "29/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10315,9 +10315,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "29/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10441,9 +10441,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "31/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10747,9 +10747,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "27/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "27/01/2025 à 23h00",
+        "date_debut": "28/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "28/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10901,9 +10901,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -10935,9 +10935,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "31/01/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -11017,9 +11017,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "29/01/2025 à 23h00",
+        "date_debut": "30/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "30/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -11163,9 +11163,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -11469,9 +11469,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -11571,9 +11571,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "29/01/2025 à 23h00",
+        "date_debut": "30/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "30/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -11693,9 +11693,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -11875,9 +11875,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12041,9 +12041,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12139,9 +12139,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12273,9 +12273,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "30/01/2025 à 15h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "30/01/2025 à 16h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12511,9 +12511,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "30/01/2025 à 23h00",
+        "date_debut": "31/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "30/01/2025 à 23h00",
+        "date_saisie": "31/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12589,9 +12589,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -12887,9 +12887,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "26/01/2025 à 23h00",
+        "date_debut": "27/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "27/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -13097,9 +13097,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 23h00",
-        "date_fin": "04/02/2025 à 23h00",
-        "date_saisie": "26/01/2025 à 23h00",
+        "date_debut": "27/01/2025 à 00h00",
+        "date_fin": "05/02/2025 à 00h00",
+        "date_saisie": "27/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -13303,9 +13303,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "26/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "26/01/2025 à 23h00",
+        "date_debut": "27/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "27/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -13593,9 +13593,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -13715,9 +13715,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -13901,9 +13901,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -14039,9 +14039,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -14153,9 +14153,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "24/01/2025 à 23h00",
+        "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
-        "date_saisie": "24/01/2025 à 23h00",
+        "date_saisie": "25/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -14347,9 +14347,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "02/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "03/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -14609,9 +14609,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "25/01/2025 à 23h00",
-        "date_fin": "03/02/2025 à 23h00",
-        "date_saisie": "25/01/2025 à 23h00",
+        "date_debut": "26/01/2025 à 00h00",
+        "date_fin": "04/02/2025 à 00h00",
+        "date_saisie": "26/01/2025 à 00h00",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -14637,9 +14637,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 07h53",
+        "date_debut": "29/01/2025 à 08h53",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 07h53",
+        "date_saisie": "29/01/2025 à 08h53",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -14667,9 +14667,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 200",
-        "date_debut": "29/01/2025 à 08h03",
+        "date_debut": "29/01/2025 à 09h03",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h03",
+        "date_saisie": "29/01/2025 à 09h03",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "200"
@@ -14697,9 +14697,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 100",
-        "date_debut": "28/01/2025 à 11h05",
+        "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h05",
+        "date_saisie": "28/01/2025 à 12h05",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "100"
@@ -14727,9 +14727,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 10h38",
+        "date_debut": "28/01/2025 à 11h38",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 10h38",
+        "date_saisie": "28/01/2025 à 11h38",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -14757,9 +14757,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h22",
+        "date_debut": "29/01/2025 à 09h22",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h22",
+        "date_saisie": "29/01/2025 à 09h22",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "0"
@@ -14787,9 +14787,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 150",
-        "date_debut": "28/01/2025 à 11h05",
+        "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h05",
+        "date_saisie": "28/01/2025 à 12h05",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "150"
@@ -14817,9 +14817,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 12h14",
+        "date_debut": "28/01/2025 à 13h14",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h14",
+        "date_saisie": "28/01/2025 à 13h14",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "0"
@@ -14847,9 +14847,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h23",
+        "date_debut": "29/01/2025 à 09h23",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h23",
+        "date_saisie": "29/01/2025 à 09h23",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "0"
@@ -14877,9 +14877,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 800",
-        "date_debut": "28/01/2025 à 11h05",
+        "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h05",
+        "date_saisie": "28/01/2025 à 12h05",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "800"
@@ -14907,9 +14907,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h23",
+        "date_debut": "29/01/2025 à 09h23",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h23",
+        "date_saisie": "29/01/2025 à 09h23",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "0"
@@ -14937,9 +14937,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h23",
+        "date_debut": "29/01/2025 à 09h23",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h23",
+        "date_saisie": "29/01/2025 à 09h23",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "0"
@@ -14967,9 +14967,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 10h37",
+        "date_debut": "28/01/2025 à 11h37",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 10h37",
+        "date_saisie": "28/01/2025 à 11h37",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -14997,9 +14997,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 30",
-        "date_debut": "28/01/2025 à 11h05",
+        "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h05",
+        "date_saisie": "28/01/2025 à 12h05",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "30"
@@ -15027,9 +15027,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 150",
-        "date_debut": "28/01/2025 à 11h05",
-        "date_fin": "22/11/2025 à 13h00",
-        "date_saisie": "28/01/2025 à 11h05",
+        "date_debut": "28/01/2025 à 12h05",
+        "date_fin": "22/11/2025 à 14h00",
+        "date_saisie": "28/01/2025 à 12h05",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "150"
@@ -15057,9 +15057,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 300",
-        "date_debut": "29/01/2025 à 08h03",
+        "date_debut": "29/01/2025 à 09h03",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h03",
+        "date_saisie": "29/01/2025 à 09h03",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "300"
@@ -15087,9 +15087,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 10h38",
-        "date_fin": "23/11/2025 à 13h00",
-        "date_saisie": "28/01/2025 à 10h38",
+        "date_debut": "28/01/2025 à 11h38",
+        "date_fin": "23/11/2025 à 14h00",
+        "date_saisie": "28/01/2025 à 11h38",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -15117,9 +15117,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 07h53",
+        "date_debut": "29/01/2025 à 08h53",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 07h53",
+        "date_saisie": "29/01/2025 à 08h53",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -15147,9 +15147,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 10h37",
-        "date_fin": "24/11/2025 à 13h00",
-        "date_saisie": "28/01/2025 à 10h37",
+        "date_debut": "28/01/2025 à 11h37",
+        "date_fin": "24/11/2025 à 14h00",
+        "date_saisie": "28/01/2025 à 11h37",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -15177,9 +15177,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Inondation partielle",
-        "date_debut": "28/01/2025 à 11h18",
+        "date_debut": "28/01/2025 à 12h18",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h18",
+        "date_saisie": "28/01/2025 à 12h18",
         "gestionnaire": "CD56",
         "conditions_circulation": "INONDÉE PARTIELLE",
         "lineaire_inonde": "0"
@@ -15207,9 +15207,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 07h54",
+        "date_debut": "29/01/2025 à 08h54",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 07h54",
+        "date_saisie": "29/01/2025 à 08h54",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "?"
@@ -15237,9 +15237,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Inondation partielle",
-        "date_debut": "29/01/2025 à 08h25",
+        "date_debut": "29/01/2025 à 09h25",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h25",
+        "date_saisie": "29/01/2025 à 09h25",
         "gestionnaire": "CD56",
         "conditions_circulation": "INONDÉE PARTIELLE",
         "lineaire_inonde": "0"
@@ -15267,9 +15267,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 200",
-        "date_debut": "29/01/2025 à 08h03",
+        "date_debut": "29/01/2025 à 09h03",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h03",
+        "date_saisie": "29/01/2025 à 09h03",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "200"
@@ -15297,9 +15297,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 10h21",
+        "date_debut": "29/01/2025 à 11h21",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 10h21",
+        "date_saisie": "29/01/2025 à 11h21",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "0"
@@ -15327,9 +15327,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 200",
-        "date_debut": "28/01/2025 à 13h34",
+        "date_debut": "28/01/2025 à 14h34",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 13h34",
+        "date_saisie": "28/01/2025 à 14h34",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "200"
@@ -15357,9 +15357,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 250",
-        "date_debut": "28/01/2025 à 13h34",
+        "date_debut": "28/01/2025 à 14h34",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 13h34",
+        "date_saisie": "28/01/2025 à 14h34",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "250"
@@ -15387,9 +15387,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 100",
-        "date_debut": "27/01/2025 à 16h30",
+        "date_debut": "27/01/2025 à 17h30",
         "date_fin": "",
-        "date_saisie": "27/01/2025 à 16h30",
+        "date_saisie": "27/01/2025 à 17h30",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "100"
@@ -15417,9 +15417,9 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 50",
-        "date_debut": "28/01/2025 à 13h56",
+        "date_debut": "28/01/2025 à 14h56",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 13h56",
+        "date_saisie": "28/01/2025 à 14h56",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
         "lineaire_inonde": "50"
@@ -15427,7 +15427,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T13:23:06.301Z",
+    "generated": "2025-11-24T13:27:52.126Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 152,
     "sources": {
