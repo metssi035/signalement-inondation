@@ -1,21 +1,21 @@
 {
-  "lastUpdate": "2025-11-24T12:57:00.247Z",
+  "lastUpdate": "2025-11-24T13:11:48.595Z",
   "sources": {
     "grist_35": 4,
     "cd44": 14,
     "rennes_metropole": 119,
     "cd35_inondations": 0,
     "cd56": 116,
-    "total": 164
+    "total": 152
   },
   "stats": {
-    "points": 43,
+    "points": 31,
     "lines": 121,
     "multilines": 0,
     "polygons": 0,
     "by_source": {
       "grist_35": 4,
-      "cd44": 14,
+      "cd44": 2,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 27

@@ -146,40 +146,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.6743617405076974,
-          47.19644470749437
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Bacs de Loire",
-        "commune": "Liaison : Basse-Indre / Indret",
-        "etat": "Autre",
-        "cause": "Bacs de Loire",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Autre",
-        "sens_circulation": "",
-        "commentaire": "Arrêt cause MANOEUVRE SDIS 44",
-        "date_debut": "22/11/2025 à 10h06",
-        "date_fin": "",
-        "date_saisie": "22/11/2025 à 10h06",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.1246682529747294,
           47.040735855648464
         ]
       },
       "properties": {
-        "id": "cd44-undefined",
+        "id": "cd44-srch5x1dj",
         "source": "CD44",
         "route": "D118 / Boussay",
         "commune": "Boussay / Gétigné",
@@ -190,290 +162,10 @@
         "statut_resolu": false,
         "type_coupure": "Obstacle",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Route fermée / déviation",
         "date_debut": "17/11/2025 à 14h39",
         "date_fin": "",
         "date_saisie": "17/11/2025 à 14h39",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7836021878359964,
-          47.65704036763818
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "- D130 / Pierric",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "17/11/2025 à 08h30",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h30",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7856518418964957,
-          47.69100660935287
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "- D46 / Pierric",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "17/11/2025 à 08h29",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h29",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7855770907900756,
-          47.6912127689407
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D130 / Pierric",
-        "commune": "Pierric / Conquereuil",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "17/11/2025 à 08h27",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h27",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.8069025389259534,
-          47.67183915681312
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D129 / Conquereuil",
-        "commune": "Guémené-Penfao / Conquereuil",
-        "etat": "Tranchée / raccordement",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tranchée / raccordement",
-        "sens_circulation": "",
-        "commentaire": "Travaux sur réseaux",
-        "date_debut": "17/11/2025 à 08h27",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h27",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7191523709366827,
-          47.13872841192744
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D751 / Saint-Léger-les-Vignes",
-        "commune": "Saint-Léger vers Port St Pere",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "11/12/2025 à 20h00",
-        "date_fin": "",
-        "date_saisie": "11/12/2025 à 20h00",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.0296761823388727,
-          47.44610587634307
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D33 / Sainte-Anne-sur-Brivet",
-        "commune": "Ste-Anne-sur-Brivet / Pontchâteau",
-        "etat": "Divers",
-        "cause": "Autre danger",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Divers",
-        "sens_circulation": "",
-        "commentaire": "Divers",
-        "date_debut": "11/01/2025 à 11h02",
-        "date_fin": "",
-        "date_saisie": "11/01/2025 à 11h02",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2345530279060744,
-          47.527487795162074
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Travaux / D120 / Saint-Sulpice",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "20/10/2025 à 06h00",
-        "date_fin": "",
-        "date_saisie": "20/10/2025 à 06h00",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1843208417877313,
-          47.524417704208005
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Travaux sur réseaux / D14 / Riaillé",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "20/10/2025 à 06h00",
-        "date_fin": "",
-        "date_saisie": "20/10/2025 à 06h00",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2345812446447124,
-          47.527488229655766
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D33 / Bonnoeuvre",
-        "commune": "Saint-Mars-la-Jaille / Bonnoeuvre",
-        "etat": "Tranchée / raccordement",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tranchée / raccordement",
-        "sens_circulation": "",
-        "commentaire": "Travaux sur réseaux",
-        "date_debut": "20/10/2025 à 06h00",
-        "date_fin": "",
-        "date_saisie": "20/10/2025 à 06h00",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6454427970987844,
-          47.16743664838338
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D723 / Bouguenais",
-        "commune": "Pornic vers Nantes",
-        "etat": "Bouchon",
-        "cause": "Bouchon",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Bouchon",
-        "sens_circulation": "",
-        "commentaire": "Bouchon sur 4 km",
-        "date_debut": "07/04/2024 à 07h24",
-        "date_fin": "",
-        "date_saisie": "07/04/2024 à 07h24",
         "gestionnaire": "CD44"
       }
     },
@@ -487,7 +179,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-undefined",
+        "id": "cd44-dbb1giii8",
         "source": "CD44",
         "route": "D537 / Treillières",
         "commune": "Orvault / Treillières",
@@ -498,38 +190,10 @@
         "statut_resolu": false,
         "type_coupure": "Obstacle",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
         "date_debut": "13/05/2024 à 06h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 06h06",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5158596319695528,
-          47.132985443600795
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "Aménagement de chaussée",
-        "commune": "Commune",
-        "etat": "Tous les véhicules",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Tous les véhicules",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "07/04/2022 à 19h00",
-        "date_fin": "",
-        "date_saisie": "07/04/2022 à 19h00",
         "gestionnaire": "CD44"
       }
     },
@@ -15763,9 +15427,9 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T12:57:00.240Z",
+    "generated": "2025-11-24T13:11:48.590Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 164,
+    "total_count": 152,
     "sources": {
       "grist_35": 4,
       "cd44": 14,
