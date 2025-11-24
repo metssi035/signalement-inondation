@@ -151,7 +151,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-950vrfubr",
+        "id": "cd44-tko8a9fx2",
         "source": "CD44",
         "route": "D118 / Boussay",
         "commune": "Boussay / Gétigné",
@@ -179,7 +179,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-ozqvv8m0q",
+        "id": "cd44-pyhlrgwab",
         "source": "CD44",
         "route": "D537 / Treillières",
         "commune": "Orvault / Treillières",
@@ -15018,7 +15018,7 @@
         "id": "cd56-75",
         "source": "CD56",
         "route": "D153A",
-        "commune": "SAINT-PERREUX",
+        "commune": "Saint-Perreux",
         "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
@@ -15028,7 +15028,7 @@
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 150",
         "date_debut": "28/01/2025 à 11h05",
-        "date_fin": "",
+        "date_fin": "22/11/2025 à 13h00",
         "date_saisie": "28/01/2025 à 11h05",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
@@ -15078,7 +15078,7 @@
         "id": "cd56-80",
         "source": "CD56",
         "route": "D764",
-        "commune": "SAINT-PERREUX",
+        "commune": "Saint-Perreux",
         "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
@@ -15088,7 +15088,7 @@
         "sens_circulation": "",
         "commentaire": "",
         "date_debut": "28/01/2025 à 10h38",
-        "date_fin": "",
+        "date_fin": "23/11/2025 à 13h00",
         "date_saisie": "28/01/2025 à 10h38",
         "gestionnaire": "CD56",
         "conditions_circulation": "COUPÉE",
@@ -15427,7 +15427,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T13:19:49.444Z",
+    "generated": "2025-11-24T13:23:06.301Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 152,
     "sources": {
