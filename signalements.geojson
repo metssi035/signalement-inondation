@@ -286,62 +286,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.1749552882366439,
-          47.47090865710422
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "- D28 / Saint-Mars-la-Jaille",
-        "commune": "Commune",
-        "etat": "VL + car",
-        "cause": "Déviation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "VL + car",
-        "sens_circulation": "",
-        "commentaire": "Déviation",
-        "date_debut": "17/11/2025 à 08h28",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h28",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.183570041404042,
-          47.520577020921834
-        ]
-      },
-      "properties": {
-        "id": "cd44-undefined",
-        "source": "CD44",
-        "route": "D878 / Saint-Mars-la-Jaille",
-        "commune": "Saint-Mars-la-Jaille / Bonnoeuvre",
-        "etat": "Aménagement de chaussée",
-        "cause": "Chantier",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Aménagement de chaussée",
-        "sens_circulation": "",
-        "commentaire": "Aménagement de chaussée",
-        "date_debut": "17/11/2025 à 08h27",
-        "date_fin": "",
-        "date_saisie": "17/11/2025 à 08h27",
-        "gestionnaire": "CD44"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.7855770907900756,
           47.6912127689407
         ]
@@ -15847,15 +15791,15 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T07:42:30.146Z",
+    "generated": "2025-11-24T08:26:37.620Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 167,
+    "total_count": 165,
     "sources": {
       "grist_35": 4,
-      "cd44": 17,
+      "cd44": 15,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
-      "cd56": 117
+      "cd56": 116
     }
   }
 }
