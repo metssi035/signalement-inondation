@@ -220,6 +220,7 @@ function rennesMetroToFeature(feature, needsConversion = false) {
                 statut_actif: isActif,
                 statut_resolu: isResolu,
                 type_coupure: 'Totale',
+                commentaire: props.commentaires || '',
                 sens_circulation: '',
                 commentaire: props.commentaire || '',
                 date_debut: formatDate(props.date_debut),
