@@ -552,22 +552,63 @@ function gristToFeature(record) {
     }
 }
 
+// Fonction pour parser la date de fin depuis ligne4 (CD44)
+function parseCD44DateFin(ligne4) {
+    if (!ligne4) return '';
+    
+    try {
+        // Format: "Du XX/XX/XXXX au DD/MM/AAAA"
+        const duAuMatch = ligne4.match(/au\s+(\d{2})\/(\d{2})\/(\d{4})/);
+        if (duAuMatch) {
+            const [_, day, month, year] = duAuMatch;
+            return `${day}/${month}/${year} à 00h00`;
+        }
+        
+        // Format: "Fin prévisible : DD/MM/AAAA à HHhMM"
+        const finMatch = ligne4.match(/(\d{2})\/(\d{2})\/(\d{4})\s+à\s+(\d{1,2})h(\d{2})/);
+        if (finMatch) {
+            const [_, day, month, year, hours, minutes] = finMatch;
+            return `${day}/${month}/${year} à ${hours.padStart(2, '0')}h${minutes}`;
+        }
+        
+        return ''; // Durée indéterminée ou format non reconnu
+    } catch (e) {
+        return '';
+    }
+}
+
 // Convertir CD44
 function cd44ToFeature(item) {
     try {
+        // ✅ FILTRE : Ne garder que type="Obstacle"
+        if (item.type !== 'Obstacle') {
+            return null;
+        }
+        
         const geometry = {
             type: 'Point',
             coordinates: [item.longitude, item.latitude]
         };
         
+        // ✅ Route depuis ligne2
         const route = Array.isArray(item.ligne2) ? item.ligne2.join(' / ') : (item.ligne2 || 'Route');
+        
+        // ✅ Commentaire = ligne1 + ligne5
+        let commentaire = item.ligne1 || '';
+        if (item.ligne5) {
+            commentaire += (commentaire ? ' - ' : '') + item.ligne5;
+        }
+        
+        // ✅ Date de fin extraite depuis ligne4
+        const dateFin = parseCD44DateFin(item.ligne4);
+        
         const statut = 'Actif';
         
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd44-${item.recordid}`,
+                id: `cd44-${item.recordid || Math.random().toString(36).substr(2, 9)}`,
                 source: 'CD44',
                 route: route,
                 commune: item.ligne3 || 'Commune',
@@ -578,9 +619,9 @@ function cd44ToFeature(item) {
                 statut_resolu: false,
                 type_coupure: item.type || '',
                 sens_circulation: '',
-                commentaire: item.ligne1 || '',
+                commentaire: commentaire,
                 date_debut: formatDate(item.datepublication),
-                date_fin: '',
+                date_fin: dateFin,
                 date_saisie: formatDate(item.datepublication),
                 gestionnaire: 'CD44'
             }
