@@ -151,7 +151,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-kypm8lamr",
+        "id": "cd44-3vo99s8qf",
         "source": "CD44",
         "route": "D118 / Boussay",
         "commune": "Boussay / Gétigné",
@@ -179,7 +179,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-0h3hxknk9",
+        "id": "cd44-2ndpd4fok",
         "source": "CD44",
         "route": "D537 / Treillières",
         "commune": "Orvault / Treillières",
@@ -15427,7 +15427,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-24T20:29:54.064Z",
+    "generated": "2025-11-24T20:45:25.967Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 152,
     "sources": {
