@@ -12,6 +12,13 @@ const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
 const TABLE_ID = 'Signalements';
 
+// Compteur global pour générer des IDs uniques
+let uniqueIdCounter = 1;
+
+function generateUniqueId() {
+    return uniqueIdCounter++;
+}
+
 console.log('🚀 Démarrage de la fusion des 6 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
@@ -221,15 +228,18 @@ function rennesMetroToFeature(feature, needsConversion = false) {
         
         const statut = isResolu ? 'Résolu' : (isActif ? 'Actif' : etat);
         
+        // ID source : champ 'id' de Rennes Métropole
+        const idSource = props.id || props.gid || null;
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `rennes-${props.gid || props.id || Math.random().toString(36).substr(2, 9)}`,
+                id: generateUniqueId(),
+                id_source: idSource,
                 source: 'Rennes Métropole',
                 route: props.toponyme || '',
                 commune: props.comm_nom || '',
-                etat: etat,
                 cause: 'Inondation',
                 statut: statut,
                 statut_actif: isActif,
@@ -540,20 +550,23 @@ function gristToFeature(record) {
         
         const statut = record.fields.Statut || 'Actif';
         
+        // ID source : champ 'id' de Grist
+        const idSource = record.id || null;
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: record.id,
-                source: 'Grist 35',
+                id: generateUniqueId(),
+                id_source: idSource,
+                source: 'Saisie Grist',
                 route: record.fields.Route || '',
                 commune: record.fields.Commune || '',
-                etat: record.fields.Type_coupure || 'Route fermée',
                 cause: cause || 'Inondation',
                 statut: statut,
                 statut_actif: statut === 'Actif',
                 statut_resolu: statut === 'Résolu',
-                type_coupure: record.fields.Type_coupure || '',
+                type_coupure: record.fields.Type_coupure || 'Totale',
                 sens_circulation: record.fields.sens_circulation || '',
                 commentaire: record.fields.Description || '',
                 date_debut: formatDate(record.fields.Date_heure),
@@ -617,22 +630,28 @@ function cd44ToFeature(item) {
         // ✅ Date de fin extraite depuis ligne4
         const dateFin = parseCD44DateFin(item.ligne4);
         
+        // ✅ Commune depuis ligne3 (ne pas mettre 'Commune' par défaut)
+        const commune = item.ligne3 || '';
+        
         const statut = 'Actif';
+        
+        // ID source : NULL pour CD44 (pas d'ID disponible)
+        const idSource = null;
         
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd44-${item.recordid || Math.random().toString(36).substr(2, 9)}`,
+                id: generateUniqueId(),
+                id_source: idSource,
                 source: 'CD44',
                 route: route,
-                commune: item.ligne3 || 'Commune',
-                etat: item.type || 'Route fermée',
+                commune: commune,
                 cause: 'Inondation',
                 statut: statut,
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: item.type || '',
+                type_coupure: 'Totale',
                 sens_circulation: '',
                 commentaire: commentaire,
                 date_debut: formatDate(item.datepublication),
@@ -655,15 +674,18 @@ function cd35InondationsToFeature(feature) {
         
         const props = feature.properties || {};
         
+        // ID source : pas d'ID distinct dans CD35, utiliser OBJECTID
+        const idSource = props.OBJECTID || null;
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd35-inond-${props.OBJECTID || Math.random().toString(36).substr(2, 9)}`,
+                id: generateUniqueId(),
+                id_source: idSource,
                 source: 'CD35 Inondations',
                 route: props.route || '',
                 commune: props.commune || '',
-                etat: props.etat_circulation || 'Route fermée',
                 cause: 'Inondation',
                 statut: 'Actif',
                 statut_actif: true,
@@ -700,6 +722,9 @@ function cd56ToFeature(feature) {
             return null;
         }
         
+        // Déterminer le type de coupure
+        const typeCoupure = conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE' ? 'Partielle' : 'Totale';
+        
         // Lineaire_inonde : seulement si différent de 0 et de "?"
         const lineaireInonde = props.lineaire_inonde || props.lineaireInonde || '';
         const lineaireInondeText = (lineaireInonde && lineaireInonde !== '0' && lineaireInonde !== '?') 
@@ -717,28 +742,29 @@ function cd56ToFeature(feature) {
             commentaire = lineaireInondeText;
         }
         
+        // ID source : champ 'OBJECTID' ou 'objectid' de CD56
+        const idSource = props.OBJECTID || props.objectid || null;
+        
         return {
             type: 'Feature',
             geometry: geometry,
             properties: {
-                id: `cd56-${props.OBJECTID || props.objectid || Math.random().toString(36).substr(2, 9)}`,
+                id: generateUniqueId(),
+                id_source: idSource,
                 source: 'CD56',
                 route: props.rd || '',
                 commune: props.commune || '',
-                etat: conditionsCirculation,
                 cause: 'Inondation',
                 statut: 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: 'Totale',
+                type_coupure: typeCoupure,
                 sens_circulation: '',
                 commentaire: commentaire,
                 date_debut: formatDate(props.date_constatation || props.dateConstatation),
                 date_fin: formatDate(props.Date_fin_d_évènement || props.date_fin_evenement || props.dateFin),
                 date_saisie: formatDate(props.date_constatation || props.dateConstatation),
-                gestionnaire: 'CD56',
-                conditions_circulation: conditionsCirculation,
-                lineaire_inonde: lineaireInonde
+                gestionnaire: 'CD56'
             }
         };
     } catch (e) {
@@ -875,7 +901,7 @@ async function mergeSources() {
                 multilines: features.filter(f => f.geometry.type === 'MultiLineString').length,
                 polygons: features.filter(f => f.geometry.type === 'Polygon').length,
                 by_source: {
-                    grist_35: features.filter(f => f.properties.source === 'Grist 35').length,
+                    saisie_grist: features.filter(f => f.properties.source === 'Saisie Grist').length,
                     cd44: features.filter(f => f.properties.source === 'CD44').length,
                     rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
                     cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
