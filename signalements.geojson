@@ -181,14 +181,14 @@
         "id_source": null,
         "source": "CD44",
         "route": "D537 / Treillières",
-        "commune": "",
+        "commune": "Orvault / Treillières",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
+        "commentaire": "Obstacle sur la chaussée",
         "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 08h06",
@@ -3069,12 +3069,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-25T15:49:45.599Z",
+    "generated": "2025-11-25T16:36:32.886Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 49,
     "sources": {
       "grist_35": 5,
-      "cd44": 12,
+      "cd44": 14,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 116
