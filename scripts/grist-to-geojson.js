@@ -40,6 +40,62 @@ const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/
 
 const RENNES_METRO_WFS_URL = 'https://public.sig.rennesmetropole.fr/geoserver/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=trp_rout:routes_coupees&OUTPUTFORMAT=json';
 
+// ✅ FONCTION POUR VÉRIFIER SI UNE DATE EST SUPÉRIEURE À 3 JOURS
+function isOlderThan3Days(dateString) {
+    if (!dateString) return false;
+    
+    try {
+        // Parser le format "DD/MM/YYYY à HHhMM"
+        const match = dateString.match(/(\d{2})\/(\d{2})\/(\d{4})\s+à\s+(\d{2})h(\d{2})/);
+        if (!match) return false;
+        
+        const [_, day, month, year, hours, minutes] = match;
+        
+        // Créer un objet Date en heure locale française
+        const dateObj = new Date(year, month - 1, day, hours, minutes);
+        
+        // Vérifier validité
+        if (isNaN(dateObj.getTime())) return false;
+        
+        // Calculer la différence en millisecondes
+        const now = new Date();
+        const diffMs = now - dateObj;
+        
+        // Convertir en jours (1 jour = 86400000 ms)
+        const diffDays = diffMs / (1000 * 60 * 60 * 24);
+        
+        // Retourner true si > 3 jours
+        return diffDays > 3;
+        
+    } catch (e) {
+        return false;
+    }
+}
+
+// ✅ FONCTION POUR FILTRER LES SIGNALEMENTS RÉSOLUS DEPUIS PLUS DE 3 JOURS
+function shouldKeepFeature(feature) {
+    const props = feature.properties;
+    
+    // Si le signalement est actif, on le garde toujours
+    if (props.statut_actif === true) {
+        return { keep: true, filteredResolved: false };
+    }
+    
+    // Si le signalement est résolu
+    if (props.statut_resolu === true) {
+        // Vérifier la date de fin
+        if (props.date_fin && isOlderThan3Days(props.date_fin)) {
+            // Résolu depuis plus de 3 jours → on le filtre
+            return { keep: false, filteredResolved: true };
+        }
+        // Si pas de date_fin ou < 3 jours, on le garde
+        return { keep: true, filteredResolved: false };
+    }
+    
+    // Par défaut, on garde
+    return { keep: true, filteredResolved: false };
+}
+
 // ✅ FONCTION DE FORMATAGE DES DATES - Convertit UTC → Heure locale française
 function formatDate(dateValue) {
     if (!dateValue) return '';
@@ -804,15 +860,21 @@ async function mergeSources() {
             cd35_recupere: cd35InondationsFeatures.length,
             cd35_garde: 0,
             cd56_recupere: cd56Features.length,
-            cd56_garde: 0
+            cd56_garde: 0,
+            resolus_filtres: 0  // Compteur pour les résolus > 3 jours
         };
         
         // Grist 35
         gristRecords.forEach(record => {
             const feature = gristToFeature(record);
             if (feature) {
-                features.push(feature);
-                stats.grist_garde++;
+                const result = shouldKeepFeature(feature);
+                if (result.keep) {
+                    features.push(feature);
+                    stats.grist_garde++;
+                } else if (result.filteredResolved) {
+                    stats.resolus_filtres++;
+                }
             }
         });
         console.log(`   Grist 35: ${stats.grist_recupere} récupérés → ${stats.grist_garde} gardés`);
@@ -821,8 +883,13 @@ async function mergeSources() {
         cd44Records.forEach(item => {
             const feature = cd44ToFeature(item);
             if (feature) {
-                features.push(feature);
-                stats.cd44_garde++;
+                const result = shouldKeepFeature(feature);
+                if (result.keep) {
+                    features.push(feature);
+                    stats.cd44_garde++;
+                } else if (result.filteredResolved) {
+                    stats.resolus_filtres++;
+                }
             }
         });
         console.log(`   CD44: ${stats.cd44_recupere} récupérés → ${stats.cd44_garde} gardés`);
@@ -831,8 +898,13 @@ async function mergeSources() {
         rennesMetroFeatures.forEach(feature => {
             const converted = rennesMetroToFeature(feature, needsConversion);
             if (converted) {
-                features.push(converted);
-                stats.rennes_garde++;
+                const result = shouldKeepFeature(converted);
+                if (result.keep) {
+                    features.push(converted);
+                    stats.rennes_garde++;
+                } else if (result.filteredResolved) {
+                    stats.resolus_filtres++;
+                }
             }
         });
         console.log(`   Rennes Métropole: ${stats.rennes_recupere} récupérés → ${stats.rennes_garde} gardés`);
@@ -841,8 +913,13 @@ async function mergeSources() {
         cd35InondationsFeatures.forEach(feature => {
             const converted = cd35InondationsToFeature(feature);
             if (converted) {
-                features.push(converted);
-                stats.cd35_garde++;
+                const result = shouldKeepFeature(converted);
+                if (result.keep) {
+                    features.push(converted);
+                    stats.cd35_garde++;
+                } else if (result.filteredResolved) {
+                    stats.resolus_filtres++;
+                }
             }
         });
         console.log(`   CD35: ${stats.cd35_recupere} récupérés → ${stats.cd35_garde} gardés`);
@@ -851,8 +928,13 @@ async function mergeSources() {
         cd56Features.forEach(feature => {
             const converted = cd56ToFeature(feature);
             if (converted) {
-                features.push(converted);
-                stats.cd56_garde++;
+                const result = shouldKeepFeature(converted);
+                if (result.keep) {
+                    features.push(converted);
+                    stats.cd56_garde++;
+                } else if (result.filteredResolved) {
+                    stats.resolus_filtres++;
+                }
             }
         });
         console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
@@ -863,7 +945,8 @@ async function mergeSources() {
         console.log(`\n📊 Résumé:`);
         console.log(`   Total récupéré: ${totalBrut}`);
         console.log(`   Total gardé: ${totalGarde}`);
-        console.log(`   Total filtré: ${totalFiltre}\n`);
+        console.log(`   Total filtré: ${totalFiltre}`);
+        console.log(`   → dont résolus > 3 jours: ${stats.resolus_filtres}\n`);
         
         const geojson = {
             type: 'FeatureCollection',
