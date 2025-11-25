@@ -11,11 +11,11 @@
         ]
       },
       "properties": {
-        "id": 90,
-        "source": "Grist 35",
+        "id": 1,
+        "id_source": 90,
+        "source": "Saisie Grist",
         "route": "D 873",
         "commune": "Redon",
-        "etat": "Totale",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -45,11 +45,11 @@
         ]
       },
       "properties": {
-        "id": 91,
-        "source": "Grist 35",
+        "id": 2,
+        "id_source": 91,
+        "source": "Saisie Grist",
         "route": "D 164",
         "commune": "Avessac",
-        "etat": "Totale",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -73,11 +73,11 @@
         ]
       },
       "properties": {
-        "id": 92,
-        "source": "Grist 35",
+        "id": 3,
+        "id_source": 92,
+        "source": "Saisie Grist",
         "route": "D 20",
         "commune": "Béganne",
-        "etat": "Totale",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -111,11 +111,11 @@
         ]
       },
       "properties": {
-        "id": 93,
-        "source": "Grist 35",
+        "id": 4,
+        "id_source": 93,
+        "source": "Saisie Grist",
         "route": "D 177",
         "commune": "Bains-sur-Oust",
-        "etat": "Partielle",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -149,11 +149,11 @@
         ]
       },
       "properties": {
-        "id": 94,
-        "source": "Grist 35",
+        "id": 5,
+        "id_source": 94,
+        "source": "Saisie Grist",
         "route": "N 12",
         "commune": "Montauban-de-Bretagne",
-        "etat": "Totale",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -177,16 +177,16 @@
         ]
       },
       "properties": {
-        "id": "cd44-on1twa2sd",
+        "id": 6,
+        "id_source": null,
         "source": "CD44",
         "route": "D537 / Treillières",
-        "commune": "Commune",
-        "etat": "Obstacle",
+        "commune": "",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Obstacle",
+        "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
         "date_debut": "13/05/2024 à 08h06",
@@ -431,11 +431,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-2",
+        "id": 7,
+        "id_source": 2,
         "source": "Rennes Métropole",
         "route": "Cheneday",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -585,11 +585,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-3",
+        "id": 8,
+        "id_source": 3,
         "source": "Rennes Métropole",
         "route": "Moulin de Tertron",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -703,11 +703,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-4",
+        "id": 9,
+        "id_source": 4,
         "source": "Rennes Métropole",
         "route": "Chancors",
         "commune": "Bruz / Saint-Jacques-de-la-Lande",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -901,11 +901,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-5",
+        "id": 10,
+        "id_source": 5,
         "source": "Rennes Métropole",
         "route": "La Ville du Bois",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -943,11 +943,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-6",
+        "id": 11,
+        "id_source": 6,
         "source": "Rennes Métropole",
         "route": "Rue du Canal",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1049,11 +1049,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-7",
+        "id": 12,
+        "id_source": 7,
         "source": "Rennes Métropole",
         "route": "RD 36",
         "commune": "Saint Erblon",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1099,11 +1099,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-8",
+        "id": 13,
+        "id_source": 8,
         "source": "Rennes Métropole",
         "route": "Mons la Rouadière",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1233,11 +1233,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-9",
+        "id": 14,
+        "id_source": 9,
         "source": "Rennes Métropole",
         "route": "rue de la Noé",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1271,11 +1271,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-10",
+        "id": 15,
+        "id_source": 10,
         "source": "Rennes Métropole",
         "route": "Château des Loges",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1389,11 +1389,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-11",
+        "id": 16,
+        "id_source": 11,
         "source": "Rennes Métropole",
         "route": "Fenicat",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1499,11 +1499,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-12",
+        "id": 17,
+        "id_source": 12,
         "source": "Rennes Métropole",
         "route": "Bd Maréchal de Lattre de Tassigny",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -1577,11 +1577,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-14",
+        "id": 18,
+        "id_source": 14,
         "source": "Rennes Métropole",
         "route": "sq. des Corbières",
         "commune": "Bruz",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -1615,11 +1615,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-15",
+        "id": 19,
+        "id_source": 15,
         "source": "Rennes Métropole",
         "route": "Sq. des Corbières",
         "commune": "Bruz",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -1693,11 +1693,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-50",
+        "id": 20,
+        "id_source": 50,
         "source": "Rennes Métropole",
         "route": "piste cyclable Chartres/Noyal",
         "commune": "Chartres-de-Bretagne",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -2015,11 +2015,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-16",
+        "id": 21,
+        "id_source": 16,
         "source": "Rennes Métropole",
         "route": "Rue de la Giraudais",
         "commune": "Bruz",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -2165,11 +2165,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-17",
+        "id": 22,
+        "id_source": 17,
         "source": "Rennes Métropole",
         "route": "Rue du Patis Louard",
         "commune": "Bruz",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -2271,11 +2271,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-18",
+        "id": 23,
+        "id_source": 18,
         "source": "Rennes Métropole",
         "route": "Rue Pierre Charrot",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2313,11 +2313,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-19",
+        "id": 24,
+        "id_source": 19,
         "source": "Rennes Métropole",
         "route": "Moulin de Brecé",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2479,11 +2479,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-20",
+        "id": 25,
+        "id_source": 20,
         "source": "Rennes Métropole",
         "route": "Pierrefitte",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2609,11 +2609,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-21",
+        "id": 26,
+        "id_source": 21,
         "source": "Rennes Métropole",
         "route": "Terron",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2719,11 +2719,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-22",
+        "id": 27,
+        "id_source": 22,
         "source": "Rennes Métropole",
         "route": "Pierrfitte",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2797,11 +2797,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-23",
+        "id": 28,
+        "id_source": 23,
         "source": "Rennes Métropole",
         "route": "Pierrefitte",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2863,11 +2863,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-24",
+        "id": 29,
+        "id_source": 24,
         "source": "Rennes Métropole",
         "route": "Le grand Patis",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -2985,11 +2985,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-25",
+        "id": 30,
+        "id_source": 25,
         "source": "Rennes Métropole",
         "route": "Pont de Vaugon",
         "commune": "Vern-sur-Seiche",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -3167,11 +3167,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-26",
+        "id": 31,
+        "id_source": 26,
         "source": "Rennes Métropole",
         "route": "Belle épine",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3305,11 +3305,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-27",
+        "id": 32,
+        "id_source": 27,
         "source": "Rennes Métropole",
         "route": "Avenue Mozart",
         "commune": "Betton",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3379,11 +3379,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-28",
+        "id": 33,
+        "id_source": 28,
         "source": "Rennes Métropole",
         "route": "Rollard",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3473,11 +3473,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-29",
+        "id": 34,
+        "id_source": 29,
         "source": "Rennes Métropole",
         "route": "RD 286",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3511,11 +3511,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-30",
+        "id": 35,
+        "id_source": 30,
         "source": "Rennes Métropole",
         "route": "Rue Arletty",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3545,11 +3545,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-31",
+        "id": 36,
+        "id_source": 31,
         "source": "Rennes Métropole",
         "route": "Rue Arletty",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3703,11 +3703,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-32",
+        "id": 37,
+        "id_source": 32,
         "source": "Rennes Métropole",
         "route": "Rue Xavier Grall",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3805,11 +3805,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-33",
+        "id": 38,
+        "id_source": 33,
         "source": "Rennes Métropole",
         "route": "Avenue Georges Brassens",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3899,11 +3899,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-34",
+        "id": 39,
+        "id_source": 34,
         "source": "Rennes Métropole",
         "route": "la Noë du Gué",
         "commune": "Brécé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -3973,11 +3973,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-35",
+        "id": 40,
+        "id_source": 35,
         "source": "Rennes Métropole",
         "route": "Chemin du Balluds",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4163,11 +4163,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-36",
+        "id": 41,
+        "id_source": 36,
         "source": "Rennes Métropole",
         "route": "Chancors",
         "commune": "Bruz / Saint-Jacques-de-la-Lande",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4209,11 +4209,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-38",
+        "id": 42,
+        "id_source": 38,
         "source": "Rennes Métropole",
         "route": "bd Mrchl de L. de Tassigny",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4279,11 +4279,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-39",
+        "id": 43,
+        "id_source": 39,
         "source": "Rennes Métropole",
         "route": "Passage st Cast",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4337,11 +4337,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-40",
+        "id": 44,
+        "id_source": 40,
         "source": "Rennes Métropole",
         "route": "Rue du Manoir de Servigné",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4379,11 +4379,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-41",
+        "id": 45,
+        "id_source": 41,
         "source": "Rennes Métropole",
         "route": "Rue des Frères Blin",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4469,11 +4469,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-42",
+        "id": 46,
+        "id_source": 42,
         "source": "Rennes Métropole",
         "route": "Rue Bourgault Ducoudray",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4635,11 +4635,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-43",
+        "id": 47,
+        "id_source": 43,
         "source": "Rennes Métropole",
         "route": "RD 837",
         "commune": "Pont-Péan",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4745,11 +4745,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-44",
+        "id": 48,
+        "id_source": 44,
         "source": "Rennes Métropole",
         "route": "Mons la Rouadière",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4831,11 +4831,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-45",
+        "id": 49,
+        "id_source": 45,
         "source": "Rennes Métropole",
         "route": "VC 20",
         "commune": "Bourgbarré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4913,11 +4913,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-46",
+        "id": 50,
+        "id_source": 46,
         "source": "Rennes Métropole",
         "route": "route de Mesneuf",
         "commune": "Bourgbarré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -4991,11 +4991,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-47",
+        "id": 51,
+        "id_source": 47,
         "source": "Rennes Métropole",
         "route": "l'Épalet",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5057,11 +5057,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-48",
+        "id": 52,
+        "id_source": 48,
         "source": "Rennes Métropole",
         "route": "Bel air chemin de la Vigne",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5199,11 +5199,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-49",
+        "id": 53,
+        "id_source": 49,
         "source": "Rennes Métropole",
         "route": "route du hameau de la Rivière",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -5301,11 +5301,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-51",
+        "id": 54,
+        "id_source": 51,
         "source": "Rennes Métropole",
         "route": "VC 104 les Tremblais",
         "commune": "Pont-Péan",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -5371,11 +5371,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-52",
+        "id": 55,
+        "id_source": 52,
         "source": "Rennes Métropole",
         "route": "Coquelande",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -5441,11 +5441,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-53",
+        "id": 56,
+        "id_source": 53,
         "source": "Rennes Métropole",
         "route": "Champagne",
         "commune": "Gévezé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5495,11 +5495,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-54",
+        "id": 57,
+        "id_source": 54,
         "source": "Rennes Métropole",
         "route": "la Foucherais D 68",
         "commune": "Pacé",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -5557,11 +5557,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-55",
+        "id": 58,
+        "id_source": 55,
         "source": "Rennes Métropole",
         "route": "Allée Marie Berhaut",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5647,11 +5647,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-56",
+        "id": 59,
+        "id_source": 56,
         "source": "Rennes Métropole",
         "route": "Rue de la Motte Brûlon",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5745,11 +5745,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-57",
+        "id": 60,
+        "id_source": 57,
         "source": "Rennes Métropole",
         "route": "Terron",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5815,11 +5815,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-58",
+        "id": 61,
+        "id_source": 58,
         "source": "Rennes Métropole",
         "route": "l'Euridice",
         "commune": "Vern-sur-Seiche / Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5849,11 +5849,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-59",
+        "id": 62,
+        "id_source": 59,
         "source": "Rennes Métropole",
         "route": "RD 36",
         "commune": "Pont-Péan",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -5959,11 +5959,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-60",
+        "id": 63,
+        "id_source": 60,
         "source": "Rennes Métropole",
         "route": "RD 36",
         "commune": "Pont-Péan",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6009,11 +6009,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-61",
+        "id": 64,
+        "id_source": 61,
         "source": "Rennes Métropole",
         "route": "Les Garennes",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6067,11 +6067,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-62",
+        "id": 65,
+        "id_source": 62,
         "source": "Rennes Métropole",
         "route": "Brais",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6133,11 +6133,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-63",
+        "id": 66,
+        "id_source": 63,
         "source": "Rennes Métropole",
         "route": "Piste cyclable sous rocade",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6207,11 +6207,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-64",
+        "id": 67,
+        "id_source": 64,
         "source": "Rennes Métropole",
         "route": "VC 104",
         "commune": "Pont-Péan",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -6509,11 +6509,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-65",
+        "id": 68,
+        "id_source": 65,
         "source": "Rennes Métropole",
         "route": "Canal St-Martin",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6579,11 +6579,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-66",
+        "id": 69,
+        "id_source": 66,
         "source": "Rennes Métropole",
         "route": "RD 25",
         "commune": "Chevaigné",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6717,11 +6717,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-67",
+        "id": 70,
+        "id_source": 67,
         "source": "Rennes Métropole",
         "route": "Rue de la Duchesse Anne",
         "commune": "Saint-Grégoire",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6807,11 +6807,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-68",
+        "id": 71,
+        "id_source": 68,
         "source": "Rennes Métropole",
         "route": "Bel Air",
         "commune": "Betton",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -6969,11 +6969,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-69",
+        "id": 72,
+        "id_source": 69,
         "source": "Rennes Métropole",
         "route": "Rue de la Fontaine",
         "commune": "Cesson-Sévigné",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7255,11 +7255,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-70",
+        "id": 73,
+        "id_source": 70,
         "source": "Rennes Métropole",
         "route": "Apigné",
         "commune": "Rennes / le Rheu",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7357,11 +7357,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-71",
+        "id": 74,
+        "id_source": 71,
         "source": "Rennes Métropole",
         "route": "RD 231",
         "commune": "la Chapelle-des-Fougeretz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7447,11 +7447,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-72",
+        "id": 75,
+        "id_source": 72,
         "source": "Rennes Métropole",
         "route": "Avenue Gros Malhon",
         "commune": "Rennes",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -7513,11 +7513,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-73",
+        "id": 76,
+        "id_source": 73,
         "source": "Rennes Métropole",
         "route": "RD 287",
         "commune": "Pacé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7591,11 +7591,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-74",
+        "id": 77,
+        "id_source": 74,
         "source": "Rennes Métropole",
         "route": "rue du Dr Léon",
         "commune": "Pacé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7661,11 +7661,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-75",
+        "id": 78,
+        "id_source": 75,
         "source": "Rennes Métropole",
         "route": "D 34",
         "commune": "Mordelles",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7771,11 +7771,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-76",
+        "id": 79,
+        "id_source": 76,
         "source": "Rennes Métropole",
         "route": "RD 36",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7837,11 +7837,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-77",
+        "id": 80,
+        "id_source": 77,
         "source": "Rennes Métropole",
         "route": "Av. Pinault",
         "commune": "Pacé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -7943,11 +7943,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-78",
+        "id": 81,
+        "id_source": 78,
         "source": "Rennes Métropole",
         "route": "Mellon",
         "commune": "Pacé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8125,11 +8125,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-79",
+        "id": 82,
+        "id_source": 79,
         "source": "Rennes Métropole",
         "route": "St-Martin",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8167,11 +8167,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-80",
+        "id": 83,
+        "id_source": 80,
         "source": "Rennes Métropole",
         "route": "Rue Pierre Legrand",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8241,11 +8241,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-81",
+        "id": 84,
+        "id_source": 81,
         "source": "Rennes Métropole",
         "route": "Rollard",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8355,11 +8355,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-82",
+        "id": 85,
+        "id_source": 82,
         "source": "Rennes Métropole",
         "route": "la Manquerais",
         "commune": "Thorigné-Fouillard",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8441,11 +8441,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-83",
+        "id": 86,
+        "id_source": 83,
         "source": "Rennes Métropole",
         "route": "D35 ",
         "commune": "Cintré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8531,11 +8531,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-84",
+        "id": 87,
+        "id_source": 84,
         "source": "Rennes Métropole",
         "route": "av C. le Goffic",
         "commune": "Pacé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8697,11 +8697,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-85",
+        "id": 88,
+        "id_source": 85,
         "source": "Rennes Métropole",
         "route": "route de Bintin",
         "commune": "Cintré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8767,11 +8767,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-86",
+        "id": 89,
+        "id_source": 86,
         "source": "Rennes Métropole",
         "route": "route de Bintin",
         "commune": "Cintré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8865,11 +8865,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-87",
+        "id": 90,
+        "id_source": 87,
         "source": "Rennes Métropole",
         "route": "Le Vaurouil",
         "commune": "Saint-Gilles",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -8911,11 +8911,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-88",
+        "id": 91,
+        "id_source": 88,
         "source": "Rennes Métropole",
         "route": "Branval",
         "commune": "Cintré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -9125,11 +9125,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-89",
+        "id": 92,
+        "id_source": 89,
         "source": "Rennes Métropole",
         "route": "Route de la Rivière",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -9271,11 +9271,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-90",
+        "id": 93,
+        "id_source": 90,
         "source": "Rennes Métropole",
         "route": "RD 434",
         "commune": "Bruz / Saint-Jacques-de-la-Lande / Chavagne",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -9449,11 +9449,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-91",
+        "id": 94,
+        "id_source": 91,
         "source": "Rennes Métropole",
         "route": "le Haut Limeul",
         "commune": "Gévezé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -9583,11 +9583,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-92",
+        "id": 95,
+        "id_source": 92,
         "source": "Rennes Métropole",
         "route": "VC 202",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -9625,11 +9625,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-94",
+        "id": 96,
+        "id_source": 94,
         "source": "Rennes Métropole",
         "route": "le Vaurouil",
         "commune": "Saint-Gilles",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -9751,11 +9751,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-95",
+        "id": 97,
+        "id_source": 95,
         "source": "Rennes Métropole",
         "route": "la Roberie",
         "commune": "Gévezé",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10057,11 +10057,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-96",
+        "id": 98,
+        "id_source": 96,
         "source": "Rennes Métropole",
         "route": "VC 104",
         "commune": "Saint Erblon",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10211,11 +10211,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-97",
+        "id": 99,
+        "id_source": 97,
         "source": "Rennes Métropole",
         "route": "D41",
         "commune": "Corps Nuds",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10245,11 +10245,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-98",
+        "id": 100,
+        "id_source": 98,
         "source": "Rennes Métropole",
         "route": "Avenue Gros Malhon",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10327,11 +10327,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-99",
+        "id": 101,
+        "id_source": 99,
         "source": "Rennes Métropole",
         "route": "RD 39 dans le sens Saint-Armel -> Nouvoitou",
         "commune": "Saint-Armel",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10473,11 +10473,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-100",
+        "id": 102,
+        "id_source": 100,
         "source": "Rennes Métropole",
         "route": "Route de Lillion",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10779,11 +10779,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-101",
+        "id": 103,
+        "id_source": 101,
         "source": "Rennes Métropole",
         "route": "Route de la Maugerais",
         "commune": "Rennes",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -10881,11 +10881,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-102",
+        "id": 104,
+        "id_source": 102,
         "source": "Rennes Métropole",
         "route": "Rue des Perrières",
         "commune": "Vern-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -11003,11 +11003,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-103",
+        "id": 105,
+        "id_source": 103,
         "source": "Rennes Métropole",
         "route": "VC 105",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -11185,11 +11185,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-104",
+        "id": 106,
+        "id_source": 104,
         "source": "Rennes Métropole",
         "route": "La Marquerais",
         "commune": "Thorigné-Fouillard",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -11351,11 +11351,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-105",
+        "id": 107,
+        "id_source": 105,
         "source": "Rennes Métropole",
         "route": "Rue de la Forge",
         "commune": "Betton",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -11449,11 +11449,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-106",
+        "id": 108,
+        "id_source": 106,
         "source": "Rennes Métropole",
         "route": "Malcotais",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -11583,11 +11583,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-107",
+        "id": 109,
+        "id_source": 107,
         "source": "Rennes Métropole",
         "route": "Lande Pinçon",
         "commune": "Noyal-Châtillon-sur-Seiche",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -11821,11 +11821,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-108",
+        "id": 110,
+        "id_source": 108,
         "source": "Rennes Métropole",
         "route": "Verrières",
         "commune": "Le Rheu",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -11899,11 +11899,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-109",
+        "id": 111,
+        "id_source": 109,
         "source": "Rennes Métropole",
         "route": "Epron",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -12197,11 +12197,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-110",
+        "id": 112,
+        "id_source": 110,
         "source": "Rennes Métropole",
         "route": "Monceaux / Le Petit Corce",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -12407,11 +12407,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-111",
+        "id": 113,
+        "id_source": 111,
         "source": "Rennes Métropole",
         "route": "Le Bois Rond",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -12613,11 +12613,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-112",
+        "id": 114,
+        "id_source": 112,
         "source": "Rennes Métropole",
         "route": "La Hersandais",
         "commune": "Nouvoitou",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -12903,11 +12903,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-113",
+        "id": 115,
+        "id_source": 113,
         "source": "Rennes Métropole",
         "route": "cahot",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -13025,11 +13025,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-114",
+        "id": 116,
+        "id_source": 114,
         "source": "Rennes Métropole",
         "route": "la Barre",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -13211,11 +13211,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-115",
+        "id": 117,
+        "id_source": 115,
         "source": "Rennes Métropole",
         "route": "D77 / Route de Laillé",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -13349,11 +13349,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-116",
+        "id": 118,
+        "id_source": 116,
         "source": "Rennes Métropole",
         "route": "La Rouardière",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -13463,11 +13463,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-117",
+        "id": 119,
+        "id_source": 117,
         "source": "Rennes Métropole",
         "route": "pont réan",
         "commune": "Bruz",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -13657,11 +13657,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-118",
+        "id": 120,
+        "id_source": 118,
         "source": "Rennes Métropole",
         "route": "RD 82",
         "commune": "Bourgbarré",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -13919,11 +13919,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-119",
+        "id": 121,
+        "id_source": 119,
         "source": "Rennes Métropole",
         "route": "Mouille Pied",
         "commune": "Cesson-Sévigné",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -14089,11 +14089,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-37",
+        "id": 122,
+        "id_source": 37,
         "source": "Rennes Métropole",
         "route": "RN 24 Est/Ouest",
         "commune": "Mordelles",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -14259,11 +14259,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-93",
+        "id": 123,
+        "id_source": 93,
         "source": "Rennes Métropole",
         "route": "RN 24 Ouest/Est",
         "commune": "Mordelles",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -14365,11 +14365,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-1",
+        "id": 124,
+        "id_source": 1,
         "source": "Rennes Métropole",
         "route": "RD 36 Mons",
         "commune": "Bruz",
-        "etat": "terminé",
         "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
@@ -14595,11 +14595,11 @@
         ]
       },
       "properties": {
-        "id": "rennes-13",
+        "id": 125,
+        "id_source": 13,
         "source": "Rennes Métropole",
         "route": "rue de la Louveterie",
         "commune": "Bruz",
-        "etat": "en cours",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14623,11 +14623,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-56",
+        "id": 126,
+        "id_source": 56,
         "source": "CD56",
         "route": "D14",
         "commune": "Peillac",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14638,9 +14638,7 @@
         "date_debut": "29/01/2025 à 08h53",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 08h53",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14653,11 +14651,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-59",
+        "id": 127,
+        "id_source": 59,
         "source": "CD56",
         "route": "D020",
         "commune": "MUZILLAC",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14668,9 +14666,7 @@
         "date_debut": "29/01/2025 à 09h03",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h03",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "200"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14683,11 +14679,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-60",
+        "id": 128,
+        "id_source": 60,
         "source": "CD56",
         "route": "D21",
         "commune": "PÉAULE",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14698,9 +14694,7 @@
         "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 12h05",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "100"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14713,11 +14707,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-61",
+        "id": 129,
+        "id_source": 61,
         "source": "CD56",
         "route": "D114",
         "commune": "RIEUX",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14728,9 +14722,7 @@
         "date_debut": "28/01/2025 à 11h38",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 11h38",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14743,11 +14735,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-65",
+        "id": 130,
+        "id_source": 65,
         "source": "CD56",
         "route": "D138",
         "commune": "LA GACILLY (Glénac)",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14758,9 +14750,7 @@
         "date_debut": "29/01/2025 à 09h22",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h22",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14773,11 +14763,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-66",
+        "id": 131,
+        "id_source": 66,
         "source": "CD56",
         "route": "D138",
         "commune": "PEILLAC",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14788,9 +14778,7 @@
         "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 12h05",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "150"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14803,11 +14791,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-68",
+        "id": 132,
+        "id_source": 68,
         "source": "CD56",
         "route": "D14",
         "commune": "CARENTOIR (Quelneuc) ",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14818,9 +14806,7 @@
         "date_debut": "28/01/2025 à 13h14",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 13h14",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14833,11 +14819,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-69",
+        "id": 133,
+        "id_source": 69,
         "source": "CD56",
         "route": "D14",
         "commune": "LES FOUGERETS",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14848,9 +14834,7 @@
         "date_debut": "29/01/2025 à 09h23",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h23",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14863,11 +14847,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-70",
+        "id": 134,
+        "id_source": 70,
         "source": "CD56",
         "route": "D149",
         "commune": "SAINT-CONGARD",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14878,9 +14862,7 @@
         "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 12h05",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "800"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14893,11 +14875,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-71",
+        "id": 135,
+        "id_source": 71,
         "source": "CD56",
         "route": "D149",
         "commune": "LA GACILLY (Glénac)",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14908,9 +14890,7 @@
         "date_debut": "29/01/2025 à 09h23",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h23",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14923,11 +14903,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-72",
+        "id": 136,
+        "id_source": 72,
         "source": "CD56",
         "route": "D149A",
         "commune": "COURNON",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14938,9 +14918,7 @@
         "date_debut": "29/01/2025 à 09h23",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h23",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14953,11 +14931,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-73",
+        "id": 137,
+        "id_source": 73,
         "source": "CD56",
         "route": "D153",
         "commune": "SAINT-JACUT-LES-PINS",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14968,9 +14946,7 @@
         "date_debut": "28/01/2025 à 11h37",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 11h37",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -14983,11 +14959,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-74",
+        "id": 138,
+        "id_source": 74,
         "source": "CD56",
         "route": "D153A",
         "commune": "SAINT-PERREUX",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14998,9 +14974,7 @@
         "date_debut": "28/01/2025 à 12h05",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 12h05",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "30"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15013,11 +14987,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-75",
+        "id": 139,
+        "id_source": 75,
         "source": "CD56",
         "route": "D153A",
         "commune": "Saint-Perreux",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15028,9 +15002,7 @@
         "date_debut": "28/01/2025 à 12h05",
         "date_fin": "22/11/2025 à 14h00",
         "date_saisie": "28/01/2025 à 12h05",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "150"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15043,11 +15015,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-76",
+        "id": 140,
+        "id_source": 76,
         "source": "CD56",
         "route": "D176",
         "commune": "THÉHILLAC",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15058,9 +15030,7 @@
         "date_debut": "29/01/2025 à 09h03",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h03",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "300"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15073,11 +15043,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-80",
+        "id": 141,
+        "id_source": 80,
         "source": "CD56",
         "route": "D764",
         "commune": "Saint-Perreux",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15088,9 +15058,7 @@
         "date_debut": "28/01/2025 à 11h38",
         "date_fin": "23/11/2025 à 14h00",
         "date_saisie": "28/01/2025 à 11h38",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15103,11 +15071,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-81",
+        "id": 142,
+        "id_source": 81,
         "source": "CD56",
         "route": "D764",
         "commune": "SAINT-CONGARD",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15118,9 +15086,7 @@
         "date_debut": "29/01/2025 à 08h53",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 08h53",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15133,11 +15099,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-85",
+        "id": 143,
+        "id_source": 85,
         "source": "CD56",
         "route": "D775B",
         "commune": "Saint-Jean-la-Poterie",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15148,9 +15114,7 @@
         "date_debut": "28/01/2025 à 11h37",
         "date_fin": "24/11/2025 à 14h00",
         "date_saisie": "28/01/2025 à 11h37",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15163,24 +15127,22 @@
         ]
       },
       "properties": {
-        "id": "cd56-86",
+        "id": 144,
+        "id_source": 86,
         "source": "CD56",
         "route": "D311",
         "commune": "GUER",
-        "etat": "INONDÉE PARTIELLE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Totale",
+        "type_coupure": "Partielle",
         "sens_circulation": "",
         "commentaire": "Inondation partielle",
         "date_debut": "28/01/2025 à 12h18",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 12h18",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "INONDÉE PARTIELLE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15193,11 +15155,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-87",
+        "id": 145,
+        "id_source": 87,
         "source": "CD56",
         "route": "D777",
         "commune": "SAINT-GRAVÉ",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15208,9 +15170,7 @@
         "date_debut": "29/01/2025 à 08h54",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 08h54",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "?"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15223,24 +15183,22 @@
         ]
       },
       "properties": {
-        "id": "cd56-88",
+        "id": 146,
+        "id_source": 88,
         "source": "CD56",
         "route": "D777",
         "commune": "SAINT-MARTIN-SUR-OUST",
-        "etat": "INONDÉE PARTIELLE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Totale",
+        "type_coupure": "Partielle",
         "sens_circulation": "",
         "commentaire": "Inondation partielle",
         "date_debut": "29/01/2025 à 09h25",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h25",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "INONDÉE PARTIELLE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15253,11 +15211,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-91",
+        "id": 147,
+        "id_source": 91,
         "source": "CD56",
         "route": "D114",
         "commune": "RIEUX",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15268,9 +15226,7 @@
         "date_debut": "29/01/2025 à 09h03",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 09h03",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "200"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15283,11 +15239,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-92",
+        "id": 148,
+        "id_source": 92,
         "source": "CD56",
         "route": "D775",
         "commune": "RIEUX",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15298,9 +15254,7 @@
         "date_debut": "29/01/2025 à 11h21",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 11h21",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "0"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15313,11 +15267,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-109",
+        "id": 149,
+        "id_source": 109,
         "source": "CD56",
         "route": "D154",
         "commune": "NÉANT-SUR-YVEL",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15328,9 +15282,7 @@
         "date_debut": "28/01/2025 à 14h34",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 14h34",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "200"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15343,11 +15295,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-111",
+        "id": 150,
+        "id_source": 111,
         "source": "CD56",
         "route": "D157",
         "commune": "LA GRÉE-SAINT-LAURENT",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15358,9 +15310,7 @@
         "date_debut": "28/01/2025 à 14h34",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 14h34",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "250"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15373,11 +15323,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-113",
+        "id": 151,
+        "id_source": 113,
         "source": "CD56",
         "route": "D167",
         "commune": "MAURON",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15388,9 +15338,7 @@
         "date_debut": "27/01/2025 à 17h30",
         "date_fin": "",
         "date_saisie": "27/01/2025 à 17h30",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "100"
+        "gestionnaire": "CD56"
       }
     },
     {
@@ -15403,11 +15351,11 @@
         ]
       },
       "properties": {
-        "id": "cd56-115",
+        "id": 152,
+        "id_source": 115,
         "source": "CD56",
         "route": "D764",
         "commune": "MALESTROIT",
-        "etat": "COUPÉE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15418,14 +15366,12 @@
         "date_debut": "28/01/2025 à 14h56",
         "date_fin": "",
         "date_saisie": "28/01/2025 à 14h56",
-        "gestionnaire": "CD56",
-        "conditions_circulation": "COUPÉE",
-        "lineaire_inonde": "50"
+        "gestionnaire": "CD56"
       }
     }
   ],
   "metadata": {
-    "generated": "2025-11-25T13:39:25.884Z",
+    "generated": "2025-11-25T13:51:50.986Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 152,
     "sources": {
