@@ -22,7 +22,7 @@
         "statut_resolu": true,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "",
+        "commentaire": "TEST",
         "date_debut": "17/11/2025 à 13h40",
         "date_fin": "",
         "date_saisie": "17/11/2025 à 13h40",
@@ -35,28 +35,48 @@
         "type": "LineString",
         "coordinates": [
           [
-            -1.78085274389145,
-            48.14422315012563
+            -2.0553377021816526,
+            47.63493984952522
           ],
           [
-            -1.7736445319800724,
-            48.140326989655236
-          ],
-          [
-            -1.7595713563435902,
-            48.13253378153885
-          ],
-          [
-            -1.7448116843345998,
-            48.127261234691694
+            -2.0532343395689705,
+            47.63384048836151
           ]
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "source": "Grist 35",
+        "route": "D 164",
+        "commune": "Avessac",
+        "etat": "Totale",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "TEST",
+        "date_debut": "25/11/2025 à 14h09",
+        "date_fin": "",
+        "date_saisie": "25/11/2025 à 14h09",
+        "gestionnaire": "Redon Agglo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.286974856996276,
+          47.59331104156952
         ]
       },
       "properties": {
         "id": 92,
         "source": "Grist 35",
-        "route": "N 12",
-        "commune": "Pacé",
+        "route": "D 20",
+        "commune": "Béganne",
         "etat": "Totale",
         "cause": "Inondation",
         "statut": "Résolu",
@@ -65,38 +85,10 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "19/11/2025 à 11h04",
+        "date_debut": "25/11/2025 à 14h21",
         "date_fin": "",
-        "date_saisie": "19/11/2025 à 11h04",
-        "gestionnaire": "DIRO"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.62592508565979,
-          48.17214975360465
-        ]
-      },
-      "properties": {
-        "id": 94,
-        "source": "Grist 35",
-        "route": "C 13",
-        "commune": "Betton",
-        "etat": "Totale",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "",
-        "date_debut": "20/11/2025 à 11h35",
-        "date_fin": "",
-        "date_saisie": "20/11/2025 à 11h35",
-        "gestionnaire": "CD35"
+        "date_saisie": "25/11/2025 à 14h21",
+        "gestionnaire": "Redon Agglo"
       }
     },
     {
@@ -105,28 +97,62 @@
         "type": "LineString",
         "coordinates": [
           [
-            -1.6311675799075844,
-            48.077337401760126
+            -2.0564404608398816,
+            47.69011821403397
           ],
           [
-            -1.6293646210249337,
-            48.075359886464334
+            -2.0509913958830683,
+            47.69270467215058
           ],
           [
-            -1.6271323862178357,
-            48.07364024616481
-          ],
-          [
-            -1.625501137704948,
-            48.07203519669989
+            -2.0446413044373357,
+            47.69393283359927
           ]
         ]
       },
       "properties": {
-        "id": 95,
+        "id": 93,
         "source": "Grist 35",
-        "route": "Route d'Angers",
-        "commune": "Vern-sur-Seiche",
+        "route": "D 177",
+        "commune": "Bains-sur-Oust",
+        "etat": "Partielle",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Partielle",
+        "sens_circulation": "",
+        "commentaire": "sens vers Redon",
+        "date_debut": "25/11/2025 à 14h33",
+        "date_fin": "",
+        "date_saisie": "25/11/2025 à 14h33",
+        "gestionnaire": "Redon Agglo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.061661134587549,
+            48.20785429385215
+          ],
+          [
+            -2.050934628767061,
+            48.20756817684635
+          ],
+          [
+            -2.0408946193191007,
+            48.20636646796701
+          ]
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "source": "Grist 35",
+        "route": "N 12",
+        "commune": "Montauban-de-Bretagne",
         "etat": "Totale",
         "cause": "Inondation",
         "statut": "Actif",
@@ -135,10 +161,10 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "20/11/2025 à 11h36",
+        "date_debut": "25/11/2025 à 14h36",
         "date_fin": "",
-        "date_saisie": "20/11/2025 à 11h36",
-        "gestionnaire": "DIRO"
+        "date_saisie": "25/11/2025 à 14h36",
+        "gestionnaire": "Redon Agglo"
       }
     },
     {
@@ -151,7 +177,7 @@
         ]
       },
       "properties": {
-        "id": "cd44-22ofc1vt3",
+        "id": "cd44-on1twa2sd",
         "source": "CD44",
         "route": "D537 / Treillières",
         "commune": "Commune",
@@ -15399,11 +15425,11 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-25T12:56:20.062Z",
+    "generated": "2025-11-25T13:39:25.884Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 151,
+    "total_count": 152,
     "sources": {
-      "grist_35": 4,
+      "grist_35": 5,
       "cd44": 12,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
