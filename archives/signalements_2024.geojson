@@ -22,7 +22,7 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
         "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 08h06",
@@ -34,6 +34,6 @@
   "metadata": {
     "year": 2024,
     "created": "2025-11-26T08:55:18.461Z",
-    "last_update": "2025-11-26T15:45:51.149Z"
+    "last_update": "2025-11-26T16:34:38.838Z"
   }
 }
