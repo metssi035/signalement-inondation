@@ -159,8 +159,8 @@
         "route": "N 12",
         "commune": "Montauban-de-Bretagne",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -168,7 +168,7 @@
         "date_debut": "25/11/2025 à 14h36",
         "date_fin": "",
         "date_saisie": "25/11/2025 à 14h36",
-        "date_suppression": "",
+        "date_suppression": "26/11/2025 à 08h58",
         "gestionnaire": "Redon Agglo"
       }
     },
@@ -3091,6 +3091,6 @@
   "metadata": {
     "year": 2025,
     "created": "2025-11-26T08:55:18.459Z",
-    "last_update": "2025-11-26T08:55:18.504Z"
+    "last_update": "2025-11-26T08:58:50.795Z"
   }
 }
