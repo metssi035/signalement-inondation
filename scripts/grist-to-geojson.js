@@ -223,22 +223,39 @@ function addOrUpdateInArchive(feature) {
     const existingIndex = findInArchive(archive, props.id_source, props.source);
     
     if (existingIndex >= 0) {
-        // Mise à jour d'un signalement existant
+        // Un signalement avec le même id_source existe
         const existing = archive.features[existingIndex];
         const existingProps = existing.properties;
         
-        // Si le statut a changé vers "Résolu", ajouter date_fin
-        if (!existingProps.statut_resolu && props.statut_resolu && props.date_fin) {
-            existingProps.statut = 'Résolu';
-            existingProps.statut_resolu = true;
-            existingProps.date_fin = props.date_fin;
-            console.log(`   ✏️ Mise à jour ${props.source} ${props.id_source}: Actif → Résolu`);
+        // ✨ VÉRIFICATION : Comparer les dates_debut pour détecter les ID réutilisés
+        if (existingProps.date_debut !== props.date_debut) {
+            // C'est un NOUVEAU signalement différent avec le même ID réutilisé !
+            // Ne pas mettre à jour, créer une nouvelle entrée
+            const archiveFeature = {
+                ...feature,
+                properties: {
+                    ...props,
+                    date_suppression: ''
+                }
+            };
+            archive.features.push(archiveFeature);
+            console.log(`   ➕ Nouvel signalement ${props.source} ${props.id_source} (ID réutilisé) dans archive ${year}`);
+        } else {
+            // Même date_debut = vraiment le même signalement, mise à jour possible
+            
+            // Si le statut a changé vers "Résolu", ajouter date_fin
+            if (!existingProps.statut_resolu && props.statut_resolu && props.date_fin) {
+                existingProps.statut = 'Résolu';
+                existingProps.statut_resolu = true;
+                existingProps.date_fin = props.date_fin;
+                console.log(`   ✏️ Mise à jour ${props.source} ${props.id_source}: Actif → Résolu`);
+            }
+            
+            // Mettre à jour la géométrie et autres infos (au cas où)
+            existing.geometry = feature.geometry;
+            existingProps.type_coupure = props.type_coupure;
+            existingProps.commentaire = props.commentaire;
         }
-        
-        // Mettre à jour la géométrie et autres infos (au cas où)
-        existing.geometry = feature.geometry;
-        existingProps.type_coupure = props.type_coupure;
-        existingProps.commentaire = props.commentaire;
         
     } else {
         // Nouveau signalement, l'ajouter
@@ -246,7 +263,7 @@ function addOrUpdateInArchive(feature) {
             ...feature,
             properties: {
                 ...props,
-                date_suppression: '' // Initialement vide
+                date_suppression: ''
             }
         };
         archive.features.push(archiveFeature);
