@@ -96,6 +96,258 @@ function shouldKeepFeature(feature) {
     return { keep: true, filteredResolved: false };
 }
 
+// =====================================================
+// SYSTÈME D'ARCHIVAGE ANNUEL
+// =====================================================
+
+// Charger un fichier d'archive (ou créer vide)
+function loadArchive(year) {
+    const archiveDir = 'archives';
+    const archivePath = `${archiveDir}/signalements_${year}.geojson`;
+    
+    // Créer le dossier archives s'il n'existe pas
+    if (!fs.existsSync(archiveDir)) {
+        fs.mkdirSync(archiveDir, { recursive: true });
+    }
+    
+    // Si le fichier existe, le charger
+    if (fs.existsSync(archivePath)) {
+        try {
+            const content = fs.readFileSync(archivePath, 'utf8');
+            return JSON.parse(content);
+        } catch (e) {
+            console.warn(`⚠️ Erreur lecture archive ${year}, création nouvelle:`, e.message);
+            return {
+                type: 'FeatureCollection',
+                features: [],
+                metadata: {
+                    year: year,
+                    created: new Date().toISOString(),
+                    last_update: new Date().toISOString()
+                }
+            };
+        }
+    }
+    
+    // Sinon créer un nouveau GeoJSON vide
+    return {
+        type: 'FeatureCollection',
+        features: [],
+        metadata: {
+            year: year,
+            created: new Date().toISOString(),
+            last_update: new Date().toISOString()
+        }
+    };
+}
+
+// Sauvegarder une archive
+function saveArchive(year, geojson) {
+    const archiveDir = 'archives';
+    const archivePath = `${archiveDir}/signalements_${year}.geojson`;
+    
+    geojson.metadata.last_update = new Date().toISOString();
+    
+    fs.writeFileSync(archivePath, JSON.stringify(geojson, null, 2));
+}
+
+// Charger last_run.json
+function loadLastRun() {
+    const lastRunPath = 'archives/last_run.json';
+    
+    if (fs.existsSync(lastRunPath)) {
+        try {
+            const content = fs.readFileSync(lastRunPath, 'utf8');
+            return JSON.parse(content);
+        } catch (e) {
+            console.warn('⚠️ Erreur lecture last_run.json:', e.message);
+            return { date: null, actifs: {} };
+        }
+    }
+    
+    return { date: null, actifs: {} };
+}
+
+// Sauvegarder last_run.json
+function saveLastRun(data) {
+    const lastRunPath = 'archives/last_run.json';
+    fs.writeFileSync(lastRunPath, JSON.stringify(data, null, 2));
+}
+
+// Extraire l'année de date_debut
+function getYearFromDateDebut(dateString) {
+    if (!dateString) return null;
+    
+    try {
+        // Format: "DD/MM/YYYY à HHhMM"
+        const match = dateString.match(/\d{2}\/\d{2}\/(\d{4})/);
+        if (match) {
+            return parseInt(match[1]);
+        }
+        return null;
+    } catch (e) {
+        return null;
+    }
+}
+
+// Trouver un signalement dans l'archive par id_source + source
+function findInArchive(archive, idSource, source) {
+    if (!archive || !archive.features) return -1;
+    
+    return archive.features.findIndex(f => 
+        f.properties.id_source === idSource && 
+        f.properties.source === source
+    );
+}
+
+// Ajouter ou mettre à jour un signalement dans l'archive
+function addOrUpdateInArchive(feature) {
+    const props = feature.properties;
+    
+    // Ignorer CD35 Inondations
+    if (props.source === 'CD35 Inondations') {
+        return;
+    }
+    
+    // Extraire l'année
+    const year = getYearFromDateDebut(props.date_debut);
+    if (!year) {
+        console.warn(`⚠️ Pas d'année pour ${props.source} - ${props.id_source}`);
+        return;
+    }
+    
+    // Charger l'archive de cette année
+    const archive = loadArchive(year);
+    
+    // Chercher si le signalement existe déjà
+    const existingIndex = findInArchive(archive, props.id_source, props.source);
+    
+    if (existingIndex >= 0) {
+        // Mise à jour d'un signalement existant
+        const existing = archive.features[existingIndex];
+        const existingProps = existing.properties;
+        
+        // Si le statut a changé vers "Résolu", ajouter date_fin
+        if (!existingProps.statut_resolu && props.statut_resolu && props.date_fin) {
+            existingProps.statut = 'Résolu';
+            existingProps.statut_resolu = true;
+            existingProps.date_fin = props.date_fin;
+            console.log(`   ✏️ Mise à jour ${props.source} ${props.id_source}: Actif → Résolu`);
+        }
+        
+        // Mettre à jour la géométrie et autres infos (au cas où)
+        existing.geometry = feature.geometry;
+        existingProps.type_coupure = props.type_coupure;
+        existingProps.commentaire = props.commentaire;
+        
+    } else {
+        // Nouveau signalement, l'ajouter
+        const archiveFeature = {
+            ...feature,
+            properties: {
+                ...props,
+                date_suppression: '' // Initialement vide
+            }
+        };
+        archive.features.push(archiveFeature);
+        console.log(`   ➕ Ajout ${props.source} ${props.id_source} dans archive ${year}`);
+    }
+    
+    // Sauvegarder l'archive
+    saveArchive(year, archive);
+}
+
+// Détecter et marquer les signalements supprimés
+function detectDeletedSignalements(currentFeatures) {
+    const lastRun = loadLastRun();
+    const now = new Date();
+    const dateSuppressionFormatted = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()} à ${String(now.getHours()).padStart(2, '0')}h${String(now.getMinutes()).padStart(2, '0')}`;
+    
+    // Construire la liste des id_source actuels par source
+    const currentActifs = {
+        'Saisie Grist': [],
+        'CD44': [],
+        'Rennes Métropole': [],
+        'CD56': []
+    };
+    
+    currentFeatures.forEach(feature => {
+        const props = feature.properties;
+        
+        // Ignorer CD35
+        if (props.source === 'CD35 Inondations') return;
+        
+        // Seulement les actifs
+        if (props.statut_actif && props.id_source) {
+            if (currentActifs[props.source]) {
+                currentActifs[props.source].push(props.id_source);
+            }
+        }
+    });
+    
+    // Si c'est la première exécution, juste sauvegarder
+    if (!lastRun.date) {
+        console.log('   ℹ️ Première exécution - initialisation de last_run.json');
+        saveLastRun({
+            date: now.toISOString(),
+            actifs: currentActifs
+        });
+        return;
+    }
+    
+    // Comparer avec la dernière exécution
+    let deletedCount = 0;
+    
+    Object.keys(lastRun.actifs || {}).forEach(source => {
+        const previousIds = lastRun.actifs[source] || [];
+        const currentIds = currentActifs[source] || [];
+        
+        previousIds.forEach(idSource => {
+            // Si l'ID n'est plus dans les actifs actuels
+            if (!currentIds.includes(idSource)) {
+                // Chercher dans quelle archive il est
+                // On doit parcourir plusieurs années potentielles
+                const currentYear = now.getFullYear();
+                const yearsToCheck = [currentYear, currentYear - 1]; // Année actuelle + année précédente
+                
+                let found = false;
+                yearsToCheck.forEach(year => {
+                    if (found) return;
+                    
+                    const archive = loadArchive(year);
+                    const index = findInArchive(archive, idSource, source);
+                    
+                    if (index >= 0) {
+                        const feature = archive.features[index];
+                        
+                        // Seulement marquer comme supprimé s'il était actif
+                        if (feature.properties.statut_actif && !feature.properties.date_suppression) {
+                            feature.properties.statut = 'Supprimé';
+                            feature.properties.statut_actif = false;
+                            feature.properties.date_suppression = dateSuppressionFormatted;
+                            
+                            saveArchive(year, archive);
+                            console.log(`   🗑️ Suppression détectée: ${source} ${idSource} (archive ${year})`);
+                            deletedCount++;
+                            found = true;
+                        }
+                    }
+                });
+            }
+        });
+    });
+    
+    if (deletedCount > 0) {
+        console.log(`   📊 Total suppressions détectées: ${deletedCount}`);
+    }
+    
+    // Sauvegarder le nouvel état
+    saveLastRun({
+        date: now.toISOString(),
+        actifs: currentActifs
+    });
+}
+
 // ✅ FONCTION DE FORMATAGE DES DATES - Convertit UTC → Heure locale française
 function formatDate(dateValue) {
     if (!dateValue) return '';
@@ -306,6 +558,7 @@ function rennesMetroToFeature(feature, needsConversion = false) {
                 date_debut: formatDate(props.date_debut),
                 date_fin: formatDate(props.date_fin),
                 date_saisie: formatDate(props.date_debut), // date_debut comme date de saisie
+                date_suppression: '',
                 gestionnaire: 'Rennes Métropole'
             }
         };
@@ -628,6 +881,7 @@ function gristToFeature(record) {
                 date_debut: formatDate(record.fields.Date_heure),
                 date_fin: formatDate(record.fields.Date_fin),
                 date_saisie: formatDate(record.fields.Date_heure),
+                date_suppression: '',
                 gestionnaire: record.fields.Gestionnaire || ''
             }
         };
@@ -713,6 +967,7 @@ function cd44ToFeature(item) {
                 date_debut: formatDate(item.datepublication),
                 date_fin: dateFin,
                 date_saisie: formatDate(item.datepublication),
+                date_suppression: '',
                 gestionnaire: 'CD44'
             }
         };
@@ -752,6 +1007,7 @@ function cd35InondationsToFeature(feature) {
                 date_debut: '',
                 date_fin: '',
                 date_saisie: new Date().toISOString(),
+                date_suppression: '',
                 gestionnaire: 'CD35',
                 agence: props.agence || '',
                 pr_debut: props.PR_debut || '',
@@ -820,6 +1076,7 @@ function cd56ToFeature(feature) {
                 date_debut: formatDate(props.date_constatation || props.dateConstatation),
                 date_fin: formatDate(props.Date_fin_d_évènement || props.date_fin_evenement || props.dateFin),
                 date_saisie: formatDate(props.date_constatation || props.dateConstatation),
+                date_suppression: '',
                 gestionnaire: 'CD56'
             }
         };
@@ -942,6 +1199,26 @@ async function mergeSources() {
         const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + stats.cd35_garde + stats.cd56_garde;
         const totalFiltre = totalBrut - totalGarde;
         
+        // =====================================================
+        // ARCHIVAGE ANNUEL
+        // =====================================================
+        console.log(`\n📦 Archivage annuel...`);
+        
+        // Archiver tous les signalements (sauf CD35)
+        features.forEach(feature => {
+            addOrUpdateInArchive(feature);
+        });
+        
+        // Détecter les signalements supprimés
+        console.log(`\n🔍 Détection des suppressions...`);
+        detectDeletedSignalements(features);
+        
+        console.log(`✅ Archivage terminé\n`);
+        
+        // =====================================================
+        // FIN ARCHIVAGE
+        // =====================================================
+        
         console.log(`\n📊 Résumé:`);
         console.log(`   Total récupéré: ${totalBrut}`);
         console.log(`   Total gardé: ${totalGarde}`);
@@ -990,6 +1267,12 @@ async function mergeSources() {
                     cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
                     cd56: features.filter(f => f.properties.source === 'CD56').length
                 }
+            },
+            archives: {
+                enabled: true,
+                location: 'archives/',
+                description: 'Historique annuel permanent (sauf CD35 Inondations)',
+                note: 'Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions'
             }
         };
         
