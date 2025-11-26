@@ -154,7 +154,7 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
+        "commentaire": "Obstacle sur la chaussée",
         "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 08h06",
@@ -3079,12 +3079,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-26T10:30:46.432Z",
+    "generated": "2025-11-26T11:23:56.089Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 48,
     "sources": {
       "grist_35": 4,
-      "cd44": 16,
+      "cd44": 17,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 116
