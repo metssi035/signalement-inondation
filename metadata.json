@@ -1,30 +1,24 @@
 {
-  "lastUpdate": "2025-11-27T08:36:22.563Z",
+  "lastUpdate": "2025-11-27T09:08:38.822Z",
   "sources": {
     "grist_35": 4,
-    "cd44": 20,
+    "cd44": 21,
     "rennes_metropole": 119,
     "cd35_inondations": 0,
     "cd56": 116,
-    "total": 48
+    "total": 151
   },
   "stats": {
     "points": 30,
-    "lines": 18,
+    "lines": 121,
     "multilines": 0,
     "polygons": 0,
     "by_source": {
       "saisie_grist": 4,
       "cd44": 1,
-      "rennes_metropole": 16,
+      "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 27
     }
-  },
-  "archives": {
-    "enabled": true,
-    "location": "archives/",
-    "description": "Historique annuel permanent (sauf CD35 Inondations)",
-    "note": "Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions"
   }
 }
