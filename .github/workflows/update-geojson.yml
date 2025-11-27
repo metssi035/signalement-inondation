@@ -1,8 +1,10 @@
 name: 🚀 Update GeoJSON
+
 on:
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -12,26 +14,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-      
+
       - name: Install dependencies
         run: npm install
-      
-      - name: 🚀 Fusion des sources + Archivage
+
+      - name: 🚀 Fusion des 3 sources (Grist 35 + CD44 + Rennes Métropole)
         env:
           GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}
           GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
         run: |
           node scripts/grist-to-geojson.js
-      
-      - name: Push GeoJSON + Archives
+
+      - name: Push GeoJSON
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add signalements.geojson metadata.json archives/
-          git commit -m "🔄 Update GeoJSON + Archives $(date)" || true
+          git add signalements.geojson metadata.json
+          git commit -m "🔄 Update GeoJSON $(date)" || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
