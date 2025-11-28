@@ -150,9 +150,9 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Nettoyage de la chaussée,",
         "date_debut": "28/11/2025 à 12h47",
-        "date_fin": "",
+        "date_fin": "28/11/2025 à 15h09",
         "date_saisie": "28/11/2025 à 12h47",
         "gestionnaire": "CD44"
       }
@@ -178,7 +178,7 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
         "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 08h06",
@@ -15361,12 +15361,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-28T17:42:19.157Z",
+    "generated": "2025-11-28T18:36:12.711Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 152,
     "sources": {
       "grist_35": 4,
-      "cd44": 24,
+      "cd44": 23,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 116
