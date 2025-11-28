@@ -134,12 +134,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -2.164638935463075,
+          47.276606484685594
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "id_source": null,
+        "source": "CD44",
+        "route": "D213 / Saint-Brevin-les-Pins",
+        "commune": "Saint-Nazaire / Saint-Brevin",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Obstacle sur la chaussée - Nettoyage de la chaussée,",
+        "date_debut": "28/11/2025 à 12h11",
+        "date_fin": "28/11/2025 à 15h09",
+        "date_saisie": "28/11/2025 à 12h11",
+        "gestionnaire": "CD44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.6185729517584457,
           47.31018428842964
         ]
       },
       "properties": {
-        "id": 5,
+        "id": 6,
         "id_source": null,
         "source": "CD44",
         "route": "D537 / Treillières",
@@ -150,7 +178,7 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Obstacle sur la chaussée",
+        "commentaire": "Obstacle sur la chaussée - Chaussée(s) rétrécie(s)",
         "date_debut": "13/05/2024 à 08h06",
         "date_fin": "",
         "date_saisie": "13/05/2024 à 08h06",
@@ -393,7 +421,7 @@
         ]
       },
       "properties": {
-        "id": 6,
+        "id": 7,
         "id_source": 2,
         "source": "Rennes Métropole",
         "route": "Cheneday",
@@ -547,7 +575,7 @@
         ]
       },
       "properties": {
-        "id": 7,
+        "id": 8,
         "id_source": 3,
         "source": "Rennes Métropole",
         "route": "Moulin de Tertron",
@@ -665,7 +693,7 @@
         ]
       },
       "properties": {
-        "id": 8,
+        "id": 9,
         "id_source": 4,
         "source": "Rennes Métropole",
         "route": "Chancors",
@@ -863,7 +891,7 @@
         ]
       },
       "properties": {
-        "id": 9,
+        "id": 10,
         "id_source": 5,
         "source": "Rennes Métropole",
         "route": "La Ville du Bois",
@@ -905,7 +933,7 @@
         ]
       },
       "properties": {
-        "id": 10,
+        "id": 11,
         "id_source": 6,
         "source": "Rennes Métropole",
         "route": "Rue du Canal",
@@ -1011,7 +1039,7 @@
         ]
       },
       "properties": {
-        "id": 11,
+        "id": 12,
         "id_source": 7,
         "source": "Rennes Métropole",
         "route": "RD 36",
@@ -1061,7 +1089,7 @@
         ]
       },
       "properties": {
-        "id": 12,
+        "id": 13,
         "id_source": 8,
         "source": "Rennes Métropole",
         "route": "Mons la Rouadière",
@@ -1195,7 +1223,7 @@
         ]
       },
       "properties": {
-        "id": 13,
+        "id": 14,
         "id_source": 9,
         "source": "Rennes Métropole",
         "route": "rue de la Noé",
@@ -1233,7 +1261,7 @@
         ]
       },
       "properties": {
-        "id": 14,
+        "id": 15,
         "id_source": 10,
         "source": "Rennes Métropole",
         "route": "Château des Loges",
@@ -1351,7 +1379,7 @@
         ]
       },
       "properties": {
-        "id": 15,
+        "id": 16,
         "id_source": 11,
         "source": "Rennes Métropole",
         "route": "Fenicat",
@@ -1461,7 +1489,7 @@
         ]
       },
       "properties": {
-        "id": 16,
+        "id": 17,
         "id_source": 12,
         "source": "Rennes Métropole",
         "route": "Bd Maréchal de Lattre de Tassigny",
@@ -1539,7 +1567,7 @@
         ]
       },
       "properties": {
-        "id": 17,
+        "id": 18,
         "id_source": 14,
         "source": "Rennes Métropole",
         "route": "sq. des Corbières",
@@ -1577,7 +1605,7 @@
         ]
       },
       "properties": {
-        "id": 18,
+        "id": 19,
         "id_source": 15,
         "source": "Rennes Métropole",
         "route": "Sq. des Corbières",
@@ -1655,7 +1683,7 @@
         ]
       },
       "properties": {
-        "id": 19,
+        "id": 20,
         "id_source": 50,
         "source": "Rennes Métropole",
         "route": "piste cyclable Chartres/Noyal",
@@ -1977,7 +2005,7 @@
         ]
       },
       "properties": {
-        "id": 20,
+        "id": 21,
         "id_source": 16,
         "source": "Rennes Métropole",
         "route": "Rue de la Giraudais",
@@ -2127,7 +2155,7 @@
         ]
       },
       "properties": {
-        "id": 21,
+        "id": 22,
         "id_source": 17,
         "source": "Rennes Métropole",
         "route": "Rue du Patis Louard",
@@ -2233,7 +2261,7 @@
         ]
       },
       "properties": {
-        "id": 22,
+        "id": 23,
         "id_source": 18,
         "source": "Rennes Métropole",
         "route": "Rue Pierre Charrot",
@@ -2275,7 +2303,7 @@
         ]
       },
       "properties": {
-        "id": 23,
+        "id": 24,
         "id_source": 19,
         "source": "Rennes Métropole",
         "route": "Moulin de Brecé",
@@ -2441,7 +2469,7 @@
         ]
       },
       "properties": {
-        "id": 24,
+        "id": 25,
         "id_source": 20,
         "source": "Rennes Métropole",
         "route": "Pierrefitte",
@@ -2571,7 +2599,7 @@
         ]
       },
       "properties": {
-        "id": 25,
+        "id": 26,
         "id_source": 21,
         "source": "Rennes Métropole",
         "route": "Terron",
@@ -2681,7 +2709,7 @@
         ]
       },
       "properties": {
-        "id": 26,
+        "id": 27,
         "id_source": 22,
         "source": "Rennes Métropole",
         "route": "Pierrfitte",
@@ -2759,7 +2787,7 @@
         ]
       },
       "properties": {
-        "id": 27,
+        "id": 28,
         "id_source": 23,
         "source": "Rennes Métropole",
         "route": "Pierrefitte",
@@ -2825,7 +2853,7 @@
         ]
       },
       "properties": {
-        "id": 28,
+        "id": 29,
         "id_source": 24,
         "source": "Rennes Métropole",
         "route": "Le grand Patis",
@@ -2947,7 +2975,7 @@
         ]
       },
       "properties": {
-        "id": 29,
+        "id": 30,
         "id_source": 25,
         "source": "Rennes Métropole",
         "route": "Pont de Vaugon",
@@ -3129,7 +3157,7 @@
         ]
       },
       "properties": {
-        "id": 30,
+        "id": 31,
         "id_source": 26,
         "source": "Rennes Métropole",
         "route": "Belle épine",
@@ -3267,7 +3295,7 @@
         ]
       },
       "properties": {
-        "id": 31,
+        "id": 32,
         "id_source": 27,
         "source": "Rennes Métropole",
         "route": "Avenue Mozart",
@@ -3341,7 +3369,7 @@
         ]
       },
       "properties": {
-        "id": 32,
+        "id": 33,
         "id_source": 28,
         "source": "Rennes Métropole",
         "route": "Rollard",
@@ -3435,7 +3463,7 @@
         ]
       },
       "properties": {
-        "id": 33,
+        "id": 34,
         "id_source": 29,
         "source": "Rennes Métropole",
         "route": "RD 286",
@@ -3473,7 +3501,7 @@
         ]
       },
       "properties": {
-        "id": 34,
+        "id": 35,
         "id_source": 30,
         "source": "Rennes Métropole",
         "route": "Rue Arletty",
@@ -3507,7 +3535,7 @@
         ]
       },
       "properties": {
-        "id": 35,
+        "id": 36,
         "id_source": 31,
         "source": "Rennes Métropole",
         "route": "Rue Arletty",
@@ -3665,7 +3693,7 @@
         ]
       },
       "properties": {
-        "id": 36,
+        "id": 37,
         "id_source": 32,
         "source": "Rennes Métropole",
         "route": "Rue Xavier Grall",
@@ -3767,7 +3795,7 @@
         ]
       },
       "properties": {
-        "id": 37,
+        "id": 38,
         "id_source": 33,
         "source": "Rennes Métropole",
         "route": "Avenue Georges Brassens",
@@ -3861,7 +3889,7 @@
         ]
       },
       "properties": {
-        "id": 38,
+        "id": 39,
         "id_source": 34,
         "source": "Rennes Métropole",
         "route": "la Noë du Gué",
@@ -3935,7 +3963,7 @@
         ]
       },
       "properties": {
-        "id": 39,
+        "id": 40,
         "id_source": 35,
         "source": "Rennes Métropole",
         "route": "Chemin du Balluds",
@@ -4125,7 +4153,7 @@
         ]
       },
       "properties": {
-        "id": 40,
+        "id": 41,
         "id_source": 36,
         "source": "Rennes Métropole",
         "route": "Chancors",
@@ -4171,7 +4199,7 @@
         ]
       },
       "properties": {
-        "id": 41,
+        "id": 42,
         "id_source": 38,
         "source": "Rennes Métropole",
         "route": "bd Mrchl de L. de Tassigny",
@@ -4241,7 +4269,7 @@
         ]
       },
       "properties": {
-        "id": 42,
+        "id": 43,
         "id_source": 39,
         "source": "Rennes Métropole",
         "route": "Passage st Cast",
@@ -4299,7 +4327,7 @@
         ]
       },
       "properties": {
-        "id": 43,
+        "id": 44,
         "id_source": 40,
         "source": "Rennes Métropole",
         "route": "Rue du Manoir de Servigné",
@@ -4341,7 +4369,7 @@
         ]
       },
       "properties": {
-        "id": 44,
+        "id": 45,
         "id_source": 41,
         "source": "Rennes Métropole",
         "route": "Rue des Frères Blin",
@@ -4431,7 +4459,7 @@
         ]
       },
       "properties": {
-        "id": 45,
+        "id": 46,
         "id_source": 42,
         "source": "Rennes Métropole",
         "route": "Rue Bourgault Ducoudray",
@@ -4597,7 +4625,7 @@
         ]
       },
       "properties": {
-        "id": 46,
+        "id": 47,
         "id_source": 43,
         "source": "Rennes Métropole",
         "route": "RD 837",
@@ -4707,7 +4735,7 @@
         ]
       },
       "properties": {
-        "id": 47,
+        "id": 48,
         "id_source": 44,
         "source": "Rennes Métropole",
         "route": "Mons la Rouadière",
@@ -4793,7 +4821,7 @@
         ]
       },
       "properties": {
-        "id": 48,
+        "id": 49,
         "id_source": 45,
         "source": "Rennes Métropole",
         "route": "VC 20",
@@ -4875,7 +4903,7 @@
         ]
       },
       "properties": {
-        "id": 49,
+        "id": 50,
         "id_source": 46,
         "source": "Rennes Métropole",
         "route": "route de Mesneuf",
@@ -4953,7 +4981,7 @@
         ]
       },
       "properties": {
-        "id": 50,
+        "id": 51,
         "id_source": 47,
         "source": "Rennes Métropole",
         "route": "l'Épalet",
@@ -5019,7 +5047,7 @@
         ]
       },
       "properties": {
-        "id": 51,
+        "id": 52,
         "id_source": 48,
         "source": "Rennes Métropole",
         "route": "Bel air chemin de la Vigne",
@@ -5161,7 +5189,7 @@
         ]
       },
       "properties": {
-        "id": 52,
+        "id": 53,
         "id_source": 49,
         "source": "Rennes Métropole",
         "route": "route du hameau de la Rivière",
@@ -5263,7 +5291,7 @@
         ]
       },
       "properties": {
-        "id": 53,
+        "id": 54,
         "id_source": 51,
         "source": "Rennes Métropole",
         "route": "VC 104 les Tremblais",
@@ -5333,7 +5361,7 @@
         ]
       },
       "properties": {
-        "id": 54,
+        "id": 55,
         "id_source": 52,
         "source": "Rennes Métropole",
         "route": "Coquelande",
@@ -5403,7 +5431,7 @@
         ]
       },
       "properties": {
-        "id": 55,
+        "id": 56,
         "id_source": 53,
         "source": "Rennes Métropole",
         "route": "Champagne",
@@ -5457,7 +5485,7 @@
         ]
       },
       "properties": {
-        "id": 56,
+        "id": 57,
         "id_source": 54,
         "source": "Rennes Métropole",
         "route": "la Foucherais D 68",
@@ -5519,7 +5547,7 @@
         ]
       },
       "properties": {
-        "id": 57,
+        "id": 58,
         "id_source": 55,
         "source": "Rennes Métropole",
         "route": "Allée Marie Berhaut",
@@ -5609,7 +5637,7 @@
         ]
       },
       "properties": {
-        "id": 58,
+        "id": 59,
         "id_source": 56,
         "source": "Rennes Métropole",
         "route": "Rue de la Motte Brûlon",
@@ -5707,7 +5735,7 @@
         ]
       },
       "properties": {
-        "id": 59,
+        "id": 60,
         "id_source": 57,
         "source": "Rennes Métropole",
         "route": "Terron",
@@ -5777,7 +5805,7 @@
         ]
       },
       "properties": {
-        "id": 60,
+        "id": 61,
         "id_source": 58,
         "source": "Rennes Métropole",
         "route": "l'Euridice",
@@ -5811,7 +5839,7 @@
         ]
       },
       "properties": {
-        "id": 61,
+        "id": 62,
         "id_source": 59,
         "source": "Rennes Métropole",
         "route": "RD 36",
@@ -5921,7 +5949,7 @@
         ]
       },
       "properties": {
-        "id": 62,
+        "id": 63,
         "id_source": 60,
         "source": "Rennes Métropole",
         "route": "RD 36",
@@ -5971,7 +5999,7 @@
         ]
       },
       "properties": {
-        "id": 63,
+        "id": 64,
         "id_source": 61,
         "source": "Rennes Métropole",
         "route": "Les Garennes",
@@ -6029,7 +6057,7 @@
         ]
       },
       "properties": {
-        "id": 64,
+        "id": 65,
         "id_source": 62,
         "source": "Rennes Métropole",
         "route": "Brais",
@@ -6095,7 +6123,7 @@
         ]
       },
       "properties": {
-        "id": 65,
+        "id": 66,
         "id_source": 63,
         "source": "Rennes Métropole",
         "route": "Piste cyclable sous rocade",
@@ -6169,7 +6197,7 @@
         ]
       },
       "properties": {
-        "id": 66,
+        "id": 67,
         "id_source": 64,
         "source": "Rennes Métropole",
         "route": "VC 104",
@@ -6471,7 +6499,7 @@
         ]
       },
       "properties": {
-        "id": 67,
+        "id": 68,
         "id_source": 65,
         "source": "Rennes Métropole",
         "route": "Canal St-Martin",
@@ -6541,7 +6569,7 @@
         ]
       },
       "properties": {
-        "id": 68,
+        "id": 69,
         "id_source": 66,
         "source": "Rennes Métropole",
         "route": "RD 25",
@@ -6679,7 +6707,7 @@
         ]
       },
       "properties": {
-        "id": 69,
+        "id": 70,
         "id_source": 67,
         "source": "Rennes Métropole",
         "route": "Rue de la Duchesse Anne",
@@ -6769,7 +6797,7 @@
         ]
       },
       "properties": {
-        "id": 70,
+        "id": 71,
         "id_source": 68,
         "source": "Rennes Métropole",
         "route": "Bel Air",
@@ -6931,7 +6959,7 @@
         ]
       },
       "properties": {
-        "id": 71,
+        "id": 72,
         "id_source": 69,
         "source": "Rennes Métropole",
         "route": "Rue de la Fontaine",
@@ -7217,7 +7245,7 @@
         ]
       },
       "properties": {
-        "id": 72,
+        "id": 73,
         "id_source": 70,
         "source": "Rennes Métropole",
         "route": "Apigné",
@@ -7319,7 +7347,7 @@
         ]
       },
       "properties": {
-        "id": 73,
+        "id": 74,
         "id_source": 71,
         "source": "Rennes Métropole",
         "route": "RD 231",
@@ -7409,7 +7437,7 @@
         ]
       },
       "properties": {
-        "id": 74,
+        "id": 75,
         "id_source": 72,
         "source": "Rennes Métropole",
         "route": "Avenue Gros Malhon",
@@ -7475,7 +7503,7 @@
         ]
       },
       "properties": {
-        "id": 75,
+        "id": 76,
         "id_source": 73,
         "source": "Rennes Métropole",
         "route": "RD 287",
@@ -7553,7 +7581,7 @@
         ]
       },
       "properties": {
-        "id": 76,
+        "id": 77,
         "id_source": 74,
         "source": "Rennes Métropole",
         "route": "rue du Dr Léon",
@@ -7623,7 +7651,7 @@
         ]
       },
       "properties": {
-        "id": 77,
+        "id": 78,
         "id_source": 75,
         "source": "Rennes Métropole",
         "route": "D 34",
@@ -7733,7 +7761,7 @@
         ]
       },
       "properties": {
-        "id": 78,
+        "id": 79,
         "id_source": 76,
         "source": "Rennes Métropole",
         "route": "RD 36",
@@ -7799,7 +7827,7 @@
         ]
       },
       "properties": {
-        "id": 79,
+        "id": 80,
         "id_source": 77,
         "source": "Rennes Métropole",
         "route": "Av. Pinault",
@@ -7905,7 +7933,7 @@
         ]
       },
       "properties": {
-        "id": 80,
+        "id": 81,
         "id_source": 78,
         "source": "Rennes Métropole",
         "route": "Mellon",
@@ -8087,7 +8115,7 @@
         ]
       },
       "properties": {
-        "id": 81,
+        "id": 82,
         "id_source": 79,
         "source": "Rennes Métropole",
         "route": "St-Martin",
@@ -8129,7 +8157,7 @@
         ]
       },
       "properties": {
-        "id": 82,
+        "id": 83,
         "id_source": 80,
         "source": "Rennes Métropole",
         "route": "Rue Pierre Legrand",
@@ -8203,7 +8231,7 @@
         ]
       },
       "properties": {
-        "id": 83,
+        "id": 84,
         "id_source": 81,
         "source": "Rennes Métropole",
         "route": "Rollard",
@@ -8317,7 +8345,7 @@
         ]
       },
       "properties": {
-        "id": 84,
+        "id": 85,
         "id_source": 82,
         "source": "Rennes Métropole",
         "route": "la Manquerais",
@@ -8403,7 +8431,7 @@
         ]
       },
       "properties": {
-        "id": 85,
+        "id": 86,
         "id_source": 83,
         "source": "Rennes Métropole",
         "route": "D35 ",
@@ -8493,7 +8521,7 @@
         ]
       },
       "properties": {
-        "id": 86,
+        "id": 87,
         "id_source": 84,
         "source": "Rennes Métropole",
         "route": "av C. le Goffic",
@@ -8659,7 +8687,7 @@
         ]
       },
       "properties": {
-        "id": 87,
+        "id": 88,
         "id_source": 85,
         "source": "Rennes Métropole",
         "route": "route de Bintin",
@@ -8729,7 +8757,7 @@
         ]
       },
       "properties": {
-        "id": 88,
+        "id": 89,
         "id_source": 86,
         "source": "Rennes Métropole",
         "route": "route de Bintin",
@@ -8827,7 +8855,7 @@
         ]
       },
       "properties": {
-        "id": 89,
+        "id": 90,
         "id_source": 87,
         "source": "Rennes Métropole",
         "route": "Le Vaurouil",
@@ -8873,7 +8901,7 @@
         ]
       },
       "properties": {
-        "id": 90,
+        "id": 91,
         "id_source": 88,
         "source": "Rennes Métropole",
         "route": "Branval",
@@ -9087,7 +9115,7 @@
         ]
       },
       "properties": {
-        "id": 91,
+        "id": 92,
         "id_source": 89,
         "source": "Rennes Métropole",
         "route": "Route de la Rivière",
@@ -9233,7 +9261,7 @@
         ]
       },
       "properties": {
-        "id": 92,
+        "id": 93,
         "id_source": 90,
         "source": "Rennes Métropole",
         "route": "RD 434",
@@ -9411,7 +9439,7 @@
         ]
       },
       "properties": {
-        "id": 93,
+        "id": 94,
         "id_source": 91,
         "source": "Rennes Métropole",
         "route": "le Haut Limeul",
@@ -9545,7 +9573,7 @@
         ]
       },
       "properties": {
-        "id": 94,
+        "id": 95,
         "id_source": 92,
         "source": "Rennes Métropole",
         "route": "VC 202",
@@ -9587,7 +9615,7 @@
         ]
       },
       "properties": {
-        "id": 95,
+        "id": 96,
         "id_source": 94,
         "source": "Rennes Métropole",
         "route": "le Vaurouil",
@@ -9713,7 +9741,7 @@
         ]
       },
       "properties": {
-        "id": 96,
+        "id": 97,
         "id_source": 95,
         "source": "Rennes Métropole",
         "route": "la Roberie",
@@ -10019,7 +10047,7 @@
         ]
       },
       "properties": {
-        "id": 97,
+        "id": 98,
         "id_source": 96,
         "source": "Rennes Métropole",
         "route": "VC 104",
@@ -10173,7 +10201,7 @@
         ]
       },
       "properties": {
-        "id": 98,
+        "id": 99,
         "id_source": 97,
         "source": "Rennes Métropole",
         "route": "D41",
@@ -10207,7 +10235,7 @@
         ]
       },
       "properties": {
-        "id": 99,
+        "id": 100,
         "id_source": 98,
         "source": "Rennes Métropole",
         "route": "Avenue Gros Malhon",
@@ -10289,7 +10317,7 @@
         ]
       },
       "properties": {
-        "id": 100,
+        "id": 101,
         "id_source": 99,
         "source": "Rennes Métropole",
         "route": "RD 39 dans le sens Saint-Armel -> Nouvoitou",
@@ -10435,7 +10463,7 @@
         ]
       },
       "properties": {
-        "id": 101,
+        "id": 102,
         "id_source": 100,
         "source": "Rennes Métropole",
         "route": "Route de Lillion",
@@ -10741,7 +10769,7 @@
         ]
       },
       "properties": {
-        "id": 102,
+        "id": 103,
         "id_source": 101,
         "source": "Rennes Métropole",
         "route": "Route de la Maugerais",
@@ -10843,7 +10871,7 @@
         ]
       },
       "properties": {
-        "id": 103,
+        "id": 104,
         "id_source": 102,
         "source": "Rennes Métropole",
         "route": "Rue des Perrières",
@@ -10965,7 +10993,7 @@
         ]
       },
       "properties": {
-        "id": 104,
+        "id": 105,
         "id_source": 103,
         "source": "Rennes Métropole",
         "route": "VC 105",
@@ -11147,7 +11175,7 @@
         ]
       },
       "properties": {
-        "id": 105,
+        "id": 106,
         "id_source": 104,
         "source": "Rennes Métropole",
         "route": "La Marquerais",
@@ -11313,7 +11341,7 @@
         ]
       },
       "properties": {
-        "id": 106,
+        "id": 107,
         "id_source": 105,
         "source": "Rennes Métropole",
         "route": "Rue de la Forge",
@@ -11411,7 +11439,7 @@
         ]
       },
       "properties": {
-        "id": 107,
+        "id": 108,
         "id_source": 106,
         "source": "Rennes Métropole",
         "route": "Malcotais",
@@ -11545,7 +11573,7 @@
         ]
       },
       "properties": {
-        "id": 108,
+        "id": 109,
         "id_source": 107,
         "source": "Rennes Métropole",
         "route": "Lande Pinçon",
@@ -11783,7 +11811,7 @@
         ]
       },
       "properties": {
-        "id": 109,
+        "id": 110,
         "id_source": 108,
         "source": "Rennes Métropole",
         "route": "Verrières",
@@ -11861,7 +11889,7 @@
         ]
       },
       "properties": {
-        "id": 110,
+        "id": 111,
         "id_source": 109,
         "source": "Rennes Métropole",
         "route": "Epron",
@@ -12159,7 +12187,7 @@
         ]
       },
       "properties": {
-        "id": 111,
+        "id": 112,
         "id_source": 110,
         "source": "Rennes Métropole",
         "route": "Monceaux / Le Petit Corce",
@@ -12369,7 +12397,7 @@
         ]
       },
       "properties": {
-        "id": 112,
+        "id": 113,
         "id_source": 111,
         "source": "Rennes Métropole",
         "route": "Le Bois Rond",
@@ -12575,7 +12603,7 @@
         ]
       },
       "properties": {
-        "id": 113,
+        "id": 114,
         "id_source": 112,
         "source": "Rennes Métropole",
         "route": "La Hersandais",
@@ -12865,7 +12893,7 @@
         ]
       },
       "properties": {
-        "id": 114,
+        "id": 115,
         "id_source": 113,
         "source": "Rennes Métropole",
         "route": "cahot",
@@ -12987,7 +13015,7 @@
         ]
       },
       "properties": {
-        "id": 115,
+        "id": 116,
         "id_source": 114,
         "source": "Rennes Métropole",
         "route": "la Barre",
@@ -13173,7 +13201,7 @@
         ]
       },
       "properties": {
-        "id": 116,
+        "id": 117,
         "id_source": 115,
         "source": "Rennes Métropole",
         "route": "D77 / Route de Laillé",
@@ -13311,7 +13339,7 @@
         ]
       },
       "properties": {
-        "id": 117,
+        "id": 118,
         "id_source": 116,
         "source": "Rennes Métropole",
         "route": "La Rouardière",
@@ -13425,7 +13453,7 @@
         ]
       },
       "properties": {
-        "id": 118,
+        "id": 119,
         "id_source": 117,
         "source": "Rennes Métropole",
         "route": "pont réan",
@@ -13619,7 +13647,7 @@
         ]
       },
       "properties": {
-        "id": 119,
+        "id": 120,
         "id_source": 118,
         "source": "Rennes Métropole",
         "route": "RD 82",
@@ -13881,7 +13909,7 @@
         ]
       },
       "properties": {
-        "id": 120,
+        "id": 121,
         "id_source": 119,
         "source": "Rennes Métropole",
         "route": "Mouille Pied",
@@ -14051,7 +14079,7 @@
         ]
       },
       "properties": {
-        "id": 121,
+        "id": 122,
         "id_source": 37,
         "source": "Rennes Métropole",
         "route": "RN 24 Est/Ouest",
@@ -14221,7 +14249,7 @@
         ]
       },
       "properties": {
-        "id": 122,
+        "id": 123,
         "id_source": 93,
         "source": "Rennes Métropole",
         "route": "RN 24 Ouest/Est",
@@ -14327,7 +14355,7 @@
         ]
       },
       "properties": {
-        "id": 123,
+        "id": 124,
         "id_source": 1,
         "source": "Rennes Métropole",
         "route": "RD 36 Mons",
@@ -14557,7 +14585,7 @@
         ]
       },
       "properties": {
-        "id": 124,
+        "id": 125,
         "id_source": 13,
         "source": "Rennes Métropole",
         "route": "rue de la Louveterie",
@@ -14585,7 +14613,7 @@
         ]
       },
       "properties": {
-        "id": 125,
+        "id": 126,
         "id_source": 56,
         "source": "CD56",
         "route": "D14",
@@ -14613,7 +14641,7 @@
         ]
       },
       "properties": {
-        "id": 126,
+        "id": 127,
         "id_source": 59,
         "source": "CD56",
         "route": "D020",
@@ -14641,7 +14669,7 @@
         ]
       },
       "properties": {
-        "id": 127,
+        "id": 128,
         "id_source": 60,
         "source": "CD56",
         "route": "D21",
@@ -14669,7 +14697,7 @@
         ]
       },
       "properties": {
-        "id": 128,
+        "id": 129,
         "id_source": 61,
         "source": "CD56",
         "route": "D114",
@@ -14697,7 +14725,7 @@
         ]
       },
       "properties": {
-        "id": 129,
+        "id": 130,
         "id_source": 65,
         "source": "CD56",
         "route": "D138",
@@ -14725,7 +14753,7 @@
         ]
       },
       "properties": {
-        "id": 130,
+        "id": 131,
         "id_source": 66,
         "source": "CD56",
         "route": "D138",
@@ -14753,7 +14781,7 @@
         ]
       },
       "properties": {
-        "id": 131,
+        "id": 132,
         "id_source": 68,
         "source": "CD56",
         "route": "D14",
@@ -14781,7 +14809,7 @@
         ]
       },
       "properties": {
-        "id": 132,
+        "id": 133,
         "id_source": 69,
         "source": "CD56",
         "route": "D14",
@@ -14809,7 +14837,7 @@
         ]
       },
       "properties": {
-        "id": 133,
+        "id": 134,
         "id_source": 70,
         "source": "CD56",
         "route": "D149",
@@ -14837,7 +14865,7 @@
         ]
       },
       "properties": {
-        "id": 134,
+        "id": 135,
         "id_source": 71,
         "source": "CD56",
         "route": "D149",
@@ -14865,7 +14893,7 @@
         ]
       },
       "properties": {
-        "id": 135,
+        "id": 136,
         "id_source": 72,
         "source": "CD56",
         "route": "D149A",
@@ -14893,7 +14921,7 @@
         ]
       },
       "properties": {
-        "id": 136,
+        "id": 137,
         "id_source": 73,
         "source": "CD56",
         "route": "D153",
@@ -14921,7 +14949,7 @@
         ]
       },
       "properties": {
-        "id": 137,
+        "id": 138,
         "id_source": 74,
         "source": "CD56",
         "route": "D153A",
@@ -14949,7 +14977,7 @@
         ]
       },
       "properties": {
-        "id": 138,
+        "id": 139,
         "id_source": 75,
         "source": "CD56",
         "route": "D153A",
@@ -14977,7 +15005,7 @@
         ]
       },
       "properties": {
-        "id": 139,
+        "id": 140,
         "id_source": 76,
         "source": "CD56",
         "route": "D176",
@@ -15005,7 +15033,7 @@
         ]
       },
       "properties": {
-        "id": 140,
+        "id": 141,
         "id_source": 80,
         "source": "CD56",
         "route": "D764",
@@ -15033,7 +15061,7 @@
         ]
       },
       "properties": {
-        "id": 141,
+        "id": 142,
         "id_source": 81,
         "source": "CD56",
         "route": "D764",
@@ -15061,7 +15089,7 @@
         ]
       },
       "properties": {
-        "id": 142,
+        "id": 143,
         "id_source": 85,
         "source": "CD56",
         "route": "D775B",
@@ -15089,7 +15117,7 @@
         ]
       },
       "properties": {
-        "id": 143,
+        "id": 144,
         "id_source": 86,
         "source": "CD56",
         "route": "D311",
@@ -15117,7 +15145,7 @@
         ]
       },
       "properties": {
-        "id": 144,
+        "id": 145,
         "id_source": 87,
         "source": "CD56",
         "route": "D777",
@@ -15145,7 +15173,7 @@
         ]
       },
       "properties": {
-        "id": 145,
+        "id": 146,
         "id_source": 88,
         "source": "CD56",
         "route": "D777",
@@ -15173,7 +15201,7 @@
         ]
       },
       "properties": {
-        "id": 146,
+        "id": 147,
         "id_source": 91,
         "source": "CD56",
         "route": "D114",
@@ -15201,7 +15229,7 @@
         ]
       },
       "properties": {
-        "id": 147,
+        "id": 148,
         "id_source": 92,
         "source": "CD56",
         "route": "D775",
@@ -15229,7 +15257,7 @@
         ]
       },
       "properties": {
-        "id": 148,
+        "id": 149,
         "id_source": 109,
         "source": "CD56",
         "route": "D154",
@@ -15257,7 +15285,7 @@
         ]
       },
       "properties": {
-        "id": 149,
+        "id": 150,
         "id_source": 111,
         "source": "CD56",
         "route": "D157",
@@ -15285,7 +15313,7 @@
         ]
       },
       "properties": {
-        "id": 150,
+        "id": 151,
         "id_source": 113,
         "source": "CD56",
         "route": "D167",
@@ -15313,7 +15341,7 @@
         ]
       },
       "properties": {
-        "id": 151,
+        "id": 152,
         "id_source": 115,
         "source": "CD56",
         "route": "D764",
@@ -15333,12 +15361,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-11-28T10:48:19.762Z",
+    "generated": "2025-11-28T11:23:35.724Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 151,
+    "total_count": 152,
     "sources": {
       "grist_35": 4,
-      "cd44": 22,
+      "cd44": 23,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 116
