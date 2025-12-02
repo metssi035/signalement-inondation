@@ -937,10 +937,9 @@ function parseCD44DateFin(ligne4) {
 function cd44ToFeature(item) {
     try {
         // ✅ FILTRE : Ne garder que type="Obstacle"
-        if (item.type !== 'Obstacle') {
-            return null;
-        }
-        
+     if (item.type !== 'Inondation' && item.type !== 'inondation') {
+    return null;
+}
         const geometry = {
             type: 'Point',
             coordinates: [item.longitude, item.latitude]
