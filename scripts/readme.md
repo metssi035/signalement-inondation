@@ -15,9 +15,6 @@ Appliqué à toutes les sources après fusion des données.
   - `date_fin` > 3 jours : filtrés
 
 
-### Impact
-103 signalements résolus filtrés (48% du total récupéré)
-
 ## 1. Grist Ille-et-Vilaine (35)
 
 ### Source
