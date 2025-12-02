@@ -14589,7 +14589,7 @@
         "id_source": 56,
         "source": "CD56",
         "route": "D14",
-        "commune": "Peillac",
+        "commune": "PEILLAC",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14953,7 +14953,7 @@
         "id_source": 75,
         "source": "CD56",
         "route": "D153A",
-        "commune": "Saint-Perreux",
+        "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -14962,7 +14962,7 @@
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 150",
         "date_debut": "28/01/2025 à 12h05",
-        "date_fin": "22/11/2025 à 14h00",
+        "date_fin": "",
         "date_saisie": "28/01/2025 à 12h05",
         "gestionnaire": "CD56"
       }
@@ -15009,7 +15009,7 @@
         "id_source": 80,
         "source": "CD56",
         "route": "D764",
-        "commune": "Saint-Perreux",
+        "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15018,7 +15018,7 @@
         "sens_circulation": "",
         "commentaire": "",
         "date_debut": "28/01/2025 à 11h38",
-        "date_fin": "23/11/2025 à 14h00",
+        "date_fin": "",
         "date_saisie": "28/01/2025 à 11h38",
         "gestionnaire": "CD56"
       }
@@ -15065,7 +15065,7 @@
         "id_source": 85,
         "source": "CD56",
         "route": "D775B",
-        "commune": "Saint-Jean-la-Poterie",
+        "commune": "SAINT-JEAN-LA-POTERIE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -15074,7 +15074,7 @@
         "sens_circulation": "",
         "commentaire": "",
         "date_debut": "28/01/2025 à 11h37",
-        "date_fin": "24/11/2025 à 14h00",
+        "date_fin": "",
         "date_saisie": "28/01/2025 à 11h37",
         "gestionnaire": "CD56"
       }
@@ -15333,7 +15333,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-02T12:58:41.904Z",
+    "generated": "2025-12-02T13:43:47.108Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 151,
     "sources": {
