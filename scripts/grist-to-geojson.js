@@ -1,4 +1,3 @@
-
 const https = require('https');
 const fs = require('fs');
 const fetch = require('node-fetch');
@@ -872,7 +871,7 @@ function gristToFeature(record) {
         }
         
         const cause = Array.isArray(record.fields.Cause) ? 
-                     record.fields.Cause.filter(c => c !== 'L').join(', ') : 
+                     record.fields.Cause.join(', ') : 
                      (record.fields.Cause || '');
         
         const statut = record.fields.Statut || 'Actif';
