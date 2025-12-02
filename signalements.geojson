@@ -16,7 +16,7 @@
         "source": "Saisie Grist",
         "route": "D 873",
         "commune": "Redon",
-        "cause": "L, Inondation",
+        "cause": "Inondation",
         "statut": "Résolu",
         "statut_actif": false,
         "statut_resolu": true,
@@ -51,7 +51,7 @@
         "source": "Saisie Grist",
         "route": "D 164",
         "commune": "Avessac",
-        "cause": "L, Inondation",
+        "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
@@ -90,7 +90,7 @@
         "source": "Saisie Grist",
         "route": "D 177",
         "commune": "Bains-sur-Oust",
-        "cause": "L, Inondation",
+        "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
@@ -2963,7 +2963,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-02T15:35:04.472Z",
+    "generated": "2025-12-02T16:23:38.866Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
     "total_count": 44,
     "sources": {
