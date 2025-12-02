@@ -32,8 +32,7 @@ WGS84 (EPSG:4326)
 Points, LineStrings, Polygons (mixte selon saisie manuelle)
 
 ### Filtres
-- Filtre sur valeurs "L" dans le champ `Cause`
-- Aucun filtre temporel à la source
+Pas de filtre
 
 ### Résultat
 3 signalements récupérés, 3 conservés
