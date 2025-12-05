@@ -1,23 +1,53 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2025-12-05T12:38:29.909022",
+    "generated_at": "2025-12-05T18:25:03.616355",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 0,
-    "count_active": 0,
+    "count": 1,
+    "count_active": 1,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 231,
-      "dir_ouest": 91,
-      "environmental_obstruction": 0,
-      "inondations": 0,
-      "actives": 0,
+      "total_situations": 211,
+      "dir_ouest": 87,
+      "environmental_obstruction": 1,
+      "inondations": 1,
+      "actives": 1,
       "terminees": 0,
-      "par_severite": {},
-      "par_subtype": {},
+      "par_severite": {
+        "low": 1
+      },
+      "par_subtype": {
+        "flooding": 1
+      },
       "sans_coords": 0
     }
   },
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.201844,
+          48.232723
+        ]
+      },
+      "properties": {
+        "id": "251205-002378",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N/A",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "low",
+        "description": "situé 1837 m à l'est de Plouguernevel | Hors voie de circulation | DIR Ouest/District de Saint-Brieuc/CEI de Rostrenen | sur bretelle de sortie | De Rennes vers Chateaulin",
+        "start_date": "2025-12-05T18:43:14.072+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2025-12-05T18:25:03.614955"
+      }
+    }
+  ]
 }
