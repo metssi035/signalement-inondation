@@ -1,10 +1,8 @@
 name: 🚀 Update GeoJSON
-
 on:
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
-
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -14,22 +12,62 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-
       - name: Install dependencies
         run: npm install
-
       - name: 🚀 Fusion des 3 sources (Grist 35 + CD44 + Rennes Métropole)
         env:
           GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}
           GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
         run: |
           node scripts/grist-to-geojson.js
-
+      
+      - name: ☁️ Upload vers GéoBretagne (WebDAV)
+        env:
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+        run: |
+          echo "🚀 Upload vers GéoBretagne..."
+          
+          # Créer le dossier data s'il n'existe pas
+          echo "📁 Création/vérification du dossier data..."
+          curl -X MKCOL -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/data" 2>/dev/null || echo "Dossier existe déjà ou créé"
+          
+          # Upload du fichier GeoJSON dans le dossier data
+          echo "📤 Upload de signalements.geojson..."
+          HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/data/signalements.geojson")
+          
+          if [ $HTTP_CODE -eq 201 ] || [ $HTTP_CODE -eq 204 ]; then
+            echo "✅ signalements.geojson uploadé (HTTP $HTTP_CODE)"
+          else
+            echo "⚠️ Upload terminé avec code HTTP: $HTTP_CODE"
+            exit 1
+          fi
+          
+          # Upload des métadonnées
+          if [ -f metadata.json ]; then
+            echo "📤 Upload de metadata.json..."
+            HTTP_CODE_META=$(curl -w "%{http_code}" -o /dev/null -s -T metadata.json \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/data/metadata.json")
+            
+            if [ $HTTP_CODE_META -eq 201 ] || [ $HTTP_CODE_META -eq 204 ]; then
+              echo "✅ metadata.json uploadé (HTTP $HTTP_CODE_META)"
+            else
+              echo "⚠️ Upload metadata avec code HTTP: $HTTP_CODE_META"
+            fi
+          fi
+          
+          echo "🎉 Upload vers GéoBretagne terminé !"
+          echo "📍 Fichiers disponibles à: ${WEBDAV_URL}/data/"
+      
       - name: Push GeoJSON
         run: |
           git config user.name "GitHub Actions"
