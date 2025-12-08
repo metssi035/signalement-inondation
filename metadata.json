@@ -1,25 +1,34 @@
 {
-  "lastUpdate": "2025-12-08T10:10:04.401Z",
-  "sources": {
+  "lastUpdate": "2025-12-08T10:32:34.866Z",
+  "lastUpdateFR": "08/12/2025 à 11:32",
+  "timezone": "Europe/Paris",
+  "nextUpdateIn": "30 minutes",
+  "totalRecus": 264,
+  "totalInclus": 44,
+  "totalFiltres": 220,
+  "resolus_filtres_3jours": 103,
+  "sources_recues": {
     "grist_35": 3,
     "cd44": 26,
     "rennes_metropole": 119,
     "cd35_inondations": 0,
-    "cd56": 116,
-    "total": 44
+    "cd56": 116
   },
-  "stats": {
+  "sources_incluses": {
+    "saisie_grist": 3,
+    "cd44": 0,
+    "rennes_metropole": 16,
+    "cd35_inondations": 0,
+    "cd56": 25
+  },
+  "geometries": {
     "points": 26,
-    "lines": 18,
-    "multilines": 0,
-    "polygons": 0,
-    "by_source": {
-      "saisie_grist": 3,
-      "cd44": 0,
-      "rennes_metropole": 16,
-      "cd35_inondations": 0,
-      "cd56": 25
-    }
+    "lignes": 18,
+    "multilignes": 0,
+    "polygones": 0
+  },
+  "administrations": {
+    "Non spécifié": 44
   },
   "archives": {
     "enabled": true,
