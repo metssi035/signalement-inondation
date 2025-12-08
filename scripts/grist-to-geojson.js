@@ -1,4 +1,3 @@
-
 const https = require('https');
 const fs = require('fs');
 const fetch = require('node-fetch');
@@ -18,6 +17,34 @@ let uniqueIdCounter = 1;
 
 function generateUniqueId() {
     return uniqueIdCounter++;
+}
+
+// Fonction pour obtenir la date/heure en format français (timezone Europe/Paris)
+function getDateTimeFR() {
+    const now = new Date();
+    
+    // Obtenir la date/heure en timezone française
+    const optionsDate = { 
+        timeZone: 'Europe/Paris',
+        day: '2-digit',
+        month: '2-digit', 
+        year: 'numeric'
+    };
+    const optionsTime = { 
+        timeZone: 'Europe/Paris',
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: false
+    };
+    
+    const dateFR = now.toLocaleDateString('fr-FR', optionsDate);
+    const timeFR = now.toLocaleTimeString('fr-FR', optionsTime);
+    
+    return {
+        iso: now.toISOString(),  // Format ISO UTC standard
+        local: `${dateFR} à ${timeFR}`,  // Format français lisible
+        timezone: 'Europe/Paris'
+    };
 }
 
 console.log('🚀 Démarrage de la fusion des 6 sources...\n');
@@ -1262,29 +1289,62 @@ async function mergeSources() {
         fs.writeFileSync('signalements.geojson', JSON.stringify(geojson, null, 2));
         console.log('✅ Fichier signalements.geojson créé');
         
+        // Obtenir la date/heure française
+        const dateTimeFR = getDateTimeFR();
+        
+        // Calculer les statistiques par administration
+        const administrations = {};
+        features.forEach(feature => {
+            const admin = feature.properties.administration || 'Non spécifié';
+            administrations[admin] = (administrations[admin] || 0) + 1;
+        });
+        
+        // Calculer les statistiques par source
+        const parSource = {
+            saisie_grist: features.filter(f => f.properties.source === 'Saisie Grist').length,
+            cd44: features.filter(f => f.properties.source === 'CD44').length,
+            rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
+            cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
+            cd56: features.filter(f => f.properties.source === 'CD56').length
+        };
+        
         const metadata = {
-            lastUpdate: new Date().toISOString(),
-            sources: {
+            // ⏰ Informations temporelles
+            lastUpdate: dateTimeFR.iso,           // Format ISO UTC (standard)
+            lastUpdateFR: dateTimeFR.local,       // Format français lisible
+            timezone: dateTimeFR.timezone,
+            nextUpdateIn: '30 minutes',
+            
+            // 📊 Comptages globaux
+            totalRecus: totalBrut,
+            totalInclus: totalGarde,
+            totalFiltres: totalFiltre,
+            resolus_filtres_3jours: stats.resolus_filtres,
+            
+            // 📡 Données brutes récupérées par source
+            sources_recues: {
                 grist_35: gristRecords.length,
                 cd44: cd44Records.length,
                 rennes_metropole: rennesMetroFeatures.length,
                 cd35_inondations: cd35InondationsFeatures.length,
-                cd56: cd56Features.length,
-                total: features.length
+                cd56: cd56Features.length
             },
-            stats: {
+            
+            // ✅ Données incluses par source (après filtrage)
+            sources_incluses: parSource,
+            
+            // 🗺️ Par type de géométrie
+            geometries: {
                 points: features.filter(f => f.geometry.type === 'Point').length,
-                lines: features.filter(f => f.geometry.type === 'LineString').length,
-                multilines: features.filter(f => f.geometry.type === 'MultiLineString').length,
-                polygons: features.filter(f => f.geometry.type === 'Polygon').length,
-                by_source: {
-                    saisie_grist: features.filter(f => f.properties.source === 'Saisie Grist').length,
-                    cd44: features.filter(f => f.properties.source === 'CD44').length,
-                    rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
-                    cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
-                    cd56: features.filter(f => f.properties.source === 'CD56').length
-                }
+                lignes: features.filter(f => f.geometry.type === 'LineString').length,
+                multilignes: features.filter(f => f.geometry.type === 'MultiLineString').length,
+                polygones: features.filter(f => f.geometry.type === 'Polygon').length
             },
+            
+            // 🏛️ Par administration/gestionnaire
+            administrations: administrations,
+            
+            // 📦 Informations sur l'archivage
             archives: {
                 enabled: true,
                 location: 'archives/',
@@ -1297,15 +1357,22 @@ async function mergeSources() {
         console.log('✅ Métadonnées créées');
         
         console.log('\n📊 Statistiques finales:');
+        console.log(`   - Heure mise à jour: ${dateTimeFR.local}`);
+        console.log(`   - Total reçu: ${totalBrut}`);
+        console.log(`   - Total inclus: ${totalGarde}`);
+        console.log(`   - Total filtré: ${totalFiltre}`);
         console.log(`   - Grist 35: ${gristRecords.length}`);
         console.log(`   - CD44: ${cd44Records.length}`);
         console.log(`   - Rennes Métropole: ${rennesMetroFeatures.length}`);
         console.log(`   - CD35 Inondations: ${cd35InondationsFeatures.length}`);
         console.log(`   - CD56: ${cd56Features.length}`);
-        console.log(`   - Total features: ${features.length}`);
-        console.log(`   - Points: ${metadata.stats.points}`);
-        console.log(`   - LineStrings: ${metadata.stats.lines}`);
-        console.log(`   - Polygons: ${metadata.stats.polygons}`);
+        console.log(`   - Points: ${metadata.geometries.points}`);
+        console.log(`   - LineStrings: ${metadata.geometries.lignes}`);
+        console.log(`   - Polygons: ${metadata.geometries.polygones}`);
+        console.log('\n🏛️ Par administration:');
+        Object.entries(administrations).forEach(([admin, count]) => {
+            console.log(`   - ${admin}: ${count}`);
+        });
         
     } catch (error) {
         console.error('❌ Erreur fusion:', error.message);
