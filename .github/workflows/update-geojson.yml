@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      - name: 🚀 Fusion des sources 
+      - name: 🚀 Fusion des sources
         env:
           GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}
           GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
@@ -34,7 +34,7 @@ jobs:
           echo "🚀 Upload vers GéoBretagne..."
           
           # Upload direct du fichier GeoJSON (sans créer de dossiers)
-          echo "Upload de signalements.geojson..."
+          echo "📤 Upload de signalements.geojson..."
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/signalements.geojson")
@@ -60,13 +60,66 @@ jobs:
             fi
           fi
           
-          echo "Upload vers le cloud GéoBretagne terminé !"
-          echo "Fichiers disponibles dans: App Routes_coupees_inondation/data/"
+          echo " Upload vers le cloud GéoBretagne terminé !"
+          echo " Fichiers disponibles dans: App Routes_coupees_inondation/data/"
+          
+          # Upload des archives
+          if [ -d archives ]; then
+            echo ""
+            echo "📦 Upload des archives..."
+            
+            # Créer le dossier archives s'il n'existe pas
+            echo "📁 Création du dossier archives..."
+            curl -X MKCOL -s \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/archives/" || true
+            
+            # Upload de tous les fichiers GeoJSON d'archive
+            for file in archives/*.geojson; do
+              if [ -f "$file" ]; then
+                filename=$(basename "$file")
+                echo "📤 Upload de $filename..."
+                HTTP_CODE_ARCH=$(curl -w "%{http_code}" -o /dev/null -s -T "$file" \
+                     -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                     "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/archives/$filename")
+                
+                if [ $HTTP_CODE_ARCH -eq 201 ] || [ $HTTP_CODE_ARCH -eq 204 ]; then
+                  echo "✅ $filename uploadé (HTTP $HTTP_CODE_ARCH)"
+                else
+                  echo "⚠️ Erreur upload $filename - Code HTTP: $HTTP_CODE_ARCH"
+                fi
+              fi
+            done
+            
+            # Upload de last_run.json
+            if [ -f archives/last_run.json ]; then
+              echo "📤 Upload de last_run.json..."
+              HTTP_CODE_LAST=$(curl -w "%{http_code}" -o /dev/null -s -T archives/last_run.json \
+                   -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                   "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/archives/last_run.json")
+              
+              if [ $HTTP_CODE_LAST -eq 201 ] || [ $HTTP_CODE_LAST -eq 204 ]; then
+                echo "✅ last_run.json uploadé (HTTP $HTTP_CODE_LAST)"
+              else
+                echo "⚠️ Erreur upload last_run.json - Code HTTP: $HTTP_CODE_LAST"
+              fi
+            fi
+            
+            echo "✅ Upload des archives terminé !"
+          else
+            echo "ℹ️ Aucun dossier archives trouvé"
+          fi
       
       - name: Push GeoJSON
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add signalements.geojson metadata.json
+          
+          # Ajouter les archives si elles existent
+          if [ -d archives ]; then
+            git add archives/*.geojson archives/last_run.json || true
+          fi
+          
           git commit -m "🔄 Update GeoJSON $(date)" || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
