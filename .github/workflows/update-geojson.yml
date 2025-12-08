@@ -37,7 +37,7 @@ jobs:
           echo "📤 Upload de signalements.geojson..."
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-               "${WEBDAV_URL}/apps/routes_coupees_inondation/data/signalements.geojson")
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/signalements.geojson")
           
           if [ $HTTP_CODE -eq 201 ] || [ $HTTP_CODE -eq 204 ]; then
             echo "✅ signalements.geojson uploadé avec succès (HTTP $HTTP_CODE)"
@@ -51,7 +51,7 @@ jobs:
             echo "📤 Upload de metadata.json..."
             HTTP_CODE_META=$(curl -w "%{http_code}" -o /dev/null -s -T metadata.json \
                  -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-                 "${WEBDAV_URL}/apps/routes_coupees_inondation/data/metadata.json")
+                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/metadata.json")
             
             if [ $HTTP_CODE_META -eq 201 ] || [ $HTTP_CODE_META -eq 204 ]; then
               echo "✅ metadata.json uploadé avec succès (HTTP $HTTP_CODE_META)"
@@ -61,7 +61,7 @@ jobs:
           fi
           
           echo "🎉 Upload vers GéoBretagne terminé !"
-          echo "📍 Fichiers disponibles à: https://geobretagne.fr/apps/routes_coupees_inondation/data/"
+          echo "📍 Fichiers disponibles dans: App Routes_coupees_inondation/data/"
       
       - name: Push GeoJSON
         run: |
