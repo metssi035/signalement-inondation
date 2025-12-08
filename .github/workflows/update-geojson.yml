@@ -33,16 +33,21 @@ jobs:
         run: |
           echo "🚀 Upload vers GéoBretagne..."
           
-          # Créer le dossier data s'il n'existe pas
+          # Créer le dossier parent App Routes_coupees_inondation s'il n'existe pas
+          echo "📁 Création/vérification du dossier App Routes_coupees_inondation..."
+          curl -X MKCOL -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation" 2>/dev/null || echo "Dossier parent existe déjà"
+          
+          # Créer le sous-dossier data
           echo "📁 Création/vérification du dossier data..."
           curl -X MKCOL -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-               "${WEBDAV_URL}/data" 2>/dev/null || echo "Dossier existe déjà ou créé"
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data" 2>/dev/null || echo "Dossier data existe déjà"
           
-          # Upload du fichier GeoJSON dans le dossier data
+          # Upload du fichier GeoJSON dans le dossier App Routes_coupees_inondation/data
           echo "📤 Upload de signalements.geojson..."
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-               "${WEBDAV_URL}/data/signalements.geojson")
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/signalements.geojson")
           
           if [ $HTTP_CODE -eq 201 ] || [ $HTTP_CODE -eq 204 ]; then
             echo "✅ signalements.geojson uploadé (HTTP $HTTP_CODE)"
@@ -56,7 +61,7 @@ jobs:
             echo "📤 Upload de metadata.json..."
             HTTP_CODE_META=$(curl -w "%{http_code}" -o /dev/null -s -T metadata.json \
                  -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-                 "${WEBDAV_URL}/data/metadata.json")
+                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/metadata.json")
             
             if [ $HTTP_CODE_META -eq 201 ] || [ $HTTP_CODE_META -eq 204 ]; then
               echo "✅ metadata.json uploadé (HTTP $HTTP_CODE_META)"
@@ -66,7 +71,7 @@ jobs:
           fi
           
           echo "🎉 Upload vers GéoBretagne terminé !"
-          echo "📍 Fichiers disponibles à: ${WEBDAV_URL}/data/"
+          echo "📍 Fichiers disponibles à: ${WEBDAV_URL}/App Routes_coupees_inondation/data/"
       
       - name: Push GeoJSON
         run: |
