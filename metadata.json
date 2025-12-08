@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2025-12-08T17:26:47.857Z",
-  "lastUpdateFR": "08/12/2025 à 18:26",
+  "lastUpdate": "2025-12-08T17:46:01.439Z",
+  "lastUpdateFR": "08/12/2025 à 18:46",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
-  "totalRecus": 262,
+  "totalRecus": 261,
   "totalInclus": 41,
-  "totalFiltres": 221,
+  "totalFiltres": 220,
   "resolus_filtres_3jours": 103,
   "sources_recues": {
     "grist_35": 0,
-    "cd44": 27,
+    "cd44": 26,
     "rennes_metropole": 119,
     "cd35_inondations": 0,
     "cd56": 116
