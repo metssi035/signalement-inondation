@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      - name: 🚀 Fusion des 3 sources (Grist 35 + CD44 + Rennes Métropole)
+      - name: 🚀 Fusion des sources 
         env:
           GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}
           GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
@@ -34,7 +34,7 @@ jobs:
           echo "🚀 Upload vers GéoBretagne..."
           
           # Upload direct du fichier GeoJSON (sans créer de dossiers)
-          echo "📤 Upload de signalements.geojson..."
+          echo "Upload de signalements.geojson..."
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/signalements.geojson")
@@ -60,8 +60,8 @@ jobs:
             fi
           fi
           
-          echo "🎉 Upload vers GéoBretagne terminé !"
-          echo "📍 Fichiers disponibles dans: App Routes_coupees_inondation/data/"
+          echo "Upload vers le cloud GéoBretagne terminé !"
+          echo "Fichiers disponibles dans: App Routes_coupees_inondation/data/"
       
       - name: Push GeoJSON
         run: |
