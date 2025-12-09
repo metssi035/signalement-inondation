@@ -236,11 +236,6 @@ function findInArchive(archive, idSource, source) {
 function addOrUpdateInArchive(feature) {
     const props = feature.properties;
     
-    // Ignorer CD35 Inondations et DIRO
-    if (props.source === 'CD35 Inondations' || props.source === 'DIRO') {
-        return;
-    }
-    
     // Extraire l'année
     const year = getYearFromDateDebut(props.date_debut);
     if (!year) {
@@ -317,14 +312,13 @@ function detectDeletedSignalements(currentFeatures) {
         'Saisie Grist': [],
         'CD44': [],
         'Rennes Métropole': [],
-        'CD56': []
+        'CD35 Inondations': [],
+        'CD56': [],
+        'DIRO': []
     };
     
     currentFeatures.forEach(feature => {
         const props = feature.properties;
-        
-        // Ignorer CD35 et DIRO
-        if (props.source === 'CD35 Inondations' || props.source === 'DIRO') return;
         
         // Seulement les actifs
         if (props.statut_actif && props.id_source) {
@@ -1370,7 +1364,7 @@ async function mergeSources() {
         // =====================================================
         console.log(`\n📦 Archivage annuel...`);
         
-        // Archiver tous les signalements (sauf CD35)
+        // Archiver tous les signalements (toutes sources)
         features.forEach(feature => {
             addOrUpdateInArchive(feature);
         });
@@ -1473,7 +1467,7 @@ async function mergeSources() {
             archives: {
                 enabled: true,
                 location: 'archives/',
-                description: 'Historique annuel permanent (sauf CD35 Inondations et DIRO)',
+                description: 'Historique annuel permanent (toutes sources)',
                 note: 'Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions'
             }
         };
