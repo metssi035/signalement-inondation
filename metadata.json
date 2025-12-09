@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "2025-12-09T08:38:44.193Z",
-  "lastUpdateFR": "09/12/2025 à 09:38",
+  "lastUpdate": "2025-12-09T09:31:02.154Z",
+  "lastUpdateFR": "09/12/2025 à 10:31",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
   "totalRecus": 255,
-  "totalInclus": 41,
-  "totalFiltres": 214,
+  "totalInclus": 43,
+  "totalFiltres": 212,
   "resolus_filtres_3jours": 103,
   "sources_recues": {
     "grist_35": 0,
@@ -19,16 +19,16 @@
     "cd44": 0,
     "rennes_metropole": 16,
     "cd35_inondations": 0,
-    "cd56": 25
+    "cd56": 27
   },
   "geometries": {
-    "points": 25,
+    "points": 27,
     "lignes": 16,
     "multilignes": 0,
     "polygones": 0
   },
   "administrations": {
-    "Non spécifié": 41
+    "Non spécifié": 43
   },
   "archives": {
     "enabled": true,

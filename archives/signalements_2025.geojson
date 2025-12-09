@@ -2320,8 +2320,8 @@
         "route": "D14",
         "commune": "Peillac",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -2329,7 +2329,7 @@
         "date_debut": "29/01/2025 à 08h53",
         "date_fin": "",
         "date_saisie": "29/01/2025 à 08h53",
-        "date_suppression": "",
+        "date_suppression": "09/12/2025 à 09h31",
         "gestionnaire": "CD56"
       }
     },
@@ -2407,6 +2407,789 @@
         "route": "D114",
         "commune": "RIEUX",
         "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "28/01/2025 à 11h38",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 11h38",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.15419459933442,
+          47.7891386654214
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "id_source": 65,
+        "source": "CD56",
+        "route": "D138",
+        "commune": "LA GACILLY (Glénac)",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 09h22",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h22",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.16764656290585,
+          47.7223354248694
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "id_source": 66,
+        "source": "CD56",
+        "route": "D138",
+        "commune": "PEILLAC",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 150",
+        "date_debut": "28/01/2025 à 12h05",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 12h05",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.08897349724938,
+          47.8443079634133
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "id_source": 68,
+        "source": "CD56",
+        "route": "D14",
+        "commune": "CARENTOIR (Quelneuc) ",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "28/01/2025 à 13h14",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 13h14",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.21225784272479,
+          47.7325638164653
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "id_source": 69,
+        "source": "CD56",
+        "route": "D14",
+        "commune": "LES FOUGERETS",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 09h23",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h23",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31764952202289,
+          47.7591634307121
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "id_source": 70,
+        "source": "CD56",
+        "route": "D149",
+        "commune": "SAINT-CONGARD",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 800",
+        "date_debut": "28/01/2025 à 12h05",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 12h05",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11730620140454,
+          47.728385001674
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "id_source": 71,
+        "source": "CD56",
+        "route": "D149",
+        "commune": "LA GACILLY (Glénac)",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 09h23",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h23",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11260161106869,
+          47.7439309289594
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "id_source": 72,
+        "source": "CD56",
+        "route": "D149A",
+        "commune": "COURNON",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 09h23",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h23",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1468027869172,
+          47.6789983541054
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "id_source": 73,
+        "source": "CD56",
+        "route": "D153",
+        "commune": "SAINT-JACUT-LES-PINS",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "28/01/2025 à 11h37",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 11h37",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10540319665902,
+          47.6762552253726
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "id_source": 74,
+        "source": "CD56",
+        "route": "D153A",
+        "commune": "SAINT-PERREUX",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 30",
+        "date_debut": "28/01/2025 à 12h05",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 12h05",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1059156864573,
+          47.6663548292285
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "id_source": 75,
+        "source": "CD56",
+        "route": "D153A",
+        "commune": "Saint-Perreux",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 150",
+        "date_debut": "28/01/2025 à 12h05",
+        "date_fin": "22/11/2025 à 14h00",
+        "date_saisie": "28/01/2025 à 12h05",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11318550502771,
+          47.5707989491676
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "id_source": 76,
+        "source": "CD56",
+        "route": "D176",
+        "commune": "THÉHILLAC",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 300",
+        "date_debut": "29/01/2025 à 09h03",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h03",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10499461266322,
+          47.6651356043173
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "id_source": 80,
+        "source": "CD56",
+        "route": "D764",
+        "commune": "Saint-Perreux",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "28/01/2025 à 11h38",
+        "date_fin": "23/11/2025 à 14h00",
+        "date_saisie": "28/01/2025 à 11h38",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31722129404455,
+          47.7559532617245
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "id_source": 81,
+        "source": "CD56",
+        "route": "D764",
+        "commune": "SAINT-CONGARD",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 08h53",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 08h53",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09878569777953,
+          47.6441463769875
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "id_source": 85,
+        "source": "CD56",
+        "route": "D775B",
+        "commune": "Saint-Jean-la-Poterie",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "28/01/2025 à 11h37",
+        "date_fin": "24/11/2025 à 14h00",
+        "date_saisie": "28/01/2025 à 11h37",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10268146671805,
+          47.9402958799186
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "id_source": 86,
+        "source": "CD56",
+        "route": "D311",
+        "commune": "GUER",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Partielle",
+        "sens_circulation": "",
+        "commentaire": "Inondation partielle",
+        "date_debut": "28/01/2025 à 12h18",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 12h18",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.26605826438245,
+          47.7437489330227
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "id_source": 87,
+        "source": "CD56",
+        "route": "D777",
+        "commune": "SAINT-GRAVÉ",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 08h54",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 08h54",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.25849231219605,
+          47.7458635819539
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "id_source": 88,
+        "source": "CD56",
+        "route": "D777",
+        "commune": "SAINT-MARTIN-SUR-OUST",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Partielle",
+        "sens_circulation": "",
+        "commentaire": "Inondation partielle",
+        "date_debut": "29/01/2025 à 09h25",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h25",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11615279877046,
+          47.5825732674795
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "id_source": 91,
+        "source": "CD56",
+        "route": "D114",
+        "commune": "RIEUX",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 200",
+        "date_debut": "29/01/2025 à 09h03",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h03",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10176801401889,
+          47.6308796671222
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "id_source": 92,
+        "source": "CD56",
+        "route": "D775",
+        "commune": "RIEUX",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 11h21",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 11h21",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.35004438530293,
+          48.0243350944362
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "id_source": 109,
+        "source": "CD56",
+        "route": "D154",
+        "commune": "NÉANT-SUR-YVEL",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 200",
+        "date_debut": "28/01/2025 à 14h34",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 14h34",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.48640975203912,
+          48.0011055427704
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "id_source": 111,
+        "source": "CD56",
+        "route": "D157",
+        "commune": "LA GRÉE-SAINT-LAURENT",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 250",
+        "date_debut": "28/01/2025 à 14h34",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 14h34",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31811891357394,
+          48.0533596198331
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "id_source": 113,
+        "source": "CD56",
+        "route": "D167",
+        "commune": "MAURON",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 100",
+        "date_debut": "27/01/2025 à 17h30",
+        "date_fin": "",
+        "date_saisie": "27/01/2025 à 17h30",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.37924887224811,
+          47.8056840606482
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "id_source": 115,
+        "source": "CD56",
+        "route": "D764",
+        "commune": "MALESTROIT",
+        "cause": "Inondation",
+        "statut": "Supprimé",
+        "statut_actif": false,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 50",
+        "date_debut": "28/01/2025 à 14h56",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 14h56",
+        "date_suppression": "09/12/2025 à 09h31",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.21304574138723,
+          47.7260504636724
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "id_source": 509,
+        "source": "CD56",
+        "route": "D14",
+        "commune": "PEILLAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "29/01/2025 à 08h53",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 08h53",
+        "date_suppression": "",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.48649464842115,
+          47.5531459087067
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "id_source": 512,
+        "source": "CD56",
+        "route": "D020",
+        "commune": "MUZILLAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 200",
+        "date_debut": "29/01/2025 à 09h03",
+        "date_fin": "",
+        "date_saisie": "29/01/2025 à 09h03",
+        "date_suppression": "",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.29496303264746,
+          47.6022116091491
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "id_source": 513,
+        "source": "CD56",
+        "route": "D21",
+        "commune": "PÉAULE",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Longueur linéaire inondée : 100",
+        "date_debut": "28/01/2025 à 12h05",
+        "date_fin": "",
+        "date_saisie": "28/01/2025 à 12h05",
+        "date_suppression": "",
+        "gestionnaire": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10731541422727,
+          47.6046283866609
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "id_source": 514,
+        "source": "CD56",
+        "route": "D114",
+        "commune": "RIEUX",
+        "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
@@ -2430,8 +3213,8 @@
         ]
       },
       "properties": {
-        "id": 130,
-        "id_source": 65,
+        "id": 124,
+        "id_source": 518,
         "source": "CD56",
         "route": "D138",
         "commune": "LA GACILLY (Glénac)",
@@ -2459,8 +3242,8 @@
         ]
       },
       "properties": {
-        "id": 131,
-        "id_source": 66,
+        "id": 125,
+        "id_source": 519,
         "source": "CD56",
         "route": "D138",
         "commune": "PEILLAC",
@@ -2488,8 +3271,8 @@
         ]
       },
       "properties": {
-        "id": 132,
-        "id_source": 68,
+        "id": 126,
+        "id_source": 521,
         "source": "CD56",
         "route": "D14",
         "commune": "CARENTOIR (Quelneuc) ",
@@ -2517,8 +3300,8 @@
         ]
       },
       "properties": {
-        "id": 133,
-        "id_source": 69,
+        "id": 127,
+        "id_source": 522,
         "source": "CD56",
         "route": "D14",
         "commune": "LES FOUGERETS",
@@ -2546,8 +3329,8 @@
         ]
       },
       "properties": {
-        "id": 134,
-        "id_source": 70,
+        "id": 128,
+        "id_source": 523,
         "source": "CD56",
         "route": "D149",
         "commune": "SAINT-CONGARD",
@@ -2575,8 +3358,8 @@
         ]
       },
       "properties": {
-        "id": 135,
-        "id_source": 71,
+        "id": 129,
+        "id_source": 524,
         "source": "CD56",
         "route": "D149",
         "commune": "LA GACILLY (Glénac)",
@@ -2604,8 +3387,8 @@
         ]
       },
       "properties": {
-        "id": 136,
-        "id_source": 72,
+        "id": 130,
+        "id_source": 525,
         "source": "CD56",
         "route": "D149A",
         "commune": "COURNON",
@@ -2633,8 +3416,8 @@
         ]
       },
       "properties": {
-        "id": 137,
-        "id_source": 73,
+        "id": 131,
+        "id_source": 526,
         "source": "CD56",
         "route": "D153",
         "commune": "SAINT-JACUT-LES-PINS",
@@ -2662,8 +3445,8 @@
         ]
       },
       "properties": {
-        "id": 138,
-        "id_source": 74,
+        "id": 132,
+        "id_source": 527,
         "source": "CD56",
         "route": "D153A",
         "commune": "SAINT-PERREUX",
@@ -2691,11 +3474,11 @@
         ]
       },
       "properties": {
-        "id": 139,
-        "id_source": 75,
+        "id": 133,
+        "id_source": 528,
         "source": "CD56",
         "route": "D153A",
-        "commune": "Saint-Perreux",
+        "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -2704,7 +3487,7 @@
         "sens_circulation": "",
         "commentaire": "Longueur linéaire inondée : 150",
         "date_debut": "28/01/2025 à 12h05",
-        "date_fin": "22/11/2025 à 14h00",
+        "date_fin": "",
         "date_saisie": "28/01/2025 à 12h05",
         "date_suppression": "",
         "gestionnaire": "CD56"
@@ -2720,8 +3503,8 @@
         ]
       },
       "properties": {
-        "id": 140,
-        "id_source": 76,
+        "id": 134,
+        "id_source": 529,
         "source": "CD56",
         "route": "D176",
         "commune": "THÉHILLAC",
@@ -2749,11 +3532,11 @@
         ]
       },
       "properties": {
-        "id": 141,
-        "id_source": 80,
+        "id": 135,
+        "id_source": 533,
         "source": "CD56",
         "route": "D764",
-        "commune": "Saint-Perreux",
+        "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -2762,7 +3545,7 @@
         "sens_circulation": "",
         "commentaire": "",
         "date_debut": "28/01/2025 à 11h38",
-        "date_fin": "23/11/2025 à 14h00",
+        "date_fin": "",
         "date_saisie": "28/01/2025 à 11h38",
         "date_suppression": "",
         "gestionnaire": "CD56"
@@ -2778,8 +3561,8 @@
         ]
       },
       "properties": {
-        "id": 142,
-        "id_source": 81,
+        "id": 136,
+        "id_source": 534,
         "source": "CD56",
         "route": "D764",
         "commune": "SAINT-CONGARD",
@@ -2807,11 +3590,11 @@
         ]
       },
       "properties": {
-        "id": 143,
-        "id_source": 85,
+        "id": 137,
+        "id_source": 538,
         "source": "CD56",
         "route": "D775B",
-        "commune": "Saint-Jean-la-Poterie",
+        "commune": "SAINT-JEAN-LA-POTERIE",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
@@ -2820,7 +3603,7 @@
         "sens_circulation": "",
         "commentaire": "",
         "date_debut": "28/01/2025 à 11h37",
-        "date_fin": "24/11/2025 à 14h00",
+        "date_fin": "",
         "date_saisie": "28/01/2025 à 11h37",
         "date_suppression": "",
         "gestionnaire": "CD56"
@@ -2836,8 +3619,8 @@
         ]
       },
       "properties": {
-        "id": 144,
-        "id_source": 86,
+        "id": 138,
+        "id_source": 539,
         "source": "CD56",
         "route": "D311",
         "commune": "GUER",
@@ -2865,8 +3648,8 @@
         ]
       },
       "properties": {
-        "id": 145,
-        "id_source": 87,
+        "id": 139,
+        "id_source": 540,
         "source": "CD56",
         "route": "D777",
         "commune": "SAINT-GRAVÉ",
@@ -2894,8 +3677,8 @@
         ]
       },
       "properties": {
-        "id": 146,
-        "id_source": 88,
+        "id": 140,
+        "id_source": 541,
         "source": "CD56",
         "route": "D777",
         "commune": "SAINT-MARTIN-SUR-OUST",
@@ -2923,8 +3706,8 @@
         ]
       },
       "properties": {
-        "id": 147,
-        "id_source": 91,
+        "id": 141,
+        "id_source": 544,
         "source": "CD56",
         "route": "D114",
         "commune": "RIEUX",
@@ -2952,8 +3735,8 @@
         ]
       },
       "properties": {
-        "id": 148,
-        "id_source": 92,
+        "id": 142,
+        "id_source": 545,
         "source": "CD56",
         "route": "D775",
         "commune": "RIEUX",
@@ -2981,8 +3764,8 @@
         ]
       },
       "properties": {
-        "id": 149,
-        "id_source": 109,
+        "id": 143,
+        "id_source": 562,
         "source": "CD56",
         "route": "D154",
         "commune": "NÉANT-SUR-YVEL",
@@ -3010,8 +3793,8 @@
         ]
       },
       "properties": {
-        "id": 150,
-        "id_source": 111,
+        "id": 144,
+        "id_source": 564,
         "source": "CD56",
         "route": "D157",
         "commune": "LA GRÉE-SAINT-LAURENT",
@@ -3039,8 +3822,8 @@
         ]
       },
       "properties": {
-        "id": 151,
-        "id_source": 113,
+        "id": 145,
+        "id_source": 566,
         "source": "CD56",
         "route": "D167",
         "commune": "MAURON",
@@ -3068,8 +3851,8 @@
         ]
       },
       "properties": {
-        "id": 152,
-        "id_source": 115,
+        "id": 146,
+        "id_source": 568,
         "source": "CD56",
         "route": "D764",
         "commune": "MALESTROIT",
@@ -3091,6 +3874,6 @@
   "metadata": {
     "year": 2025,
     "created": "2025-11-26T08:55:18.459Z",
-    "last_update": "2025-12-09T08:38:44.190Z"
+    "last_update": "2025-12-09T09:31:02.152Z"
   }
 }
