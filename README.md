@@ -41,13 +41,13 @@ Le système vise à :
            │Robot : Export API          │ Robot : Moissonnage Python/API/flux WFS
            ▼                            ▼
     ┌──────────────────────────────────────┐
-    │       Fichiers GeoJSON               │
+    │     Robot JS ->  Fichiers GeoJSON    │ Cloud Geobretagne
     └──────────────────┬───────────────────┘
                        │
                        ▼
               ┌────────────────┐
               │    mviewer     │
-              │  (Visualisation │
+              │  (Visualisation │ Cloud Geobretagne
               │  cartographique)│
               └────────────────┘
 ```
