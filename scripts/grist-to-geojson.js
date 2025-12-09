@@ -12,6 +12,9 @@ const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
 const TABLE_ID = 'Signalements';
 
+// ✨ NOUVEAU : Chemin vers le fichier DIRO
+const DIRO_FILE_PATH = 'data/inondations-diro.geojson';
+
 // Compteur global pour générer des IDs uniques
 let uniqueIdCounter = 1;
 
@@ -47,12 +50,13 @@ function getDateTimeFR() {
     };
 }
 
-console.log('🚀 Démarrage de la fusion des 6 sources...\n');
+console.log('🚀 Démarrage de la fusion des 7 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. Rennes Métropole (WFS routes coupées)');
 console.log('   4. CD35 Inondations (WFS XML)');
-console.log('   5. CD56 (OGC API REST)\n');
+console.log('   5. CD56 (OGC API REST)');
+console.log('   6. ✨ DIRO - DIR Ouest (DATEX II flash floods)\n');
 
 // =====================================================
 // CONFIGURATION
@@ -232,8 +236,8 @@ function findInArchive(archive, idSource, source) {
 function addOrUpdateInArchive(feature) {
     const props = feature.properties;
     
-    // Ignorer CD35 Inondations
-    if (props.source === 'CD35 Inondations') {
+    // Ignorer CD35 Inondations et DIRO (pas d'archivage pour ces sources)
+    if (props.source === 'CD35 Inondations' || props.source === 'DIRO') {
         return;
     }
     
@@ -308,7 +312,7 @@ function detectDeletedSignalements(currentFeatures) {
     const now = new Date();
     const dateSuppressionFormatted = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()} à ${String(now.getHours()).padStart(2, '0')}h${String(now.getMinutes()).padStart(2, '0')}`;
     
-    // Construire la liste des id_source actuels par source
+    // Construire la liste des id_source actuels par source (DIRO exclu de l'archivage)
     const currentActifs = {
         'Saisie Grist': [],
         'CD44': [],
@@ -319,8 +323,8 @@ function detectDeletedSignalements(currentFeatures) {
     currentFeatures.forEach(feature => {
         const props = feature.properties;
         
-        // Ignorer CD35
-        if (props.source === 'CD35 Inondations') return;
+        // Ignorer CD35 et DIRO
+        if (props.source === 'CD35 Inondations' || props.source === 'DIRO') return;
         
         // Seulement les actifs
         if (props.statut_actif && props.id_source) {
@@ -448,6 +452,120 @@ function formatDate(dateValue) {
         
     } catch (e) {
         return '';
+    }
+}
+
+// =====================================================
+// ✨ NOUVEAU : DIRO - DIR OUEST (DATEX II)
+// =====================================================
+
+/**
+ * Récupère les données DIRO depuis le fichier GeoJSON généré par le script Python
+ */
+async function fetchDiroData() {
+    try {
+        console.log(`🔗 [DIRO] Lecture du fichier ${DIRO_FILE_PATH}...`);
+        
+        // Vérifier si le fichier existe
+        if (!fs.existsSync(DIRO_FILE_PATH)) {
+            console.log(`   ℹ️ Fichier DIRO non trouvé (${DIRO_FILE_PATH})`);
+            return [];
+        }
+        
+        // Lire le fichier
+        const fileContent = fs.readFileSync(DIRO_FILE_PATH, 'utf8');
+        const geojson = JSON.parse(fileContent);
+        
+        const features = geojson.features || [];
+        console.log(`   ${features.length} features trouvées`);
+        
+        // Filtrer uniquement les inondations actives (optionnel, selon vos besoins)
+        const activeFeatures = features.filter(f => f.properties.is_active === true);
+        console.log(`   ${activeFeatures.length} inondations actives`);
+        
+        console.log(`✅ [DIRO] ${activeFeatures.length} inondations récupérées`);
+        return activeFeatures;
+        
+    } catch (error) {
+        console.error(`❌ [DIRO]`, error.message);
+        return [];
+    }
+}
+
+/**
+ * Convertit une feature DIRO au format standard
+ * 
+ * Structure DIRO:
+ * - id: ID unique
+ * - source: "DIR Ouest"
+ * - road: Route (ex: "N165")
+ * - type: "EnvironmentalObstruction"
+ * - subtype: "flooding" | "flashFloods"
+ * - problem: "Inondation"
+ * - severity: "low" | "medium" | "high"
+ * - description: Description de l'événement
+ * - start_date: Date de début (ISO)
+ * - end_date: Date de fin (ISO ou null)
+ * - is_active: true/false
+ * - status: "en_cours" | "terminee"
+ */
+function diroToFeature(feature) {
+    try {
+        const geometry = feature.geometry;
+        if (!geometry) return null;
+        
+        const props = feature.properties || {};
+        
+        // ID source : utiliser l'ID DATEX II
+        const idSource = props.id || null;
+        
+        // Déterminer le statut
+        const isActif = props.is_active === true;
+        const isResolu = props.is_active === false;
+        const statut = isActif ? 'Actif' : 'Résolu';
+        
+        // Mapper la sévérité vers un commentaire plus détaillé
+        const severityText = {
+            'low': 'Faible',
+            'medium': 'Moyenne',
+            'high': 'Élevée',
+            'veryHigh': 'Très élevée'
+        }[props.severity] || props.severity || '';
+        
+        const commentaire = [
+            props.description || '',
+            severityText ? `Sévérité: ${severityText}` : '',
+            props.subtype ? `Type: ${props.subtype}` : ''
+        ].filter(Boolean).join(' | ');
+        
+        return {
+            type: 'Feature',
+            geometry: geometry,
+            properties: {
+                id: generateUniqueId(),
+                id_source: idSource,
+                source: 'DIRO',
+                route: props.road || '',
+                commune: '', // DIRO ne fournit pas la commune
+                cause: 'Inondation',
+                statut: statut,
+                statut_actif: isActif,
+                statut_resolu: isResolu,
+                type_coupure: 'Totale',
+                sens_circulation: '',
+                commentaire: commentaire,
+                date_debut: formatDate(props.start_date),
+                date_fin: formatDate(props.end_date),
+                date_saisie: formatDate(props.start_date),
+                date_suppression: '',
+                gestionnaire: 'DIRO - DIR Ouest',
+                // Informations supplémentaires spécifiques DIRO
+                administration: 'État (DIRO)'
+            }
+        };
+    } catch (e) {
+        console.error('Erreur conversion DIRO:', e.message);
+        return null;
     }
 }
 
@@ -604,7 +722,8 @@ function rennesMetroToFeature(feature, needsConversion = false) {
                 date_fin: formatDate(props.date_fin),
                 date_saisie: formatDate(props.date_debut), // date_debut comme date de saisie
                 date_suppression: '',
-                gestionnaire: 'Rennes Métropole'
+                gestionnaire: 'Rennes Métropole',
+                administration: 'Rennes Métropole'
             }
         };
     } catch (e) {
@@ -703,15 +822,13 @@ async function fetchCD35InondationsData() {
             console.error(`❌ [CD35 Inondations] Tentative ${attempt} échouée:`, error.message);
             
             if (attempt < maxRetries) {
-                console.log(`   ⏳ Attente de ${retryDelay/1000}s avant nouvelle tentative...`);
+                console.log(`   ⏳ Nouvelle tentative dans ${retryDelay/1000}s...`);
                 await new Promise(resolve => setTimeout(resolve, retryDelay));
-            } else {
-                console.error(`❌ [CD35 Inondations] Échec après ${maxRetries} tentatives`);
-                return [];
             }
         }
     }
     
+    console.error(`❌ [CD35 Inondations] Échec après ${maxRetries} tentatives`);
     return [];
 }
 
@@ -860,20 +977,10 @@ async function fetchCD56Data() {
             return [];
         }
         
-        const data = await itemsResponse.json();
-        console.log(`   Réponse JSON reçue`);
+        const itemsData = await itemsResponse.json();
+        const features = itemsData.features || [];
         
-        // L'API OGC retourne les features dans data.features
-        const features = data.features || [];
-        
-        // Logger les propriétés de la première feature pour debug
-        if (features.length > 0) {
-            console.log(`   🔍 Exemple de propriétés CD56 (première feature):`);
-            console.log(JSON.stringify(features[0].properties, null, 2));
-        }
-        
-        console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
-        
+        console.log(`✅ [CD56] ${features.length} features récupérées`);
         return features;
         
     } catch (error) {
@@ -882,31 +989,32 @@ async function fetchCD56Data() {
     }
 }
 
-// Convertir Grist
+// Convertir les enregistrements Grist en GeoJSON features
 function gristToFeature(record) {
     try {
-        let geometry;
+        const fields = record.fields;
         
-        if (record.fields.geojson) {
-            geometry = JSON.parse(record.fields.geojson);
-        } else if (record.fields.Latitude && record.fields.Longitude) {
-            geometry = {
-                type: 'Point',
-                coordinates: [record.fields.Longitude, record.fields.Latitude]
-            };
-        } else {
-            return null;
-        }
+        // Coordonnées GPS
+        const lat = fields.Latitude;
+        const lng = fields.Longitude;
+        if (!lat || !lng) return null;
+
+        const geometry = {
+            type: 'Point',
+            coordinates: [lng, lat]
+        };
+
+        // Date de saisie en heure locale française
+        const dateSaisie = formatDate(record.createdAt);
         
-        const cause = Array.isArray(record.fields.Cause) ? 
-                     record.fields.Cause.filter(c => c !== 'L').join(', ') : 
-                     (record.fields.Cause || '');
+        // Détermination des statuts
+        const statutActif = fields.Statut === 'Actif' || fields.Statut === 'actif';
+        const statutResolu = fields.Statut === 'Résolu' || fields.Statut === 'résolu' || fields.Statut === 'resolu';
+        const statut = fields.Statut || 'Actif';
         
-        const statut = record.fields.Statut || 'Actif';
-        
-        // ID source : champ 'id' de Grist
+        // ID source : utiliser l'ID Grist
         const idSource = record.id || null;
-        
+
         return {
             type: 'Feature',
             geometry: geometry,
@@ -914,20 +1022,21 @@ function gristToFeature(record) {
                 id: generateUniqueId(),
                 id_source: idSource,
                 source: 'Saisie Grist',
-                route: record.fields.Route || '',
-                commune: record.fields.Commune || '',
-                cause: cause || 'Inondation',
+                route: fields.Route || '',
+                commune: fields.Commune || '',
+                cause: fields.Cause_coupure || 'Inondation',
                 statut: statut,
-                statut_actif: statut === 'Actif',
-                statut_resolu: statut === 'Résolu',
-                type_coupure: record.fields.Type_coupure || 'Totale',
-                sens_circulation: record.fields.sens_circulation || '',
-                commentaire: record.fields.Description || '',
-                date_debut: formatDate(record.fields.Date_heure),
-                date_fin: formatDate(record.fields.Date_fin),
-                date_saisie: formatDate(record.fields.Date_heure),
+                statut_actif: statutActif,
+                statut_resolu: statutResolu,
+                type_coupure: fields.Type_coupure || '',
+                sens_circulation: fields.Sens_circulation || '',
+                commentaire: fields.Description || '',
+                date_debut: formatDate(fields.Date_heure),
+                date_fin: formatDate(fields.Date_fin),
+                date_saisie: dateSaisie,
                 date_suppression: '',
-                gestionnaire: record.fields.Gestionnaire || ''
+                gestionnaire: fields.Gestionnaire || '',
+                administration: fields.Gestionnaire || ''
             }
         };
     } catch (e) {
@@ -1012,7 +1121,8 @@ function cd44ToFeature(item) {
                 date_fin: dateFin,
                 date_saisie: formatDate(item.datepublication),
                 date_suppression: '',
-                gestionnaire: 'CD44'
+                gestionnaire: 'CD44',
+                administration: 'CD44'
             }
         };
     } catch (e) {
@@ -1050,16 +1160,13 @@ function cd35InondationsToFeature(feature) {
                 commentaire: props.lieu_dit || '',
                 date_debut: '',
                 date_fin: '',
-                date_saisie: new Date().toISOString(),
+                date_saisie: '',
                 date_suppression: '',
                 gestionnaire: 'CD35',
-                agence: props.agence || '',
-                pr_debut: props.PR_debut || '',
-                pr_fin: props.PR_fin || ''
+                administration: 'CD35'
             }
         };
     } catch (e) {
-        console.error('Erreur conversion CD35 Inondations:', e.message);
         return null;
     }
 }
@@ -1072,34 +1179,8 @@ function cd56ToFeature(feature) {
         
         const props = feature.properties || {};
         
-        // Filtre : ne garder que COUPÉE ou INONDÉE PARTIELLE
-        const conditionsCirculation = props.conditions_circulation || props.conditionsCirculation || '';
-        if (!['COUPÉE', 'INONDÉE PARTIELLE'].includes(conditionsCirculation.toUpperCase())) {
-            return null;
-        }
-        
-        // Déterminer le type de coupure
-        const typeCoupure = conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE' ? 'Partielle' : 'Totale';
-        
-        // Lineaire_inonde : seulement si différent de 0 et de "?"
-        const lineaireInonde = props.lineaire_inonde || props.lineaireInonde || '';
-        const lineaireInondeText = (lineaireInonde && lineaireInonde !== '0' && lineaireInonde !== '?') 
-            ? `Longueur linéaire inondée : ${lineaireInonde}` 
-            : '';
-        
-        // Commentaire : si INONDÉE PARTIELLE, on écrit "Inondation partielle" + lineaire_inonde
-        let commentaire = '';
-        if (conditionsCirculation.toUpperCase() === 'INONDÉE PARTIELLE') {
-            commentaire = 'Inondation partielle';
-            if (lineaireInondeText) {
-                commentaire += `. ${lineaireInondeText}`;
-            }
-        } else if (lineaireInondeText) {
-            commentaire = lineaireInondeText;
-        }
-        
-        // ID source : champ 'OBJECTID' ou 'objectid' de CD56
-        const idSource = props.OBJECTID || props.objectid || null;
+        // ID source : utiliser OBJECTID
+        const idSource = props.OBJECTID || null;
         
         return {
             type: 'Feature',
@@ -1108,64 +1189,72 @@ function cd56ToFeature(feature) {
                 id: generateUniqueId(),
                 id_source: idSource,
                 source: 'CD56',
-                route: props.rd || '',
+                route: props.nom_route || '',
                 commune: props.commune || '',
                 cause: 'Inondation',
                 statut: 'Actif',
                 statut_actif: true,
                 statut_resolu: false,
-                type_coupure: typeCoupure,
+                type_coupure: 'Totale',
                 sens_circulation: '',
-                commentaire: commentaire,
-                date_debut: formatDate(props.date_constatation || props.dateConstatation),
-                date_fin: formatDate(props.Date_fin_d_évènement || props.date_fin_evenement || props.dateFin),
-                date_saisie: formatDate(props.date_constatation || props.dateConstatation),
+                commentaire: props.description || '',
+                date_debut: formatDate(props.date_debut),
+                date_fin: formatDate(props.date_fin),
+                date_saisie: formatDate(props.date_debut),
                 date_suppression: '',
-                gestionnaire: 'CD56'
+                gestionnaire: 'CD56',
+                administration: 'CD56'
             }
         };
     } catch (e) {
-        console.error('Erreur conversion CD56:', e.message);
         return null;
     }
 }
 
-// Fusion principale
+// =====================================================
+// FUSION DES SOURCES
+// =====================================================
+
 async function mergeSources() {
     try {
-        console.log('');
+        // Récupération des données
+        const gristRecords = await fetchGristData();
+        const cd44Records = await fetchCD44Data();
         
-        const [gristRecords, cd44Records, rennesMetroResult, cd35InondationsFeatures, cd56Features] = await Promise.all([
-            fetchGristData(),
-            fetchCD44Data(),
-            fetchRennesMetroData(),
-            fetchCD35InondationsData(),
-            fetchCD56Data()
-        ]);
+        const { features: rennesMetroFeatures, needsConversion } = await fetchRennesMetroData();
         
-        const rennesMetroFeatures = rennesMetroResult.features || [];
-        const needsConversion = rennesMetroResult.needsConversion || false;
+        const cd35InondationsFeatures = await fetchCD35InondationsData();
+        const cd56Features = await fetchCD56Data();
         
-        const totalBrut = gristRecords.length + cd44Records.length + rennesMetroFeatures.length +
-                         cd35InondationsFeatures.length + cd56Features.length;
-        console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
+        // ✨ NOUVEAU : Récupérer les données DIRO
+        const diroFeatures = await fetchDiroData();
         
-        let features = [];
-        let stats = {
+        // Compteurs initiaux
+        const stats = {
             grist_recupere: gristRecords.length,
-            grist_garde: 0,
             cd44_recupere: cd44Records.length,
-            cd44_garde: 0,
             rennes_recupere: rennesMetroFeatures.length,
-            rennes_garde: 0,
             cd35_recupere: cd35InondationsFeatures.length,
-            cd35_garde: 0,
             cd56_recupere: cd56Features.length,
+            diro_recupere: diroFeatures.length,  // ✨ NOUVEAU
+            grist_garde: 0,
+            cd44_garde: 0,
+            rennes_garde: 0,
+            cd35_garde: 0,
             cd56_garde: 0,
-            resolus_filtres: 0  // Compteur pour les résolus > 3 jours
+            diro_garde: 0,  // ✨ NOUVEAU
+            resolus_filtres: 0
         };
         
-        // Grist 35
+        const totalBrut = stats.grist_recupere + stats.cd44_recupere + stats.rennes_recupere + 
+                          stats.cd35_recupere + stats.cd56_recupere + stats.diro_recupere;  // ✨ NOUVEAU
+        
+        console.log(`\n📊 Conversion et filtrage...`);
+        
+        // Convertir et filtrer toutes les sources
+        const features = [];
+        
+        // Grist
         gristRecords.forEach(record => {
             const feature = gristToFeature(record);
             if (feature) {
@@ -1240,7 +1329,23 @@ async function mergeSources() {
         });
         console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + stats.cd35_garde + stats.cd56_garde;
+        // ✨ NOUVEAU : DIRO
+        diroFeatures.forEach(feature => {
+            const converted = diroToFeature(feature);
+            if (converted) {
+                const result = shouldKeepFeature(converted);
+                if (result.keep) {
+                    features.push(converted);
+                    stats.diro_garde++;
+                } else if (result.filteredResolved) {
+                    stats.resolus_filtres++;
+                }
+            }
+        });
+        console.log(`   DIRO: ${stats.diro_recupere} récupérés → ${stats.diro_garde} gardés`);
+        
+        const totalGarde = stats.grist_garde + stats.cd44_garde + stats.rennes_garde + 
+                           stats.cd35_garde + stats.cd56_garde + stats.diro_garde;  // ✨ NOUVEAU
         const totalFiltre = totalBrut - totalGarde;
         
         // =====================================================
@@ -1248,7 +1353,7 @@ async function mergeSources() {
         // =====================================================
         console.log(`\n📦 Archivage annuel...`);
         
-        // Archiver tous les signalements (sauf CD35)
+        // Archiver tous les signalements (sauf CD35 et DIRO)
         features.forEach(feature => {
             addOrUpdateInArchive(feature);
         });
@@ -1274,14 +1379,15 @@ async function mergeSources() {
             features: features,
             metadata: {
                 generated: new Date().toISOString(),
-                source: 'Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56',
+                source: 'Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO',
                 total_count: features.length,
                 sources: {
                     grist_35: gristRecords.length,
                     cd44: cd44Records.length,
                     rennes_metropole: rennesMetroFeatures.length,
                     cd35_inondations: cd35InondationsFeatures.length,
-                    cd56: cd56Features.length
+                    cd56: cd56Features.length,
+                    diro: diroFeatures.length  // ✨ NOUVEAU
                 }
             }
         };
@@ -1305,7 +1411,8 @@ async function mergeSources() {
             cd44: features.filter(f => f.properties.source === 'CD44').length,
             rennes_metropole: features.filter(f => f.properties.source === 'Rennes Métropole').length,
             cd35_inondations: features.filter(f => f.properties.source === 'CD35 Inondations').length,
-            cd56: features.filter(f => f.properties.source === 'CD56').length
+            cd56: features.filter(f => f.properties.source === 'CD56').length,
+            diro: features.filter(f => f.properties.source === 'DIRO').length  // ✨ NOUVEAU
         };
         
         const metadata = {
@@ -1327,7 +1434,8 @@ async function mergeSources() {
                 cd44: cd44Records.length,
                 rennes_metropole: rennesMetroFeatures.length,
                 cd35_inondations: cd35InondationsFeatures.length,
-                cd56: cd56Features.length
+                cd56: cd56Features.length,
+                diro: diroFeatures.length  // ✨ NOUVEAU
             },
             
             // ✅ Données incluses par source (après filtrage)
@@ -1348,7 +1456,7 @@ async function mergeSources() {
             archives: {
                 enabled: true,
                 location: 'archives/',
-                description: 'Historique annuel permanent (sauf CD35 Inondations)',
+                description: 'Historique annuel permanent (sauf CD35 Inondations et DIRO)',
                 note: 'Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions'
             }
         };
@@ -1366,6 +1474,7 @@ async function mergeSources() {
         console.log(`   - Rennes Métropole: ${rennesMetroFeatures.length}`);
         console.log(`   - CD35 Inondations: ${cd35InondationsFeatures.length}`);
         console.log(`   - CD56: ${cd56Features.length}`);
+        console.log(`   - DIRO: ${diroFeatures.length}`);
         console.log(`   - Points: ${metadata.geometries.points}`);
         console.log(`   - LineStrings: ${metadata.geometries.lignes}`);
         console.log(`   - Polygons: ${metadata.geometries.polygones}`);
