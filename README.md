@@ -52,49 +52,10 @@ Le système vise à :
               └────────────────┘
 ```
 
----
-
-## Sources de données
-
-### Base Grist
-
-**Utilisation** : Saisie collaborative des signalements terrain par les agents de la DIR Ouest
-
-**Accès** : [Saisie GRIST des routes coupées inondation](https://grist.dataregion.fr/o/inforoute/n9MXV7uiYFKH/Route-coupees-35/p/2)
-
-**Export** : Automatique grâce à l'API vers format GeoJSON
-
-**Contenu** : Signalements manuels (ponctuel ou linéaire) incluant la localisation, le type d'obstacle, les dates de début et de fin, et une description détaillée
-
-### Flux DATEX II (Bison Futé)
-
-**Utilisation** : Récupération automatique des événements routiers officiels
-
-**Norme** : DATEX II version 2.0 (standard européen d'échange de données routières)
-
-**Filtres appliqués** :
-- Zone géographique : DIR Ouest uniquement
-- Type d'événement : EnvironmentalObstruction (obstructions environnementales)
-- Sous-type : flooding (inondation) et flashFloods (crue éclair)
-
-**Fréquence de mise à jour** : Temps réel (rafraîchissement environ toutes les 6 minutes)
-
-### API CD35 
-
-**Utilisation** : Récupération automatique des événements routiers officiels
-
-**Norme** : 
-
-**Filtres appliqués** :
-
-
-**Fréquence de mise à jour** : 
-
----
 
 ## Visualisation cartographique
 
-**Accès au visualiseur** : [Carte interactive mviewer](https://geobretagne.fr/mviewer/?config=/apps/grist2mviewer/config.xml)
+**Accès au visualiseur** : [Carte interactive mviewer](https://geobretagne.fr/app/routes_coupees_inondation)
 
 ---
 
@@ -104,18 +65,5 @@ Ce projet est distribué sous licence MIT. Voir le fichier [LICENSE](LICENSE) po
 
 ---
 
-**DDTM35 - METSSI**
 
-Courriel technique : 
-
----
-
-## Références
-
-- [DATEX II - Site officiel du standard européen](https://datex2.eu/)
-- [Bison Futé - Données ouvertes](https://www.bison-fute.gouv.fr/)
-
-  
-
----
 
