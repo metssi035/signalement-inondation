@@ -1,6 +1,6 @@
 {
-  "lastUpdate": "2025-12-09T13:43:18.330Z",
-  "lastUpdateFR": "09/12/2025 à 14:43",
+  "lastUpdate": "2025-12-09T14:13:11.131Z",
+  "lastUpdateFR": "09/12/2025 à 15:13",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
   "totalRecus": 261,
@@ -35,7 +35,7 @@
   "archives": {
     "enabled": true,
     "location": "archives/",
-    "description": "Historique annuel permanent (sauf CD35 Inondations et DIRO)",
+    "description": "Historique annuel permanent (toutes sources)",
     "note": "Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions"
   }
 }
