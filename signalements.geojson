@@ -77,7 +77,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -116,7 +117,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -195,7 +197,8 @@
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -518,7 +521,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -669,7 +673,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -792,7 +797,8 @@
         "date_fin": "",
         "date_saisie": "27/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -935,7 +941,8 @@
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1038,7 +1045,8 @@
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1109,7 +1117,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1164,7 +1173,8 @@
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1239,7 +1249,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1330,7 +1341,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1545,7 +1557,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1784,7 +1797,8 @@
         "date_fin": "",
         "date_saisie": "31/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -1899,7 +1913,8 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
       }
     },
     {
@@ -2130,7 +2145,1658 @@
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
         "date_suppression": "",
-        "gestionnaire": "Rennes Métropole"
+        "gestionnaire": "Rennes Métropole",
+        "administration": "Rennes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.53524074421885,
+          47.6713436951226
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SULNIAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.51106739267723,
+          47.6656514877937
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SULNIAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.71910032488235,
+          47.6863511729854
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "ST-AVÉ",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11078026240951,
+          47.7796149292938
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CARENTOIR (Quelneuc) ",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.36753642062508,
+          47.810020483861
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "RUFFIAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.31944309707376,
+          47.7947239759994
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-LAURENT-SUR-OUST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.26954031429566,
+          47.74845733388
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-MARTIN-SUR-OUST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11721402653032,
+          47.728352328351
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-MARTIN-SUR-OUST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2519004274652,
+          47.7456382653948
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "COURNON",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1596234589469,
+          47.7896591934879
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.17694180515747,
+          47.8079679036602
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.39428053502596,
+          47.9050821172918
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLOUAY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.32203128579379,
+          47.9250587746306
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLOUAY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.10947494401946,
+          47.8829127181256
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BAUD",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.11583443910444,
+          48.2044441934204
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINTE-BRIGITTE",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.24828021531729,
+          47.8261665588402
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "INZINZAC-LOCHRIST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.20100776248538,
+          47.9019910375543
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LANVAUDAN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.33988858214507,
+          47.8299222755291
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CAUDAN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.32275885011795,
+          47.9139745403828
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLOUAY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.90668438932582,
+          47.7716433686135
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BRANDIVY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.72079245521429,
+          48.1269432185444
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "ROUDOUALLEC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.43880190956315,
+          48.1342684662184
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LANGONNET",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.35600485861614,
+          47.9449908642309
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BERNÉ",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.33330929244899,
+          47.9806445738834
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BERNÉ",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.99012809689812,
+          47.6949763044041
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BRECH",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.21478644269454,
+          48.0657896290578
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "GUÉMENÉ-SUR-SCORFF",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.94048716240982,
+          47.7342252223205
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLUMERGAT",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.04938134780982,
+          47.9359830025286
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-BARTHÉLEMY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.11568171338454,
+          48.0020886416156
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MELRAND",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.07624192325996,
+          47.9782294155458
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BIEUZY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.11089218600785,
+          47.8823753648243
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LANGUIDIC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.45360322688569,
+          47.7385961172264
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "GUIDEL",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0680115618996,
+          47.8722244154194
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BAUD",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.61715121266464,
+          48.0629290625838
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "GUISCRIFF",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.15164437120897,
+          47.8903449538921
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "QUISTINIC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.13442138723829,
+          47.8884133189146
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BAUD",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.04607241530854,
+          47.8678907201208
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BAUD",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.15308514830906,
+          47.8356278800725
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LANGUIDIC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.884941359945,
+          47.9133323186298
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLUMELIN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.41927083256988,
+          47.9437069866373
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "TAUPONT",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.74025711273949,
+          47.8873171590377
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BIGNAN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.61994031949066,
+          47.903521461892
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-SERVANT-SUR-OUST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.41935634490592,
+          48.1718142443147
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MÉNÉAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.46289655174596,
+          47.9023735286366
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "GUILLAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.34475407000542,
+          48.1038861752718
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MAURON",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.38663816385184,
+          48.1414005767466
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MÉNÉAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.02750230793399,
+          48.0975981611682
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PONTIVY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.44752131350288,
+          47.8648516379077
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "VAL D'OUST (Chapelle-Caro)",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.38182215932847,
+          47.808489847411
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MALESTROIT",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.43829382682983,
+          47.7779524823661
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BOHAL",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.65029776211899,
+          48.023308091023
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LES FORGES",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.52812158563931,
+          48.0499702132667
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MOHON",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.55376559901334,
+          48.0986414862822
+        ]
+      },
+      "properties": {
+        "id": 172,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA TRINITÉ-PORHOËT",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.58547854757782,
+          47.7592327328977
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "ELVEN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.19208231246272,
+          47.7822673924095
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2143,10 +3809,10 @@
         ]
       },
       "properties": {
-        "id": 120,
-        "id_source": 509,
+        "id": 175,
+        "id_source": null,
         "source": "CD56",
-        "route": "D14",
+        "route": "",
         "commune": "PEILLAC",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2155,11 +3821,72 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h53",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h53",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.21225418573118,
+          47.7325647011715
+        ]
+      },
+      "properties": {
+        "id": 176,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09554497049975,
+          47.8422055421647
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2172,10 +3899,10 @@
         ]
       },
       "properties": {
-        "id": 121,
-        "id_source": 512,
+        "id": 178,
+        "id_source": null,
         "source": "CD56",
-        "route": "D020",
+        "route": "",
         "commune": "MUZILLAC",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2183,12 +3910,13 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 200",
-        "date_debut": "29/01/2025 à 09h03",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h03",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2201,10 +3929,10 @@
         ]
       },
       "properties": {
-        "id": 122,
-        "id_source": 513,
+        "id": 179,
+        "id_source": null,
         "source": "CD56",
-        "route": "D21",
+        "route": "",
         "commune": "PÉAULE",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2212,12 +3940,13 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 100",
-        "date_debut": "28/01/2025 à 12h05",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h05",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2230,10 +3959,10 @@
         ]
       },
       "properties": {
-        "id": 123,
-        "id_source": 514,
+        "id": 180,
+        "id_source": null,
         "source": "CD56",
-        "route": "D114",
+        "route": "",
         "commune": "RIEUX",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2242,11 +3971,102 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 11h38",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h38",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.8638775181763,
+          47.7470838193328
+        ]
+      },
+      "properties": {
+        "id": 181,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "GRAND-CHAMP",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.89622514402352,
+          47.6969879704613
+        ]
+      },
+      "properties": {
+        "id": 182,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLESCOP",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.82960958572488,
+          47.7008857271022
+        ]
+      },
+      "properties": {
+        "id": 183,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLESCOP",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2259,10 +4079,10 @@
         ]
       },
       "properties": {
-        "id": 124,
-        "id_source": 518,
+        "id": 184,
+        "id_source": null,
         "source": "CD56",
-        "route": "D138",
+        "route": "",
         "commune": "LA GACILLY (Glénac)",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2271,11 +4091,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 09h22",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h22",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2288,10 +4109,10 @@
         ]
       },
       "properties": {
-        "id": 125,
-        "id_source": 519,
+        "id": 185,
+        "id_source": null,
         "source": "CD56",
-        "route": "D138",
+        "route": "",
         "commune": "PEILLAC",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2299,12 +4120,43 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 150",
-        "date_debut": "28/01/2025 à 12h05",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h05",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.08360723436129,
+          47.7846844974378
+        ]
+      },
+      "properties": {
+        "id": 186,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY (Chapelle-Gaceline)",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2317,10 +4169,10 @@
         ]
       },
       "properties": {
-        "id": 126,
-        "id_source": 521,
+        "id": 187,
+        "id_source": null,
         "source": "CD56",
-        "route": "D14",
+        "route": "",
         "commune": "CARENTOIR (Quelneuc) ",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2329,11 +4181,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 13h14",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 13h14",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2346,10 +4199,10 @@
         ]
       },
       "properties": {
-        "id": 127,
-        "id_source": 522,
+        "id": 188,
+        "id_source": null,
         "source": "CD56",
-        "route": "D14",
+        "route": "",
         "commune": "LES FOUGERETS",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2358,11 +4211,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 09h23",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h23",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2375,10 +4229,10 @@
         ]
       },
       "properties": {
-        "id": 128,
-        "id_source": 523,
+        "id": 189,
+        "id_source": null,
         "source": "CD56",
-        "route": "D149",
+        "route": "",
         "commune": "SAINT-CONGARD",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2386,12 +4240,13 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 800",
-        "date_debut": "28/01/2025 à 12h05",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h05",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2404,10 +4259,10 @@
         ]
       },
       "properties": {
-        "id": 129,
-        "id_source": 524,
+        "id": 190,
+        "id_source": null,
         "source": "CD56",
-        "route": "D149",
+        "route": "",
         "commune": "LA GACILLY (Glénac)",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2416,11 +4271,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 09h23",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h23",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2433,10 +4289,10 @@
         ]
       },
       "properties": {
-        "id": 130,
-        "id_source": 525,
+        "id": 191,
+        "id_source": null,
         "source": "CD56",
-        "route": "D149A",
+        "route": "",
         "commune": "COURNON",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2445,11 +4301,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 09h23",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h23",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2462,10 +4319,10 @@
         ]
       },
       "properties": {
-        "id": 131,
-        "id_source": 526,
+        "id": 192,
+        "id_source": null,
         "source": "CD56",
-        "route": "D153",
+        "route": "",
         "commune": "SAINT-JACUT-LES-PINS",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2474,11 +4331,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 11h37",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h37",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2491,10 +4349,10 @@
         ]
       },
       "properties": {
-        "id": 132,
-        "id_source": 527,
+        "id": 193,
+        "id_source": null,
         "source": "CD56",
-        "route": "D153A",
+        "route": "",
         "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2502,12 +4360,13 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 30",
-        "date_debut": "28/01/2025 à 12h05",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h05",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2520,10 +4379,10 @@
         ]
       },
       "properties": {
-        "id": 133,
-        "id_source": 528,
+        "id": 194,
+        "id_source": null,
         "source": "CD56",
-        "route": "D153A",
+        "route": "",
         "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2531,12 +4390,13 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 150",
-        "date_debut": "28/01/2025 à 12h05",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h05",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2549,10 +4409,10 @@
         ]
       },
       "properties": {
-        "id": 134,
-        "id_source": 529,
+        "id": 195,
+        "id_source": null,
         "source": "CD56",
-        "route": "D176",
+        "route": "",
         "commune": "THÉHILLAC",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2560,12 +4420,103 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 300",
-        "date_debut": "29/01/2025 à 09h03",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h03",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.83311596303942,
+          47.7308239827884
+        ]
+      },
+      "properties": {
+        "id": 196,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "GRAND-CHAMP",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.80023317440331,
+          47.7263604140355
+        ]
+      },
+      "properties": {
+        "id": 197,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MEUCON",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77761218536407,
+          47.7222544387282
+        ]
+      },
+      "properties": {
+        "id": 198,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MEUCON",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2578,10 +4529,10 @@
         ]
       },
       "properties": {
-        "id": 135,
-        "id_source": 533,
+        "id": 199,
+        "id_source": null,
         "source": "CD56",
-        "route": "D764",
+        "route": "",
         "commune": "SAINT-PERREUX",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2590,11 +4541,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 11h38",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h38",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2607,10 +4559,10 @@
         ]
       },
       "properties": {
-        "id": 136,
-        "id_source": 534,
+        "id": 200,
+        "id_source": null,
         "source": "CD56",
-        "route": "D764",
+        "route": "",
         "commune": "SAINT-CONGARD",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2619,11 +4571,102 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h53",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h53",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3340981882115,
+          47.8012731397836
+        ]
+      },
+      "properties": {
+        "id": 201,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-CONGARD",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.12809472238798,
+          47.7610839558246
+        ]
+      },
+      "properties": {
+        "id": 202,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CARENTOIR",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.11749260145964,
+          47.7432529710052
+        ]
+      },
+      "properties": {
+        "id": 203,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LA GACILLY",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2636,10 +4679,10 @@
         ]
       },
       "properties": {
-        "id": 137,
-        "id_source": 538,
+        "id": 204,
+        "id_source": null,
         "source": "CD56",
-        "route": "D775B",
+        "route": "",
         "commune": "SAINT-JEAN-LA-POTERIE",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2648,11 +4691,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "28/01/2025 à 11h37",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 11h37",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2665,23 +4709,24 @@
         ]
       },
       "properties": {
-        "id": 138,
-        "id_source": 539,
+        "id": 205,
+        "id_source": null,
         "source": "CD56",
-        "route": "D311",
+        "route": "",
         "commune": "GUER",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Partielle",
+        "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Inondation partielle",
-        "date_debut": "28/01/2025 à 12h18",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 12h18",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2694,10 +4739,10 @@
         ]
       },
       "properties": {
-        "id": 139,
-        "id_source": 540,
+        "id": 206,
+        "id_source": null,
         "source": "CD56",
-        "route": "D777",
+        "route": "",
         "commune": "SAINT-GRAVÉ",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2706,11 +4751,12 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 08h54",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 08h54",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2723,23 +4769,84 @@
         ]
       },
       "properties": {
-        "id": 140,
-        "id_source": 541,
+        "id": 207,
+        "id_source": null,
         "source": "CD56",
-        "route": "D777",
+        "route": "",
         "commune": "SAINT-MARTIN-SUR-OUST",
         "cause": "Inondation",
         "statut": "Actif",
         "statut_actif": true,
         "statut_resolu": false,
-        "type_coupure": "Partielle",
+        "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Inondation partielle",
-        "date_debut": "29/01/2025 à 09h25",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h25",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1586530064339,
+          47.7876356194135
+        ]
+      },
+      "properties": {
+        "id": 208,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-MARTIN-SUR-OUST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.22851472597604,
+          47.7920732953141
+        ]
+      },
+      "properties": {
+        "id": 209,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAINT-NICOLAS-DU-TERTRE",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2752,10 +4859,10 @@
         ]
       },
       "properties": {
-        "id": 141,
-        "id_source": 544,
+        "id": 210,
+        "id_source": null,
         "source": "CD56",
-        "route": "D114",
+        "route": "",
         "commune": "RIEUX",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2763,12 +4870,13 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 200",
-        "date_debut": "29/01/2025 à 09h03",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 09h03",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2781,10 +4889,10 @@
         ]
       },
       "properties": {
-        "id": 142,
-        "id_source": 545,
+        "id": 211,
+        "id_source": null,
         "source": "CD56",
-        "route": "D775",
+        "route": "",
         "commune": "RIEUX",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2793,11 +4901,492 @@
         "type_coupure": "Totale",
         "sens_circulation": "",
         "commentaire": "",
-        "date_debut": "29/01/2025 à 11h21",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "29/01/2025 à 11h21",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.15354990733391,
+          47.6746604294865
+        ]
+      },
+      "properties": {
+        "id": 212,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BELZ",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.16228633072907,
+          47.6754381062642
+        ]
+      },
+      "properties": {
+        "id": 213,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "BELZ",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.2260787728289,
+          47.3545805652836
+        ]
+      },
+      "properties": {
+        "id": 214,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "SAUZON",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.05826856907215,
+          47.6435813937499
+        ]
+      },
+      "properties": {
+        "id": 215,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLOEMEL",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.06440340688445,
+          47.5966640976817
+        ]
+      },
+      "properties": {
+        "id": 216,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CARNAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.05305442151639,
+          47.6015507202725
+        ]
+      },
+      "properties": {
+        "id": 217,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CARNAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.05198681948399,
+          47.6020862664391
+        ]
+      },
+      "properties": {
+        "id": 218,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CARNAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.01444697180834,
+          47.8628014698644
+        ]
+      },
+      "properties": {
+        "id": 219,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CAMORS",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.73919073028208,
+          48.0635954382568
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "ROHAN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.76254511407495,
+          48.0824346677438
+        ]
+      },
+      "properties": {
+        "id": 221,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "ROHAN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.65328709536954,
+          47.9989949426642
+        ]
+      },
+      "properties": {
+        "id": 222,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "PLEUGRIFFET",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9987322448817,
+          48.1212560355078
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CLÉGUÉREC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9692088485142,
+          48.1221151360891
+        ]
+      },
+      "properties": {
+        "id": 224,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "NEULLIAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.76315977076923,
+          48.0764592487147
+        ]
+      },
+      "properties": {
+        "id": 225,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "ROHAN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3673917250341,
+          47.9939966930465
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "LOYAT",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.45213692873074,
+          47.9797541715686
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "TAUPONT",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2810,10 +5399,10 @@
         ]
       },
       "properties": {
-        "id": 143,
-        "id_source": 562,
+        "id": 228,
+        "id_source": null,
         "source": "CD56",
-        "route": "D154",
+        "route": "",
         "commune": "NÉANT-SUR-YVEL",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2821,12 +5410,43 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 200",
-        "date_debut": "28/01/2025 à 14h34",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 14h34",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.01304767727061,
+          48.1160394673834
+        ]
+      },
+      "properties": {
+        "id": 229,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CLÉGUÉREC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2839,10 +5459,10 @@
         ]
       },
       "properties": {
-        "id": 144,
-        "id_source": 564,
+        "id": 230,
+        "id_source": null,
         "source": "CD56",
-        "route": "D157",
+        "route": "",
         "commune": "LA GRÉE-SAINT-LAURENT",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2850,12 +5470,43 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 250",
-        "date_debut": "28/01/2025 à 14h34",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 14h34",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.05671167494886,
+          48.0701306283379
+        ]
+      },
+      "properties": {
+        "id": 231,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "MALGUÉNAC",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2868,10 +5519,10 @@
         ]
       },
       "properties": {
-        "id": 145,
-        "id_source": 566,
+        "id": 232,
+        "id_source": null,
         "source": "CD56",
-        "route": "D167",
+        "route": "",
         "commune": "MAURON",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2879,12 +5530,43 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 100",
-        "date_debut": "27/01/2025 à 17h30",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "27/01/2025 à 17h30",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.94806895474787,
+          48.1708383074538
+        ]
+      },
+      "properties": {
+        "id": 233,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "KERGRIST",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     },
     {
@@ -2897,10 +5579,10 @@
         ]
       },
       "properties": {
-        "id": 146,
-        "id_source": 568,
+        "id": 234,
+        "id_source": null,
         "source": "CD56",
-        "route": "D764",
+        "route": "",
         "commune": "MALESTROIT",
         "cause": "Inondation",
         "statut": "Actif",
@@ -2908,25 +5590,57 @@
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
-        "commentaire": "Longueur linéaire inondée : 50",
-        "date_debut": "28/01/2025 à 14h56",
+        "commentaire": "",
+        "date_debut": "",
         "date_fin": "",
-        "date_saisie": "28/01/2025 à 14h56",
+        "date_saisie": "",
         "date_suppression": "",
-        "gestionnaire": "CD56"
+        "gestionnaire": "CD56",
+        "administration": "CD56"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7886407493644,
+          48.0157755180656
+        ]
+      },
+      "properties": {
+        "id": 235,
+        "id_source": null,
+        "source": "CD56",
+        "route": "",
+        "commune": "CRÉDIN",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "",
+        "date_suppression": "",
+        "gestionnaire": "CD56",
+        "administration": "CD56"
       }
     }
   ],
   "metadata": {
-    "generated": "2025-12-09T09:31:02.153Z",
-    "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56",
-    "total_count": 43,
+    "generated": "2025-12-09T10:16:20.993Z",
+    "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
+    "total_count": 132,
     "sources": {
       "grist_35": 0,
       "cd44": 20,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
-      "cd56": 116
+      "cd56": 116,
+      "diro": 0
     }
   }
 }
