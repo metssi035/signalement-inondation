@@ -2918,12 +2918,12 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-10T22:30:19.300Z",
+    "generated": "2025-12-10T23:24:44.567Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
     "total_count": 43,
     "sources": {
       "grist_35": 0,
-      "cd44": 24,
+      "cd44": 22,
       "rennes_metropole": 119,
       "cd35_inondations": 0,
       "cd56": 116,
