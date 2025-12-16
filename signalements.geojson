@@ -2138,12 +2138,44 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.47367171106174,
+          48.00946979929012
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "id_source": "474",
+        "source": "CD35 Inondations",
+        "route": "D1",
+        "commune": "Amanlis",
+        "cause": "Inondation",
+        "statut": "Actif",
+        "statut_actif": true,
+        "statut_resolu": false,
+        "type_coupure": "Totale",
+        "sens_circulation": "",
+        "commentaire": "Amanlis",
+        "date_debut": "",
+        "date_fin": "",
+        "date_saisie": "2025-12-16T15:31:21.486Z",
+        "date_suppression": "",
+        "gestionnaire": "CD35",
+        "agence": "Vitré",
+        "pr_debut": "102",
+        "pr_fin": "104"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.21304574138723,
           47.7260504636724
         ]
       },
       "properties": {
-        "id": 120,
+        "id": 121,
         "id_source": 509,
         "source": "CD56",
         "route": "D14",
@@ -2172,7 +2204,7 @@
         ]
       },
       "properties": {
-        "id": 121,
+        "id": 122,
         "id_source": 512,
         "source": "CD56",
         "route": "D020",
@@ -2201,7 +2233,7 @@
         ]
       },
       "properties": {
-        "id": 122,
+        "id": 123,
         "id_source": 513,
         "source": "CD56",
         "route": "D21",
@@ -2230,7 +2262,7 @@
         ]
       },
       "properties": {
-        "id": 123,
+        "id": 124,
         "id_source": 514,
         "source": "CD56",
         "route": "D114",
@@ -2259,7 +2291,7 @@
         ]
       },
       "properties": {
-        "id": 124,
+        "id": 125,
         "id_source": 518,
         "source": "CD56",
         "route": "D138",
@@ -2288,7 +2320,7 @@
         ]
       },
       "properties": {
-        "id": 125,
+        "id": 126,
         "id_source": 519,
         "source": "CD56",
         "route": "D138",
@@ -2317,7 +2349,7 @@
         ]
       },
       "properties": {
-        "id": 126,
+        "id": 127,
         "id_source": 521,
         "source": "CD56",
         "route": "D14",
@@ -2346,7 +2378,7 @@
         ]
       },
       "properties": {
-        "id": 127,
+        "id": 128,
         "id_source": 522,
         "source": "CD56",
         "route": "D14",
@@ -2375,7 +2407,7 @@
         ]
       },
       "properties": {
-        "id": 128,
+        "id": 129,
         "id_source": 523,
         "source": "CD56",
         "route": "D149",
@@ -2404,7 +2436,7 @@
         ]
       },
       "properties": {
-        "id": 129,
+        "id": 130,
         "id_source": 524,
         "source": "CD56",
         "route": "D149",
@@ -2433,7 +2465,7 @@
         ]
       },
       "properties": {
-        "id": 130,
+        "id": 131,
         "id_source": 525,
         "source": "CD56",
         "route": "D149A",
@@ -2462,7 +2494,7 @@
         ]
       },
       "properties": {
-        "id": 131,
+        "id": 132,
         "id_source": 526,
         "source": "CD56",
         "route": "D153",
@@ -2491,7 +2523,7 @@
         ]
       },
       "properties": {
-        "id": 132,
+        "id": 133,
         "id_source": 527,
         "source": "CD56",
         "route": "D153A",
@@ -2520,7 +2552,7 @@
         ]
       },
       "properties": {
-        "id": 133,
+        "id": 134,
         "id_source": 528,
         "source": "CD56",
         "route": "D153A",
@@ -2549,7 +2581,7 @@
         ]
       },
       "properties": {
-        "id": 134,
+        "id": 135,
         "id_source": 529,
         "source": "CD56",
         "route": "D176",
@@ -2578,7 +2610,7 @@
         ]
       },
       "properties": {
-        "id": 135,
+        "id": 136,
         "id_source": 533,
         "source": "CD56",
         "route": "D764",
@@ -2607,7 +2639,7 @@
         ]
       },
       "properties": {
-        "id": 136,
+        "id": 137,
         "id_source": 534,
         "source": "CD56",
         "route": "D764",
@@ -2636,7 +2668,7 @@
         ]
       },
       "properties": {
-        "id": 137,
+        "id": 138,
         "id_source": 538,
         "source": "CD56",
         "route": "D775B",
@@ -2665,7 +2697,7 @@
         ]
       },
       "properties": {
-        "id": 138,
+        "id": 139,
         "id_source": 539,
         "source": "CD56",
         "route": "D311",
@@ -2694,7 +2726,7 @@
         ]
       },
       "properties": {
-        "id": 139,
+        "id": 140,
         "id_source": 540,
         "source": "CD56",
         "route": "D777",
@@ -2723,7 +2755,7 @@
         ]
       },
       "properties": {
-        "id": 140,
+        "id": 141,
         "id_source": 541,
         "source": "CD56",
         "route": "D777",
@@ -2752,7 +2784,7 @@
         ]
       },
       "properties": {
-        "id": 141,
+        "id": 142,
         "id_source": 544,
         "source": "CD56",
         "route": "D114",
@@ -2781,7 +2813,7 @@
         ]
       },
       "properties": {
-        "id": 142,
+        "id": 143,
         "id_source": 545,
         "source": "CD56",
         "route": "D775",
@@ -2810,7 +2842,7 @@
         ]
       },
       "properties": {
-        "id": 143,
+        "id": 144,
         "id_source": 562,
         "source": "CD56",
         "route": "D154",
@@ -2839,7 +2871,7 @@
         ]
       },
       "properties": {
-        "id": 144,
+        "id": 145,
         "id_source": 564,
         "source": "CD56",
         "route": "D157",
@@ -2868,7 +2900,7 @@
         ]
       },
       "properties": {
-        "id": 145,
+        "id": 146,
         "id_source": 566,
         "source": "CD56",
         "route": "D167",
@@ -2897,7 +2929,7 @@
         ]
       },
       "properties": {
-        "id": 146,
+        "id": 147,
         "id_source": 568,
         "source": "CD56",
         "route": "D764",
@@ -2918,14 +2950,14 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-16T14:32:51.647Z",
+    "generated": "2025-12-16T15:31:21.567Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
-    "total_count": 43,
+    "total_count": 44,
     "sources": {
       "grist_35": 0,
       "cd44": 25,
       "rennes_metropole": 119,
-      "cd35_inondations": 0,
+      "cd35_inondations": 1,
       "cd56": 116,
       "diro": 0
     }
