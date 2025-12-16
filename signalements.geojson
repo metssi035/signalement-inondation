@@ -1529,7 +1529,7 @@
         ]
       },
       "properties": {
-        "id": 87,
+        "id": 86,
         "id_source": 89,
         "source": "Rennes Métropole",
         "route": "Route de la Rivière",
@@ -2918,7 +2918,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-15T23:44:26.882Z",
+    "generated": "2025-12-16T02:10:48.136Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
     "total_count": 43,
     "sources": {
