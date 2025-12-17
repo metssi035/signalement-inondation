@@ -528,28 +528,15 @@ function generateFluxStatus() {
     
     console.log('🔍 [DEBUG] fluxStatus créé:', JSON.stringify(summary));
     
-    // Créer le dossier data s'il n'existe pas
-    const dataDir = 'data';
-    console.log(`🔍 [DEBUG] Vérification du dossier ${dataDir}...`);
+    // Sauvegarder le fichier à la racine (comme metadata.json)
+    const statusPath = 'flux_status.json';
+    const jsonContent = JSON.stringify(fluxStatus, null, 2);
+    
+    console.log(`🔍 [DEBUG] Tentative d'écriture dans ${statusPath}...`);
+    console.log(`🔍 [DEBUG] Taille du contenu: ${jsonContent.length} caractères`);
     
     try {
-        if (!fs.existsSync(dataDir)) {
-            console.log(`🔍 [DEBUG] Création du dossier ${dataDir}...`);
-            fs.mkdirSync(dataDir, { recursive: true });
-            console.log(`✅ [DEBUG] Dossier ${dataDir} créé`);
-        } else {
-            console.log(`✅ [DEBUG] Dossier ${dataDir} existe déjà`);
-        }
-        
-        // Sauvegarder le fichier dans data/
-        const statusPath = 'data/flux_status.json';
-        const jsonContent = JSON.stringify(fluxStatus, null, 2);
-        
-        console.log(`🔍 [DEBUG] Tentative d'écriture dans ${statusPath}...`);
-        console.log(`🔍 [DEBUG] Taille du contenu: ${jsonContent.length} caractères`);
-        
         fs.writeFileSync(statusPath, jsonContent);
-        
         console.log(`✅ Fichier ${statusPath} créé avec succès`);
         
         // Vérifier que le fichier existe vraiment
@@ -559,7 +546,6 @@ function generateFluxStatus() {
         } else {
             console.error(`❌ [DEBUG] ERREUR: Le fichier n'existe pas après écriture !`);
         }
-        
     } catch (error) {
         console.error(`❌ [DEBUG] ERREUR lors de la création du fichier:`, error.message);
         console.error(`❌ [DEBUG] Stack:`, error.stack);
