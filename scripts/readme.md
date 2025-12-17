@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 VUE D'ENSEMBLE
+## VUE D'ENSEMBLE
 
 ### Objectif du script
 Ce script fusionne les données d'inondations provenant de **6 sources différentes** en un seul fichier GeoJSON standardisé. Il gère également :
