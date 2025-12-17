@@ -488,6 +488,8 @@ function loadPreviousFluxStatus() {
 
 // Générer le fichier flux_status.json
 function generateFluxStatus() {
+    console.log('\n🔍 [DEBUG] Début de generateFluxStatus()');
+    
     const now = new Date();
     const dateTimeFR = getDateTimeFR();
     
@@ -524,16 +526,44 @@ function generateFluxStatus() {
         sources: fluxMonitor
     };
     
+    console.log('🔍 [DEBUG] fluxStatus créé:', JSON.stringify(summary));
+    
     // Créer le dossier data s'il n'existe pas
     const dataDir = 'data';
-    if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-    }
+    console.log(`🔍 [DEBUG] Vérification du dossier ${dataDir}...`);
     
-    // Sauvegarder le fichier dans data/
-    const statusPath = 'data/flux_status.json';
-    fs.writeFileSync(statusPath, JSON.stringify(fluxStatus, null, 2));
-    console.log(`✅ Fichier ${statusPath} créé`);
+    try {
+        if (!fs.existsSync(dataDir)) {
+            console.log(`🔍 [DEBUG] Création du dossier ${dataDir}...`);
+            fs.mkdirSync(dataDir, { recursive: true });
+            console.log(`✅ [DEBUG] Dossier ${dataDir} créé`);
+        } else {
+            console.log(`✅ [DEBUG] Dossier ${dataDir} existe déjà`);
+        }
+        
+        // Sauvegarder le fichier dans data/
+        const statusPath = 'data/flux_status.json';
+        const jsonContent = JSON.stringify(fluxStatus, null, 2);
+        
+        console.log(`🔍 [DEBUG] Tentative d'écriture dans ${statusPath}...`);
+        console.log(`🔍 [DEBUG] Taille du contenu: ${jsonContent.length} caractères`);
+        
+        fs.writeFileSync(statusPath, jsonContent);
+        
+        console.log(`✅ Fichier ${statusPath} créé avec succès`);
+        
+        // Vérifier que le fichier existe vraiment
+        if (fs.existsSync(statusPath)) {
+            const fileSize = fs.statSync(statusPath).size;
+            console.log(`✅ [DEBUG] Fichier confirmé, taille: ${fileSize} octets`);
+        } else {
+            console.error(`❌ [DEBUG] ERREUR: Le fichier n'existe pas après écriture !`);
+        }
+        
+    } catch (error) {
+        console.error(`❌ [DEBUG] ERREUR lors de la création du fichier:`, error.message);
+        console.error(`❌ [DEBUG] Stack:`, error.stack);
+    }
     
     return fluxStatus;
 }
