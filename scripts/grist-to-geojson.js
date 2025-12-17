@@ -62,11 +62,7 @@ console.log('   6. ✨ DIRO - DIR Ouest (DATEX II flash floods)\n');
 // CONFIGURATION
 // =====================================================
 
-const CD35_WFS_CONFIG = {
-    url: 'https://dservices1.arcgis.com/jGLANYlFVVx3nuxa/arcgis/services/Inondations_cd35/WFSServer',
-    typeName: 'Inondations_cd35:Inondation',
-    srsName: 'EPSG:2154'
-};
+const CD35_OGC_BASE = 'https://services1.arcgis.com/jGLANYlFVVx3nuxa/arcgis/rest/services/Inondations/OGCFeatureServer';
 
 const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/OGCFeatureServer';
 
@@ -614,103 +610,72 @@ function rennesMetroToFeature(feature, needsConversion = false) {
 // FONCTION CD35 AVEC RETRY - À remplacer dans votre script
 
 async function fetchCD35InondationsData() {
-    const maxRetries = 3;
-    const retryDelay = 2000; // 2 secondes entre chaque tentative
-    
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-        try {
-            console.log(`🔗 [CD35 Inondations] Tentative ${attempt}/${maxRetries}...`);
-            
-            const wfsUrl = `${CD35_WFS_CONFIG.url}?` +
-                `service=WFS&` +
-                `version=2.0.0&` +
-                `request=GetFeature&` +
-                `typeNames=${CD35_WFS_CONFIG.typeName}&` +
-                `srsName=${CD35_WFS_CONFIG.srsName}`;
-            
-            const response = await fetch(wfsUrl, {
-                headers: {
-                    'User-Agent': 'Mozilla/5.0'
-                },
-                timeout: 10000 // 10 secondes de timeout
-            });
-            
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
+    try {
+        console.log(`🔗 [CD35 Inondations] Récupération via OGC API REST...`);
+        
+        // D'abord, récupérer la liste des collections pour trouver le bon ID
+        const collectionsUrl = `${CD35_OGC_BASE}/collections?f=json`;
+        console.log(`   URL collections: ${collectionsUrl.substring(0, 80)}...`);
+        
+        const collectionsResponse = await fetch(collectionsUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
             }
-            
-            const xmlText = await response.text();
-            console.log(`   ✅ XML reçu (${xmlText.length} caractères)`);
-            
-            const parser = new xml2js.Parser({ 
-                explicitArray: false,
-                tagNameProcessors: [xml2js.processors.stripPrefix]
-            });
-            const json = await parser.parseStringPromise(xmlText);
-            
-            const features = [];
-            let members = json.FeatureCollection?.member || [];
-            if (!Array.isArray(members)) {
-                members = [members];
-            }
-            
-            console.log(`   ${members.length} members trouvés`);
-            
-            members.forEach(member => {
-                try {
-                    const inondation = member.Inondation;
-                    if (!inondation) return;
-                    
-                    const shape = inondation.Shape || inondation.geometry;
-                    if (!shape || !shape.Point || !shape.Point.pos) return;
-                    
-                    const coords = shape.Point.pos.split(' ');
-                    const x = parseFloat(coords[0]);
-                    const y = parseFloat(coords[1]);
-                    if (isNaN(x) || isNaN(y)) return;
-                    
-                    const [lng, lat] = proj4("EPSG:2154", "EPSG:4326", [x, y]);
-                    
-                    features.push({
-                        type: 'Feature',
-                        geometry: { 
-                            type: 'Point', 
-                            coordinates: [lng, lat] 
-                        },
-                        properties: {
-                            OBJECTID: inondation.OBJECTID,
-                            route: inondation.route,
-                            etat_circulation: inondation.etat_circulation,
-                            commune: inondation.commune,
-                            agence: inondation.agence,
-                            PR_debut: inondation.PR_début,
-                            PR_fin: inondation.PR_fin,
-                            lieu_dit: inondation.lieu_dit
-                        }
-                    });
-                    
-                } catch (e) {
-                    console.warn(`   ⚠️ Erreur parsing feature:`, e.message);
-                }
-            });
-            
-            console.log(`✅ [CD35 Inondations] ${features.length} features parsées`);
-            return features;
-            
-        } catch (error) {
-            console.error(`❌ [CD35 Inondations] Tentative ${attempt} échouée:`, error.message);
-            
-            if (attempt < maxRetries) {
-                console.log(`   ⏳ Attente de ${retryDelay/1000}s avant nouvelle tentative...`);
-                await new Promise(resolve => setTimeout(resolve, retryDelay));
-            } else {
-                console.error(`❌ [CD35 Inondations] Échec après ${maxRetries} tentatives`);
-                return [];
-            }
+        });
+        
+        if (!collectionsResponse.ok) {
+            console.error(`❌ [CD35 Inondations] HTTP ${collectionsResponse.status} sur /collections`);
+            return [];
         }
+        
+        const collectionsData = await collectionsResponse.json();
+        
+        // Trouver la première collection (ou celle qui contient "Inondation")
+        const collections = collectionsData.collections || [];
+        if (collections.length === 0) {
+            console.error(`❌ [CD35 Inondations] Aucune collection trouvée`);
+            return [];
+        }
+        
+        const collection = collections[0]; // Prendre la première
+        const collectionId = collection.id;
+        console.log(`   Collection trouvée: ${collectionId}`);
+        
+        // Maintenant récupérer les items
+        const itemsUrl = `${CD35_OGC_BASE}/collections/${collectionId}/items?f=json`;
+        console.log(`   URL items: ${itemsUrl.substring(0, 80)}...`);
+        
+        const itemsResponse = await fetch(itemsUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        });
+        
+        if (!itemsResponse.ok) {
+            console.error(`❌ [CD35 Inondations] HTTP ${itemsResponse.status} sur /items`);
+            return [];
+        }
+        
+        const data = await itemsResponse.json();
+        console.log(`   Réponse JSON reçue`);
+        
+        // L'API OGC retourne les features dans data.features
+        const features = data.features || [];
+        
+        // Logger les propriétés de la première feature pour debug
+        if (features.length > 0) {
+            console.log(`   🔍 Exemple de propriétés CD35 (première feature):`);
+            console.log(JSON.stringify(features[0].properties, null, 2));
+        }
+        
+        console.log(`✅ [CD35 Inondations] ${features.length} features récupérées avec succès`);
+        
+        return features;
+        
+    } catch (error) {
+        console.error(`❌ [CD35 Inondations]`, error.message);
+        return [];
     }
-    
-    return [];
 }
 
 // Récupérer Grist
