@@ -524,9 +524,16 @@ function generateFluxStatus() {
         sources: fluxMonitor
     };
     
-    // Sauvegarder le fichier
-    fs.writeFileSync('flux_status.json', JSON.stringify(fluxStatus, null, 2));
-    console.log('✅ Fichier flux_status.json créé');
+    // Créer le dossier data s'il n'existe pas
+    const dataDir = 'data';
+    if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+    }
+    
+    // Sauvegarder le fichier dans data/
+    const statusPath = 'data/flux_status.json';
+    fs.writeFileSync(statusPath, JSON.stringify(fluxStatus, null, 2));
+    console.log(`✅ Fichier ${statusPath} créé`);
     
     return fluxStatus;
 }
