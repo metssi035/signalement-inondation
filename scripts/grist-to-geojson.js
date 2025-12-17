@@ -458,6 +458,128 @@ function convertCC48ToWGS84(x, y) {
 }
 
 // =====================================================
+// SYSTÈME DE MONITORING DES FLUX
+// =====================================================
+
+// Structure pour stocker les statuts de tous les flux
+const fluxMonitor = {
+    grist_35: null,
+    cd44: null,
+    rennes_metropole: null,
+    cd35_inondations: null,
+    cd56: null,
+    diro: null
+};
+
+// Charger l'état précédent du monitoring
+function loadPreviousFluxStatus() {
+    const statusPath = 'flux_status.json';
+    if (fs.existsSync(statusPath)) {
+        try {
+            const content = fs.readFileSync(statusPath, 'utf8');
+            return JSON.parse(content);
+        } catch (e) {
+            console.warn('⚠️ Erreur lecture flux_status.json:', e.message);
+            return null;
+        }
+    }
+    return null;
+}
+
+// Générer le fichier flux_status.json
+function generateFluxStatus() {
+    const now = new Date();
+    const dateTimeFR = getDateTimeFR();
+    
+    // Calculer le résumé
+    const summary = {
+        total: Object.keys(fluxMonitor).length,
+        ok: 0,
+        empty: 0,
+        error: 0
+    };
+    
+    Object.values(fluxMonitor).forEach(status => {
+        if (status) {
+            if (status.status === 'OK') summary.ok++;
+            else if (status.status === 'EMPTY') summary.empty++;
+            else if (status.status === 'ERROR') summary.error++;
+        }
+    });
+    
+    // Déterminer le statut global
+    let globalStatus = 'OK';
+    if (summary.error > 0) {
+        globalStatus = 'CRITICAL';
+    } else if (summary.empty > 0) {
+        globalStatus = 'DEGRADED';
+    }
+    
+    const fluxStatus = {
+        lastCheck: dateTimeFR.local,
+        lastCheckISO: dateTimeFR.iso,
+        lastCheckTimestamp: now.getTime(),
+        globalStatus: globalStatus,
+        summary: summary,
+        sources: fluxMonitor
+    };
+    
+    // Sauvegarder le fichier
+    fs.writeFileSync('flux_status.json', JSON.stringify(fluxStatus, null, 2));
+    console.log('✅ Fichier flux_status.json créé');
+    
+    return fluxStatus;
+}
+
+// Wrapper pour capturer le statut d'une fonction fetch
+async function monitorFetch(sourceName, fetchFunction) {
+    const startTime = Date.now();
+    const status = {
+        source: sourceName,
+        status: 'ERROR',
+        records: 0,
+        responseTime: 0,
+        lastError: null,
+        lastSuccess: null,
+        message: null
+    };
+    
+    try {
+        const data = await fetchFunction();
+        
+        status.responseTime = Date.now() - startTime;
+        status.records = data ? data.length : 0;
+        
+        if (status.records === 0) {
+            status.status = 'EMPTY';
+            status.message = 'API accessible mais 0 résultats';
+        } else {
+            status.status = 'OK';
+            status.message = `${status.records} signalement(s) récupéré(s)`;
+            status.lastSuccess = getDateTimeFR().local;
+        }
+        
+        fluxMonitor[sourceName] = status;
+        return data;
+        
+    } catch (error) {
+        status.responseTime = Date.now() - startTime;
+        status.status = 'ERROR';
+        status.lastError = error.message;
+        status.message = `Erreur: ${error.message}`;
+        
+        // Essayer de récupérer la dernière date de succès du fichier précédent
+        const previousStatus = loadPreviousFluxStatus();
+        if (previousStatus && previousStatus.sources && previousStatus.sources[sourceName]) {
+            status.lastSuccess = previousStatus.sources[sourceName].lastSuccess;
+        }
+        
+        fluxMonitor[sourceName] = status;
+        return [];
+    }
+}
+
+// =====================================================
 // RENNES MÉTROPOLE - WFS ROUTES COUPÉES
 // =====================================================
 
@@ -1197,15 +1319,15 @@ async function mergeSources() {
         console.log('');
         
         const [gristRecords, cd44Records, rennesMetroResult, cd35InondationsFeatures, cd56Features] = await Promise.all([
-            fetchGristData(),
-            fetchCD44Data(),
-            fetchRennesMetroData(),
-            fetchCD35InondationsData(),
-            fetchCD56Data()
+            monitorFetch('grist_35', fetchGristData),
+            monitorFetch('cd44', fetchCD44Data),
+            monitorFetch('rennes_metropole', fetchRennesMetroData),
+            monitorFetch('cd35_inondations', fetchCD35InondationsData),
+            monitorFetch('cd56', fetchCD56Data)
         ]);
         
         // ✨ Récupérer les données DIRO (lecture fichier local)
-        const diroFeatures = await fetchDiroData();
+        const diroFeatures = await monitorFetch('diro', fetchDiroData);
         
         const rennesMetroFeatures = rennesMetroResult.features || [];
         const needsConversion = rennesMetroResult.needsConversion || false;
@@ -1458,6 +1580,19 @@ async function mergeSources() {
         Object.entries(administrations).forEach(([admin, count]) => {
             console.log(`   - ${admin}: ${count}`);
         });
+        
+        // =====================================================
+        // MONITORING ET ALERTES
+        // =====================================================
+        console.log('\n📊 Génération du monitoring des flux...');
+        const fluxStatus = generateFluxStatus();
+        
+        console.log(`\n🔔 Statut global des flux: ${fluxStatus.globalStatus}`);
+        console.log(`   ✅ OK: ${fluxStatus.summary.ok}`);
+        console.log(`   ⚠️ VIDE: ${fluxStatus.summary.empty}`);
+        console.log(`   ❌ ERREUR: ${fluxStatus.summary.error}`);
+        
+        console.log('\n✅ Script terminé avec succès\n');
         
     } catch (error) {
         console.error('❌ Erreur fusion:', error.message);
