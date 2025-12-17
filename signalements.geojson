@@ -2138,13 +2138,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.47367171106174,
-          48.00946979929012
+          -1.47367171164244,
+          48.0094697983244
         ]
       },
       "properties": {
         "id": 120,
-        "id_source": "474",
+        "id_source": null,
         "source": "CD35 Inondations",
         "route": "D1",
         "commune": "Amanlis",
@@ -2157,12 +2157,12 @@
         "commentaire": "Amanlis",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-12-17T07:46:40.165Z",
+        "date_saisie": "2025-12-17T08:26:10.435Z",
         "date_suppression": "",
         "gestionnaire": "CD35",
         "agence": "Vitré",
-        "pr_debut": "102",
-        "pr_fin": "104"
+        "pr_debut": "",
+        "pr_fin": ""
       }
     },
     {
@@ -2950,7 +2950,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-17T07:46:40.248Z",
+    "generated": "2025-12-17T08:26:10.516Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
     "total_count": 44,
     "sources": {
