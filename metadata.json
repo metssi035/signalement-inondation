@@ -1,6 +1,6 @@
 {
-  "lastUpdate": "2025-12-17T10:04:35.548Z",
-  "lastUpdateFR": "17/12/2025 à 11:04",
+  "lastUpdate": "2025-12-17T10:10:54.128Z",
+  "lastUpdateFR": "17/12/2025 à 11:10",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
   "totalRecus": 261,
@@ -37,5 +37,71 @@
     "location": "archives/",
     "description": "Historique annuel permanent (toutes sources)",
     "note": "Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions"
+  },
+  "flux_monitoring": {
+    "globalStatus": "DEGRADED",
+    "lastCheck": "17/12/2025 à 11:10",
+    "lastCheckISO": "2025-12-17T10:10:54.128Z",
+    "summary": {
+      "total": 6,
+      "ok": 4,
+      "empty": 2,
+      "error": 0
+    },
+    "sources": {
+      "grist_35": {
+        "source": "grist_35",
+        "status": "EMPTY",
+        "records": 0,
+        "responseTime": 2782,
+        "lastError": null,
+        "lastSuccess": null,
+        "message": "API accessible mais 0 résultats"
+      },
+      "cd44": {
+        "source": "cd44",
+        "status": "OK",
+        "records": 25,
+        "responseTime": 1011,
+        "lastError": null,
+        "lastSuccess": "17/12/2025 à 11:10",
+        "message": "25 signalement(s) récupéré(s)"
+      },
+      "rennes_metropole": {
+        "source": "rennes_metropole",
+        "status": "OK",
+        "responseTime": 1416,
+        "lastError": null,
+        "lastSuccess": "17/12/2025 à 11:10",
+        "message": "undefined signalement(s) récupéré(s)"
+      },
+      "cd35_inondations": {
+        "source": "cd35_inondations",
+        "status": "OK",
+        "records": 1,
+        "responseTime": 1905,
+        "lastError": null,
+        "lastSuccess": "17/12/2025 à 11:10",
+        "message": "1 signalement(s) récupéré(s)"
+      },
+      "cd56": {
+        "source": "cd56",
+        "status": "OK",
+        "records": 116,
+        "responseTime": 1253,
+        "lastError": null,
+        "lastSuccess": "17/12/2025 à 11:10",
+        "message": "116 signalement(s) récupéré(s)"
+      },
+      "diro": {
+        "source": "diro",
+        "status": "EMPTY",
+        "records": 0,
+        "responseTime": 1,
+        "lastError": null,
+        "lastSuccess": null,
+        "message": "API accessible mais 0 résultats"
+      }
+    }
   }
 }
