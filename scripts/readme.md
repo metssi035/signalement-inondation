@@ -1,7 +1,7 @@
 # 📚 DOCUMENTATION DÉTAILLÉE DU CODE
 # Script : grist-to-geojson__monitoring-only.js
 
-## 📋 TABLE DES MATIÈRES
+## TABLE DES MATIÈRES
 1. [Vue d'ensemble](#vue-densemble)
 2. [Structure du fichier](#structure-du-fichier)
 3. [Explication section par section](#explication-section-par-section)
@@ -38,7 +38,7 @@ archives/
 
 ---
 
-## 📁 STRUCTURE DU FICHIER
+## STRUCTURE DU FICHIER
 
 Le code est organisé en sections logiques :
 
@@ -90,7 +90,7 @@ Le code est organisé en sections logiques :
 
 ---
 
-## 📖 EXPLICATION SECTION PAR SECTION
+## EXPLICATION SECTION PAR SECTION
 
 ### SECTION 1 : IMPORTS
 
