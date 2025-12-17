@@ -1,28 +1,105 @@
+// ================================================================================
+// SCRIPT DE FUSION DES FLUX INFOROUTE AVEC MONITORING
+// ================================================================================
+// 
+// Ce script fusionne les données d'inondations de 6 sources différentes en un seul fichier GeoJSON.
+// Il gère également l'archivage annuel et le monitoring de l'état de chaque flux.
+//
+// Sources de données :
+//   1. Grist 35 : Signalements manuels saisis par les agents
+//   2. CD44 : Département de Loire-Atlantique (API REST)
+//   3. Rennes Métropole : Service WFS
+//   4. CD35 : Département d'Ille-et-Vilaine (API OGC)
+//   5. CD56 : Département du Morbihan (API OGC)
+//   6. DIRO : DIR Ouest (fichier GeoJSON généré par script Python)
+//
+// Fichiers générés :
+//   - signalements.geojson : Tous les signalements actifs fusionnés
+//   - metadata.json : Statistiques + monitoring des flux
+//   - archives/signalements_YYYY.geojson : Archives par année
+//   - archives/last_run.json : État de la dernière exécution
+//
+// ================================================================================
+
+// Module natif Node.js pour les requêtes HTTPS (utilisé pour Grist)
 const https = require('https');
+
+// Module natif Node.js pour lire et écrire des fichiers
 const fs = require('fs');
+
+// Module pour faire des requêtes HTTP modernes (utilisé pour les API REST)
 const fetch = require('node-fetch');
+
+// Module pour parser le XML en JSON (nécessaire pour Rennes Métropole WFS qui retourne du XML)
 const xml2js = require('xml2js');
+
+// Module pour convertir les projections cartographiques (Lambert 93, CC48 vers WGS84)
 const proj4 = require('proj4');
 
-// Définition des projections
+// ================================================================================
+// DÉFINITION DES SYSTÈMES DE PROJECTION CARTOGRAPHIQUE
+// ================================================================================
+// Ces définitions permettent de convertir les coordonnées entre différents systèmes.
+// Objectif : convertir tout en WGS84 (latitude/longitude utilisé par GPS et applications web)
+
+// EPSG:2154 = Lambert 93 (système officiel français métropole)
+// Utilisé par de nombreuses administrations françaises pour stocker les coordonnées en mètres (X, Y)
 proj4.defs("EPSG:2154", "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs");
+
+// EPSG:3948 = Conique Conforme Zone 8 (système utilisé en Bretagne)
+// Système de projection local pour plus de précision en Bretagne
 proj4.defs("EPSG:3948", "+proj=lcc +lat_0=48 +lon_0=3 +lat_1=47.25 +lat_2=48.75 +x_0=1700000 +y_0=7200000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs");
 
+// ================================================================================
+// CONFIGURATION - Variables d'environnement
+// ================================================================================
+// Ces valeurs proviennent des variables d'environnement (fichier .env ou GitHub Secrets)
+
+// Identifiant du document Grist contenant les signalements manuels
 const GRIST_DOC_ID = process.env.GRIST_DOC_ID;
+
+// Clé API pour accéder à Grist (authentification)
 const GRIST_API_KEY = process.env.GRIST_API_KEY;
+
+// Nom de la table dans Grist qui contient les signalements
 const TABLE_ID = 'Signalements';
 
-// ✨ DIRO : Chemin vers le fichier GeoJSON généré par le script Python
+// ================================================================================
+// CONFIGURATION - Chemins des fichiers
+// ================================================================================
+
+// Chemin vers le fichier GeoJSON généré par le script Python DIRO
+// Ce fichier doit exister avant l'exécution de ce script
 const DIRO_FILE_PATH = 'data/inondations-diro.geojson';
 
-// Compteur global pour générer des IDs uniques
+// ================================================================================
+// GÉNÉRATION D'IDENTIFIANTS UNIQUES
+// ================================================================================
+// Compteur global qui s'incrémente à chaque nouveau signalement
+// Permet de donner un ID unique à chaque feature dans le GeoJSON final
 let uniqueIdCounter = 1;
 
+/**
+ * Génère un ID unique en incrémentant le compteur global
+ * @returns {number} Un nouvel ID unique
+ */
 function generateUniqueId() {
     return uniqueIdCounter++;
 }
 
-// Fonction pour obtenir la date/heure en format français (timezone Europe/Paris)
+// ================================================================================
+// GESTION DES DATES ET HEURES (timezone française)
+// ================================================================================
+
+/**
+ * Retourne la date et l'heure actuelle dans différents formats.
+ * Utilise le fuseau horaire Europe/Paris pour cohérence avec les utilisateurs français.
+ * 
+ * @returns {Object} Objet contenant :
+ *   - iso: Date au format ISO (UTC) pour stockage standardisé
+ *   - local: Date au format français lisible "DD/MM/YYYY à HHhMM"
+ *   - timezone: Le fuseau horaire utilisé
+ */
 function getDateTimeFR() {
     const now = new Date();
     
@@ -50,25 +127,38 @@ function getDateTimeFR() {
     };
 }
 
-console.log('🚀 Démarrage de la fusion des 7 sources...\n');
+console.log(' Démarrage de la fusion des 7 sources...\n');
 console.log('   1. Grist 35 (signalements manuels)');
 console.log('   2. CD44 (API REST)');
 console.log('   3. Rennes Métropole (WFS routes coupées)');
 console.log('   4. CD35 Inondations (WFS XML)');
 console.log('   5. CD56 (OGC API REST)');
-console.log('   6. ✨ DIRO - DIR Ouest (DATEX II flash floods)\n');
+console.log('   6.  DIRO - DIR Ouest (DATEX II flash floods)\n');
 
 // =====================================================
 // CONFIGURATION
 // =====================================================
 
+// URL de l'API OGC Feature du département d'Ille-et-Vilaine (CD35)
 const CD35_OGC_BASE = 'https://services1.arcgis.com/jGLANYlFVVx3nuxa/arcgis/rest/services/Inondations/OGCFeatureServer';
 
+// URL de l'API OGC Feature du département du Morbihan (CD56)
 const CD56_OGC_BASE = 'https://services.arcgis.com/4GFMPbPboxIs6KOG/arcgis/rest/services/INONDATION/OGCFeatureServer';
 
+// URL du service WFS de Rennes Métropole pour récupérer les routes coupées
 const RENNES_METRO_WFS_URL = 'https://public.sig.rennesmetropole.fr/geoserver/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=trp_rout:routes_coupees&OUTPUTFORMAT=json';
 
-// ✅ FONCTION POUR VÉRIFIER SI UNE DATE EST SUPÉRIEURE À 3 JOURS
+//  FONCTION POUR VÉRIFIER SI UNE DATE EST SUPÉRIEURE À 3 JOURS
+// ================================================================================
+// VÉRIFICATION DE L'ANCIENNETÉ DES DATES
+// ================================================================================
+/**
+ * Vérifie si une date donnée est supérieure à 3 jours par rapport à maintenant.
+ * Utilisé pour filtrer les signalements résolus trop anciens.
+ * 
+ * @param {string} dateString - Date au format "DD/MM/YYYY à HHhMM"
+ * @returns {boolean} true si la date est > 3 jours, false sinon
+ */
 function isOlderThan3Days(dateString) {
     if (!dateString) return false;
     
@@ -100,7 +190,17 @@ function isOlderThan3Days(dateString) {
     }
 }
 
-// ✅ FONCTION POUR FILTRER LES SIGNALEMENTS RÉSOLUS DEPUIS PLUS DE 3 JOURS
+//  FONCTION POUR FILTRER LES SIGNALEMENTS RÉSOLUS DEPUIS PLUS DE 3 JOURS
+/**
+ * Détermine si un signalement doit être gardé selon son statut et sa date.
+ * Règles :
+ *   - Toujours garder les signalements actifs
+ *   - Garder les signalements résolus depuis moins de 3 jours
+ *   - Retirer les signalements résolus depuis plus de 3 jours
+ * 
+ * @param {Object} feature - Le signalement à évaluer
+ * @returns {Object} { keep: boolean, filteredResolved: boolean }
+ */
 function shouldKeepFeature(feature) {
     const props = feature.properties;
     
@@ -128,7 +228,13 @@ function shouldKeepFeature(feature) {
 // SYSTÈME D'ARCHIVAGE ANNUEL
 // =====================================================
 
-// Charger un fichier d'archive (ou créer vide)
+/**
+ * Charge un fichier d'archive pour une année donnée.
+ * Si le fichier n'existe pas, en crée un vide.
+ * 
+ * @param {number} year - L'année à charger (ex: 2024, 2025)
+ * @returns {Object} GeoJSON avec features et metadata
+ */
 function loadArchive(year) {
     const archiveDir = 'archives';
     const archivePath = `${archiveDir}/signalements_${year}.geojson`;
@@ -144,7 +250,7 @@ function loadArchive(year) {
             const content = fs.readFileSync(archivePath, 'utf8');
             return JSON.parse(content);
         } catch (e) {
-            console.warn(`⚠️ Erreur lecture archive ${year}, création nouvelle:`, e.message);
+            console.warn(` Erreur lecture archive ${year}, création nouvelle:`, e.message);
             return {
                 type: 'FeatureCollection',
                 features: [],
@@ -169,7 +275,13 @@ function loadArchive(year) {
     };
 }
 
-// Sauvegarder une archive
+/**
+ * Sauvegarde un fichier d'archive pour une année donnée.
+ * Met à jour automatiquement le timestamp last_update.
+ * 
+ * @param {number} year - L'année à sauvegarder
+ * @param {Object} geojson - Le GeoJSON à sauvegarder
+ */
 function saveArchive(year, geojson) {
     const archiveDir = 'archives';
     const archivePath = `${archiveDir}/signalements_${year}.geojson`;
@@ -188,7 +300,7 @@ function loadLastRun() {
             const content = fs.readFileSync(lastRunPath, 'utf8');
             return JSON.parse(content);
         } catch (e) {
-            console.warn('⚠️ Erreur lecture last_run.json:', e.message);
+            console.warn(' Erreur lecture last_run.json:', e.message);
             return { date: null, actifs: {} };
         }
     }
@@ -235,7 +347,7 @@ function addOrUpdateInArchive(feature) {
     // Extraire l'année
     const year = getYearFromDateDebut(props.date_debut);
     if (!year) {
-        console.warn(`⚠️ Pas d'année pour ${props.source} - ${props.id_source}`);
+        console.warn(` Pas d'année pour ${props.source} - ${props.id_source}`);
         return;
     }
     
@@ -250,7 +362,7 @@ function addOrUpdateInArchive(feature) {
         const existing = archive.features[existingIndex];
         const existingProps = existing.properties;
         
-        // ✨ VÉRIFICATION : Comparer les dates_debut pour détecter les ID réutilisés
+        //  VÉRIFICATION : Comparer les dates_debut pour détecter les ID réutilisés
         if (existingProps.date_debut !== props.date_debut) {
             // C'est un NOUVEAU signalement différent avec le même ID réutilisé !
             // Ne pas mettre à jour, créer une nouvelle entrée
@@ -297,7 +409,13 @@ function addOrUpdateInArchive(feature) {
     saveArchive(year, archive);
 }
 
-// Détecter et marquer les signalements supprimés
+/**
+ * Détecte les signalements qui ont été supprimés depuis la dernière exécution.
+ * Compare les IDs actifs de la dernière exécution avec ceux d'aujourd'hui.
+ * Si un ID était actif mais ne l'est plus, il est marqué "Supprimé" dans l'archive.
+ * 
+ * @param {Array} currentFeatures - Liste des signalements actifs actuellement
+ */
 function detectDeletedSignalements(currentFeatures) {
     const lastRun = loadLastRun();
     const now = new Date();
@@ -326,7 +444,7 @@ function detectDeletedSignalements(currentFeatures) {
     
     // Si c'est la première exécution, juste sauvegarder
     if (!lastRun.date) {
-        console.log('   ℹ️ Première exécution - initialisation de last_run.json');
+        console.log('    Première exécution - initialisation de last_run.json');
         saveLastRun({
             date: now.toISOString(),
             actifs: currentActifs
@@ -366,7 +484,7 @@ function detectDeletedSignalements(currentFeatures) {
                             feature.properties.date_suppression = dateSuppressionFormatted;
                             
                             saveArchive(year, archive);
-                            console.log(`   🗑️ Suppression détectée: ${source} ${idSource} (archive ${year})`);
+                            console.log(`    Suppression détectée: ${source} ${idSource} (archive ${year})`);
                             deletedCount++;
                             found = true;
                         }
@@ -377,7 +495,7 @@ function detectDeletedSignalements(currentFeatures) {
     });
     
     if (deletedCount > 0) {
-        console.log(`   📊 Total suppressions détectées: ${deletedCount}`);
+        console.log(`    Total suppressions détectées: ${deletedCount}`);
     }
     
     // Sauvegarder le nouvel état
@@ -387,7 +505,7 @@ function detectDeletedSignalements(currentFeatures) {
     });
 }
 
-// ✅ FONCTION DE FORMATAGE DES DATES - Convertit UTC → Heure locale française
+//  FONCTION DE FORMATAGE DES DATES - Convertit UTC → Heure locale française
 function formatDate(dateValue) {
     if (!dateValue) return '';
     
@@ -479,7 +597,7 @@ function loadPreviousFluxStatus() {
             const content = fs.readFileSync(statusPath, 'utf8');
             return JSON.parse(content);
         } catch (e) {
-            console.warn('⚠️ Erreur lecture flux_status.json:', e.message);
+            console.warn(' Erreur lecture flux_status.json:', e.message);
             return null;
         }
     }
@@ -488,7 +606,7 @@ function loadPreviousFluxStatus() {
 
 // Générer le fichier flux_status.json
 function generateFluxStatus() {
-    console.log('\n🔍 [DEBUG] Début de generateFluxStatus()');
+    console.log('\n [DEBUG] Début de generateFluxStatus()');
     
     const now = new Date();
     const dateTimeFR = getDateTimeFR();
@@ -526,29 +644,29 @@ function generateFluxStatus() {
         sources: fluxMonitor
     };
     
-    console.log('🔍 [DEBUG] fluxStatus créé:', JSON.stringify(summary));
+    console.log(' [DEBUG] fluxStatus créé:', JSON.stringify(summary));
     
     // Sauvegarder le fichier à la racine (comme metadata.json)
     const statusPath = 'flux_status.json';
     const jsonContent = JSON.stringify(fluxStatus, null, 2);
     
-    console.log(`🔍 [DEBUG] Tentative d'écriture dans ${statusPath}...`);
-    console.log(`🔍 [DEBUG] Taille du contenu: ${jsonContent.length} caractères`);
+    console.log(` [DEBUG] Tentative d'écriture dans ${statusPath}...`);
+    console.log(` [DEBUG] Taille du contenu: ${jsonContent.length} caractères`);
     
     try {
         fs.writeFileSync(statusPath, jsonContent);
-        console.log(`✅ Fichier ${statusPath} créé avec succès`);
+        console.log(` Fichier ${statusPath} créé avec succès`);
         
         // Vérifier que le fichier existe vraiment
         if (fs.existsSync(statusPath)) {
             const fileSize = fs.statSync(statusPath).size;
-            console.log(`✅ [DEBUG] Fichier confirmé, taille: ${fileSize} octets`);
+            console.log(` [DEBUG] Fichier confirmé, taille: ${fileSize} octets`);
         } else {
-            console.error(`❌ [DEBUG] ERREUR: Le fichier n'existe pas après écriture !`);
+            console.error(` [DEBUG] ERREUR: Le fichier n'existe pas après écriture !`);
         }
     } catch (error) {
-        console.error(`❌ [DEBUG] ERREUR lors de la création du fichier:`, error.message);
-        console.error(`❌ [DEBUG] Stack:`, error.stack);
+        console.error(` [DEBUG] ERREUR lors de la création du fichier:`, error.message);
+        console.error(` [DEBUG] Stack:`, error.stack);
     }
     
     return fluxStatus;
@@ -571,7 +689,13 @@ async function monitorFetch(sourceName, fetchFunction) {
         const data = await fetchFunction();
         
         status.responseTime = Date.now() - startTime;
-        status.records = data ? data.length : 0;
+        
+        // Gérer le cas spécial de Rennes Métropole qui retourne {features: [...], needsConversion: ...}
+        if (data && typeof data === 'object' && 'features' in data) {
+            status.records = data.features ? data.features.length : 0;
+        } else {
+            status.records = data ? data.length : 0;
+        }
         
         if (status.records === 0) {
             status.status = 'EMPTY';
@@ -608,7 +732,7 @@ async function monitorFetch(sourceName, fetchFunction) {
 
 async function fetchRennesMetroData() {
     try {
-        console.log(`🔗 [Rennes Métropole] Récupération via WFS...`);
+        console.log(` [Rennes Métropole] Récupération via WFS...`);
         
         const response = await fetch(RENNES_METRO_WFS_URL, {
             headers: {
@@ -617,7 +741,7 @@ async function fetchRennesMetroData() {
         });
         
         if (!response.ok) {
-            console.error(`❌ [Rennes Métropole] HTTP ${response.status}`);
+            console.error(` [Rennes Métropole] HTTP ${response.status}`);
             return [];
         }
         
@@ -653,18 +777,18 @@ async function fetchRennesMetroData() {
                 
                 if (testCoord && Math.abs(testCoord) > 1000) {
                     needsConversion = true;
-                    console.log(`   ⚠️ Coordonnées détectées en projection CC48 (EPSG:3948): X=${testCoord}`);
+                    console.log(`    Coordonnées détectées en projection CC48 (EPSG:3948): X=${testCoord}`);
                 } else {
-                    console.log(`   ✅ Coordonnées déjà en WGS84: X=${testCoord}`);
+                    console.log(`    Coordonnées déjà en WGS84: X=${testCoord}`);
                 }
             }
         }
         
-        console.log(`✅ [Rennes Métropole] ${filteredFeatures.length} features filtrées avec succès`);
+        console.log(` [Rennes Métropole] ${filteredFeatures.length} features filtrées avec succès`);
         return { features: filteredFeatures, needsConversion };
         
     } catch (error) {
-        console.error(`❌ [Rennes Métropole]`, error.message);
+        console.error(` [Rennes Métropole]`, error.message);
         return { features: [], needsConversion: false };
     }
 }
@@ -756,7 +880,7 @@ function rennesMetroToFeature(feature, needsConversion = false) {
 
 async function fetchCD35InondationsData() {
     try {
-        console.log(`🔗 [CD35 Inondations] Récupération via OGC API REST...`);
+        console.log(` [CD35 Inondations] Récupération via OGC API REST...`);
         
         // D'abord, récupérer la liste des collections pour trouver le bon ID
         const collectionsUrl = `${CD35_OGC_BASE}/collections?f=json`;
@@ -769,7 +893,7 @@ async function fetchCD35InondationsData() {
         });
         
         if (!collectionsResponse.ok) {
-            console.error(`❌ [CD35 Inondations] HTTP ${collectionsResponse.status} sur /collections`);
+            console.error(` [CD35 Inondations] HTTP ${collectionsResponse.status} sur /collections`);
             return [];
         }
         
@@ -778,7 +902,7 @@ async function fetchCD35InondationsData() {
         // Trouver la première collection (ou celle qui contient "Inondation")
         const collections = collectionsData.collections || [];
         if (collections.length === 0) {
-            console.error(`❌ [CD35 Inondations] Aucune collection trouvée`);
+            console.error(` [CD35 Inondations] Aucune collection trouvée`);
             return [];
         }
         
@@ -797,7 +921,7 @@ async function fetchCD35InondationsData() {
         });
         
         if (!itemsResponse.ok) {
-            console.error(`❌ [CD35 Inondations] HTTP ${itemsResponse.status} sur /items`);
+            console.error(` [CD35 Inondations] HTTP ${itemsResponse.status} sur /items`);
             return [];
         }
         
@@ -809,16 +933,16 @@ async function fetchCD35InondationsData() {
         
         // Logger les propriétés de la première feature pour debug
         if (features.length > 0) {
-            console.log(`   🔍 Exemple de propriétés CD35 (première feature):`);
+            console.log(`    Exemple de propriétés CD35 (première feature):`);
             console.log(JSON.stringify(features[0].properties, null, 2));
         }
         
-        console.log(`✅ [CD35 Inondations] ${features.length} features récupérées avec succès`);
+        console.log(` [CD35 Inondations] ${features.length} features récupérées avec succès`);
         
         return features;
         
     } catch (error) {
-        console.error(`❌ [CD35 Inondations]`, error.message);
+        console.error(` [CD35 Inondations]`, error.message);
         return [];
     }
 }
@@ -827,11 +951,11 @@ async function fetchCD35InondationsData() {
 async function fetchGristData() {
     try {
         if (!GRIST_DOC_ID || !GRIST_API_KEY) {
-            console.warn('⚠️ Grist credentials manquants');
+            console.warn(' Grist credentials manquants');
             return [];
         }
 
-        console.log('🔗 [Grist 35] Récupération...');
+        console.log(' [Grist 35] Récupération...');
         
         const options = {
             hostname: 'grist.dataregion.fr',
@@ -851,24 +975,24 @@ async function fetchGristData() {
                     if (res.statusCode === 200) {
                         try {
                             const parsed = JSON.parse(data);
-                            console.log(`✅ [Grist 35] ${parsed.records.length} records`);
+                            console.log(` [Grist 35] ${parsed.records.length} records`);
                             resolve(parsed.records || []);
                         } catch (e) {
-                            console.error('❌ [Grist 35] Parse error');
+                            console.error(' [Grist 35] Parse error');
                             resolve([]);
                         }
                     } else {
-                        console.error(`❌ [Grist 35] HTTP ${res.statusCode}`);
+                        console.error(` [Grist 35] HTTP ${res.statusCode}`);
                         resolve([]);
                     }
                 });
             }).on('error', (err) => {
-                console.error('❌ [Grist 35]', err.message);
+                console.error(' [Grist 35]', err.message);
                 resolve([]);
             });
         });
     } catch (error) {
-        console.error('❌ [Grist 35]', error.message);
+        console.error(' [Grist 35]', error.message);
         return [];
     }
 }
@@ -876,7 +1000,7 @@ async function fetchGristData() {
 // Récupérer CD44
 async function fetchCD44Data() {
     try {
-        console.log('🔗 [CD44] Récupération...');
+        console.log(' [CD44] Récupération...');
         
         return new Promise((resolve) => {
             const options = {
@@ -896,24 +1020,24 @@ async function fetchCD44Data() {
                         try {
                             const response = JSON.parse(data);
                             const records = response.results || [];
-                            console.log(`✅ [CD44] ${records.length} records`);
+                            console.log(` [CD44] ${records.length} records`);
                             resolve(records);
                         } catch (e) {
-                            console.error('❌ [CD44] Parse error');
+                            console.error(' [CD44] Parse error');
                             resolve([]);
                         }
                     } else {
-                        console.error(`❌ [CD44] HTTP ${res.statusCode}`);
+                        console.error(` [CD44] HTTP ${res.statusCode}`);
                         resolve([]);
                     }
                 });
             }).on('error', (err) => {
-                console.error('❌ [CD44]', err.message);
+                console.error(' [CD44]', err.message);
                 resolve([]);
             });
         });
     } catch (error) {
-        console.error('❌ [CD44]', error.message);
+        console.error(' [CD44]', error.message);
         return [];
     }
 }
@@ -923,7 +1047,7 @@ async function fetchCD44Data() {
 // Récupérer CD56 (OGC API REST)
 async function fetchCD56Data() {
     try {
-        console.log(`🔗 [CD56] Récupération via OGC API REST...`);
+        console.log(` [CD56] Récupération via OGC API REST...`);
         
         // D'abord, récupérer la liste des collections pour trouver le bon ID
         const collectionsUrl = `${CD56_OGC_BASE}/collections?f=json`;
@@ -936,7 +1060,7 @@ async function fetchCD56Data() {
         });
         
         if (!collectionsResponse.ok) {
-            console.error(`❌ [CD56] HTTP ${collectionsResponse.status} sur /collections`);
+            console.error(` [CD56] HTTP ${collectionsResponse.status} sur /collections`);
             return [];
         }
         
@@ -945,7 +1069,7 @@ async function fetchCD56Data() {
         // Trouver la première collection (ou celle qui contient "Inondation")
         const collections = collectionsData.collections || [];
         if (collections.length === 0) {
-            console.error(`❌ [CD56] Aucune collection trouvée`);
+            console.error(` [CD56] Aucune collection trouvée`);
             return [];
         }
         
@@ -964,7 +1088,7 @@ async function fetchCD56Data() {
         });
         
         if (!itemsResponse.ok) {
-            console.error(`❌ [CD56] HTTP ${itemsResponse.status} sur /items`);
+            console.error(` [CD56] HTTP ${itemsResponse.status} sur /items`);
             return [];
         }
         
@@ -976,16 +1100,16 @@ async function fetchCD56Data() {
         
         // Logger les propriétés de la première feature pour debug
         if (features.length > 0) {
-            console.log(`   🔍 Exemple de propriétés CD56 (première feature):`);
+            console.log(`    Exemple de propriétés CD56 (première feature):`);
             console.log(JSON.stringify(features[0].properties, null, 2));
         }
         
-        console.log(`✅ [CD56] ${features.length} features récupérées avec succès`);
+        console.log(` [CD56] ${features.length} features récupérées avec succès`);
         
         return features;
         
     } catch (error) {
-        console.error(`❌ [CD56]`, error.message);
+        console.error(` [CD56]`, error.message);
         return [];
     }
 }
@@ -1071,7 +1195,7 @@ function parseCD44DateFin(ligne4) {
 // Convertir CD44
 function cd44ToFeature(item) {
     try {
-        // ✅ FILTRE : Ne garder que type="Obstacle"
+        //  FILTRE : Ne garder que type="Obstacle"
      if (item.type !== 'Inondation' && item.type !== 'inondation') {
     return null;
 }
@@ -1080,19 +1204,19 @@ function cd44ToFeature(item) {
             coordinates: [item.longitude, item.latitude]
         };
         
-        // ✅ Route depuis ligne2
+        //  Route depuis ligne2
         const route = Array.isArray(item.ligne2) ? item.ligne2.join(' / ') : (item.ligne2 || 'Route');
         
-        // ✅ Commentaire = ligne1 + ligne5
+        //  Commentaire = ligne1 + ligne5
         let commentaire = item.ligne1 || '';
         if (item.ligne5) {
             commentaire += (commentaire ? ' - ' : '') + item.ligne5;
         }
         
-        // ✅ Date de fin extraite depuis ligne4
+        //  Date de fin extraite depuis ligne4
         const dateFin = parseCD44DateFin(item.ligne4);
         
-        // ✅ Commune depuis ligne3 (ne pas mettre 'Commune' par défaut)
+        //  Commune depuis ligne3 (ne pas mettre 'Commune' par défaut)
         const commune = item.ligne3 || '';
         
         const statut = 'Actif';
@@ -1239,7 +1363,7 @@ function cd56ToFeature(feature) {
 }
 
 // =====================================================
-// ✨ DIRO - DIR OUEST (DATEX II)
+//  DIRO - DIR OUEST (DATEX II)
 // =====================================================
 
 /**
@@ -1247,11 +1371,11 @@ function cd56ToFeature(feature) {
  */
 async function fetchDiroData() {
     try {
-        console.log(`🔗 [DIRO] Lecture du fichier ${DIRO_FILE_PATH}...`);
+        console.log(` [DIRO] Lecture du fichier ${DIRO_FILE_PATH}...`);
         
         // Vérifier si le fichier existe
         if (!fs.existsSync(DIRO_FILE_PATH)) {
-            console.log(`   ℹ️ Fichier DIRO non trouvé (${DIRO_FILE_PATH})`);
+            console.log(`    Fichier DIRO non trouvé (${DIRO_FILE_PATH})`);
             return [];
         }
         
@@ -1266,11 +1390,11 @@ async function fetchDiroData() {
         const activeFeatures = features.filter(f => f.properties.is_active === true);
         console.log(`   ${activeFeatures.length} inondations actives`);
         
-        console.log(`✅ [DIRO] ${activeFeatures.length} inondations récupérées`);
+        console.log(` [DIRO] ${activeFeatures.length} inondations récupérées`);
         return activeFeatures;
         
     } catch (error) {
-        console.error(`❌ [DIRO]`, error.message);
+        console.error(` [DIRO]`, error.message);
         return [];
     }
 }
@@ -1337,6 +1461,18 @@ function diroToFeature(feature) {
 }
 
 // Fusion principale
+// ================================================================================
+// FONCTION PRINCIPALE - FUSION DE TOUTES LES SOURCES
+// ================================================================================
+/**
+ * Fonction principale qui orchestre tout le processus :
+ *   1. Récupération des données de toutes les sources (en parallèle quand possible)
+ *   2. Conversion de chaque source au format standard
+ *   3. Filtrage des signalements (garder actifs + résolus < 3j)
+ *   4. Archivage annuel de tous les signalements
+ *   5. Détection des suppressions
+ *   6. Génération des fichiers de sortie (signalements.geojson, metadata.json)
+ */
 async function mergeSources() {
     try {
         console.log('');
@@ -1349,7 +1485,7 @@ async function mergeSources() {
             monitorFetch('cd56', fetchCD56Data)
         ]);
         
-        // ✨ Récupérer les données DIRO (lecture fichier local)
+        //  Récupérer les données DIRO (lecture fichier local)
         const diroFeatures = await monitorFetch('diro', fetchDiroData);
         
         const rennesMetroFeatures = rennesMetroResult.features || [];
@@ -1357,7 +1493,7 @@ async function mergeSources() {
         
         const totalBrut = gristRecords.length + cd44Records.length + rennesMetroFeatures.length +
                          cd35InondationsFeatures.length + cd56Features.length + diroFeatures.length;
-        console.log(`\n📊 Total brut récupéré: ${totalBrut} records\n`);
+        console.log(`\n Total brut récupéré: ${totalBrut} records\n`);
         
         let features = [];
         let stats = {
@@ -1451,7 +1587,7 @@ async function mergeSources() {
         });
         console.log(`   CD56: ${stats.cd56_recupere} récupérés → ${stats.cd56_garde} gardés`);
         
-        // ✨ DIRO
+        //  DIRO
         diroFeatures.forEach(feature => {
             const converted = diroToFeature(feature);
             if (converted) {
@@ -1472,7 +1608,7 @@ async function mergeSources() {
         // =====================================================
         // ARCHIVAGE ANNUEL
         // =====================================================
-        console.log(`\n📦 Archivage annuel...`);
+        console.log(`\n Archivage annuel...`);
         
         // Archiver tous les signalements (toutes sources)
         features.forEach(feature => {
@@ -1480,16 +1616,16 @@ async function mergeSources() {
         });
         
         // Détecter les signalements supprimés
-        console.log(`\n🔍 Détection des suppressions...`);
+        console.log(`\n Détection des suppressions...`);
         detectDeletedSignalements(features);
         
-        console.log(`✅ Archivage terminé\n`);
+        console.log(` Archivage terminé\n`);
         
         // =====================================================
         // FIN ARCHIVAGE
         // =====================================================
         
-        console.log(`\n📊 Résumé:`);
+        console.log(`\n Résumé:`);
         console.log(`   Total récupéré: ${totalBrut}`);
         console.log(`   Total gardé: ${totalGarde}`);
         console.log(`   Total filtré: ${totalFiltre}`);
@@ -1514,7 +1650,7 @@ async function mergeSources() {
         };
         
         fs.writeFileSync('signalements.geojson', JSON.stringify(geojson, null, 2));
-        console.log('✅ Fichier signalements.geojson créé');
+        console.log(' Fichier signalements.geojson créé');
         
         // Obtenir la date/heure française
         const dateTimeFR = getDateTimeFR();
@@ -1537,19 +1673,19 @@ async function mergeSources() {
         };
         
         const metadata = {
-            // ⏰ Informations temporelles
+            //  Informations temporelles
             lastUpdate: dateTimeFR.iso,           // Format ISO UTC (standard)
             lastUpdateFR: dateTimeFR.local,       // Format français lisible
             timezone: dateTimeFR.timezone,
             nextUpdateIn: '30 minutes',
             
-            // 📊 Comptages globaux
+            //  Comptages globaux
             totalRecus: totalBrut,
             totalInclus: totalGarde,
             totalFiltres: totalFiltre,
             resolus_filtres_3jours: stats.resolus_filtres,
             
-            // 📡 Données brutes récupérées par source
+            //  Données brutes récupérées par source
             sources_recues: {
                 grist_35: gristRecords.length,
                 cd44: cd44Records.length,
@@ -1559,10 +1695,10 @@ async function mergeSources() {
                 diro: diroFeatures.length
             },
             
-            // ✅ Données incluses par source (après filtrage)
+            //  Données incluses par source (après filtrage)
             sources_incluses: parSource,
             
-            // 🗺️ Par type de géométrie
+            //  Par type de géométrie
             geometries: {
                 points: features.filter(f => f.geometry.type === 'Point').length,
                 lignes: features.filter(f => f.geometry.type === 'LineString').length,
@@ -1570,10 +1706,10 @@ async function mergeSources() {
                 polygones: features.filter(f => f.geometry.type === 'Polygon').length
             },
             
-            // 🏛️ Par administration/gestionnaire
+            //  Par administration/gestionnaire
             administrations: administrations,
             
-            // 📦 Informations sur l'archivage
+            //  Informations sur l'archivage
             archives: {
                 enabled: true,
                 location: 'archives/',
@@ -1581,7 +1717,7 @@ async function mergeSources() {
                 note: 'Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions'
             },
             
-            // 📊 Monitoring des flux (statut de chaque source)
+            //  Monitoring des flux (statut de chaque source)
             flux_monitoring: (() => {
                 // Calculer le résumé
                 const summary = { total: 6, ok: 0, empty: 0, error: 0 };
@@ -1609,16 +1745,16 @@ async function mergeSources() {
         };
         
         fs.writeFileSync('metadata.json', JSON.stringify(metadata, null, 2));
-        console.log('✅ Métadonnées créées (avec monitoring des flux intégré)');
+        console.log(' Métadonnées créées (avec monitoring des flux intégré)');
         
         // Afficher le statut du monitoring
-        console.log(`\n📊 Monitoring des flux:`);
-        console.log(`   🔔 Statut global: ${metadata.flux_monitoring.globalStatus}`);
-        console.log(`   ✅ OK: ${metadata.flux_monitoring.summary.ok}`);
-        console.log(`   ⚠️ VIDE: ${metadata.flux_monitoring.summary.empty}`);
-        console.log(`   ❌ ERREUR: ${metadata.flux_monitoring.summary.error}`);
+        console.log(`\n Monitoring des flux:`);
+        console.log(`    Statut global: ${metadata.flux_monitoring.globalStatus}`);
+        console.log(`    OK: ${metadata.flux_monitoring.summary.ok}`);
+        console.log(`    VIDE: ${metadata.flux_monitoring.summary.empty}`);
+        console.log(`    ERREUR: ${metadata.flux_monitoring.summary.error}`);
         
-        console.log('\n📊 Statistiques finales:');
+        console.log('\n Statistiques finales:');
         console.log(`   - Heure mise à jour: ${dateTimeFR.local}`);
         console.log(`   - Total reçu: ${totalBrut}`);
         console.log(`   - Total inclus: ${totalGarde}`);
@@ -1628,19 +1764,19 @@ async function mergeSources() {
         console.log(`   - Rennes Métropole: ${rennesMetroFeatures.length}`);
         console.log(`   - CD35 Inondations: ${cd35InondationsFeatures.length}`);
         console.log(`   - CD56: ${cd56Features.length}`);
-        console.log(`   - ✨ DIRO: ${diroFeatures.length}`);
+        console.log(`   -  DIRO: ${diroFeatures.length}`);
         console.log(`   - Points: ${metadata.geometries.points}`);
         console.log(`   - LineStrings: ${metadata.geometries.lignes}`);
         console.log(`   - Polygons: ${metadata.geometries.polygones}`);
-        console.log('\n🏛️ Par administration:');
+        console.log('\n Par administration:');
         Object.entries(administrations).forEach(([admin, count]) => {
             console.log(`   - ${admin}: ${count}`);
         });
         
-        console.log('\n✅ Script terminé avec succès\n');
+        console.log('\n Script terminé avec succès\n');
         
     } catch (error) {
-        console.error('❌ Erreur fusion:', error.message);
+        console.error(' Erreur fusion:', error.message);
         process.exit(1);
     }
 }
