@@ -1579,11 +1579,44 @@ async function mergeSources() {
                 location: 'archives/',
                 description: 'Historique annuel permanent (toutes sources)',
                 note: 'Les signalements sont archivés par année (date_debut) et suivis pour détecter les suppressions'
-            }
+            },
+            
+            // 📊 Monitoring des flux (statut de chaque source)
+            flux_monitoring: (() => {
+                // Calculer le résumé
+                const summary = { total: 6, ok: 0, empty: 0, error: 0 };
+                Object.values(fluxMonitor).forEach(status => {
+                    if (status) {
+                        if (status.status === 'OK') summary.ok++;
+                        else if (status.status === 'EMPTY') summary.empty++;
+                        else if (status.status === 'ERROR') summary.error++;
+                    }
+                });
+                
+                // Déterminer le statut global
+                let globalStatus = 'OK';
+                if (summary.error > 0) globalStatus = 'CRITICAL';
+                else if (summary.empty > 0) globalStatus = 'DEGRADED';
+                
+                return {
+                    globalStatus: globalStatus,
+                    lastCheck: dateTimeFR.local,
+                    lastCheckISO: dateTimeFR.iso,
+                    summary: summary,
+                    sources: fluxMonitor
+                };
+            })()
         };
         
         fs.writeFileSync('metadata.json', JSON.stringify(metadata, null, 2));
-        console.log('✅ Métadonnées créées');
+        console.log('✅ Métadonnées créées (avec monitoring des flux intégré)');
+        
+        // Afficher le statut du monitoring
+        console.log(`\n📊 Monitoring des flux:`);
+        console.log(`   🔔 Statut global: ${metadata.flux_monitoring.globalStatus}`);
+        console.log(`   ✅ OK: ${metadata.flux_monitoring.summary.ok}`);
+        console.log(`   ⚠️ VIDE: ${metadata.flux_monitoring.summary.empty}`);
+        console.log(`   ❌ ERREUR: ${metadata.flux_monitoring.summary.error}`);
         
         console.log('\n📊 Statistiques finales:');
         console.log(`   - Heure mise à jour: ${dateTimeFR.local}`);
@@ -1603,17 +1636,6 @@ async function mergeSources() {
         Object.entries(administrations).forEach(([admin, count]) => {
             console.log(`   - ${admin}: ${count}`);
         });
-        
-        // =====================================================
-        // MONITORING ET ALERTES
-        // =====================================================
-        console.log('\n📊 Génération du monitoring des flux...');
-        const fluxStatus = generateFluxStatus();
-        
-        console.log(`\n🔔 Statut global des flux: ${fluxStatus.globalStatus}`);
-        console.log(`   ✅ OK: ${fluxStatus.summary.ok}`);
-        console.log(`   ⚠️ VIDE: ${fluxStatus.summary.empty}`);
-        console.log(`   ❌ ERREUR: ${fluxStatus.summary.error}`);
         
         console.log('\n✅ Script terminé avec succès\n');
         
