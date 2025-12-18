@@ -2157,7 +2157,7 @@
         "commentaire": "Amanlis",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-12-18T10:38:15.392Z",
+        "date_saisie": "2025-12-18T11:44:02.891Z",
         "date_suppression": "",
         "gestionnaire": "CD35",
         "agence": "Vitré",
@@ -2950,7 +2950,7 @@
     }
   ],
   "metadata": {
-    "generated": "2025-12-18T10:38:15.472Z",
+    "generated": "2025-12-18T11:44:02.972Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
     "total_count": 44,
     "sources": {
