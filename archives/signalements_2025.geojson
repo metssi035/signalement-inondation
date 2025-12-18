@@ -238,8 +238,8 @@
         "route": "sq. des Corbières",
         "commune": "Bruz",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -247,7 +247,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -277,8 +277,8 @@
         "route": "Sq. des Corbières",
         "commune": "Bruz",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -286,7 +286,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -356,8 +356,8 @@
         "route": "piste cyclable Chartres/Noyal",
         "commune": "Chartres-de-Bretagne",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -365,7 +365,7 @@
         "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -679,8 +679,8 @@
         "route": "Rue de la Giraudais",
         "commune": "Bruz",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -688,7 +688,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -830,8 +830,8 @@
         "route": "Rue du Patis Louard",
         "commune": "Bruz",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -839,7 +839,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -953,8 +953,8 @@
         "route": "Pont de Vaugon",
         "commune": "Vern-sur-Seiche",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -962,7 +962,7 @@
         "date_debut": "27/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "27/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1096,8 +1096,8 @@
         "route": "route du hameau de la Rivière",
         "commune": "Noyal-Châtillon-sur-Seiche",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1105,7 +1105,7 @@
         "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1199,8 +1199,8 @@
         "route": "VC 104 les Tremblais",
         "commune": "Pont-Péan",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1208,7 +1208,7 @@
         "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1270,8 +1270,8 @@
         "route": "Coquelande",
         "commune": "Noyal-Châtillon-sur-Seiche",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1279,7 +1279,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1325,8 +1325,8 @@
         "route": "la Foucherais D 68",
         "commune": "Pacé",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1334,7 +1334,7 @@
         "date_debut": "26/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "26/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1400,8 +1400,8 @@
         "route": "VC 104",
         "commune": "Pont-Péan",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1409,7 +1409,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1491,8 +1491,8 @@
         "route": "Avenue Gros Malhon",
         "commune": "Rennes",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1500,7 +1500,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1706,8 +1706,8 @@
         "route": "Route de la Rivière",
         "commune": "Noyal-Châtillon-sur-Seiche",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1715,7 +1715,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -1945,8 +1945,8 @@
         "route": "Verrières",
         "commune": "Le Rheu",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -1954,7 +1954,7 @@
         "date_debut": "31/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "31/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2060,8 +2060,8 @@
         "route": "pont réan",
         "commune": "Bruz",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -2069,7 +2069,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -2291,8 +2291,8 @@
         "route": "rue de la Louveterie",
         "commune": "Bruz",
         "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
+        "statut": "Supprimé",
+        "statut_actif": false,
         "statut_resolu": false,
         "type_coupure": "Totale",
         "sens_circulation": "",
@@ -2300,7 +2300,7 @@
         "date_debut": "25/01/2025 à 00h00",
         "date_fin": "",
         "date_saisie": "25/01/2025 à 00h00",
-        "date_suppression": "",
+        "date_suppression": "18/12/2025 à 23h28",
         "gestionnaire": "Rennes Métropole"
       }
     },
@@ -3932,6 +3932,6 @@
   "metadata": {
     "year": 2025,
     "created": "2025-11-26T08:55:18.459Z",
-    "last_update": "2025-12-18T22:27:08.309Z"
+    "last_update": "2025-12-18T23:28:35.348Z"
   }
 }
