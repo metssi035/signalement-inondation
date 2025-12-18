@@ -1,6 +1,6 @@
 {
-  "lastUpdate": "2025-12-18T07:28:45.534Z",
-  "lastUpdateFR": "18/12/2025 à 08:28",
+  "lastUpdate": "2025-12-18T07:46:07.629Z",
+  "lastUpdateFR": "18/12/2025 à 08:46",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
   "totalRecus": 263,
@@ -40,8 +40,8 @@
   },
   "flux_monitoring": {
     "globalStatus": "DEGRADED",
-    "lastCheck": "18/12/2025 à 08:28",
-    "lastCheckISO": "2025-12-18T07:28:45.534Z",
+    "lastCheck": "18/12/2025 à 08:46",
+    "lastCheckISO": "2025-12-18T07:46:07.629Z",
     "summary": {
       "total": 6,
       "ok": 4,
@@ -53,7 +53,7 @@
         "source": "grist_35",
         "status": "EMPTY",
         "records": 0,
-        "responseTime": 2634,
+        "responseTime": 2416,
         "lastError": null,
         "lastSuccess": null,
         "message": "API accessible mais 0 résultats"
@@ -62,43 +62,43 @@
         "source": "cd44",
         "status": "OK",
         "records": 27,
-        "responseTime": 662,
+        "responseTime": 711,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 08:28",
+        "lastSuccess": "18/12/2025 à 08:46",
         "message": "27 signalement(s) récupéré(s)"
       },
       "rennes_metropole": {
         "source": "rennes_metropole",
         "status": "OK",
         "records": 119,
-        "responseTime": 995,
+        "responseTime": 1054,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 08:28",
+        "lastSuccess": "18/12/2025 à 08:46",
         "message": "119 signalement(s) récupéré(s)"
       },
       "cd35_inondations": {
         "source": "cd35_inondations",
         "status": "OK",
         "records": 1,
-        "responseTime": 926,
+        "responseTime": 684,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 08:28",
+        "lastSuccess": "18/12/2025 à 08:46",
         "message": "1 signalement(s) récupéré(s)"
       },
       "cd56": {
         "source": "cd56",
         "status": "OK",
         "records": 116,
-        "responseTime": 1269,
+        "responseTime": 1088,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 08:28",
+        "lastSuccess": "18/12/2025 à 08:46",
         "message": "116 signalement(s) récupéré(s)"
       },
       "diro": {
         "source": "diro",
         "status": "EMPTY",
         "records": 0,
-        "responseTime": 0,
+        "responseTime": 1,
         "lastError": null,
         "lastSuccess": null,
         "message": "API accessible mais 0 résultats"
