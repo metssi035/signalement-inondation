@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2025-12-18T17:29:30.330Z",
-  "lastUpdateFR": "18/12/2025 à 18:29",
+  "lastUpdate": "2025-12-18T17:50:20.103Z",
+  "lastUpdateFR": "18/12/2025 à 18:50",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
-  "totalRecus": 265,
+  "totalRecus": 263,
   "totalInclus": 46,
-  "totalFiltres": 219,
+  "totalFiltres": 217,
   "resolus_filtres_3jours": 103,
   "sources_recues": {
     "grist_35": 0,
-    "cd44": 27,
+    "cd44": 25,
     "rennes_metropole": 119,
     "cd35_inondations": 1,
     "cd56": 116,
@@ -40,8 +40,8 @@
   },
   "flux_monitoring": {
     "globalStatus": "DEGRADED",
-    "lastCheck": "18/12/2025 à 18:29",
-    "lastCheckISO": "2025-12-18T17:29:30.330Z",
+    "lastCheck": "18/12/2025 à 18:50",
+    "lastCheckISO": "2025-12-18T17:50:20.103Z",
     "summary": {
       "total": 6,
       "ok": 5,
@@ -53,7 +53,7 @@
         "source": "grist_35",
         "status": "EMPTY",
         "records": 0,
-        "responseTime": 3271,
+        "responseTime": 2465,
         "lastError": null,
         "lastSuccess": null,
         "message": "API accessible mais 0 résultats"
@@ -61,46 +61,46 @@
       "cd44": {
         "source": "cd44",
         "status": "OK",
-        "records": 27,
-        "responseTime": 2121,
+        "records": 25,
+        "responseTime": 771,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 18:29",
-        "message": "27 signalement(s) récupéré(s)"
+        "lastSuccess": "18/12/2025 à 18:50",
+        "message": "25 signalement(s) récupéré(s)"
       },
       "rennes_metropole": {
         "source": "rennes_metropole",
         "status": "OK",
         "records": 119,
-        "responseTime": 1734,
+        "responseTime": 1063,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 18:29",
+        "lastSuccess": "18/12/2025 à 18:50",
         "message": "119 signalement(s) récupéré(s)"
       },
       "cd35_inondations": {
         "source": "cd35_inondations",
         "status": "OK",
         "records": 1,
-        "responseTime": 1847,
+        "responseTime": 893,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 18:29",
+        "lastSuccess": "18/12/2025 à 18:50",
         "message": "1 signalement(s) récupéré(s)"
       },
       "cd56": {
         "source": "cd56",
         "status": "OK",
         "records": 116,
-        "responseTime": 1923,
+        "responseTime": 1054,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 18:29",
+        "lastSuccess": "18/12/2025 à 18:50",
         "message": "116 signalement(s) récupéré(s)"
       },
       "diro": {
         "source": "diro",
         "status": "OK",
         "records": 2,
-        "responseTime": 0,
+        "responseTime": 1,
         "lastError": null,
-        "lastSuccess": "18/12/2025 à 18:29",
+        "lastSuccess": "18/12/2025 à 18:50",
         "message": "2 signalement(s) récupéré(s)"
       }
     }
