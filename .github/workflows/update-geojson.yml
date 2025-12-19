@@ -1,8 +1,10 @@
 name: 🚀 Update GeoJSON
+
 on:
   schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
+    - cron: '*/30 * * * *'  # Exécution toutes les 30 minutes - modifier ici pour changer la fréquence
+  workflow_dispatch:  # Permet de lancer manuellement le workflow
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -12,43 +14,75 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '18'  # Version de Node.js - changer ici si besoin d'une autre version
+      
       - name: Install dependencies
         run: npm install
+      
       - name: 🚀 Fusion des sources
         env:
-          GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}
-          GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
+          GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}      # À configurer dans GitLab Settings > CI/CD > Variables
+          GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}    # À configurer dans GitLab Settings > CI/CD > Variables
         run: |
-          node scripts/grist-to-geojson.js
+          node scripts/grist-to-geojson.js  # Chemin vers le script - modifier si le script est ailleurs
       
       - name: ☁️ Upload vers GéoBretagne (WebDAV)
         env:
-          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
-          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
-          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}              # URL du serveur WebDAV - à configurer dans Variables
+          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}    # Username WebDAV - à configurer dans Variables
+          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}    # Password WebDAV - à configurer dans Variables
         run: |
           echo "🚀 Upload vers GéoBretagne..."
+          echo ""
           
-          # Upload direct du fichier GeoJSON (sans créer de dossiers)
+          # ═══════════════════════════════════════════════════════════════════
+          # CRÉATION DES DOSSIERS SUR LE SERVEUR WEBDAV
+          # ═══════════════════════════════════════════════════════════════════
+          echo "📁 Création de la structure de dossiers..."
+          
+          # Créer data/ - MODIFIER ICI le chemin si la structure change
+          curl -X MKCOL -s \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+          
+          # Créer data/github/ - MODIFIER ICI le chemin si la structure change
+          curl -X MKCOL -s \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/" || true
+          
+          echo "✅ Structure de dossiers créée"
+          echo ""
+          
+          # ═══════════════════════════════════════════════════════════════════
+          # UPLOAD DU FICHIER GEOJSON PRINCIPAL
+          # ═══════════════════════════════════════════════════════════════════
           echo "📤 Upload de signalements.geojson..."
+          
+          # MODIFIER ICI : le nom du fichier (signalements.geojson) et le chemin de destination
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/signalements.geojson")
           
+          # Vérification du code HTTP (201=créé, 204=mis à jour)
           if [ $HTTP_CODE -eq 201 ] || [ $HTTP_CODE -eq 204 ]; then
             echo "✅ signalements.geojson uploadé avec succès (HTTP $HTTP_CODE)"
           else
             echo "❌ Erreur upload - Code HTTP: $HTTP_CODE"
-            exit 1
+            exit 1  # Arrête le workflow en cas d'erreur
           fi
+          echo ""
           
-          # Upload des métadonnées
-          if [ -f metadata.json ]; then
+          # ═══════════════════════════════════════════════════════════════════
+          # UPLOAD DES MÉTADONNÉES
+          # ═══════════════════════════════════════════════════════════════════
+          if [ -f metadata.json ]; then  # Vérifie que le fichier existe
             echo "📤 Upload de metadata.json..."
+            
+            # MODIFIER ICI : le nom du fichier et le chemin de destination
             HTTP_CODE_META=$(curl -w "%{http_code}" -o /dev/null -s -T metadata.json \
                  -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                  "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/metadata.json")
@@ -58,27 +92,34 @@ jobs:
             else
               echo "⚠️ Erreur upload metadata - Code HTTP: $HTTP_CODE_META"
             fi
+            echo ""
           fi
           
-          echo " Upload vers le cloud GéoBretagne terminé !"
-          echo " Fichiers disponibles dans: App Routes_coupees_inondation/data/github"
+          echo "✅ Upload vers le cloud GéoBretagne terminé !"
+          echo "📁 Fichiers disponibles dans: App Routes_coupees_inondation/data/github"
+          echo ""
           
-          # Upload des archives
-          if [ -d archives ]; then
-            echo ""
+          # ═══════════════════════════════════════════════════════════════════
+          # UPLOAD DES ARCHIVES
+          # ═══════════════════════════════════════════════════════════════════
+          if [ -d archives ]; then  # Vérifie que le dossier archives existe
             echo "📦 Upload des archives..."
+            echo ""
             
-            # Créer le dossier archives s'il n'existe pas
+            # Créer le dossier archives/ - MODIFIER ICI le chemin si nécessaire
             echo "📁 Création du dossier archives..."
             curl -X MKCOL -s \
                  -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                  "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/archives/" || true
+            echo ""
             
-            # Upload de tous les fichiers GeoJSON d'archive
+            # Upload de tous les fichiers .geojson du dossier archives
             for file in archives/*.geojson; do
               if [ -f "$file" ]; then
                 filename=$(basename "$file")
                 echo "📤 Upload de $filename..."
+                
+                # MODIFIER ICI le chemin de destination si nécessaire
                 HTTP_CODE_ARCH=$(curl -w "%{http_code}" -o /dev/null -s -T "$file" \
                      -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                      "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/archives/$filename")
@@ -90,10 +131,13 @@ jobs:
                 fi
               fi
             done
+            echo ""
             
-            # Upload de last_run.json
+            # Upload du fichier last_run.json
             if [ -f archives/last_run.json ]; then
               echo "📤 Upload de last_run.json..."
+              
+              # MODIFIER ICI le chemin de destination si nécessaire
               HTTP_CODE_LAST=$(curl -w "%{http_code}" -o /dev/null -s -T archives/last_run.json \
                    -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                    "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/archives/last_run.json")
@@ -103,23 +147,13 @@ jobs:
               else
                 echo "⚠️ Erreur upload last_run.json - Code HTTP: $HTTP_CODE_LAST"
               fi
+              echo ""
             fi
             
             echo "✅ Upload des archives terminé !"
           else
             echo "ℹ️ Aucun dossier archives trouvé"
           fi
-      
-      - name: Push GeoJSON
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add signalements.geojson metadata.json
           
-          # Ajouter les archives si elles existent
-          if [ -d archives ]; then
-            git add archives/*.geojson archives/last_run.json || true
-          fi
-          
-          git commit -m "🔄 Update GeoJSON $(date)" || true
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          echo ""
+          echo "🎉 Tous les uploads sont terminés !"
