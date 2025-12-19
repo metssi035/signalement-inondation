@@ -37,7 +37,7 @@ jobs:
           echo "📤 Upload de signalements.geojson..."
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/signalements.geojson")
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/signalements.geojson")
           
           if [ $HTTP_CODE -eq 201 ] || [ $HTTP_CODE -eq 204 ]; then
             echo "✅ signalements.geojson uploadé avec succès (HTTP $HTTP_CODE)"
@@ -51,7 +51,7 @@ jobs:
             echo "📤 Upload de metadata.json..."
             HTTP_CODE_META=$(curl -w "%{http_code}" -o /dev/null -s -T metadata.json \
                  -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/metadata.json")
+                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/metadata.json")
             
             if [ $HTTP_CODE_META -eq 201 ] || [ $HTTP_CODE_META -eq 204 ]; then
               echo "✅ metadata.json uploadé avec succès (HTTP $HTTP_CODE_META)"
@@ -61,7 +61,7 @@ jobs:
           fi
           
           echo " Upload vers le cloud GéoBretagne terminé !"
-          echo " Fichiers disponibles dans: App Routes_coupees_inondation/data/"
+          echo " Fichiers disponibles dans: App Routes_coupees_inondation/data/github"
           
           # Upload des archives
           if [ -d archives ]; then
@@ -72,7 +72,7 @@ jobs:
             echo "📁 Création du dossier archives..."
             curl -X MKCOL -s \
                  -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/archives/" || true
+                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/archives/" || true
             
             # Upload de tous les fichiers GeoJSON d'archive
             for file in archives/*.geojson; do
@@ -81,7 +81,7 @@ jobs:
                 echo "📤 Upload de $filename..."
                 HTTP_CODE_ARCH=$(curl -w "%{http_code}" -o /dev/null -s -T "$file" \
                      -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-                     "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/archives/$filename")
+                     "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/archives/$filename")
                 
                 if [ $HTTP_CODE_ARCH -eq 201 ] || [ $HTTP_CODE_ARCH -eq 204 ]; then
                   echo "✅ $filename uploadé (HTTP $HTTP_CODE_ARCH)"
@@ -96,7 +96,7 @@ jobs:
               echo "📤 Upload de last_run.json..."
               HTTP_CODE_LAST=$(curl -w "%{http_code}" -o /dev/null -s -T archives/last_run.json \
                    -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-                   "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/archives/last_run.json")
+                   "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/github/archives/last_run.json")
               
               if [ $HTTP_CODE_LAST -eq 201 ] || [ $HTTP_CODE_LAST -eq 204 ]; then
                 echo "✅ last_run.json uploadé (HTTP $HTTP_CODE_LAST)"
