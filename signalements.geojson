@@ -2157,7 +2157,7 @@
         "commentaire": "Amanlis",
         "date_debut": "",
         "date_fin": "",
-        "date_saisie": "2025-12-19T05:48:52.895Z",
+        "date_saisie": "2025-12-19T06:41:11.111Z",
         "date_suppression": "",
         "gestionnaire": "CD35",
         "agence": "Vitré",
@@ -2976,48 +2976,19 @@
         "date_suppression": "",
         "gestionnaire": "DIRO - DIR Ouest"
       }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.2902493,
-          48.379303
-        ]
-      },
-      "properties": {
-        "id": 149,
-        "id_source": "251218-001127",
-        "source": "DIRO",
-        "route": "N0165",
-        "commune": "",
-        "cause": "Inondation",
-        "statut": "Actif",
-        "statut_actif": true,
-        "statut_resolu": false,
-        "type_coupure": "Totale",
-        "sens_circulation": "",
-        "commentaire": "situé 1305 m au sud de Ar C'hoadic | Hors voie de circulation | DIR Ouest/District de Brest/CEI de Brest | De Nantes vers Brest | Sévérité: Moyenne | Type: flooding",
-        "date_debut": "18/12/2025 à 10h51",
-        "date_fin": "",
-        "date_saisie": "18/12/2025 à 10h51",
-        "date_suppression": "",
-        "gestionnaire": "DIRO - DIR Ouest"
-      }
     }
   ],
   "metadata": {
-    "generated": "2025-12-19T05:48:52.979Z",
+    "generated": "2025-12-19T06:41:11.199Z",
     "source": "Fusion Grist 35 + CD44 + Rennes Métropole + CD35 Inondations + CD56 + DIRO",
-    "total_count": 46,
+    "total_count": 45,
     "sources": {
       "grist_35": 0,
-      "cd44": 23,
+      "cd44": 25,
       "rennes_metropole": 119,
       "cd35_inondations": 1,
       "cd56": 116,
-      "diro": 2
+      "diro": 1
     }
   }
 }
