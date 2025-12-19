@@ -13,8 +13,8 @@ Le projet combine plusieurs sources de données complémentaires :
 - Moissonnage automatique des données officielles DATEX II (Bison Futé) pour la DIRO
 - Moissonnage des données via API pour le CD35
 - Moissonnage des données via API pour Rennes Metropole
-- Moissonnage des données via ? pour le CD44
-- Moissonnage des données via ? pour le CD56
+- Moissonnage des données via OGC API pour le CD44
+- Moissonnage des données via OGC API pour le CD56
 
 Toutes ces données agrégées seront ensuite visualisées sur une carte interactive via mviewer (Geobretagne).
 
