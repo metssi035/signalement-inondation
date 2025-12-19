@@ -1,24 +1,24 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2025-12-19T01:26:11.349031",
+    "generated_at": "2025-12-19T06:29:10.166084",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 2,
-    "count_active": 2,
+    "count": 1,
+    "count_active": 1,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 165,
-      "dir_ouest": 57,
-      "environmental_obstruction": 2,
-      "inondations": 2,
-      "actives": 2,
+      "total_situations": 162,
+      "dir_ouest": 54,
+      "environmental_obstruction": 1,
+      "inondations": 1,
+      "actives": 1,
       "terminees": 0,
       "par_severite": {
-        "medium": 2
+        "medium": 1
       },
       "par_subtype": {
-        "flooding": 2
+        "flooding": 1
       },
       "sans_coords": 0
     }
@@ -46,32 +46,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2025-12-19T01:26:11.347218"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.2902493,
-          48.379303
-        ]
-      },
-      "properties": {
-        "id": "251218-001127",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0165",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "medium",
-        "description": "situé 1305 m au sud de Ar C'hoadic | Hors voie de circulation | DIR Ouest/District de Brest/CEI de Brest | De Nantes vers Brest",
-        "start_date": "2025-12-18T10:51:38.565+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2025-12-19T01:26:11.347290"
+        "updated_at": "2025-12-19T06:29:10.164846"
       }
     }
   ]
