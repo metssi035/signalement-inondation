@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2025-12-18T23:46:30.258Z",
-  "lastUpdateFR": "19/12/2025 à 00:46",
+  "lastUpdate": "2025-12-19T02:09:31.060Z",
+  "lastUpdateFR": "19/12/2025 à 03:09",
   "timezone": "Europe/Paris",
   "nextUpdateIn": "30 minutes",
-  "totalRecus": 142,
-  "totalInclus": 30,
-  "totalFiltres": 112,
-  "resolus_filtres_3jours": 0,
+  "totalRecus": 261,
+  "totalInclus": 46,
+  "totalFiltres": 215,
+  "resolus_filtres_3jours": 103,
   "sources_recues": {
     "grist_35": 0,
     "cd44": 23,
-    "rennes_metropole": 0,
+    "rennes_metropole": 119,
     "cd35_inondations": 1,
     "cd56": 116,
     "diro": 2
@@ -18,19 +18,19 @@
   "sources_incluses": {
     "saisie_grist": 0,
     "cd44": 0,
-    "rennes_metropole": 0,
+    "rennes_metropole": 16,
     "cd35_inondations": 1,
     "cd56": 27,
     "diro": 2
   },
   "geometries": {
     "points": 30,
-    "lignes": 0,
+    "lignes": 16,
     "multilignes": 0,
     "polygones": 0
   },
   "administrations": {
-    "Non spécifié": 30
+    "Non spécifié": 46
   },
   "archives": {
     "enabled": true,
@@ -40,12 +40,12 @@
   },
   "flux_monitoring": {
     "globalStatus": "DEGRADED",
-    "lastCheck": "19/12/2025 à 00:46",
-    "lastCheckISO": "2025-12-18T23:46:30.258Z",
+    "lastCheck": "19/12/2025 à 03:09",
+    "lastCheckISO": "2025-12-19T02:09:31.060Z",
     "summary": {
       "total": 6,
-      "ok": 4,
-      "empty": 2,
+      "ok": 5,
+      "empty": 1,
       "error": 0
     },
     "sources": {
@@ -53,7 +53,7 @@
         "source": "grist_35",
         "status": "EMPTY",
         "records": 0,
-        "responseTime": 136753,
+        "responseTime": 2457,
         "lastError": null,
         "lastSuccess": null,
         "message": "API accessible mais 0 résultats"
@@ -62,45 +62,45 @@
         "source": "cd44",
         "status": "OK",
         "records": 23,
-        "responseTime": 837,
+        "responseTime": 742,
         "lastError": null,
-        "lastSuccess": "19/12/2025 à 00:44",
+        "lastSuccess": "19/12/2025 à 03:09",
         "message": "23 signalement(s) récupéré(s)"
       },
       "rennes_metropole": {
         "source": "rennes_metropole",
-        "status": "EMPTY",
-        "records": 0,
-        "responseTime": 136726,
+        "status": "OK",
+        "records": 119,
+        "responseTime": 1193,
         "lastError": null,
-        "lastSuccess": null,
-        "message": "API accessible mais 0 résultats"
+        "lastSuccess": "19/12/2025 à 03:09",
+        "message": "119 signalement(s) récupéré(s)"
       },
       "cd35_inondations": {
         "source": "cd35_inondations",
         "status": "OK",
         "records": 1,
-        "responseTime": 1038,
+        "responseTime": 1057,
         "lastError": null,
-        "lastSuccess": "19/12/2025 à 00:44",
+        "lastSuccess": "19/12/2025 à 03:09",
         "message": "1 signalement(s) récupéré(s)"
       },
       "cd56": {
         "source": "cd56",
         "status": "OK",
         "records": 116,
-        "responseTime": 1141,
+        "responseTime": 1234,
         "lastError": null,
-        "lastSuccess": "19/12/2025 à 00:44",
+        "lastSuccess": "19/12/2025 à 03:09",
         "message": "116 signalement(s) récupéré(s)"
       },
       "diro": {
         "source": "diro",
         "status": "OK",
         "records": 2,
-        "responseTime": 1,
+        "responseTime": 0,
         "lastError": null,
-        "lastSuccess": "19/12/2025 à 00:46",
+        "lastSuccess": "19/12/2025 à 03:09",
         "message": "2 signalement(s) récupéré(s)"
       }
     }
