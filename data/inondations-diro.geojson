@@ -1,15 +1,15 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-01-15T12:41:35.619302",
+    "generated_at": "2026-01-15T18:33:54.500758",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 2,
     "count_active": 2,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 205,
-      "dir_ouest": 88,
+      "total_situations": 198,
+      "dir_ouest": 102,
       "environmental_obstruction": 2,
       "inondations": 2,
       "actives": 2,
@@ -46,7 +46,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-01-15T12:41:35.617749"
+        "updated_at": "2026-01-15T18:33:54.498592"
       }
     },
     {
@@ -54,24 +54,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.3356514,
-          48.38282
+          -3.7353957,
+          48.22108
         ]
       },
       "properties": {
-        "id": "260115-001077",
+        "id": "260115-001751",
         "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0165",
+        "road": "N0164",
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
         "severity": "medium",
-        "description": "situé 993 m au sud de Ti ar Ménez | DIR Ouest/District de Brest/CEI de Brest | De Nantes vers Brest",
-        "start_date": "2026-01-15T11:11:45.390+01:00",
+        "description": "situé 3456 m à l'est de Châteauneuf-du-Faou Saint-Andr | DIR Ouest/District de Brest/CEI de Châteauneuf-du-Faou | De Rennes vers Chateaulin",
+        "start_date": "2026-01-15T15:48:27.020+01:00",
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-01-15T12:41:35.617812"
+        "updated_at": "2026-01-15T18:33:54.498830"
       }
     }
   ]
