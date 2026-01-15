@@ -1,15 +1,20 @@
 STATISTIQUES INONDATIONS DIR OUEST
 ==================================================
 
-Généré le : 2026-01-15 06:30:55
+Généré le : 2026-01-15 12:41:35
 Zone géographique : DIR Ouest (Bretagne / Pays de la Loire)
 Filtres appliqués : EnvironmentalObstruction + flooding/flashFloods
 
-Situations totales dans le flux : 175
-Situations DIR Ouest : 66
-Type EnvironmentalObstruction : 0
-INONDATIONS IDENTIFIÉES : 0
-  |-- En cours : 0
+Situations totales dans le flux : 205
+Situations DIR Ouest : 88
+Type EnvironmentalObstruction : 2
+INONDATIONS IDENTIFIÉES : 2
+  |-- En cours : 2
   |-- Terminées : 0
 Événements sans coordonnées GPS : 0
 
+Répartition par niveau de sévérité :
+  - medium: 2
+
+Répartition par sous-type d'inondation :
+  - flooding: 2
