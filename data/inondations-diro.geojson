@@ -1,54 +1,29 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-01-15T18:33:54.500758",
+    "generated_at": "2026-01-16T01:39:07.086847",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 2,
-    "count_active": 2,
+    "count": 1,
+    "count_active": 1,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 198,
-      "dir_ouest": 102,
-      "environmental_obstruction": 2,
-      "inondations": 2,
-      "actives": 2,
+      "total_situations": 167,
+      "dir_ouest": 91,
+      "environmental_obstruction": 1,
+      "inondations": 1,
+      "actives": 1,
       "terminees": 0,
       "par_severite": {
-        "medium": 2
+        "medium": 1
       },
       "par_subtype": {
-        "flooding": 2
+        "flooding": 1
       },
       "sans_coords": 0
     }
   },
   "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.2902875,
-          48.379215
-        ]
-      },
-      "properties": {
-        "id": "260115-000872",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0165",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "medium",
-        "description": "situé 1268 m au nord de Ar C'hranj | DIR Ouest/District de Brest/CEI de Brest | De Brest vers Nantes",
-        "start_date": "2026-01-15T09:56:11.863+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2026-01-15T18:33:54.498592"
-      }
-    },
     {
       "type": "Feature",
       "geometry": {
@@ -71,7 +46,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-01-15T18:33:54.498830"
+        "updated_at": "2026-01-16T01:39:07.084882"
       }
     }
   ]
