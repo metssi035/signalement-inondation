@@ -1,15 +1,15 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-01-21T01:41:43.777525",
+    "generated_at": "2026-01-21T06:33:41.303363",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 1,
     "count_active": 1,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 178,
-      "dir_ouest": 50,
+      "total_situations": 159,
+      "dir_ouest": 51,
       "environmental_obstruction": 1,
       "inondations": 1,
       "actives": 1,
@@ -43,10 +43,10 @@
         "severity": "medium",
         "description": "DIR Ouest/District de Nantes/CEI de Savenay | situé 752 m à l'ouest de Pontchâteau centre | De Brest vers Nantes",
         "start_date": "2026-01-21T01:03:00.563+01:00",
-        "end_date": null,
+        "end_date": "2026-01-21T12:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-01-21T01:41:43.776527"
+        "updated_at": "2026-01-21T06:33:41.302204"
       }
     }
   ]
