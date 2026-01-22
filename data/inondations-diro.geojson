@@ -1,23 +1,53 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-01-21T18:39:36.759350",
+    "generated_at": "2026-01-22T01:41:15.788055",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 0,
-    "count_active": 0,
+    "count": 1,
+    "count_active": 1,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 174,
-      "dir_ouest": 45,
-      "environmental_obstruction": 0,
-      "inondations": 0,
-      "actives": 0,
+      "total_situations": 167,
+      "dir_ouest": 43,
+      "environmental_obstruction": 1,
+      "inondations": 1,
+      "actives": 1,
       "terminees": 0,
-      "par_severite": {},
-      "par_subtype": {},
+      "par_severite": {
+        "medium": 1
+      },
+      "par_subtype": {
+        "flooding": 1
+      },
       "sans_coords": 0
     }
   },
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5515348,
+          47.25767
+        ]
+      },
+      "properties": {
+        "id": "260121-002488",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N0844",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "medium",
+        "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 400 m à l'est de Porte de la Chapelle | De Nantes Porte d'Anjou vers Nantes Porte d'Orvault",
+        "start_date": "2026-01-21T21:09:42.890+01:00",
+        "end_date": "2026-01-23T10:00:00.000+01:00",
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-01-22T01:41:15.786782"
+      }
+    }
+  ]
 }
