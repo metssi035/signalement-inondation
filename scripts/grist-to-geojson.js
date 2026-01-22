@@ -1155,8 +1155,8 @@ function gristToFeature(record) {
                 type_coupure: record.fields.Type_coupure || 'Totale',
                 sens_circulation: record.fields.sens_circulation || '',
                 commentaire: record.fields.Description || '',
-                date_debut: formatDate(record.fields.Date_heure),
-                date_fin: formatDate(record.fields.Date_fin),
+                date_debut: formatDate(record.fields.Date_heure_debut),
+                date_fin: formatDate(record.fields.Date_heure_fin),
                 date_saisie: formatDate(record.fields.Date_heure),
                 date_suppression: '',
                 gestionnaire: record.fields.Gestionnaire || ''
