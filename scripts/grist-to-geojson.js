@@ -1616,8 +1616,8 @@ async function mergeSources() {
         });
         
         // Détecter les signalements supprimés
-        console.log(`\n Détection des suppressions...`);
-        detectDeletedSignalements(features);
+        //console.log(`\n Détection des suppressions...`);
+        //detectDeletedSignalements(features);
         
         console.log(` Archivage terminé\n`);
         
