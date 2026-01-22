@@ -1,21 +1,21 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-01-22T01:41:15.788055",
+    "generated_at": "2026-01-22T06:31:58.971593",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 1,
     "count_active": 1,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 167,
-      "dir_ouest": 43,
+      "total_situations": 187,
+      "dir_ouest": 42,
       "environmental_obstruction": 1,
       "inondations": 1,
       "actives": 1,
       "terminees": 0,
       "par_severite": {
-        "medium": 1
+        "high": 1
       },
       "par_subtype": {
         "flooding": 1
@@ -40,13 +40,13 @@
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
-        "severity": "medium",
+        "severity": "high",
         "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 400 m à l'est de Porte de la Chapelle | De Nantes Porte d'Anjou vers Nantes Porte d'Orvault",
         "start_date": "2026-01-21T21:09:42.890+01:00",
         "end_date": "2026-01-23T10:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-01-22T01:41:15.786782"
+        "updated_at": "2026-01-22T06:31:58.969843"
       }
     }
   ]
