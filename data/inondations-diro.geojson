@@ -1,53 +1,23 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-01-30T12:51:34.711185",
+    "generated_at": "2026-01-30T18:39:11.750199",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 1,
-    "count_active": 1,
+    "count": 0,
+    "count_active": 0,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 212,
-      "dir_ouest": 78,
-      "environmental_obstruction": 1,
-      "inondations": 1,
-      "actives": 1,
+      "total_situations": 217,
+      "dir_ouest": 66,
+      "environmental_obstruction": 0,
+      "inondations": 0,
+      "actives": 0,
       "terminees": 0,
-      "par_severite": {
-        "low": 1
-      },
-      "par_subtype": {
-        "flooding": 1
-      },
+      "par_severite": {},
+      "par_subtype": {},
       "sans_coords": 0
     }
   },
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.3784692,
-          47.769127
-        ]
-      },
-      "properties": {
-        "id": "260130-001364",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N/A",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "low",
-        "description": "Hors voie de circulation | DIR Ouest/District de Vannes/CEI de Lorient | sur bretelle d'entrée | situé 29 m à l'est de Lorient | De Nantes vers Brest",
-        "start_date": "2026-01-30T13:39:07.569+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2026-01-30T12:51:34.709911"
-      }
-    }
-  ]
+  "features": []
 }
