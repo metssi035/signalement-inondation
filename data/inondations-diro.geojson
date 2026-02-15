@@ -1,24 +1,25 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-15T12:46:35.041173",
+    "generated_at": "2026-02-15T18:33:45.922050",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 3,
-    "count_active": 3,
+    "count": 5,
+    "count_active": 5,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 224,
-      "dir_ouest": 57,
-      "environmental_obstruction": 3,
-      "inondations": 3,
-      "actives": 3,
+      "total_situations": 254,
+      "dir_ouest": 61,
+      "environmental_obstruction": 5,
+      "inondations": 5,
+      "actives": 5,
       "terminees": 0,
       "par_severite": {
-        "high": 3
+        "high": 2,
+        "medium": 3
       },
       "par_subtype": {
-        "flooding": 3
+        "flooding": 5
       },
       "sans_coords": 0
     }
@@ -46,7 +47,7 @@
         "end_date": "2026-02-16T10:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-15T12:46:35.039396"
+        "updated_at": "2026-02-15T18:33:45.919708"
       }
     },
     {
@@ -71,7 +72,7 @@
         "end_date": "2026-02-16T12:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-15T12:46:35.039632"
+        "updated_at": "2026-02-15T18:33:45.919790"
       }
     },
     {
@@ -79,8 +80,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.9392074,
-          47.367928
+          -1.9381919,
+          47.369186
         ]
       },
       "properties": {
@@ -90,13 +91,63 @@
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
-        "severity": "high",
+        "severity": "medium",
         "description": "DIR Ouest/District de Nantes/CEI de Savenay | sur bretelle d'entrée | situé 1478 m à l'est de Savenay ouest | De Laval vers Saint-Nazaire",
         "start_date": "2026-02-15T11:10:20.892+01:00",
-        "end_date": "2026-02-16T00:00:00.000+01:00",
+        "end_date": "2026-02-16T12:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-15T12:46:35.039733"
+        "updated_at": "2026-02-15T18:33:45.919907"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8659539,
+          47.346924
+        ]
+      },
+      "properties": {
+        "id": "260215-001459",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N/A",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "medium",
+        "description": "DIR Ouest/District de Nantes/CEI de Savenay | sur bretelle de sortie | situé 26 m à l'ouest de Malville - La Croix Blanche | De Brest vers Nantes",
+        "start_date": "2026-02-15T16:57:14.653+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-15T18:33:45.920453"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8653224,
+          47.347103
+        ]
+      },
+      "properties": {
+        "id": "260215-001459",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N/A",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "medium",
+        "description": "DIR Ouest/District de Nantes/CEI de Savenay | sur bretelle de sortie | situé 33 m à l'est de Malville - La Croix Blanche | De Nantes vers Brest",
+        "start_date": "2026-02-15T16:57:14.653+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-15T18:33:45.920499"
       }
     }
   ]
