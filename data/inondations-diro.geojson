@@ -1,24 +1,24 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-15T06:49:22.250163",
+    "generated_at": "2026-02-15T12:46:35.041173",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 2,
-    "count_active": 2,
+    "count": 3,
+    "count_active": 3,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 233,
-      "dir_ouest": 51,
-      "environmental_obstruction": 2,
-      "inondations": 2,
-      "actives": 2,
+      "total_situations": 224,
+      "dir_ouest": 57,
+      "environmental_obstruction": 3,
+      "inondations": 3,
+      "actives": 3,
       "terminees": 0,
       "par_severite": {
-        "high": 2
+        "high": 3
       },
       "par_subtype": {
-        "flooding": 2
+        "flooding": 3
       },
       "sans_coords": 0
     }
@@ -43,10 +43,10 @@
         "severity": "high",
         "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 1163 m à l'ouest de L'Erdre [C844] | De Nantes Porte d'Orvault vers Nantes Porte d'Anjou",
         "start_date": "2026-02-13T18:59:26.967+01:00",
-        "end_date": "2026-02-15T10:00:00.000+01:00",
+        "end_date": "2026-02-16T10:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-15T06:49:22.248269"
+        "updated_at": "2026-02-15T12:46:35.039396"
       }
     },
     {
@@ -68,10 +68,35 @@
         "severity": "high",
         "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 400 m à l'est de Porte de la Chapelle | De Nantes Porte d'Anjou vers Nantes Porte d'Orvault",
         "start_date": "2026-02-11T04:13:37.870+01:00",
-        "end_date": "2026-02-15T12:00:00.000+01:00",
+        "end_date": "2026-02-16T12:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-15T06:49:22.248346"
+        "updated_at": "2026-02-15T12:46:35.039632"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9392074,
+          47.367928
+        ]
+      },
+      "properties": {
+        "id": "260215-000740",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N/A",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "high",
+        "description": "DIR Ouest/District de Nantes/CEI de Savenay | sur bretelle d'entrée | situé 1478 m à l'est de Savenay ouest | De Laval vers Saint-Nazaire",
+        "start_date": "2026-02-15T11:10:20.892+01:00",
+        "end_date": "2026-02-16T00:00:00.000+01:00",
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-15T12:46:35.039733"
       }
     }
   ]
