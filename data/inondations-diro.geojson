@@ -1,15 +1,15 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-16T18:40:29.056384",
+    "generated_at": "2026-02-17T01:58:07.004742",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 2,
     "count_active": 2,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 280,
-      "dir_ouest": 68,
+      "total_situations": 246,
+      "dir_ouest": 54,
       "environmental_obstruction": 2,
       "inondations": 2,
       "actives": 2,
@@ -29,31 +29,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.5516194,
-          47.257607
-        ]
-      },
-      "properties": {
-        "id": "260213-002480",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0844",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "high",
-        "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 1163 m à l'ouest de L'Erdre [C844] | De Nantes Porte d'Orvault vers Nantes Porte d'Anjou",
-        "start_date": "2026-02-13T18:59:26.967+01:00",
-        "end_date": "2026-02-18T10:00:00.000+01:00",
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2026-02-16T18:40:29.053630"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.5515348,
           47.25767
         ]
@@ -68,10 +43,35 @@
         "severity": "high",
         "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 400 m à l'est de Porte de la Chapelle | De Nantes Porte d'Anjou vers Nantes Porte d'Orvault",
         "start_date": "2026-02-11T04:13:37.870+01:00",
-        "end_date": "2026-02-18T12:00:00.000+01:00",
+        "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-16T18:40:29.053767"
+        "updated_at": "2026-02-17T01:58:07.002748"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5516194,
+          47.257607
+        ]
+      },
+      "properties": {
+        "id": "260213-002480",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N0844",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "high",
+        "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 1163 m à l'ouest de L'Erdre [C844] | De Nantes Porte d'Orvault vers Nantes Porte d'Anjou",
+        "start_date": "2026-02-13T18:59:26.967+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-17T01:58:07.002825"
       }
     }
   ]
