@@ -1,25 +1,25 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-18T13:00:06.727866",
+    "generated_at": "2026-02-18T18:52:21.114973",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 3,
-    "count_active": 3,
+    "count": 5,
+    "count_active": 5,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 303,
-      "dir_ouest": 96,
-      "environmental_obstruction": 3,
-      "inondations": 3,
-      "actives": 3,
+      "total_situations": 246,
+      "dir_ouest": 73,
+      "environmental_obstruction": 5,
+      "inondations": 5,
+      "actives": 5,
       "terminees": 0,
       "par_severite": {
-        "high": 2,
-        "medium": 1
+        "high": 3,
+        "medium": 2
       },
       "par_subtype": {
-        "flooding": 3
+        "flooding": 5
       },
       "sans_coords": 0
     }
@@ -47,7 +47,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-18T13:00:06.722914"
+        "updated_at": "2026-02-18T18:52:21.111416"
       }
     },
     {
@@ -72,7 +72,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-18T13:00:06.723004"
+        "updated_at": "2026-02-18T18:52:21.111503"
       }
     },
     {
@@ -80,24 +80,74 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.3356514,
-          48.38282
+          -4.261382,
+          48.368706
         ]
       },
       "properties": {
-        "id": "260218-000852",
+        "id": "260218-002282",
         "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0165",
+        "road": "N/A",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "high",
+        "description": "DIR Ouest/District de Brest/CEI de Brest | sur bretelle de sortie | situé 322 m au nord de Kernévez | De Brest vers Nantes",
+        "start_date": "2026-02-18T18:14:59.150+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-18T18:52:21.112620"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2420356,
+          48.353176
+        ]
+      },
+      "properties": {
+        "id": "260218-002421",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N0012",
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
         "severity": "medium",
-        "description": "DIR Ouest/District de Brest/CEI de Brest | Point particulier : début : situé 1121 m au nord de Ar C'hoadic, fin : situé 993 m au sud de Ti ar Ménez | De Nantes vers Brest",
-        "start_date": "2026-02-18T10:09:44.593+01:00",
+        "description": "DIR Ouest/District de Rennes/CEI de Saint-Aubin-du-Cormier | situé 549 m à l'ouest de Rond point N12 - D812 | De Brest vers Paris",
+        "start_date": "2026-02-18T19:07:17.655+01:00",
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-18T13:00:06.724383"
+        "updated_at": "2026-02-18T18:52:21.112849"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7427557,
+          48.514133
+        ]
+      },
+      "properties": {
+        "id": "260218-002489",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N0012",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "medium",
+        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Le Perray | situé 456 m à l'est de Le Gouëdic | De Paris vers Brest",
+        "start_date": "2026-02-18T19:40:21.133+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-18T18:52:21.113099"
       }
     }
   ]
