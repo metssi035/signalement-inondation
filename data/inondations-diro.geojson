@@ -1,25 +1,25 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-18T18:52:21.114973",
+    "generated_at": "2026-02-19T02:00:19.212325",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 5,
-    "count_active": 5,
+    "count": 3,
+    "count_active": 3,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 246,
-      "dir_ouest": 73,
-      "environmental_obstruction": 5,
-      "inondations": 5,
-      "actives": 5,
+      "total_situations": 237,
+      "dir_ouest": 60,
+      "environmental_obstruction": 3,
+      "inondations": 3,
+      "actives": 3,
       "terminees": 0,
       "par_severite": {
-        "high": 3,
-        "medium": 2
+        "high": 2,
+        "medium": 1
       },
       "par_subtype": {
-        "flooding": 5
+        "flooding": 3
       },
       "sans_coords": 0
     }
@@ -47,7 +47,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-18T18:52:21.111416"
+        "updated_at": "2026-02-19T02:00:19.209617"
       }
     },
     {
@@ -72,7 +72,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-18T18:52:21.111503"
+        "updated_at": "2026-02-19T02:00:19.209694"
       }
     },
     {
@@ -80,33 +80,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.261382,
-          48.368706
-        ]
-      },
-      "properties": {
-        "id": "260218-002282",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N/A",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "high",
-        "description": "DIR Ouest/District de Brest/CEI de Brest | sur bretelle de sortie | situé 322 m au nord de Kernévez | De Brest vers Nantes",
-        "start_date": "2026-02-18T18:14:59.150+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2026-02-18T18:52:21.112620"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2420356,
-          48.353176
+          -1.2395165,
+          48.352554
         ]
       },
       "properties": {
@@ -117,37 +92,12 @@
         "subtype": "flooding",
         "problem": "Inondation",
         "severity": "medium",
-        "description": "DIR Ouest/District de Rennes/CEI de Saint-Aubin-du-Cormier | situé 549 m à l'ouest de Rond point N12 - D812 | De Brest vers Paris",
+        "description": "DIR Ouest/District de Rennes/CEI de Saint-Aubin-du-Cormier | Point particulier : début : situé 49 m à l'ouest de Rond point N12 - D812, fin : situé 5527 m à l'est de Romagnié | De Paris vers Brest",
         "start_date": "2026-02-18T19:07:17.655+01:00",
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-18T18:52:21.112849"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7427557,
-          48.514133
-        ]
-      },
-      "properties": {
-        "id": "260218-002489",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0012",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "medium",
-        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Le Perray | situé 456 m à l'est de Le Gouëdic | De Paris vers Brest",
-        "start_date": "2026-02-18T19:40:21.133+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2026-02-18T18:52:21.113099"
+        "updated_at": "2026-02-19T02:00:19.210450"
       }
     }
   ]
