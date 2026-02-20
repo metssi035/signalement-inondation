@@ -1,22 +1,22 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-20T12:54:41.092521",
+    "generated_at": "2026-02-20T18:43:16.583785",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 4,
     "count_active": 4,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 274,
-      "dir_ouest": 98,
+      "total_situations": 251,
+      "dir_ouest": 70,
       "environmental_obstruction": 4,
       "inondations": 4,
       "actives": 4,
       "terminees": 0,
       "par_severite": {
-        "high": 3,
-        "medium": 1
+        "high": 2,
+        "medium": 2
       },
       "par_subtype": {
         "flooding": 4
@@ -47,7 +47,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T12:54:41.089145"
+        "updated_at": "2026-02-20T18:43:16.580821"
       }
     },
     {
@@ -72,7 +72,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T12:54:41.089224"
+        "updated_at": "2026-02-20T18:43:16.580900"
       }
     },
     {
@@ -80,24 +80,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.8479058,
-          48.066475
+          -3.3681145,
+          48.553474
         ]
       },
       "properties": {
-        "id": "260219-000837",
+        "id": "260220-001685",
         "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0024",
+        "road": "N/A",
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
         "severity": "medium",
-        "description": "DIR Ouest/District de Rennes/CEI de Pleumeleuc | situé 497 m à l'est de Mordelles | De Rennes vers Lorient",
-        "start_date": "2026-02-19T09:11:29.205+01:00",
+        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Guingamp | sur bretelle de sortie | situé 352 m à l'est de Belle-Isle-en-Terre | De Paris vers Brest",
+        "start_date": "2026-02-20T14:54:03.014+01:00",
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T12:54:41.089923"
+        "updated_at": "2026-02-20T18:43:16.581705"
       }
     },
     {
@@ -105,24 +105,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.8557942,
-          48.066074
+          -1.528744,
+          48.5616
         ]
       },
       "properties": {
-        "id": "260219-002312",
+        "id": "260220-002603",
         "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0024",
+        "road": "N/A",
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
-        "severity": "high",
-        "description": "DIR Ouest/District de Rennes/CEI de Pleumeleuc | Point particulier : début : situé 3 m à l'ouest de Mordelles, fin : situé 1319 m à l'est de Bréal-sous-Monfort Les Quatre | De Rennes vers Lorient",
-        "start_date": "2026-02-19T22:30:35.666+01:00",
+        "severity": "medium",
+        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Pleslin-Trigavou | sur bretelle de sortie | situé 219 m à l'est de Pontorson ouest | De Avranches vers Saint-Brieuc",
+        "start_date": "2026-02-20T18:42:07.167+01:00",
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T12:54:41.090152"
+        "updated_at": "2026-02-20T18:43:16.582400"
       }
     }
   ]
