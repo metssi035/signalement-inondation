@@ -1,25 +1,25 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-20T06:54:14.169099",
+    "generated_at": "2026-02-20T12:54:41.092521",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 5,
-    "count_active": 5,
+    "count": 4,
+    "count_active": 4,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 261,
-      "dir_ouest": 82,
-      "environmental_obstruction": 5,
-      "inondations": 5,
-      "actives": 5,
+      "total_situations": 274,
+      "dir_ouest": 98,
+      "environmental_obstruction": 4,
+      "inondations": 4,
+      "actives": 4,
       "terminees": 0,
       "par_severite": {
         "high": 3,
-        "medium": 2
+        "medium": 1
       },
       "par_subtype": {
-        "flooding": 5
+        "flooding": 4
       },
       "sans_coords": 0
     }
@@ -47,7 +47,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T06:54:14.165403"
+        "updated_at": "2026-02-20T12:54:41.089145"
       }
     },
     {
@@ -72,7 +72,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T06:54:14.165508"
+        "updated_at": "2026-02-20T12:54:41.089224"
       }
     },
     {
@@ -97,7 +97,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T06:54:14.166536"
+        "updated_at": "2026-02-20T12:54:41.089923"
       }
     },
     {
@@ -122,32 +122,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T06:54:14.166654"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.8557708,
-          48.065987
-        ]
-      },
-      "properties": {
-        "id": "260219-003013",
-        "source": "Direction interdépartementale des routes/DIR Ouest",
-        "road": "N0024",
-        "type": "EnvironmentalObstruction",
-        "subtype": "flooding",
-        "problem": "Inondation",
-        "severity": "medium",
-        "description": "DIR Ouest/District de Rennes/CEI de Pleumeleuc | Point particulier : début : situé 1239 m à l'est de Bréal-sous-Monfort Les Quatre, fin : situé 103 m à l'ouest de Mordelles | De Lorient vers Rennes",
-        "start_date": "2026-02-19T13:06:00.000+01:00",
-        "end_date": null,
-        "is_active": true,
-        "status": "en_cours",
-        "updated_at": "2026-02-20T06:54:14.166752"
+        "updated_at": "2026-02-20T12:54:41.090152"
       }
     }
   ]
