@@ -1,25 +1,26 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-21T06:38:48.068777",
+    "generated_at": "2026-02-21T12:42:17.508331",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
-    "count": 4,
-    "count_active": 4,
+    "count": 6,
+    "count_active": 6,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 209,
-      "dir_ouest": 58,
-      "environmental_obstruction": 4,
-      "inondations": 4,
-      "actives": 4,
+      "total_situations": 238,
+      "dir_ouest": 64,
+      "environmental_obstruction": 6,
+      "inondations": 6,
+      "actives": 6,
       "terminees": 0,
       "par_severite": {
         "high": 2,
-        "medium": 2
+        "medium": 3,
+        "low": 1
       },
       "par_subtype": {
-        "flooding": 4
+        "flooding": 6
       },
       "sans_coords": 0
     }
@@ -47,7 +48,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-21T06:38:48.066329"
+        "updated_at": "2026-02-21T12:42:17.505445"
       }
     },
     {
@@ -72,7 +73,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-21T06:38:48.066406"
+        "updated_at": "2026-02-21T12:42:17.505522"
       }
     },
     {
@@ -97,7 +98,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-21T06:38:48.067122"
+        "updated_at": "2026-02-21T12:42:17.506236"
       }
     },
     {
@@ -122,7 +123,57 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-21T06:38:48.067342"
+        "updated_at": "2026-02-21T12:42:17.506431"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5356461,
+          48.56155
+        ]
+      },
+      "properties": {
+        "id": "260221-000505",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N0176",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "medium",
+        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Pleslin-Trigavou | situé 286 m à l'ouest de Pontorson ouest | De Saint-Brieuc vers Avranches",
+        "start_date": "2026-02-21T09:40:42.537+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-21T12:42:17.506687"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5310085,
+          48.560596
+        ]
+      },
+      "properties": {
+        "id": "260221-000510",
+        "source": "Direction interdépartementale des routes/DIR Ouest",
+        "road": "N/A",
+        "type": "EnvironmentalObstruction",
+        "subtype": "flooding",
+        "problem": "Inondation",
+        "severity": "low",
+        "description": "Hors voie de circulation | DIR Ouest/District de Saint-Brieuc/CEI de Pleslin-Trigavou | sur bretelle d'entrée | situé 36 m à l'ouest de Pontorson ouest | De Saint-Brieuc vers Avranches",
+        "start_date": "2026-02-21T09:43:35.376+01:00",
+        "end_date": null,
+        "is_active": true,
+        "status": "en_cours",
+        "updated_at": "2026-02-21T12:42:17.506742"
       }
     }
   ]
