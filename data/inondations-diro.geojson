@@ -1,15 +1,15 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-20T18:43:16.583785",
+    "generated_at": "2026-02-21T01:51:05.606489",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 4,
     "count_active": 4,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 251,
-      "dir_ouest": 70,
+      "total_situations": 211,
+      "dir_ouest": 57,
       "environmental_obstruction": 4,
       "inondations": 4,
       "actives": 4,
@@ -47,7 +47,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T18:43:16.580821"
+        "updated_at": "2026-02-21T01:51:05.603888"
       }
     },
     {
@@ -72,7 +72,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T18:43:16.580900"
+        "updated_at": "2026-02-21T01:51:05.603969"
       }
     },
     {
@@ -97,7 +97,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T18:43:16.581705"
+        "updated_at": "2026-02-21T01:51:05.604745"
       }
     },
     {
@@ -105,8 +105,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.528744,
-          48.5616
+          -1.5354424,
+          48.561546
         ]
       },
       "properties": {
@@ -117,12 +117,12 @@
         "subtype": "flooding",
         "problem": "Inondation",
         "severity": "medium",
-        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Pleslin-Trigavou | sur bretelle de sortie | situé 219 m à l'est de Pontorson ouest | De Avranches vers Saint-Brieuc",
+        "description": "DIR Ouest/District de Saint-Brieuc/CEI de Pleslin-Trigavou | sur bretelle de sortie | situé 274 m à l'ouest de Pontorson ouest | De Saint-Brieuc vers Avranches",
         "start_date": "2026-02-20T18:42:07.167+01:00",
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-20T18:43:16.582400"
+        "updated_at": "2026-02-21T01:51:05.604996"
       }
     }
   ]
