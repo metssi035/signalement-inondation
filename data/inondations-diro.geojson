@@ -1,21 +1,22 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-26T13:01:38.893865",
+    "generated_at": "2026-02-26T18:50:55.053158",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 2,
     "count_active": 2,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 311,
-      "dir_ouest": 145,
+      "total_situations": 267,
+      "dir_ouest": 126,
       "environmental_obstruction": 2,
       "inondations": 2,
       "actives": 2,
       "terminees": 0,
       "par_severite": {
-        "high": 2
+        "high": 1,
+        "medium": 1
       },
       "par_subtype": {
         "flooding": 2
@@ -46,7 +47,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-26T13:01:38.889935"
+        "updated_at": "2026-02-26T18:50:55.049547"
       }
     },
     {
@@ -65,13 +66,13 @@
         "type": "EnvironmentalObstruction",
         "subtype": "flooding",
         "problem": "Inondation",
-        "severity": "high",
+        "severity": "medium",
         "description": "DIR Ouest/District de Nantes/CEI de Goulaine | situé 1163 m à l'ouest de L'Erdre [C844] | De Nantes Porte d'Orvault vers Nantes Porte d'Anjou",
         "start_date": "2026-02-13T18:59:26.967+01:00",
-        "end_date": null,
+        "end_date": "2026-02-28T13:00:00.000+01:00",
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-26T13:01:38.890014"
+        "updated_at": "2026-02-26T18:50:55.051231"
       }
     }
   ]
