@@ -1,15 +1,15 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-26T06:57:35.396558",
+    "generated_at": "2026-02-26T13:01:38.893865",
     "source": "DATEX II - Bison Futé",
     "filter": "Inondations DIR Ouest (Bretagne / Pays de la Loire)",
     "count": 2,
     "count_active": 2,
     "count_finished": 0,
     "statistics": {
-      "total_situations": 267,
-      "dir_ouest": 77,
+      "total_situations": 311,
+      "dir_ouest": 145,
       "environmental_obstruction": 2,
       "inondations": 2,
       "actives": 2,
@@ -46,7 +46,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-26T06:57:35.393874"
+        "updated_at": "2026-02-26T13:01:38.889935"
       }
     },
     {
@@ -71,7 +71,7 @@
         "end_date": null,
         "is_active": true,
         "status": "en_cours",
-        "updated_at": "2026-02-26T06:57:35.393952"
+        "updated_at": "2026-02-26T13:01:38.890014"
       }
     }
   ]
