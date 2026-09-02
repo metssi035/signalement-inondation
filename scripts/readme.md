@@ -1,725 +1,415 @@
-# 📚 DOCUMENTATION DÉTAILLÉE DU CODE
-# Script : grist-to-geojson__monitoring-only.js
+# DOCUMENTATION DÉTAILLÉE DU CODE
 
 ## TABLE DES MATIÈRES
+
+### merge_signalements.py
 1. [Vue d'ensemble](#vue-densemble)
 2. [Structure du fichier](#structure-du-fichier)
 3. [Explication section par section](#explication-section-par-section)
 4. [Flux de données](#flux-de-données)
-5. [Fonctions principales](#fonctions-principales)
+5. [Concepts clés à retenir](#concepts-clés-à-retenir)
+6. [Aide pour modification](#aide-pour-modification)
+
+### Autres scripts
+7. [fetch_datex_diro.py](#fetch_datex_diropy)
+8. [fetch_vigicrues.py](#fetch_vigicruespy)
+9. [fetch_stations_hydro.py](#fetch_stations_hydropy)
+10. [stats_prefecture.py](#stats_prefecturepy)
+
 
 ---
 
 ## VUE D'ENSEMBLE
 
-### Objectif du script
-Ce script fusionne les données d'inondations provenant de **6 sources différentes** en un seul fichier GeoJSON standardisé. Il gère également :
-- L'archivage annuel permanent
-- La détection des suppressions
+### Objectif du script merge_signalements.py
+
+Ce script fusionne les données d'inondations provenant de **7 sources différentes** en un seul GeoJSON standardisé, plus deux exports dérivés (Datex II XML, CSV). Il gère également :
+- L'archivage annuel permanent (par signalement)
+- La détection des suppressions silencieuses (une source qui retire une entrée sans jamais dire pourquoi)
 - Le monitoring de l'état de chaque flux
+- Un coupe-circuit par source (`DISABLED_SOURCES`), pour désactiver une source sans toucher au code
+
+C'est un portage Python de l'ancien `grist-to-geojson.js` (Node), remplacé le 03/08/2026. La logique métier (archivage, filtrage, monitoring) est restée la même ; seul le langage a changé.
 
 ### Sources de données
-1. **Grist 35** : Signalements manuels saisis par les agents
+
+1. **Grist 35** : signalements manuels saisis par les agents (formulaire Grist)
 2. **CD44** : API REST du département de Loire-Atlantique
-3. **Rennes Métropole** : Service WFS (Web Feature Service)
-4. **CD35** : API OGC du département d'Ille-et-Vilaine
-5. **CD56** : API OGC du département du Morbihan
-6. **DIRO** : Fichier GeoJSON généré par script Python (DIR Ouest)
+3. **Rennes Métropole** : service WFS (Web Feature Service)
+4. **CD35 Inondations** : API OGC du département d'Ille-et-Vilaine, signalements ponctuels
+5. **CD35 Inondations Linéaire** : API OGC du département d'Ille-et-Vilaine, tronçons linéaires
+6. **CD56** : API OGC du département du Morbihan
+7. **DIRO** : fichier GeoJSON généré par `fetch_datex_diro.py` (DIR Ouest, Datex II Bison Futé)
 
 ### Fichiers générés
+
 ```
-signalements.geojson     → Tous les signalements actifs fusionnés
-metadata.json            → Statistiques + monitoring des flux
+signalements.geojson              → Tous les signalements actifs fusionnés
+signalements_inondation.xml       → Export Datex II v2.3 (mêmes signalements)
+signalements_inondation.csv       → Export CSV grand public, sans géométrie
+metadata.json                     → Statistiques + monitoring des flux
 archives/
-  ├── signalements_2024.geojson
   ├── signalements_2025.geojson
-  └── last_run.json
+  ├── signalements_2026.geojson
+  └── last_run.json               → État de la dernière exécution (pour détecter les suppressions)
 ```
 
 ---
 
 ## STRUCTURE DU FICHIER
 
-Le code est organisé en sections logiques :
+Le code est organisé en sections logiques (bannières `# ===` dans le fichier) :
 
 ```
-1. IMPORTS (lignes 1-40)
-   └─ Modules nécessaires : https, fs, fetch, xml2js, proj4
+1. CONFIGURATION
+   ├─ Identifiants Grist, URLs des API sources
+   └─ DISABLED_SOURCES : coupe-circuit par source
 
-2. CONFIGURATION (lignes 41-100)
-   ├─ Projections cartographiques
-   ├─ Variables d'environnement
-   └─ Chemins des fichiers
+2. IDENTIFIANTS UNIQUES
+   └─ generate_unique_id()
 
-3. UTILITAIRES (lignes 101-500)
-   ├─ Génération d'IDs uniques
-   ├─ Gestion des dates
-   ├─ Vérification ancienneté (> 3 jours)
-   └─ Filtrage des signalements
+3. DATES ET HEURES (fuseau Europe/Paris)
+   └─ _iso_now(), get_datetime_fr(), format_date(), is_older_than_3_days()
 
-4. ARCHIVAGE (lignes 501-800)
-   ├─ Chargement/sauvegarde archives
-   ├─ Gestion last_run.json
-   ├─ Détection des suppressions
-   └─ Mise à jour des statuts
+4. PROJECTIONS CARTOGRAPHIQUES
+   └─ Lambert 93 / CC48 → WGS84 (pyproj)
 
-5. MONITORING (lignes 801-900)
-   ├─ Structure fluxMonitor
-   ├─ Wrapper monitorFetch
-   └─ Calcul des statuts
+5. FILTRAGE DES SIGNALEMENTS RÉSOLUS DEPUIS PLUS DE 3 JOURS
+   └─ should_keep_feature()
 
-6. RÉCUPÉRATION DES DONNÉES (lignes 901-1300)
-   ├─ fetchGristData()
-   ├─ fetchCD44Data()
-   ├─ fetchRennesMetroData()
-   ├─ fetchCD35InondationsData()
-   ├─ fetchCD56Data()
-   └─ fetchDiroData()
+6. ARCHIVAGE ANNUEL
+   ├─ load_archive() / save_archive()
+   ├─ load_last_run() / save_last_run()
+   ├─ find_in_archive()
+   ├─ add_or_update_in_archive()
+   └─ detect_deleted_signalements()
 
-7. CONVERSION (lignes 1301-1500)
-   ├─ gristToFeature()
-   ├─ cd44ToFeature()
-   ├─ rennesMetroToFeature()
-   ├─ cd35InondationsToFeature()
-   ├─ cd56ToFeature()
-   └─ diroToFeature()
+7. MONITORING DES FLUX
+   └─ flux_monitor, monitor_fetch()
 
-8. FUSION PRINCIPALE (lignes 1501-fin)
-   └─ mergeSources()
+8. RÉCUPÉRATION + CONVERSION PAR SOURCE
+   ├─ Rennes Métropole (WFS)
+   ├─ CD35 / CD56 (API OGC Feature)
+   ├─ Grist 35
+   ├─ CD44
+   └─ DIRO
+
+9. EXPORT DATEX II
+   └─ build_datex2_export()
+
+10. CROISEMENT COMMUNAL (codes INSEE)
+    └─ enrich_with_communes()
+
+11. EXPORT CSV
+    └─ build_csv_export()
+
+12. FUSION PRINCIPALE
+    └─ merge_sources()
 ```
 
 ---
 
 ## EXPLICATION SECTION PAR SECTION
 
-### SECTION 1 : IMPORTS
+### SECTION 1 : CONFIGURATION
 
-```javascript
-const https = require('https');
+```python
+GRIST_DOC_ID = os.environ.get("GRIST_DOC_ID")
+GRIST_API_KEY = os.environ.get("GRIST_API_KEY")
 ```
-**Pourquoi ?** Module natif Node.js pour faire des requêtes HTTPS. Utilisé pour Grist car c'est le plus simple pour leur API.
+**Pourquoi des variables d'environnement ?** Ce sont des secrets, jamais en dur dans le code. Définies dans GitLab (Settings > CI/CD > Variables), injectées automatiquement dans le job.
 
-```javascript
-const fetch = require('node-fetch');
+```python
+KNOWN_SOURCES = {"grist_35", "cd44", "rennes_metropole", "cd35_inondations", "cd35_lineaire", "cd56", "diro"}
+DISABLED_SOURCES = {s.strip() for s in os.environ.get("DISABLED_SOURCES", "").split(",") if s.strip()}
 ```
-**Pourquoi ?** Alternative moderne à `https`. Utilisé pour les API REST (CD44, CD56, CD35, Rennes).
-
-```javascript
-const xml2js = require('xml2js');
-```
-**Pourquoi ?** Rennes Métropole utilise un service WFS qui retourne du XML. On doit le convertir en JSON.
-
-```javascript
-const proj4 = require('proj4');
-```
-**Pourquoi ?** Les coordonnées arrivent en Lambert 93 ou CC48. On doit tout convertir en WGS84 (latitude/longitude).
+**Coupe-circuit par source** : si une source envoie des données erronées ou test, ajouter sa clé dans la variable CI/CD `DISABLED_SOURCES` (séparées par des virgules) la désactive sans toucher au code. Elle n'est plus interrogée du tout et disparaît des exports, sans effacer son historique déjà archivé. Vide par défaut = comportement normal, rien ne change.
 
 ---
 
-### SECTION 2 : PROJECTIONS CARTOGRAPHIQUES
+### SECTION 2 : IDENTIFIANTS UNIQUES
 
-```javascript
-proj4.defs("EPSG:2154", "...");
+```python
+_unique_id_counter = itertools.count(1)
+def generate_unique_id():
+    return next(_unique_id_counter)
 ```
-
-**Qu'est-ce que c'est ?**
-- EPSG:2154 = Lambert 93 (système officiel français)
-- Les administrations stockent souvent leurs coordonnées en mètres (X, Y)
-- Nous devons tout convertir en degrés (latitude, longitude) pour le web
-
-**Exemple de conversion :**
-```
-Entrée :  X=359000, Y=6789000 (Lambert 93)
-Sortie :  lon=-1.6778, lat=48.1119 (WGS84)
-```
+**Pourquoi ?** Chaque signalement dans le GeoJSON final a besoin d'un `id` unique. Un compteur simple suffit car le script s'exécute de bout en bout à chaque run (pas de parallélisme sur l'écriture).
 
 ---
 
-### SECTION 3 : GÉNÉRATION D'IDs UNIQUES
+### SECTION 3 : DATES ET HEURES
 
-```javascript
-let uniqueIdCounter = 1;
-function generateUniqueId() {
-    return uniqueIdCounter++;
-}
-```
+Trois représentations d'une même date selon l'usage :
+- `_iso_now()` : horodatage UTC ISO (équivalent `Date.toISOString()` JS), pour `metadata.json`
+- `get_datetime_fr()` : version française lisible (`"17/12/2025 à 15h30"`), pour l'affichage
+- `format_date(date_value)` : convertit n'importe quelle date source (string ISO ou timestamp epoch en secondes/millisecondes) vers ce format français
 
-**Pourquoi ?**
-- Chaque signalement dans le GeoJSON final doit avoir un ID unique
-- Le compteur commence à 1 et s'incrémente à chaque nouveau signalement
-- Simple mais efficace car le script s'exécute de bout en bout
+**Piège gardé volontairement** : `is_older_than_3_days()` compare en heure système naïve (comme le faisait le JS d'origine), pas en Europe/Paris explicite. Comportement identique à l'ancien script, pas un bug.
 
 ---
 
-### SECTION 4 : GESTION DES DATES
+### SECTION 4 : PROJECTIONS CARTOGRAPHIQUES
 
-```javascript
-function getDateTimeFR() {
-    // ...
-    return {
-        iso: "2025-12-17T14:30:00.000Z",      // Pour machines
-        local: "17/12/2025 à 15h30",          // Pour humains
-        timezone: "Europe/Paris"
-    };
-}
+```python
+_lambert93_to_wgs84 = pyproj.Transformer.from_crs("EPSG:2154", "EPSG:4326", always_xy=True)
+_cc48_to_wgs84 = pyproj.Transformer.from_crs("EPSG:3948", "EPSG:4326", always_xy=True)
 ```
-
-**Pourquoi 2 formats ?**
-- **ISO** : Standard international, utilisé pour trier/comparer les dates
-- **Local** : Format français lisible pour l'affichage
-
-**Attention au fuseau horaire !**
-- Les API retournent souvent en UTC
-- On convertit tout en heure française pour cohérence
+Les administrations stockent parfois leurs coordonnées en mètres (Lambert 93 ou CC48). Le visualiseur a besoin de degrés (WGS84). Seule Rennes Métropole peut renvoyer en CC48 (détecté automatiquement, cf section 8).
 
 ---
 
-### SECTION 5 : FILTRAGE DES SIGNALEMENTS RÉSOLUS
+### SECTION 5 : FILTRAGE DES RÉSOLUS > 3 JOURS
 
-```javascript
-function isOlderThan3Days(dateString) {
-    // Parse "17/12/2025 à 15h30"
-    // Compare avec maintenant
-    // Retourne true si > 3 jours
-}
+```python
+def should_keep_feature(feature):
+    # actif → gardé
+    # résolu depuis < 3 jours → gardé (utile pour l'affichage "réouverture récente")
+    # résolu depuis > 3 jours → filtré
 ```
-
-**Pourquoi filtrer ?**
-- On veut garder les signalements actifs
-- On veut aussi garder les signalements résolus récents (< 3 jours)
-- Mais on retire ceux résolus depuis > 3 jours (plus pertinents)
-
-**Cas d'usage :**
-```
-Signalement résolu le 10/12 → Aujourd'hui 17/12 → Filtré (7 jours)
-Signalement résolu le 15/12 → Aujourd'hui 17/12 → Gardé (2 jours)
-```
+**Pourquoi 3 jours ?** Permet au visualiseur d'afficher encore un instant les coupures récemment réouvertes, sans garder indéfiniment du bruit dans `signalements.geojson`.
 
 ---
 
-### SECTION 6 : SYSTÈME D'ARCHIVAGE
+### SECTION 6 : ARCHIVAGE ANNUEL
 
-#### A) Pourquoi archiver ?
+**Objectif** : garder une trace permanente de chaque signalement, même supprimé (indépendamment de `signalements.geojson`, qui ne montre que l'état courant).
 
-**Objectif** : Garder une trace permanente de tous les signalements, même supprimés.
+**Détection d'ID réutilisé** (`add_or_update_in_archive`) : certaines sources réutilisent le même `id_source` pour deux événements différents dans le temps. Un nouvel épisode n'est créé que si `date_debut` diffère **et** que l'épisode précédent n'est plus actif ; sinon c'est juste une dérive de la date déclarée par une source sur une même coupure continue, celle-ci pouvant varier légèrement d'un relevé à l'autre.
 
-**Structure :**
-```
-archives/
-├── signalements_2024.geojson   → Tout ce qui a commencé en 2024
-├── signalements_2025.geojson   → Tout ce qui a commencé en 2025
-└── last_run.json                → État de la dernière exécution
-```
+**Point d'attention** : `find_in_archive()` doit renvoyer la **dernière** entrée correspondant à `(id_source, source)`, pas la première : une comparaison contre un épisode déjà périmé redéclencherait "ID réutilisé" à chaque run, créant un nouveau doublon à chaque passage.
 
-#### B) Fonctions d'archivage
-
-```javascript
-function loadArchive(year) {
-    // Charge archives/signalements_2024.geojson
-    // Si le fichier n'existe pas, en crée un vide
-}
-```
-
-```javascript
-function saveArchive(year, geojson) {
-    // Sauvegarde dans archives/signalements_2024.geojson
-    // Met à jour le timestamp last_update
-}
-```
-
-#### C) Détection des ID réutilisés
-
-**Problème** : Certaines API réutilisent les mêmes IDs pour différents événements !
-
-**Solution** :
-```javascript
-// On compare AUSSI la date_debut, pas seulement l'id_source
-if (existingProps.date_debut !== props.date_debut) {
-    // C'est un NOUVEAU signalement avec le même ID !
-    // → Créer une nouvelle entrée
-} else {
-    // C'est vraiment le même signalement
-    // → Mettre à jour
-}
-```
-
-**Exemple concret :**
-```
-Archive : { id_source: "123", date_debut: "10/12/2025" }
-Nouveau : { id_source: "123", date_debut: "15/12/2025" }
-→ Ce sont 2 événements différents ! On garde les 2.
-```
-
-#### D) Détection des suppressions
-
-```javascript
-function detectDeletedSignalements(currentFeatures) {
-    // 1. Charge last_run.json (liste des IDs actifs lors de la dernière exécution)
-    // 2. Compare avec les IDs actifs maintenant
-    // 3. Si un ID était actif avant mais ne l'est plus → Signalement supprimé
-    // 4. Marque le signalement comme "Supprimé" dans l'archive
-    // 5. Ajoute une date_suppression
-}
-```
-
-**Cas d'usage :**
-```
-Exécution N-1 (hier) :  IDs actifs = [123, 456, 789]
-Exécution N (aujourd'hui) : IDs actifs = [123, 789]
-→ ID 456 a disparu → On le marque "Supprimé" dans l'archive
-```
+**Détection des suppressions** (`detect_deleted_signalements`) : certaines sources retirent simplement une entrée de leur flux sans jamais fournir de `date_fin`. Cette fonction compare les IDs actifs du run précédent (`archives/last_run.json`) à ceux du run courant ; un ID disparu sans explication est marqué `"Supprimé"` avec `date_suppression` = l'heure où on l'a remarqué.
 
 ---
 
 ### SECTION 7 : MONITORING DES FLUX
 
-#### A) Structure fluxMonitor
-
-```javascript
-const fluxMonitor = {
-    grist_35: null,              // Sera rempli après le fetch
-    cd44: null,
-    rennes_metropole: null,
-    cd35_inondations: null,
-    cd56: null,
-    diro: null
-};
+```python
+def monitor_fetch(source_name, fetch_fn):
+    # chronomètre + capture le résultat de fetch_fn()
+    # statut : OK (données) / EMPTY (0 résultat) / ERROR (exception)
 ```
-
-**Rôle** : Stocker l'état de chaque source après récupération.
-
-#### B) Wrapper monitorFetch
-
-```javascript
-async function monitorFetch(sourceName, fetchFunction) {
-    // 1. Chronomètre le temps de réponse
-    const startTime = Date.now();
-    
-    try {
-        // 2. Appelle la fonction de fetch (ex: fetchCD35InondationsData)
-        const data = await fetchFunction();
-        
-        // 3. Calcule le statut
-        if (data.length === 0) {
-            status = 'EMPTY';  // API fonctionne mais 0 résultat
-        } else {
-            status = 'OK';      // API fonctionne avec des données
-        }
-    } catch (error) {
-        status = 'ERROR';       // API cassée
-    }
-    
-    // 4. Sauvegarde dans fluxMonitor
-    fluxMonitor[sourceName] = status;
-    
-    // 5. Retourne les données normalement
-    return data;
-}
-```
-
-**Pourquoi ce wrapper ?**
-- Permet de surveiller chaque source sans modifier leur code
-- Capture les erreurs de façon centralisée
-- Mesure les performances (temps de réponse)
-
-#### C) Les 3 statuts possibles
-
-| Statut | Signification | Exemple |
-|--------|---------------|---------|
-| **OK** | API fonctionne + données disponibles | 10 inondations récupérées |
-| **EMPTY** | API fonctionne + 0 résultat | Pas d'inondation active (normal) |
-| **ERROR** | API cassée | HTTP 503, timeout, erreur de parsing |
+Wrapper générique autour de chaque fonction de récupération. Alimente `flux_monitor`, publié dans `metadata.json`, ce qui permet de voir en un coup d'œil quelle source est en panne sans éplucher les logs CI.
 
 ---
 
-### SECTION 8 : RÉCUPÉRATION DES DONNÉES
+### SECTION 8 : RÉCUPÉRATION + CONVERSION PAR SOURCE
 
-#### A) Grist (API REST avec authentification)
+Chaque source a son format d'origine ; chaque `*_to_feature()` le convertit vers le format standard (`properties.route`, `commune`, `statut_actif`, `type_coupure`, `gestionnaire`...).
 
-```javascript
-async function fetchGristData() {
-    // 1. Configure la requête HTTPS avec authentification Bearer
-    const options = {
-        hostname: 'grist.dataregion.fr',
-        path: `/o/inforoute/api/docs/${GRIST_DOC_ID}/tables/${TABLE_ID}/records`,
-        headers: {
-            'Authorization': `Bearer ${GRIST_API_KEY}`
-        }
-    };
-    
-    // 2. Fait la requête
-    // 3. Parse le JSON
-    // 4. Retourne records[]
-}
-```
+**Rennes Métropole** : WFS, filtré sur `raison="inondation"`. Détecte automatiquement si les coordonnées sont en CC48 (X > 1000 en valeur absolue) ou déjà en WGS84.
 
-**Format retourné :**
-```javascript
-[
-    {
-        id: 1,
-        fields: {
-            Latitude: 48.1119,
-            Longitude: -1.6778,
-            Route: "D137",
-            Cause: ["Inondation"],
-            ...
-        }
-    },
-    ...
-]
-```
+**CD35 / CD56 (`_fetch_ogc_features`)** : API OGC générique (récupère la 1ère collection, puis ses items). `_cd35_properties()` factorise le mapping commun aux deux couches CD35 (ponctuel + linéaire) : même schéma de champs (`route`, `etat_circulation`, `commune`, `agence`, `prd`/`prf`, `Date_saisie` en epoch ms). La casse du champ identifiant peut différer selon la couche (`OBJECTID` ou `objectid`) : les deux sont testés. `etat_circulation` pilote `type_coupure` (Totale/Partielle) par une correspondance simple plutôt qu'une table exhaustive, ce format pouvant encore évoluer.
 
-#### B) CD44 (API REST publique)
+**Grist 35** : la géométrie peut être un point simple (`Latitude`/`Longitude`) ou du GeoJSON complexe saisi en texte libre (`fields.geojson`, pour une ligne par ex.).
 
-```javascript
-async function fetchCD44Data() {
-    // Appelle : data.loire-atlantique.fr/api/explore/v2.1/...
-    // Filtre : Seulement type="Inondation"
-    // Retourne : Liste de records avec lat/lon
-}
-```
+**CD44** : sans identifiant stable disponible, `id_source` est calculé par hash de `route + commune + période de fermeture`, pour éviter que deux coupures distinctes s'écrasent dans l'archive.
 
-#### C) Rennes Métropole (WFS - Web Feature Service)
-
-```javascript
-async function fetchRennesMetroData() {
-    // 1. Appelle le service WFS
-    const url = 'https://public.sig.rennesmetropole.fr/geoserver/ows?SERVICE=WFS...';
-    
-    // 2. Reçoit du GeoJSON directement
-    const geojson = await response.json();
-    
-    // 3. Filtre uniquement raison="inondation"
-    const filtered = geojson.features.filter(f => 
-        f.properties.raison.toLowerCase().includes('inondation')
-    );
-    
-    // 4. Détecte si conversion de projection nécessaire
-    // 5. Retourne { features: [...], needsConversion: true/false }
-}
-```
-
-**Particularité** : Rennes peut retourner en CC48 ou WGS84. On détecte automatiquement.
-
-#### D) CD35 (API OGC Feature)
-
-```javascript
-async function fetchCD35InondationsData() {
-    // 1. Récupère la liste des collections
-    const collections = await fetch('.../collections?f=json');
-    
-    // 2. Prend la première collection (ou cherche "Inondation")
-    const collectionId = collections[0].id;
-    
-    // 3. Récupère les items
-    const items = await fetch(`.../collections/${collectionId}/items?f=json`);
-    
-    // 4. Retourne items.features (déjà en WGS84)
-}
-```
-
-**Avantage API OGC** : Standard moderne, retourne directement en GeoJSON WGS84.
-
-#### E) CD56 (API OGC Feature)
-
-Identique à CD35, même logique.
-
-#### F) DIRO (Lecture fichier local)
-
-```javascript
-async function fetchDiroData() {
-    // 1. Vérifie si data/inondations-diro.geojson existe
-    if (!fs.existsSync(DIRO_FILE_PATH)) {
-        return [];
-    }
-    
-    // 2. Lit le fichier
-    const content = fs.readFileSync(DIRO_FILE_PATH, 'utf8');
-    const geojson = JSON.parse(content);
-    
-    // 3. Filtre uniquement is_active = true
-    return geojson.features.filter(f => f.properties.is_active === true);
-}
-```
+**DIRO** : lit un fichier local (`data/inondations-diro.geojson`, déjà généré par `fetch_datex_diro.py`), filtré sur `is_active = true`.
 
 ---
 
-### SECTION 9 : CONVERSION EN FORMAT STANDARD
+### SECTION 9 : EXPORT DATEX II
 
-Chaque source a son propre format. On doit tout standardiser.
+`build_datex2_export()` reproduit l'intégralité des signalements (pas de filtre par cause, `signalements.geojson` ne contient déjà que des inondations en pratique) au format Datex II v2.3, type `EnvironmentalObstruction`/`flooding`. Structure vérifiée ligne à ligne contre le XSD officiel (validation automatisée disponible via le job CI `validate-datex2`).
 
-#### Format cible (standard)
-
-```javascript
-{
-    type: 'Feature',
-    geometry: { type: 'Point', coordinates: [lon, lat] },
-    properties: {
-        id: 123,                    // ID unique généré
-        id_source: "456",           // ID dans la source d'origine
-        source: "CD35 Inondations", // Nom de la source
-        route: "D137",
-        commune: "Rennes",
-        cause: "Inondation",
-        statut: "Actif",            // ou "Résolu"
-        statut_actif: true,
-        statut_resolu: false,
-        type_coupure: "Totale",     // ou "Partielle"
-        sens_circulation: "",
-        commentaire: "...",
-        date_debut: "15/12/2025 à 10h30",
-        date_fin: "",
-        date_saisie: "15/12/2025 à 10h35",
-        date_suppression: "",
-        gestionnaire: "CD35"
-    }
-}
-```
-
-#### Exemple : gristToFeature()
-
-```javascript
-function gristToFeature(record) {
-    // 1. Extraire la géométrie
-    let geometry;
-    if (record.fields.geojson) {
-        // GeoJSON déjà saisi manuellement
-        geometry = JSON.parse(record.fields.geojson);
-    } else if (record.fields.Latitude && record.fields.Longitude) {
-        // Point simple
-        geometry = {
-            type: 'Point',
-            coordinates: [record.fields.Longitude, record.fields.Latitude]
-        };
-    }
-    
-    // 2. Mapper les champs Grist → format standard
-    return {
-        type: 'Feature',
-        geometry: geometry,
-        properties: {
-            id: generateUniqueId(),
-            id_source: record.id,
-            source: 'Saisie Grist',
-            route: record.fields.Route || '',
-            commune: record.fields.Commune || '',
-            cause: record.fields.Cause?.join(', ') || '',
-            // ... etc
-        }
-    };
-}
-```
-
-**Particularités par source :**
-
-- **Grist** : Peut avoir du GeoJSON complexe (LineString, Polygon)
-- **CD44** : Seulement des Points
-- **Rennes** : Peut nécessiter conversion CC48 → WGS84
-- **CD35/CD56** : Déjà en WGS84, facile
-- **DIRO** : Déjà au bon format
+Point à retenir si le schéma doit évoluer : `PointByCoordinates` n'hérite pas de `GroupOfLocations` : il doit être imbriqué dans un élément `Point`, qui lui en hérite. `overallStartTime` est obligatoire dans le schéma ; repli sur `date_debut` puis `date_saisie` puis l'heure de génération si aucune date exploitable n'est disponible.
 
 ---
 
-### SECTION 10 : FUSION PRINCIPALE
+### SECTION 10 : CROISEMENT COMMUNAL
 
-```javascript
-async function mergeSources() {
-    // ============================================
-    // ÉTAPE 1 : RÉCUPÉRATION PARALLÈLE
-    // ============================================
-    const [grist, cd44, rennes, cd35, cd56] = await Promise.all([
-        monitorFetch('grist_35', fetchGristData),
-        monitorFetch('cd44', fetchCD44Data),
-        monitorFetch('rennes_metropole', fetchRennesMetroData),
-        monitorFetch('cd35_inondations', fetchCD35InondationsData),
-        monitorFetch('cd56', fetchCD56Data)
-    ]);
-    
-    // DIRO en séquentiel (fichier local, très rapide)
-    const diro = await monitorFetch('diro', fetchDiroData);
-    
-    // ============================================
-    // ÉTAPE 2 : CONVERSION + FILTRAGE
-    // ============================================
-    let features = [];
-    
-    // Pour chaque source
-    grist.forEach(record => {
-        // 2.1 Convertir au format standard
-        const feature = gristToFeature(record);
-        
-        // 2.2 Vérifier si on doit le garder
-        const result = shouldKeepFeature(feature);
-        if (result.keep) {
-            features.push(feature);
-        }
-    });
-    
-    // ... même chose pour cd44, rennes, cd35, cd56, diro
-    
-    // ============================================
-    // ÉTAPE 3 : ARCHIVAGE
-    // ============================================
-    features.forEach(feature => {
-        addOrUpdateInArchive(feature);
-    });
-    
-    detectDeletedSignalements(features);
-    
-    // ============================================
-    // ÉTAPE 4 : GÉNÉRATION DES FICHIERS
-    // ============================================
-    
-    // 4.1 signalements.geojson
-    const geojson = {
-        type: 'FeatureCollection',
-        features: features
-    };
-    fs.writeFileSync('signalements.geojson', JSON.stringify(geojson));
-    
-    // 4.2 metadata.json (avec monitoring intégré)
-    const metadata = {
-        lastUpdate: ...,
-        totalRecus: ...,
-        sources_recues: {...},
-        geometries: {...},
-        administrations: {...},
-        archives: {...},
-        
-        // Monitoring calculé directement
-        flux_monitoring: {
-            globalStatus: ...,  // OK, DEGRADED, ou CRITICAL
-            summary: {...},
-            sources: fluxMonitor  // Détails par source
-        }
-    };
-    fs.writeFileSync('metadata.json', JSON.stringify(metadata));
-}
-```
+`enrich_with_communes()` ajoute `properties.codes_insee` à chaque signalement, par géocodage inverse (API IGN Géoplateforme, même service que la recherche d'adresse du visualiseur), sans BDTopo embarquée ni shapely. Un point = 1 appel ; une ligne = 3 points échantillonnés (début/milieu/fin). Repli sur l'index `parcel` si l'index `address` ne répond rien (cas des routes rurales sans adresse à proximité).
 
 ---
 
-## 🔄 FLUX DE DONNÉES COMPLET
+### SECTION 11 : EXPORT CSV
+
+`build_csv_export()` écrit en `utf-8-sig` (avec BOM) plutôt qu'`utf-8` simple : sans le BOM, Excel (l'outil le plus probable pour ouvrir un CSV grand public) ne détecte pas l'UTF-8 et affiche les accents cassés.
+
+---
+
+### SECTION 12 : FUSION PRINCIPALE
+
+`merge_sources()` orchestre tout :
+1. Récupère les 7 sources en parallèle (`ThreadPoolExecutor`), en sautant celles listées dans `DISABLED_SOURCES`
+2. Convertit chaque item brut en feature standard, filtre via `should_keep_feature()`
+3. Enrichit avec les codes INSEE
+4. Archive chaque feature, détecte les suppressions
+5. Écrit `signalements.geojson`, `signalements_inondation.xml`, `signalements_inondation.csv`
+6. Écrit `metadata.json` (statistiques + monitoring)
+
+---
+
+## FLUX DE DONNÉES COMPLET
 
 ```
-1. RÉCUPÉRATION (parallèle)
-   ├─ Grist API      → 45 records
-   ├─ CD44 API       → 12 records
-   ├─ Rennes WFS     → 8 records
-   ├─ CD35 OGC       → 10 records
-   ├─ CD56 OGC       → 11 records
-   └─ DIRO fichier   → 3 records
-                        ─────────
-                        89 records bruts
+1. RÉCUPÉRATION (parallèle, sources non désactivées seulement)
+   ├─ Grist API           → N records
+   ├─ CD44 API             → N records
+   ├─ Rennes WFS            → N records
+   ├─ CD35 OGC (ponctuel)   → N records
+   ├─ CD35 OGC (linéaire)   → N records
+   ├─ CD56 OGC              → N records
+   └─ DIRO fichier local    → N records
 
-2. CONVERSION (séquentiel par source)
-   Chaque source → Format standard uniforme
-   
+2. CONVERSION (par source) → format standard uniforme
+
 3. FILTRAGE
-   ├─ Garder : Actifs
-   ├─ Garder : Résolus < 3 jours
-   └─ Retirer : Résolus > 3 jours
-                        ─────────
-                        85 records gardés
+   ├─ Garder : actifs
+   ├─ Garder : résolus < 3 jours
+   └─ Retirer : résolus > 3 jours
 
-4. ARCHIVAGE
-   ├─ Ajouter/Mettre à jour dans archives/2025.geojson
-   ├─ Détecter suppressions
+4. ENRICHISSEMENT → codes_insee par géocodage inverse
+
+5. ARCHIVAGE
+   ├─ Ajouter/mettre à jour dans archives/<année>.geojson
+   ├─ Détecter les suppressions silencieuses
    └─ Sauvegarder last_run.json
 
-5. GÉNÉRATION
-   ├─ signalements.geojson (85 features)
+6. GÉNÉRATION
+   ├─ signalements.geojson
+   ├─ signalements_inondation.xml (Datex II)
+   ├─ signalements_inondation.csv
    └─ metadata.json (stats + monitoring)
 ```
 
 ---
 
-## 🔧 FONCTIONS UTILITAIRES IMPORTANTES
-
-### convertLambert93ToWGS84(x, y)
-Convertit des coordonnées Lambert 93 (mètres) en WGS84 (degrés).
-
-### formatDate(dateValue)
-Convertit n'importe quel format de date en "DD/MM/YYYY à HHhMM" français.
-
-### shouldKeepFeature(feature)
-Détermine si un signalement doit être gardé selon son statut et sa date.
-
-### parseCD44DateFin(ligne4)
-Parse les dates spécifiques au format CD44 (ex: "Du 15/12 au 17/12").
-
----
-
-## 💾 PERSISTANCE DES DONNÉES
-
-### Fichiers éphémères (recréés à chaque run)
-- `signalements.geojson`
-- `metadata.json`
-
-### Fichiers permanents (jamais supprimés)
-- `archives/signalements_2024.geojson`
-- `archives/signalements_2025.geojson`
-- `archives/last_run.json`
-
-**Pourquoi cette distinction ?**
-- Les fichiers de sortie reflètent l'état ACTUEL
-- Les archives gardent l'HISTORIQUE COMPLET
-
----
-
-## 🎓 CONCEPTS CLÉS À RETENIR
+## CONCEPTS CLÉS À RETENIR
 
 ### 1. Monitoring vs Données
-- **Monitoring** : État des flux (OK/EMPTY/ERROR)
-- **Données** : Signalements d'inondations
-- Ce sont deux choses différentes stockées ensemble dans metadata.json
+`flux_monitor`/`metadata.json` décrivent l'état des flux (OK/EMPTY/ERROR) ; `signalements.geojson` contient les données elles-mêmes. Deux choses distinctes.
 
-### 2. ID unique vs id_source
-- **id** : Généré par nous, unique dans le GeoJSON final
-- **id_source** : ID d'origine de la source (peut être réutilisé)
+### 2. `id` vs `id_source`
+`id` : généré par nous, unique dans le GeoJSON final. `id_source` : identifiant d'origine de la source (peut être réutilisé par la source elle-même, cf section 6).
 
-### 3. Statut du signalement
-- **statut_actif** : true = route encore coupée
-- **statut_resolu** : true = route rouverte
-- Un signalement peut être résolu mais encore dans le fichier (< 3 jours)
+### 3. Statut d'un signalement
+`statut_actif` : route encore coupée. `statut_resolu` : route réouverte. Un signalement peut être résolu mais encore présent dans le fichier (< 3 jours, cf section 5).
 
 ### 4. Conversions de projection
-- Lambert 93 (EPSG:2154) → WGS84 (EPSG:4326)
-- CC48 (EPSG:3948) → WGS84 (EPSG:4326)
-- Toujours vérifier la projection d'entrée !
+Lambert 93 (EPSG:2154) et CC48 (EPSG:3948) → WGS84 (EPSG:4326). Seule Rennes Métropole peut nécessiter cette conversion aujourd'hui.
 
 ### 5. Gestion des erreurs
-- Chaque fetch est wrappé dans un try/catch
-- Si une source échoue, les autres continuent
-- L'erreur est capturée dans le monitoring
+Chaque fonction `fetch_*` attrape ses propres erreurs réseau et retourne une liste vide en cas d'échec, les autres sources continuent normalement. L'erreur est capturée dans `flux_monitor`, jamais dans les données publiées.
 
 ---
 
-## 📞 AIDE POUR MODIFICATION
+## AIDE POUR MODIFICATION
 
 ### Ajouter une nouvelle source
 
-1. Créer la fonction de fetch
-2. Créer la fonction de conversion
-3. Ajouter dans fluxMonitor
-4. Ajouter dans Promise.all de mergeSources
-5. Ajouter le mapping dans la boucle de conversion
+1. Ajouter sa clé dans `KNOWN_SOURCES`
+2. Écrire `fetch_<source>_data()` (attrape ses propres erreurs, retourne `[]` en cas d'échec)
+3. Écrire `<source>_to_feature()` (retourne le format standard, `None` si non convertible)
+4. Ajouter dans `flux_monitor` (section 7)
+5. Ajouter dans le `ThreadPoolExecutor` de `merge_sources()` (via `_submit_or_skip`)
+6. Ajouter dans `stats`, les totaux, `metadata["sources"]`, la docstring en tête de fichier, et `current_actifs` dans `detect_deleted_signalements()`
+
+### Couper une source sans toucher au code
+
+Variable CI/CD `DISABLED_SOURCES`, cf section 1. Voir aussi l'en-tête de [`.gitlab-ci.yml`](../.gitlab-ci.yml).
 
 ### Modifier le format de sortie
 
-Modifier les fonctions `*ToFeature()` pour changer le mapping des propriétés.
+Modifier les fonctions `*_to_feature()` pour changer le mapping des propriétés.
 
 ### Changer le seuil de filtrage (3 jours)
 
-Modifier la constante dans `isOlderThan3Days()` :
-```javascript
-return diffDays > 3;  // Changer 3 par autre valeur
-```
+Modifier la constante dans `is_older_than_3_days()` (section 5) : `diff_days > 3`.
 
-### Ajouter un nouveau champ dans metadata
+### Ajouter un champ à `metadata.json`
 
-Modifier l'objet `metadata` dans `mergeSources()`.
+Modifier le dict `metadata` en fin de `merge_sources()` (section 12).
+
+---
+
+## fetch_datex_diro.py
+
+### Rôle
+
+Récupère le flux DATEX II (standard européen d'échange de données routières) publié par Bison Futé pour la DIR Ouest, filtre les événements pertinents et les convertit en GeoJSON. C'est ce fichier (`data/inondations-diro.geojson`) que `merge_signalements.py` relit ensuite comme source « DIRO ».
+
+### Fonctionnement
+
+1. `fetch_xml()` télécharge le flux XML brut.
+2. `parse_datex()` parcourt chaque `situation`/`situationRecord` et applique trois filtres successifs : source DIR Ouest, type `EnvironmentalObstruction`, sous-type `flooding`/`flashFloods` (avec un repli par mots-clés si le sous-type n'est pas explicite). Calcule aussi si l'événement est encore actif en comparant `overallEndTime` à l'heure courante.
+3. `create_geojson()` écrit le GeoJSON ainsi qu'un fichier de statistiques texte (`data/inondations-diro-stats.txt`), utile pour un contrôle visuel rapide du filtrage.
+
+### À retenir
+
+Contrairement à `merge_signalements.py`, ce script conserve aussi bien les événements actifs que terminés dans son fichier de sortie (`is_active` sur chaque feature) : c'est `merge_signalements.py` qui filtre ensuite sur les actifs uniquement (`fetch_diro_data()`, `is_active is True`).
+
+---
+
+## fetch_vigicrues.py
+
+### Rôle
+
+Interroge les flux RSS Vigicrues pour les 7 tronçons du bassin de la Vilaine, calcule le niveau de vigilance maximal parmi eux, et écrit `data/vigilance.json`. Ce fichier alimente le sous-titre du visualiseur et sert de déclencheur à `fetch_stations_hydro.py`.
+
+### Fonctionnement
+
+- `TRONCONS` : correspondance code Vigicrues → nom lisible, figée en dur (ces tronçons ne changent pas).
+- `fetch_troncon_niveau()` lit le `<title>` du flux RSS d'un tronçon (ex. `"Vilaine amont : vert"`) et en extrait la couleur.
+- `collect_niveaux()` interroge tous les tronçons ; un tronçon en échec n'empêche pas les autres d'être pris en compte (`erreurs` collecté à part).
+- Le niveau global retenu est le maximum parmi les tronçons obtenus avec succès.
+
+---
+
+## fetch_stations_hydro.py
+
+### Rôle
+
+Exporte les stations hydrométriques Hub'Eau (35/44/56) et leur dernière hauteur d'eau connue. Deux sorties : un instantané du jour (`stations_hydro.geojson`, écrasé à chaque run, pour l'exploration cartographique) et une accumulation annuelle qui ne s'efface jamais (`hauteurs_eau_<année>.geojson`), en vue d'un futur croisement avec l'historique des coupures.
+
+### Déclenchement conditionnel
+
+Le script ne s'exécute pleinement que si l'un de ces deux critères est vrai :
+- la vigilance Vigicrues (lue dans `vigilance.json`) est au moins jaune, **ou**
+- au moins une coupure de route active existe (lue dans `signalements.geojson`), une crue locale pouvant couper une route sans faire monter la vigilance des 7 tronçons suivis.
+
+En cas d'erreur de lecture de l'un ou l'autre fichier, le script part du principe qu'il vaut mieux relever par précaution que rater un vrai événement (comportement dit « fail-open »).
+
+### Vigilance par station
+
+`STATION_TRONCON` fait correspondre chaque station à son tronçon Vigicrues, pour lui attacher le niveau de vigilance courant. Cette correspondance est figée en dur plutôt que recalculée à chaque run : elle change rarement, et la reconstruire suppose d'interroger une API Vigicrues non documentée publiquement.
+
+### Fiabilité des relevés
+
+Chaque relevé de hauteur (`fetch_latest_hauteur`) est retenté jusqu'à 3 fois en cas d'échec réseau, avant d'abandonner pour cette station sans bloquer les autres.
+
+---
+
+## stats_prefecture.py
+
+### Rôle
+
+Script indépendant de `merge_signalements.py` : relit `signalements.geojson` déjà publié, agrège les coupures actives par commune, et publie le résultat à deux endroits :
+- un document Grist dédié (table `Situation_actuelle`, réécrite à chaque run, et `Historique_signalements`, un historique par point/tronçon) ;
+- une page HTML autonome (`stats-prefecture.html`), avec indicateurs clés, répartition par type de route et par organisme, et un tableau détaillé par commune.
+
+### Périmètre géographique
+
+Seuls les signalements dont le point représentatif tombe dans le périmètre défini par `masque.geojson` sont pris en compte, avec le même fichier et la même règle géométrique que le visualiseur cartographique, pour garantir une définition cohérente du périmètre entre les deux.
+
+### Classification des routes
+
+Chaque coupure est classée RN/RD/Autres à partir du nom de route déclaré (reconnaissance par expression régulière, tolérante à un préfixe « R » optionnel selon la source).
+
+### Colonnes par organisme
+
+Les sources institutionnelles (DIRO, Rennes Métropole, CD35, CD44, CD56) ont chacune une colonne fixe. Les signalements saisis manuellement peuvent provenir de plusieurs organismes différents (champ `gestionnaire`) : une colonne est créée dynamiquement par organisme rencontré, plutôt qu'une colonne unique qui les confondrait tous. Ces colonnes sont créées automatiquement dans Grist si elles n'existent pas encore.
+
+### Historique par signalement
+
+`Historique_signalements` identifie chaque coupure par la paire `(source, id_source)`, le seul identifiant stable d'un run à l'autre. Une nouvelle ligne apparaît à l'apparition d'une coupure, et se complète (`date_reouverture`) quand elle n'est plus vue active, sans jamais recréer de doublon pour le même événement.
+
+---
+
+
+
 
 ---
 
