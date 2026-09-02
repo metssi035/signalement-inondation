@@ -1,0 +1,215 @@
+name: Chaîne (DATEX -> fusion -> stats préfecture)
+
+# Duplique .gitlab-ci.yml (jobs fetch-datex-diro -> update-geojson ->
+# stats-prefecture) sur GitHub Actions, comme filet de secours si le
+# GitLab interne (gitlab-forge) est indisponible - même WebDAV Géobretagne
+# en sortie, mais sous data/github/ au lieu de data/gitlab/, pour ne jamais
+# écraser ce que produit GitLab.
+#
+# SECRETS À CRÉER (Settings > Secrets and variables > Actions) - mêmes
+# valeurs que les variables CI/CD GitLab :
+#   - GRIST_DOC_ID
+#   - GRIST_API_KEY
+#   - GRIST_STATS_DOC_ID
+#   - WEBDAV_URL
+#   - WEBDAV_USERNAME
+#   - WEBDAV_PASSWORD
+#   - DISABLED_SOURCES (optionnel, vide par défaut)
+#
+# GitHub peut retarder les schedules de plusieurs minutes en cas de charge
+# (limitation connue, documentée par GitHub) - pas de grille de minutes
+# fiable comme sur GitLab, rien à faire de notre côté.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+env:
+  WEBDAV_BASE: "App%20Routes_coupees_inondation/data/github"
+
+jobs:
+  fetch-datex-diro:
+    runs-on: ubuntu-latest
+    env:
+      WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+      WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+      WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: DATEX - Démarrage
+        run: |
+          echo "🚀 DATEX - Démarrage..."
+          pip install --quiet requests lxml
+          python scripts/fetch_datex_diro.py
+          if [ ! -f "data/inondations-diro.geojson" ]; then
+            exit 1
+          fi
+      - name: Upload vers WebDAV
+        run: |
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/" || true
+          HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T data/inondations-diro.geojson \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/inondations-diro.geojson")
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 204 ]; then
+            exit 1
+          fi
+          if [ -f "data/inondations-diro-stats.txt" ]; then
+            curl -s -T data/inondations-diro-stats.txt \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/inondations-diro-stats.txt" || true
+          fi
+          echo "✅ DATEX terminé !"
+
+  update-geojson:
+    needs: fetch-datex-diro
+    runs-on: ubuntu-latest
+    env:
+      GRIST_DOC_ID: ${{ secrets.GRIST_DOC_ID }}
+      GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
+      WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+      WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+      WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+      DISABLED_SOURCES: ${{ secrets.DISABLED_SOURCES }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fusion - Démarrage
+        run: |
+          echo "🚀 Fusion - Démarrage..."
+          pip install --quiet requests pyproj tzdata
+          mkdir -p data archives
+          HTTP_CODE=$(curl -w "%{http_code}" -o data/inondations-diro.geojson -s \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/inondations-diro.geojson")
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo '{"type":"FeatureCollection","features":[]}' > data/inondations-diro.geojson
+          fi
+      - name: Récupération des archives existantes
+        run: |
+          echo "📥 Récupération des archives existantes (sinon chaque run repart d'une archive vide et écrase l'historique accumulé)..."
+          PROPFIND_RESPONSE=$(curl -s -X PROPFIND -H "Depth: 1" \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/archives/")
+          echo "$PROPFIND_RESPONSE" | grep -oiE '<[a-z]*:?href>[^<]*</[a-z]*:?href>' | sed -E 's#<[^>]+>##g' | while read -r href; do
+            filename=$(basename "$href")
+            case "$filename" in
+              *.geojson|last_run.json)
+                curl -s -o "archives/$filename" -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                     "${WEBDAV_URL}/${WEBDAV_BASE}/archives/$filename" || true
+                echo "  ↳ $filename récupéré"
+                ;;
+            esac
+          done
+          md5sum archives/*.geojson archives/last_run.json > archives_before.md5 2>/dev/null || true
+      - name: merge_signalements.py
+        run: |
+          python scripts/merge_signalements.py
+          if [ ! -f "signalements.geojson" ] || [ ! -f "metadata.json" ]; then
+            exit 1
+          fi
+          echo "🔎 Fichiers générés localement :"
+          ls -la signalements.geojson metadata.json signalements_inondation.xml signalements_inondation.csv 2>&1 || true
+      - name: Upload signalements + metadata
+        run: |
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/" || true
+          HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T signalements.geojson \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/signalements.geojson")
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 204 ]; then
+            exit 1
+          fi
+          curl -s -T metadata.json \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/metadata.json" || true
+      - name: Upload exports Datex II / CSV
+        run: |
+          if [ -f "signalements_inondation.xml" ]; then
+            HTTP_CODE=$(curl -w "%{http_code}" -o /tmp/curl_datex2.log -s -T signalements_inondation.xml \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/signalements_inondation.xml")
+            echo "📤 Upload signalements_inondation.xml : HTTP $HTTP_CODE"
+            cat /tmp/curl_datex2.log
+          else
+            echo "⚠️ signalements_inondation.xml absent, rien à envoyer"
+          fi
+          if [ -f "signalements_inondation.csv" ]; then
+            HTTP_CODE=$(curl -w "%{http_code}" -o /tmp/curl_csv.log -s -T signalements_inondation.csv \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/signalements_inondation.csv")
+            echo "📤 Upload signalements_inondation.csv : HTTP $HTTP_CODE"
+            cat /tmp/curl_csv.log
+          else
+            echo "⚠️ signalements_inondation.csv absent, rien à envoyer"
+          fi
+      - name: Upload archives modifiées
+        run: |
+          if [ -d "archives" ]; then
+            curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/archives/" || true
+            for file in archives/*.geojson; do
+              if [ -f "$file" ]; then
+                old_sum=$(grep -F " $file" archives_before.md5 2>/dev/null | awk '{print $1}')
+                new_sum=$(md5sum "$file" | awk '{print $1}')
+                if [ "$old_sum" != "$new_sum" ]; then
+                  curl -s -T "$file" -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                       "${WEBDAV_URL}/${WEBDAV_BASE}/archives/$(basename "$file")" || true
+                  echo "  ↳ $(basename "$file") réuploadé (contenu modifié)"
+                fi
+              fi
+            done
+            if [ -f "archives/last_run.json" ]; then
+              old_sum=$(grep -F " archives/last_run.json" archives_before.md5 2>/dev/null | awk '{print $1}')
+              new_sum=$(md5sum archives/last_run.json | awk '{print $1}')
+              if [ "$old_sum" != "$new_sum" ]; then
+                curl -s -T archives/last_run.json -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                     "${WEBDAV_URL}/${WEBDAV_BASE}/archives/last_run.json" || true
+                echo "  ↳ last_run.json réuploadé (contenu modifié)"
+              fi
+            fi
+          fi
+          echo "✅ Fusion terminée !"
+
+  stats-prefecture:
+    needs: update-geojson
+    runs-on: ubuntu-latest
+    env:
+      GRIST_API_KEY: ${{ secrets.GRIST_API_KEY }}
+      GRIST_STATS_DOC_ID: ${{ secrets.GRIST_STATS_DOC_ID }}
+      WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+      WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+      WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Stats préfecture - Démarrage
+        run: |
+          echo "🚀 Stats préfecture - Démarrage..."
+          pip install --quiet requests
+          python scripts/stats_prefecture.py
+      - name: Upload stats-prefecture.html
+        run: |
+          if [ -f "stats-prefecture.html" ]; then
+            curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+            curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/" || true
+            HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T stats-prefecture.html \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/stats-prefecture.html")
+            echo "📤 Upload stats-prefecture.html : HTTP $HTTP_CODE"
+          fi
+          echo "✅ Stats préfecture terminé !"
