@@ -1,14 +1,17 @@
 name: Vigicrues
 
-# Duplique le job fetch-vigicrues de .gitlab-ci.yml. Publié au même endroit
-# partagé que côté GitLab (data/vigilance.json, sans préfixe /gitlab/ ni
-# /github/) : contenu identique quelle que soit la source, pas besoin de
-# séparer.
+# Duplique le job fetch-vigicrues de .gitlab-ci.yml. Publié sous data/github/
+# (pas le chemin partagé data/vigilance.json utilisé par GitLab) : ce
+# pipeline ne doit jamais écraser la sortie de GitLab, même si le contenu
+# est censé être identique.
 
 on:
   schedule:
     - cron: "0 * * * *"
   workflow_dispatch:
+
+env:
+  WEBDAV_BASE: "App%20Routes_coupees_inondation/data/github"
 
 jobs:
   fetch-vigicrues:
@@ -34,9 +37,11 @@ jobs:
         run: |
           curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
                "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/" || true
           HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T data/vigilance.json \
                -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
-               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/vigilance.json")
+               "${WEBDAV_URL}/${WEBDAV_BASE}/vigilance.json")
           if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 204 ]; then
             exit 1
           fi
