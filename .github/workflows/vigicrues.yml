@@ -1,0 +1,43 @@
+name: Vigicrues
+
+# Duplique le job fetch-vigicrues de .gitlab-ci.yml. Publié au même endroit
+# partagé que côté GitLab (data/vigilance.json, sans préfixe /gitlab/ ni
+# /github/) : contenu identique quelle que soit la source, pas besoin de
+# séparer.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  fetch-vigicrues:
+    runs-on: ubuntu-latest
+    env:
+      WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+      WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+      WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Vigicrues - Démarrage
+        run: |
+          echo "🚀 Vigicrues - Démarrage..."
+          pip install --quiet requests
+          python scripts/fetch_vigicrues.py
+          if [ ! -f "data/vigilance.json" ]; then
+            exit 1
+          fi
+      - name: Upload vers WebDAV
+        run: |
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+          HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T data/vigilance.json \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/vigilance.json")
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 204 ]; then
+            exit 1
+          fi
+          echo "✅ Vigicrues terminé !"

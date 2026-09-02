@@ -1,0 +1,68 @@
+name: Stations hydrométriques Hub'Eau
+
+# Duplique le job fetch-stations-hydro de .gitlab-ci.yml (objectif.md §10).
+# 2 passages/jour comme côté GitLab (10h et 16h). Publié sous data/github/
+# (comme signalements.geojson) car ce script décide de s'exécuter ou non en
+# relisant SIGNALEMENTS_URL - pointé vers data/github/ (cf commentaire dans
+# scripts/fetch_stations_hydro.py), donc son résultat est spécifique à ce
+# pipeline, pas partagé avec GitLab.
+
+on:
+  schedule:
+    - cron: "0 10,16 * * *"
+  workflow_dispatch:
+
+env:
+  WEBDAV_BASE: "App%20Routes_coupees_inondation/data/github"
+
+jobs:
+  fetch-stations-hydro:
+    runs-on: ubuntu-latest
+    env:
+      WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+      WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+      WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Récupération de l'accumulation existante
+        run: |
+          YEAR=$(date +%Y)
+          echo "📥 Récupération de l'accumulation existante hauteurs_eau_${YEAR}.geojson (sinon chaque run repart de zéro et écrase l'historique)..."
+          HTTP_CODE=$(curl -w "%{http_code}" -o "hauteurs_eau_${YEAR}.geojson" -s \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/hauteurs_eau_${YEAR}.geojson")
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            rm -f "hauteurs_eau_${YEAR}.geojson"
+            echo "  ↳ pas d'accumulation existante pour ${YEAR} (HTTP $HTTP_CODE) - on repart de zéro"
+          fi
+      - name: fetch_stations_hydro.py
+        run: |
+          pip install --quiet requests
+          python scripts/fetch_stations_hydro.py
+      - name: Upload si un relevé a été produit
+        run: |
+          if [ ! -f "stations_hydro.geojson" ]; then
+            echo "ℹ️ Rien à exporter (ni vigilance jaune+, ni coupure active) - fin normale du job"
+            exit 0
+          fi
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/App%20Routes_coupees_inondation/data/" || true
+          curl -X MKCOL -s -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/" || true
+          HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T stations_hydro.geojson \
+               -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+               "${WEBDAV_URL}/${WEBDAV_BASE}/stations_hydro.geojson")
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 204 ]; then
+            exit 1
+          fi
+          YEAR=$(date +%Y)
+          if [ -f "hauteurs_eau_${YEAR}.geojson" ]; then
+            HTTP_CODE=$(curl -w "%{http_code}" -o /dev/null -s -T "hauteurs_eau_${YEAR}.geojson" \
+                 -u "${WEBDAV_USERNAME}:${WEBDAV_PASSWORD}" \
+                 "${WEBDAV_URL}/${WEBDAV_BASE}/hauteurs_eau_${YEAR}.geojson")
+            echo "📤 Upload hauteurs_eau_${YEAR}.geojson : HTTP $HTTP_CODE"
+          fi
+          echo "✅ Stations hydrométriques terminé !"
