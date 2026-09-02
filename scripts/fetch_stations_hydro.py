@@ -50,13 +50,12 @@ DEPARTEMENTS = ["35", "44", "56"]
 # Mêmes fichiers que fetch_vigicrues.py / merge_signalements.py, déjà
 # publiés - on les relit pour ne lancer ce relevé que si l'un des deux
 # déclencheurs le justifie (vigilance jaune+, ou une coupure de route
-# active même sans vigilance). VIGILANCE_URL n'a pas de préfixe /gitlab/ ni
-# /github/ : vigilance.json est publié au même endroit partagé par les deux
-# pipelines (contenu identique quelle que soit la source, cf fetch_vigicrues.py).
-# SIGNALEMENTS_URL, lui, pointe vers data/github/ (pas data/gitlab/) : ce
-# dépôt doit lire ce que SON PROPRE job update-geojson vient de publier,
-# pas la sortie GitLab qui ne serait plus rafraîchie si gitlab-forge tombe.
-VIGILANCE_URL = "https://geobretagne.fr/apps/routes_coupees_inondation/data/vigilance.json"
+# active même sans vigilance). Les deux URLs pointent vers data/github/ (pas
+# data/gitlab/, ni le chemin partagé pour vigilance.json) : ce dépôt doit
+# toujours lire ce que SES PROPRES jobs viennent de publier, jamais la
+# sortie GitLab - qui ne serait plus rafraîchie si gitlab-forge tombe, et
+# que ce pipeline ne doit jamais écraser non plus (cf fetch_vigicrues.py).
+VIGILANCE_URL = "https://geobretagne.fr/apps/routes_coupees_inondation/data/github/vigilance.json"
 SIGNALEMENTS_URL = "https://geobretagne.fr/apps/routes_coupees_inondation/data/github/signalements.geojson"
 NIVEAUX = {"vert": 1, "jaune": 2, "orange": 3, "rouge": 4}
 SEUIL_NIVEAU = NIVEAUX["jaune"]
